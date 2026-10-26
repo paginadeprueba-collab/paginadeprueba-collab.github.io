@@ -1,0 +1,127 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Datos para tu web · Dr. Jainer Contreras</title><meta name="robots" content="noindex">
+<link rel="icon" href="../favicon.svg">
+<style>
+:root{--bg:#EEF0F4;--card:#fff;--ink:#0E1222;--mute:#5E6478;--line:#E1E4EB;--g:linear-gradient(100deg,#2A9FD6,#4FC3C9);--r:22px;--sh:0 10px 30px -12px rgba(20,30,70,.12);--c:#2A9FD6}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Manrope,Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+.wrap{max-width:720px;margin:0 auto;padding:16px}
+.top{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 18px 8px 8px;box-shadow:var(--sh);font-weight:700}
+.mono{width:38px;height:38px;border-radius:12px;background:var(--g);display:grid;place-items:center;color:#fff;font-size:14px}
+.top small{display:block;font-weight:500;color:var(--mute);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+h1{font-size:32px;font-weight:400;letter-spacing:-.02em;line-height:1.1;margin:24px 0 8px}
+.lead{color:var(--mute)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh);padding:22px;margin-top:16px}
+h2{font-size:20px;font-weight:600;margin-bottom:4px}.sub{color:var(--mute);font-size:14px;margin-bottom:14px}
+.tag{display:inline-block;font-size:12px;font-weight:600;color:var(--c);background:#E9F5FA;border-radius:999px;padding:4px 11px;margin-bottom:10px}
+ul.have{list-style:none;font-size:14.5px}ul.have li{padding:8px 0;border-bottom:1px solid var(--line);display:flex;gap:8px}ul.have li:last-child{border:0}
+.ok{color:#1a9d6a;font-weight:700}.miss{color:#d08a00;font-weight:700}
+label{display:block;font-weight:600;font-size:14.5px;margin:14px 0 6px}label span{font-weight:400;color:var(--mute);font-size:13px}
+input[type=text],input[type=tel],input[type=email],input[type=url],textarea,select{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:#F7F8FB;color:var(--ink)}
+textarea{min-height:84px;resize:vertical}input:focus,textarea:focus{outline:2px solid var(--c);background:#fff}
+.chips{display:flex;flex-wrap:wrap;gap:8px}.chips label{margin:0;font-weight:500;display:inline-flex;align-items:center;gap:6px;background:#F7F8FB;border:1px solid var(--line);border-radius:999px;padding:8px 13px;font-size:14px;cursor:pointer}
+.chips input{accent-color:#2A9FD6}
+.days{display:grid;gap:8px}.day{display:grid;grid-template-columns:96px 1fr 1fr;gap:8px;align-items:center;font-size:14px}.day input{padding:9px 10px}
+.note{font-size:13.5px;color:#1d6f96;background:#E9F5FA;border-radius:12px;padding:11px 14px;margin-top:12px}
+.btn{display:flex;justify-content:center;align-items:center;gap:10px;width:100%;border:0;border-radius:999px;padding:16px;font:inherit;font-weight:700;font-size:16px;color:#fff;background:var(--g);box-shadow:0 10px 24px -10px #2A9FD6;cursor:pointer;margin-top:20px}
+.foot{text-align:center;color:var(--mute);font-size:12.5px;margin:22px 0 40px}
+</style></head><body><div class="wrap">
+<div class="top"><div class="mono">JC</div><div>Dr. Jainer Contreras<small>Ortodoncia</small></div></div>
+<h1>Completemos tu web</h1>
+<p class="lead">Este formulario sirve para que tu página muestre solo información real tuya. Lo que ya tenemos está cargado: revisalo y corregí lo que haga falta. Lo que falta, completalo si querés que aparezca. Toma unos 5 minutos.</p>
+
+<div class="card"><span class="tag">Lo que ya tenemos (de tu ficha de Google Maps)</span>
+<ul class="have">
+<li><span class="ok">✓</span>Nombre: Dr. Jainer Contreras · Ortodoncia</li>
+<li><span class="ok">✓</span>Dirección: Ciudad de la Paz 1701, CABA (Belgrano)</li>
+<li><span class="ok">✓</span>Teléfono / WhatsApp: +54 11 3158-1174</li>
+<li><span class="ok">✓</span>Días: sábado 14 a 19 h y domingo 14 a 20 h</li>
+<li><span class="ok">✓</span>Reseñas: 5,0 ★ con 125 opiniones en Google</li>
+<li><span class="ok">✓</span>6 fotos del consultorio y de la atención</li>
+<li><span class="ok">✓</span>Instagram en Maps: @jainercon3ras <span class="miss">(no abre, hay que confirmarlo)</span></li>
+<li><span class="miss">!</span>Tratamientos: la web dice “Ortodoncia, Alineadores y Consulta”, pero lo sacamos de las reseñas</li>
+<li><span class="miss">!</span>Faltan: matrícula, obras sociales, medios de pago, duración del turno, mail, logo, preguntas frecuentes propias</li>
+</ul></div>
+
+<form id="f">
+<div class="card"><h2>1. Profesional</h2><p class="sub">Cómo querés aparecer en la web.</p>
+<label>Nombre completo del profesional<input type="text" name="Nombre completo" value="Jainer Contreras"></label>
+<label>Título como querés que figure <span>(ej.: Dr., Od., Especialista en Ortodoncia)</span><input type="text" name="Título" value="Dr."></label>
+<label>Matrícula <span>(MN / MP, opcional pero da confianza)</span><input type="text" name="Matrícula"></label>
+<label>Formación / breve presentación <span>(universidad, especialización, años de experiencia)</span><textarea name="Presentación"></textarea></label>
+<label>¿Atiende alguien más en el consultorio? <span>(nombre y especialidad)</span><input type="text" name="Equipo"></label>
+</div>
+
+<div class="card"><h2>2. Tratamientos</h2><p class="sub">Marcá los que hacés. Solo vamos a mostrar estos.</p>
+<div class="chips" data-g="Tratamientos">
+<label><input type="checkbox" value="Ortodoncia con brackets metálicos" checked>Brackets metálicos</label>
+<label><input type="checkbox" value="Brackets estéticos / zafiro">Brackets estéticos</label>
+<label><input type="checkbox" value="Brackets autoligado">Autoligado</label>
+<label><input type="checkbox" value="Alineadores invisibles" checked>Alineadores invisibles</label>
+<label><input type="checkbox" value="Ortodoncia en niños / aparatos removibles">Ortodoncia en niños</label>
+<label><input type="checkbox" value="Ortopedia funcional">Ortopedia funcional</label>
+<label><input type="checkbox" value="Casos complejos (caninos retenidos)">Casos complejos</label>
+<label><input type="checkbox" value="Contención / retenedores">Retenedores</label>
+<label><input type="checkbox" value="Blanqueamiento">Blanqueamiento</label>
+<label><input type="checkbox" value="Limpieza">Limpieza</label>
+</div>
+<label>Otros tratamientos o marca de alineadores que usás<input type="text" name="Otros tratamientos"></label>
+</div>
+
+<div class="card"><h2>3. Días y horarios</h2><p class="sub">Prellenado con lo de Google Maps. La hora de cierre no se muestra en la web, solo la usamos para ofrecer turnos.</p>
+<div class="days" id="days"></div>
+<label>Duración de cada turno<select name="Duración del turno"><option value="">Elegí…</option><option>15 min</option><option>20 min</option><option>30 min</option><option>45 min</option><option>60 min</option><option>Depende del tratamiento</option></select></label>
+<label>¿Con cuánta anticipación se puede pedir turno?<input type="text" name="Anticipación" placeholder="Ej.: hasta 2 semanas antes"></label>
+</div>
+
+<div class="card"><h2>4. Cobertura y pagos</h2>
+<label>Obras sociales / prepagas que atendés <span>(o “solo particular”)</span><textarea name="Obras sociales"></textarea></label>
+<p style="font-weight:600;font-size:14.5px;margin:14px 0 6px">Medios de pago</p>
+<div class="chips" data-g="Medios de pago">
+<label><input type="checkbox" value="Efectivo">Efectivo</label><label><input type="checkbox" value="Transferencia">Transferencia</label>
+<label><input type="checkbox" value="Mercado Pago">Mercado Pago</label><label><input type="checkbox" value="Débito">Débito</label>
+<label><input type="checkbox" value="Crédito">Crédito</label><label><input type="checkbox" value="Cuotas">Cuotas</label></div>
+<label>Primera consulta <span>(opcional: precio, si es sin cargo, o no mostrar)</span><input type="text" name="Primera consulta"></label>
+</div>
+
+<div class="card"><h2>5. Ubicación y contacto</h2>
+<label>Dirección exacta<input type="text" name="Dirección" value="Ciudad de la Paz 1701, CABA"></label>
+<label>Piso / depto / timbre<input type="text" name="Piso/timbre"></label>
+<label>Cómo llegar <span>(colectivos, subte, estacionamiento, accesibilidad)</span><textarea name="Cómo llegar"></textarea></label>
+<label>WhatsApp donde recibir los turnos<input type="tel" name="WhatsApp turnos" value="+54 11 3158-1174"></label>
+<label>Mail para avisos de turnos <span>(opcional)</span><input type="email" name="Mail"></label>
+<label>Instagram<input type="text" name="Instagram" value="@jainercon3ras"></label>
+<label>Facebook / TikTok <span>(si tenés)</span><input type="text" name="Otras redes"></label>
+</div>
+
+<div class="card"><h2>6. Agenda de turnos</h2>
+<p style="font-weight:600;font-size:14.5px;margin:4px 0 6px">¿Cómo querés recibir cada turno?</p>
+<div class="chips" data-g="Recibir turnos por">
+<label><input type="checkbox" value="WhatsApp" checked>WhatsApp</label><label><input type="checkbox" value="Mail">Mail</label>
+<label><input type="checkbox" value="Google Calendar">Google Calendar</label><label><input type="checkbox" value="Planilla (Google Sheets)">Planilla con todos los turnos</label></div>
+<label>Mail de Google para el calendario <span>(si elegiste Calendar)</span><input type="email" name="Mail Calendar"></label>
+</div>
+
+<div class="card"><h2>7. Imagen y preguntas</h2>
+<label>¿Tenés logo? <select name="Logo"><option value="">Elegí…</option><option>Sí, lo mando por WhatsApp</option><option>No, usar las iniciales JC</option></select></label>
+<label>Colores que te gustan <span>(o “dejar los actuales”)</span><input type="text" name="Colores" value="Dejar los actuales (celeste y turquesa)"></label>
+<label>Preguntas que más te hacen los pacientes <span>(y tu respuesta)</span><textarea name="Preguntas frecuentes" placeholder="Ej.: ¿Cuánto duran los alineadores? …"></textarea></label>
+<label>¿Querés un dominio propio? <span>(ej.: draContreras.com.ar)</span><input type="text" name="Dominio"></label>
+<label>Algo más que quieras que diga o que no diga la web<textarea name="Comentarios"></textarea></label>
+<div class="note">📷 <b>Fotos:</b> mandalas aparte por WhatsApp (esta página no guarda archivos). Sirven: consultorio, fachada con cartel, vos trabajando, equipo, diplomas legibles. No hace falta mandar fotos de pacientes.</div>
+</div>
+<button class="btn" type="submit">Enviar respuestas por WhatsApp →</button>
+</form>
+<p class="foot">Los datos se envían solo por WhatsApp; esta página no guarda nada.</p>
+</div>
+<script>
+const DESTINO='5491168713479'; // WhatsApp que recibe las respuestas (configurable)
+const D=[['Lunes','',''],['Martes','',''],['Miércoles','',''],['Jueves','',''],['Viernes','',''],['Sábado','14:00','19:00'],['Domingo','14:00','20:00']];
+document.getElementById('days').innerHTML=D.map(([d,a,b])=>`<div class="day"><b>${d}</b><input type="text" data-d="${d}" data-k="desde" value="${a}" placeholder="desde"><input type="text" data-d="${d}" data-k="hasta" value="${b}" placeholder="hasta"></div>`).join('');
+document.getElementById('f').onsubmit=e=>{e.preventDefault();const f=e.target;let t='*Datos para la web – Dr. Jainer Contreras*\n';
+const add=(k,v)=>{if(v&&v.trim())t+=`\n*${k}:* ${v.trim()}`};
+f.querySelectorAll('input[name],textarea[name],select[name]').forEach(el=>{if(el.type!=='checkbox')add(el.name,el.value)});
+f.querySelectorAll('[data-g]').forEach(g=>add(g.dataset.g,[...g.querySelectorAll('input:checked')].map(i=>i.value).join(', ')));
+const h=D.map(([d])=>{const a=f.querySelector(`[data-d="${d}"][data-k=desde]`).value,b=f.querySelector(`[data-d="${d}"][data-k=hasta]`).value;return a||b?`${d} ${a}-${b}`:''}).filter(Boolean).join(' | ');
+add('Horarios',h);t+='\n\n(Fotos y logo los mando aparte)';
+window.open('https://wa.me/'+DESTINO+'?text='+encodeURIComponent(t),'_blank')};
+</script></body></html>
