@@ -1,61 +1,82 @@
 <!doctype html><html lang="es-AR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Carlos Ezequiel Serrano · Webs para negocios de barrio</title>
-<meta name="description" content="Webs para negocios: datos claros, reseñas reales, turnos, WhatsApp y mapa. Muestra gratis antes de pagar. Flores, CABA.">
-<meta property="og:title" content="Carlos Ezequiel Serrano · Webs para negocios"><meta property="og:description" content="Muestra gratis con los datos de tu negocio antes de pagar."><meta property="og:image" content="https://paginadeprueba-collab.github.io/carlos-serrano/og.jpg"><meta property="og:type" content="website">
+<meta name="description" content="Webs para negocios de barrio que generan turnos y confianza. Muestra gratis antes de pagar. Flores, CABA.">
+<meta property="og:title" content="Webs que trabajan por vos mientras atendés"><meta property="og:description" content="Muestra gratis con los datos de tu negocio. Nada hasta que la veas armada."><meta property="og:image" content="https://paginadeprueba-collab.github.io/carlos-serrano/og.jpg"><meta property="og:type" content="website">
 <link rel="icon" href="favicon.svg"><meta name="theme-color" content="#14161a">
 <style>
-:root{--bg:#f7f6f3;--ink:#14161a;--mut:#5d6168;--line:#e4e1da;--acc:#1f7a5a;--gold:#b08d57}
+:root{--bg:#f7f6f3;--ink:#14161a;--mut:#5d6168;--line:#e4e1da;--acc:#1f7a5a;--gold:#b08d57;--red:#a0442c}
 *{box-sizing:border-box;margin:0}body{font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink)}
 a{color:inherit}.c{max-width:1040px;margin:auto;padding:0 20px}section{padding:56px 0;border-top:1px solid var(--line)}
-h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:600;letter-spacing:-.01em;line-height:1.15}h1{font-size:clamp(30px,6vw,50px)}h2{font-size:clamp(25px,4.5vw,36px);margin-bottom:10px}
+h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:600;letter-spacing:-.01em;line-height:1.15}h1{font-size:clamp(32px,6.5vw,54px)}h2{font-size:clamp(25px,4.5vw,36px);margin-bottom:10px}
 .k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:8px}.lead{color:var(--mut);max-width:620px}
-.btn{display:inline-flex;align-items:center;gap:10px;background:var(--acc);color:#fff;text-decoration:none;font-weight:600;padding:15px 24px;border-radius:999px;border:0;font-size:16px;cursor:pointer}
-.hero{padding:34px 0 50px;border:0}.hg{display:grid;gap:28px;align-items:center}@media(min-width:820px){.hg{grid-template-columns:1.2fr .8fr}}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--acc);color:#fff;text-decoration:none;font-weight:600;padding:16px 28px;border-radius:999px;border:0;font-size:17px;cursor:pointer;box-shadow:0 4px 14px #1f7a5a33}
+.btn:hover{filter:brightness(1.05)}
+.hero{padding:34px 0 40px;border:0}.hg{display:grid;gap:28px;align-items:center}@media(min-width:820px){.hg{grid-template-columns:1.15fr .85fr}}
 .ph{position:relative}.ph img{width:100%;aspect-ratio:4/4.4;object-fit:cover;border-radius:20px;display:block}.ph figcaption{position:absolute;right:12px;bottom:12px;background:#fff;border-radius:12px;padding:8px 13px;font-size:14px;box-shadow:0 6px 20px #0002}.ph b{display:block}
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 24px}.tags span{border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 12px;font-size:14px}
-.car{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:18px 2px 10px;-webkit-overflow-scrolling:touch}.w{flex:0 0 220px;scroll-snap-align:start;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
-.w img{width:100%;height:340px;object-fit:cover;object-position:top;display:block;border-bottom:1px solid var(--line)}.w span{display:flex;justify-content:space-between;padding:11px 13px;font-weight:600;font-size:14px;gap:6px}.w small{color:var(--acc);white-space:nowrap}
+.badge{display:inline-block;background:#fff3e0;color:var(--red);font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px;margin-bottom:12px;border:1px solid #f0d0b0}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 24px}.tags span{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 13px;font-size:14px}
+.car{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:18px 2px 10px;-webkit-overflow-scrolling:touch}.w{flex:0 0 220px;scroll-snap-align:start;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:transform .2s}
+.w:hover{transform:translateY(-3px)}.w img{width:100%;height:340px;object-fit:cover;object-position:top;display:block;border-bottom:1px solid var(--line)}.w span{display:flex;justify-content:space-between;padding:11px 13px;font-weight:600;font-size:14px;gap:6px}.w small{color:var(--acc);white-space:nowrap}
 .note{font-size:15px;color:var(--mut);margin-top:6px}.g{display:grid;gap:14px;margin-top:22px}@media(min-width:720px){.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}}
 .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px}.n{font-family:Georgia,serif;font-size:28px;color:var(--gold)}.card h3{font-size:17px;margin:4px 0}.card p{color:var(--mut);font-size:15px}
-ul.inc{list-style:none;padding:0;display:grid;gap:10px;margin-top:20px}@media(min-width:720px){ul.inc{grid-template-columns:1fr 1fr}}ul.inc li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px 15px 13px 42px;position:relative}ul.inc li:before{content:"✓";position:absolute;left:15px;color:var(--acc);font-weight:800}
 .dark{background:var(--ink);color:#f2efe9;border:0}.dark .card{background:#1d2026;border-color:#2b2f37}.dark .card p{color:#b9bcc2}
 details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px 17px;margin-top:10px}summary{font-weight:600;cursor:pointer}details p{color:var(--mut);margin-top:8px}
 form{display:grid;gap:12px}label{font-size:14px;font-weight:600}input{width:100%;padding:13px;border:1px solid var(--line);border-radius:10px;font:inherit;margin-top:4px;background:#fff}
 iframe{width:100%;height:260px;border:0;border-radius:16px}footer{padding:30px 0 90px;color:var(--mut);font-size:14px;border-top:1px solid var(--line)}
 .fab{position:fixed;left:16px;bottom:16px;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 8px 24px #0004;z-index:9}.fab svg{width:30px;height:30px}
-.pb{font-size:14px;color:var(--mut);margin-bottom:6px}.pb b{color:#a0442c;font-weight:600}.card h3+p{margin-top:2px}.ps{padding:0;overflow:hidden}.ps img{width:100%;height:auto;display:block;border-bottom:1px solid var(--line)}.ps .lb{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin:14px 18px 2px}.ps .lp{color:#a0442c}.ps .ls{color:var(--acc)}.ps .tx{color:var(--ink);font-size:16px;margin:0 18px}.ps .tx:last-child{margin-bottom:18px}</style></head><body>
+.ps{padding:0;overflow:hidden}.ps img{width:100%;height:auto;display:block;border-bottom:1px solid var(--line)}.ps .lb{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin:14px 18px 2px}.ps .lp{color:var(--red)}.ps .ls{color:var(--acc)}.ps .tx{color:var(--ink);font-size:16px;margin:0 18px}.ps .tx:last-child{margin-bottom:18px}
+.benefits{display:grid;gap:12px;margin-top:18px}@media(min-width:600px){.benefits{grid-template-columns:1fr 1fr}}
+.ben{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}.ben .ico{font-size:22px;flex-shrink:0}.ben strong{display:block;font-size:15px}.ben span{color:var(--mut);font-size:14px}
+.trust{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0;font-size:14px}.trust span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 12px}
+</style></head><body>
 <header class="hero"><div class="c hg"><div>
 <p class="k">Carlos Ezequiel Serrano · Flores, CABA</p>
-<h1>Una web que trabaja por vos mientras atendés</h1>
-<p class="lead" style="margin-top:14px">Muestra lo que hacés, tus reseñas y cómo llegar, toma pedidos de turno y deja las consultas listas en tu WhatsApp.</p>
+<div class="badge">🔥 Solo 5 muestras gratis por semana</div>
+<h1>Tus clientes te buscan, ven solo una ficha y eligen a otro.</h1>
+<p class="lead" style="margin-top:14px">Armo una web con tus fotos, reseñas reales y turnos por WhatsApp. La ves armada <b>antes</b> de pagar nada. Mientras atendés, la web trabaja.</p>
 <div class="tags"><span>WhatsApp con mensaje armado</span><span>Turnos con día y hora</span><span>Mapa</span><span>Reseñas reales</span></div>
-<a class="btn" href="https://wa.me/5491168713479?text=Hola%20Carlos%2C%20quiero%20ver%20una%20muestra%20de%20web%20para%20mi%20negocio" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg> Pedí tu muestra gratis</a>
+<a class="btn" href="https://wa.me/5491168713479?text=Hola%20Carlos%2C%20quiero%20ver%20una%20muestra%20de%20web%20para%20mi%20negocio" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg> Pedí tu muestra GRATIS ahora</a>
+<div class="trust"><span>✓ Nada hasta ver la muestra</span><span>✓ Datos reales, sin inventar</span><span>✓ Flores, CABA</span></div>
 </div><figure class="ph"><img src="img/carlos.jpg" alt="Carlos Ezequiel Serrano"><figcaption><b>Carlos Ezequiel Serrano</b>Av. Riestra 3203, Flores</figcaption></figure></div></header>
+
+<section><div class="c"><p class="k">Qué ganas</p><h2>Más clientes, menos mensajes repetidos</h2>
+<div class="benefits">
+<div class="ben"><div class="ico">📱</div><div><strong>Consultas listas en WhatsApp</strong><span>Te llegan con día, hora y servicio. Sin perder tiempo aclarando lo mismo.</span></div></div>
+<div class="ben"><div class="ico">⭐</div><div><strong>Confianza antes de escribirte</strong><span>Fotos, reseñas reales y mapa. El cliente decide más rápido.</span></div></div>
+<div class="ben"><div class="ico">📅</div><div><strong>Turnos que llegan solos</strong><span>Agenda visible. Menos idas y vueltas por chat.</span></div></div>
+<div class="ben"><div class="ico">📍</div><div><strong>Mejor que solo Maps</strong><span>Aparecés con tu propia web. Link para Instagram, WhatsApp y Google.</span></div></div>
+</div></div></section>
+
 <section id="trabajos"><div class="c"><p class="k">Trabajos reales</p><h2>Webs publicadas</h2><p class="lead">Están online. Podés abrirlas y probar la agenda y el WhatsApp.</p>
 <div class="car"><a class="w" href="https://paginadeprueba-collab.github.io/jainer-contreras/" target="_blank" rel="noopener"><img src="img/jainer-contreras.jpg" alt="Web de Ortodoncia Jainer Contreras" loading="lazy"><span>Ortodoncia Jainer Contreras<small>Ver web ↗</small></span></a><a class="w" href="https://paginadeprueba-collab.github.io/dra-daniela-acuna/" target="_blank" rel="noopener"><img src="img/dra-daniela-acuna.jpg" alt="Web de Dra. Daniela Acuña" loading="lazy"><span>Dra. Daniela Acuña<small>Ver web ↗</small></span></a><a class="w" href="https://paginadeprueba-collab.github.io/cubides-ortodoncia/" target="_blank" rel="noopener"><img src="img/cubides-ortodoncia.jpg" alt="Web de Cubides Ortodoncia" loading="lazy"><span>Cubides Ortodoncia<small>Ver web ↗</small></span></a><a class="w" href="https://paginadeprueba-collab.github.io/white-odontologia/" target="_blank" rel="noopener"><img src="img/white-odontologia.jpg" alt="Web de White Odontología" loading="lazy"><span>White Odontología<small>Ver web ↗</small></span></a><a class="w" href="https://paginadeprueba-collab.github.io/palermo-dental/" target="_blank" rel="noopener"><img src="img/palermo-dental.jpg" alt="Web de Palermo Dental" loading="lazy"><span>Palermo Dental<small>Ver web ↗</small></span></a><a class="w" href="https://paginadeprueba-collab.github.io/dental-abasto/" target="_blank" rel="noopener"><img src="img/dental-abasto.jpg" alt="Web de Dental Abasto" loading="lazy"><span>Dental Abasto<small>Ver web ↗</small></span></a><a class="w" href="https://paginadeprueba-collab.github.io/coesp/" target="_blank" rel="noopener"><img src="img/coesp.jpg" alt="Web de COESP" loading="lazy"><span>COESP<small>Ver web ↗</small></span></a><a class="w" href="https://paginadeprueba-collab.github.io/aqua-dental/" target="_blank" rel="noopener"><img src="img/aqua-dental.jpg" alt="Web de Aqua Dental" loading="lazy"><span>Aqua Dental<small>Ver web ↗</small></span></a></div>
 <p class="note">Hasta ahora son de consultorios. El mismo esquema sirve para otros rubros.</p></div></section>
+
 <section><div class="c"><p class="k">Problemas y soluciones</p><h2>Qué resuelve la web</h2><div class="g g3"><div class="card ps"><img src="img/problema-solucion-1.webp" alt="Antes: una ficha pobre de Maps. Después: una web con fotos, reseñas y WhatsApp." loading="lazy" width="1000" height="563"><p class="lb lp">Problema</p><p class="tx">Te buscan, ven solo una ficha y eligen a otro.</p><p class="lb ls">Solución</p><p class="tx">Con una web clara, con fotos y reseñas, el cliente confía antes de escribirte.</p></div><div class="card ps"><img src="img/problema-solucion-2.webp" alt="Antes: mensajes repetidos. Después: un pedido de turno concreto." loading="lazy" width="1000" height="563"><p class="lb lp">Problema</p><p class="tx">Se te va el día contestando lo mismo.</p><p class="lb ls">Solución</p><p class="tx">Precios, horarios y ubicación quedan a la vista, y te llegan consultas listas para cerrar.</p></div><div class="card ps"><img src="img/problema-solucion-3.webp" alt="Antes: una web que no sirvió. Después: tu web terminada, vista antes de pagar." loading="lazy" width="1000" height="563"><p class="lb lp">Problema</p><p class="tx">Pagaste o te ofrecieron webs que no sirvieron.</p><p class="lb ls">Solución</p><p class="tx">Acá primero ves la tuya armada, sin pagar, y recién ahí decidís.</p></div></div>
 <p class="note" style="margin-top:14px">Dominio propio opcional, si querés una dirección con el nombre de tu negocio.</p></div></section>
+
 <section><div class="c"><p class="k">Cómo trabajo</p><h2>Ves el resultado antes de decidir</h2><div class="g g3">
 <div class="card"><div class="n">1</div><h3>Muestra con tus datos</h3><p>Uso la información pública de tu negocio: Maps, Instagram, reseñas. No invento nada.</p></div>
 <div class="card"><div class="n">2</div><h3>Corregimos juntos</h3><p>Me marcás qué está mal o qué falta: servicios, días, fotos.</p></div>
 <div class="card"><div class="n">3</div><h3>Se publica</h3><p>Queda online con un link para poner en Instagram, WhatsApp y Maps.</p></div></div></div></section>
+
 <section class="dark"><div class="c"><p class="k">Antes de pagar</p><h2>Qué queda claro desde el principio</h2><div class="g g3">
 <div class="card"><h3>Quién soy</h3><p>Carlos Ezequiel Serrano. Av. Riestra 3203, Flores, CABA. WhatsApp 11 6871-3479.</p></div>
 <div class="card"><h3>Qué incluye y en qué plazo</h3><p>Lo dejamos por escrito antes de empezar.</p></div>
 <div class="card"><h3>Cuándo se paga</h3><p>No pagás nada hasta ver tu muestra.</p></div></div></div></section>
-<!-- OPINIONES DE CLIENTES: agregar acá cuando haya opiniones reales (nombre del negocio + link a su web). -->
+
 <section><div class="c"><p class="k">Preguntas frecuentes</p><h2>Dudas habituales</h2>
 <details><summary>¿Cuánto tarda?</summary><p>Depende de cuánta información haya disponible y de lo que haya que corregir. El plazo se acuerda por escrito antes de empezar.</p></details>
 <details><summary>¿El dominio queda a mi nombre?</summary><p>Sí. Si elegís dominio propio, se registra a tu nombre.</p></details>
 <details><summary>¿Qué pasa si después quiero cambios?</summary><p>Los ajustes de la muestra se hacen antes de publicar. Para cambios posteriores, acordamos por escrito cómo se manejan.</p></details>
 <details><summary>¿Cómo se paga?</summary><p>Se acuerda por escrito antes de empezar, y no pagás nada hasta ver tu muestra.</p></details></div></section>
+
 <section id="contacto"><div class="c"><p class="k">Contacto</p><h2>Pedí tu muestra gratis</h2><div class="g g2">
 <form id="f"><p class="lead">Con estos tres datos alcanza para armar la muestra. Al enviar se abre WhatsApp con la información.</p>
 <label>Nombre del negocio<input id="neg" required></label><label>Rubro<input id="rub" required placeholder="Ej: peluquería, consultorio, taller"></label>
 <label>Link de Maps o Instagram<input id="lnk" placeholder="Pegá el link"></label><button class="btn" type="submit"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg> Enviar por WhatsApp</button></form>
 <div><iframe loading="lazy" title="Mapa" src="https://www.google.com/maps?q=Av.+Riestra+3203,+Flores,+CABA&output=embed"></iframe>
 <p style="margin-top:12px"><b>Av. Riestra 3203, Flores, CABA</b><br><a href="https://www.google.com/maps/search/?api=1&query=Av.+Riestra+3203,+CABA" target="_blank" rel="noopener">Cómo llegar en Maps</a> · <a href="https://wa.me/5491168713479" target="_blank" rel="noopener">WhatsApp 11 6871-3479</a></p></div></div></div></section>
+
 <footer><div class="c">Carlos Ezequiel Serrano · Webs para negocios · Flores, CABA</div></footer>
 <a class="fab" href="https://wa.me/5491168713479?text=Hola%20Carlos%2C%20quiero%20ver%20una%20muestra%20de%20web%20para%20mi%20negocio" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg></a>
 <script>document.getElementById('f').onsubmit=e=>{e.preventDefault();const v=i=>document.getElementById(i).value.trim();
