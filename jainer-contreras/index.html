@@ -48,6 +48,15 @@ h1{font-size:clamp(40px,5.4vw,68px)}h2{font-size:clamp(32px,4vw,50px)}h3{font-si
 .pane{padding:34px}.pane h3{font-size:28px;font-weight:400;margin-bottom:12px}
 .mini{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}.mini div{background:var(--bg);border-radius:16px;padding:18px;font-size:14.5px}.mini b{display:block;margin-bottom:4px;font-weight:600}
 .note{margin-top:18px;font-size:13px;color:#2A9FD6;background:#E9F5FA;border-radius:12px;padding:10px 14px}
+
+.ctraj{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ctraj .card{padding:22px;display:flex;flex-direction:column;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh)}
+.ctraj .ic{width:44px;height:44px;border-radius:14px;background:#E9F5FA;color:#2A9FD6;display:grid;place-items:center;font-size:22px;flex-shrink:0}
+.ctraj h3{font-size:17px;font-weight:600;letter-spacing:-.01em;line-height:1.25;margin:0}
+.ctraj p{color:var(--mute);font-size:14.5px;line-height:1.55;margin:0;flex:1}
+.ctraj-cta{display:flex;justify-content:center;margin-top:26px}
+@media(max-width:1020px){.ctraj{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.ctraj{grid-template-columns:1fr}}
 .svc{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .svc .card{overflow:hidden;display:flex;flex-direction:column}.svc .media{border-radius:0;height:220px}
 .svc .bd{padding:22px;display:flex;flex-direction:column;gap:10px;flex:1}.svc p{color:var(--mute);font-size:14.5px;flex:1}
@@ -163,8 +172,21 @@ section.wrap{padding-top:64px}section.hero{padding-top:10px}@media(max-width:640
 <div class="stats hcred"><span>Especialista en Ortodoncia y Ortopedia Maxilar</span><span>Universidad de Buenos Aires</span><span>Matrícula 42018</span></div>
 
 <div class="cta" style="margin-top:20px"><a href="#agenda" class="btn btn-p">Pedir turno<span class="ar">→</span></a><a href="#" class="btn btn-wa" data-wa><svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>WhatsApp</a></div></div>
-<div class="media dipl rv"><div class="hcar" id="hcar"><img src="img/hero-1-diplomas.webp" alt="Dr. Jainer Contreras con sus diplomas" style="object-position:50% 30%" fetchpriority="high"><img src="img/hero-2-keepsmiling.webp" alt="Dr. Jainer Contreras en KeepSmiling entregando un certificado" style="object-position:55% 40%" loading="lazy"><img src="img/hero-3-consultorio.webp" alt="Consultorio con sillón odontológico azul" style="object-position:50% 50%" loading="lazy"><img src="img/hero-4-paciente.webp" alt="Dr. Jainer Contreras con una paciente y su mamá" style="object-position:50% 30%" loading="lazy"><img src="img/hero-5-paciente.webp" alt="Dr. Jainer Contreras con un paciente y su papá" style="object-position:65% 30%" loading="lazy"><img src="img/hero-6-colgate.webp" alt="Dr. Jainer Contreras con una paciente" style="object-position:62% 22%" loading="lazy"></div><div class="hdots rdots" id="hdots"><button aria-label="Foto 1" class=on></button><button aria-label="Foto 2"></button><button aria-label="Foto 3"></button><button aria-label="Foto 4"></button><button aria-label="Foto 5"></button><button aria-label="Foto 6"></button></div><div class="cap">Dr. Jainer Contreras<small>Ortodoncia y Ortopedia Maxilar · UBA · Matrícula 42018</small></div></div>
+<div class="media dipl rv"><div class="hcar" id="hcar"><img src="img/principal-1.webp" alt="Dr. Jainer Contreras con sus diplomas" style="object-position:50% 12%" fetchpriority="high"><img src="img/principal-2.webp" alt="Dr. Jainer Contreras poniéndose los guantes" style="object-position:50% 10%" loading="lazy"><img src="img/principal-3.webp" alt="Dr. Jainer Contreras con modelos de brackets" style="object-position:50% 18%" loading="lazy"></div><div class="hdots rdots" id="hdots"><button aria-label="Foto 1" class=on></button><button aria-label="Foto 2"></button><button aria-label="Foto 3"></button></div><div class="cap">Dr. Jainer Contreras<small>Ortodoncia y Ortopedia Maxilar · UBA · Matrícula 42018</small></div></div>
 </div></section>
+
+<section class="wrap" id="como-trabajamos">
+<div class="shead rv"><div><span class="tag">Cómo trabajamos</span><h2 style="margin-top:14px">Cómo trabajamos</h2><p class="lead" style="margin-top:10px">Lo que priorizamos en cada consulta y durante todo el tratamiento.</p></div></div>
+<div class="ctraj">
+<div class="card rv"><div class="ic" aria-hidden="true">💬</div><h3>Te explicamos todo desde el primer día</h3><p>En la primera consulta te contamos el diagnóstico, las opciones y qué esperar de cada etapa, con tiempos reales y sin falsas promesas.</p></div>
+<div class="card rv"><div class="ic" aria-hidden="true">👨‍👩‍👧</div><h3>Niños, adolescentes y adultos</h3><p>Con los chicos trabajamos con paciencia para que cada visita sea tranquila. En adultos tratamos apiñamientos, problemas de mordida y sonrisa gingival, mirando dientes, encías y rostro en conjunto.</p></div>
+<div class="card rv"><div class="ic" aria-hidden="true">🔎</div><h3>Seguimiento de cerca</h3><p>Ajustamos tu aparatología en cada control y te contamos cada cambio, para que te sientas acompañado durante todo el tratamiento.</p></div>
+<div class="card rv"><div class="ic" aria-hidden="true">⏱️</div><h3>Puntualidad</h3><p>Respetamos tu turno y tu tiempo, sin salas de espera llenas.</p></div>
+<div class="card rv"><div class="ic" aria-hidden="true">✨</div><h3>Un consultorio limpio y cuidado</h3><p>Trabajamos con orden e higiene en cada paso.</p></div>
+<div class="card rv"><div class="ic" aria-hidden="true">🦷</div><h3>Especialistas en ortodoncia</h3><p>Nos dedicamos a la ortodoncia y te atendemos en Belgrano, Once y Monserrat, para que elijas el lugar que te quede más cómodo.</p></div>
+</div>
+<div class="ctraj-cta rv"><a class="btn btn-p" href="https://wa.me/5491131581174?text=Hola%2C%20quiero%20pedir%20una%20evaluaci%C3%B3n%20y%20presupuesto." target="_blank" rel="noopener">Pedí tu evaluación y presupuesto<span class="ar">→</span></a></div>
+</section>
 <section class="wrap" id="agenda"><div class="ag-wrap">
 <div class="rv"><span class="tag">Turnos en Belgrano</span><h2 style="margin-top:14px">Pedí tu turno por WhatsApp</h2><p class="lead" style="margin-top:10px">Contale qué fin de semana y en qué horario te queda mejor. Se abre WhatsApp con el mensaje armado y el doctor te confirma si hay lugar.</p>
 <div class="avisos" style="margin-top:18px"><div><b>Sábados</b> de 14 a 19 h · <b>Domingos</b> de 14 a 20 h</div><div>No atiende todos los fines de semana: la disponibilidad te la confirma él.</div><div>Los turnos se dan con 3 semanas de anticipación.</div></div></div>
