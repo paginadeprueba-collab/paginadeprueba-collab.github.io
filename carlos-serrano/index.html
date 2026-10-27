@@ -25,19 +25,21 @@ footer{padding:24px 0 80px;color:var(--mut);font-size:14px;text-align:center}
 .rev{flex:0 0 260px;scroll-snap-align:start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}
 .stars{color:#f5a623;font-size:16px;letter-spacing:1px}
 .rev b{display:block;margin:6px 0 4px;font-size:15px}.rev p{color:var(--mut);font-size:14px;margin:0}
+.rbox{border:0;padding:20px 0 8px}.rcard{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px 0 20px;box-shadow:0 8px 28px #0000000d}
+.rtop{display:flex;align-items:center;gap:16px;padding:0 22px}.big{font-size:60px;font-weight:300;line-height:1}.st{color:#f5b301;font-size:20px;letter-spacing:2px}.st2{font-size:26px}.rtop small{color:var(--mut);font-size:15px}
+.rtrack{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:20px 22px 8px;scrollbar-width:none}.rtrack::-webkit-scrollbar{display:none}
+.rv{flex:0 0 82%;max-width:320px;scroll-snap-align:start;border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:10px}
+.rv .q{font-size:16px;line-height:1.6;color:#2a2d33}.rv b{font-size:16px;margin-top:auto}.rv small{color:var(--mut);margin-top:-8px}
+.dots{display:flex;justify-content:center;gap:6px;margin-top:12px}.dots i{width:8px;height:8px;border-radius:99px;background:#d6dee6;transition:.2s}.dots i.on{width:26px;background:var(--acc)}
+.rnote{color:var(--mut);font-size:14px;padding:14px 22px 0}
 </style></head><body>
 
-<section style="border:0;padding:24px 0 8px"><div class="c">
-<p class="k">Ejemplos de lo que dicen</p>
-<div class="car">
-<div class="rev"><div class="stars">★★★★★</div><b>María G. · Peluquería en Flores</b><p>La web quedó clara y me llegan consultas por WhatsApp ya armadas. Me ahorré un montón de mensajes repetidos.</p></div>
-<div class="rev"><div class="stars">★★★★★</div><b>Juan P. · Taller mecánico</b><p>Antes solo tenía Maps. Ahora tengo sitio propio y la gente me escribe con el día y el servicio. Mucho más ordenado.</p></div>
-<div class="rev"><div class="stars">★★★★★</div><b>Laura S. · Consultorio dental</b><p>Vi la muestra antes de pagar. Quedó profesional y las reseñas se ven bien. Recomendable si querés algo simple y efectivo.</p></div>
-<div class="rev"><div class="stars">★★★★★</div><b>Carlos R. · Gimnasio de barrio</b><p>La publicidad local + la web hizo que me contacten más personas del barrio. WhatsApp ya no me explota el teléfono.</p></div>
-<div class="rev"><div class="stars">★★★★★</div><b>Ana M. · Centro de estética</b><p>Rápido, claro y sin vueltas. Me mostró la web con mis datos reales y recién ahí decidí. Quedó muy bien.</p></div>
-</div>
-<p class="lead" style="margin-top:16px;font-size:15px">Nada hasta que veas tu muestra armada. Usamos solo datos públicos de tu negocio.</p>
-</div></section>
+<section class="rbox"><div class="c"><div class="rcard">
+<div class="rtop"><span class="big">5,0</span><div><div class="st st2">★★★★★</div><small>Ejemplos de lo que dicen</small></div></div>
+<div class="rtrack" id="rt"><div class="rv"><div class="st">★★★★★</div><p class="q">“La web quedó clara y me llegan consultas por WhatsApp ya armadas. Me ahorré un montón de mensajes repetidos.”</p><b>María G.</b><small>Peluquería en Flores</small></div><div class="rv"><div class="st">★★★★★</div><p class="q">“Antes solo tenía Maps. Ahora tengo sitio propio y la gente me escribe con el día y el servicio. Mucho más ordenado.”</p><b>Juan P.</b><small>Taller mecánico</small></div><div class="rv"><div class="st">★★★★★</div><p class="q">“Vi la muestra antes de pagar. Quedó profesional y las reseñas se ven bien. Recomendable si querés algo simple y efectivo.”</p><b>Laura S.</b><small>Consultorio dental</small></div><div class="rv"><div class="st">★★★★★</div><p class="q">“La publicidad local + la web hizo que me contacten más personas del barrio. WhatsApp ya no me explota el teléfono.”</p><b>Carlos R.</b><small>Gimnasio de barrio</small></div><div class="rv"><div class="st">★★★★★</div><p class="q">“Rápido, claro y sin vueltas. Me mostró la web con mis datos reales y recién ahí decidí. Quedó muy bien.”</p><b>Ana M.</b><small>Centro de estética</small></div></div>
+<div class="dots" id="dt"><i></i><i></i><i></i><i></i><i></i></div>
+<p class="rnote">Nada hasta que veas tu muestra armada. Usamos solo datos públicos de tu negocio.</p>
+</div></div></section>
 
 <header class="hero"><div class="c hg"><div>
 <p class="k">Carlos Ezequiel Serrano · Flores, CABA</p>
@@ -95,4 +97,5 @@ footer{padding:24px 0 80px;color:var(--mut);font-size:14px;text-align:center}
 <a class="fab" href="https://wa.me/5491168713479?text=Hola%20Carlos%2C%20quiero%20ver%20una%20muestra" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg></a>
 <script>document.getElementById('f').onsubmit=e=>{e.preventDefault();const n=document.getElementById('neg').value.trim(),l=document.getElementById('lnk').value.trim();
 const t=`Hola Carlos, quiero una muestra de web.\nNegocio: ${n}\nLink o dirección: ${l||'-'}`;window.open('https://wa.me/5491168713479?text='+encodeURIComponent(t),'_blank')}</script>
+<script>(()=>{const t=document.getElementById('rt'),d=[...document.querySelectorAll('#dt i')];const u=()=>{const w=t.firstElementChild.offsetWidth+14;const i=Math.round(t.scrollLeft/w);d.forEach((x,j)=>x.classList.toggle('on',j===Math.min(i,d.length-1)))};t.addEventListener('scroll',u,{passive:true});u()})()</script>
 </body></html>
