@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Propuesta para Alcaraz Odontología Integral · Carlos Serrano</title>
+<meta name="description" content="Propuesta privada: web ya armada para Alcaraz Odontología Integral. Planes 12 y 24 meses.">
+<meta name="theme-color" content="#0F1F1C">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<style>
+:root{
+  --bg:#f7f6f3;--ink:#14161a;--mut:#5d6168;--line:#e4e1da;
+  --acc:#14A89A;--acc-d:#0D7F74;--gold:#b08d57;--soft:#E6F7F3
+}
+*{box-sizing:border-box;margin:0}
+body{font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.c{max-width:720px;margin:auto;padding:0 20px}
+section{padding:40px 0;border-top:1px solid var(--line)}
+h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:600;letter-spacing:-.02em;line-height:1.15}
+h1{font-size:clamp(28px,6vw,40px)}
+h2{font-size:clamp(22px,4vw,28px);margin-bottom:10px}
+.k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:8px}
+.lead{color:var(--mut);max-width:540px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--acc);color:#fff;text-decoration:none;font-weight:600;padding:14px 24px;border-radius:999px;font-size:15px;box-shadow:0 4px 14px #14A89A33;border:0;cursor:pointer}
+.btn:hover{background:var(--acc-d)}
+.btn-ghost{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:none}
+.btn-ghost:hover{background:#fff;border-color:var(--acc);color:var(--acc-d)}
+.hero{padding:36px 0 28px;border:0}
+.note{font-size:14px;color:var(--mut);margin-top:10px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px}
+.g{display:grid;gap:14px;margin-top:16px}
+@media(min-width:700px){.g2{grid-template-columns:1fr 1fr}}
+.prev{display:grid;gap:14px;margin:18px 0 16px}
+@media(min-width:700px){.prev{grid-template-columns:.7fr 1.3fr;align-items:start}}
+.phone{background:#fff;border:1px solid var(--line);border-radius:22px;padding:10px;box-shadow:0 8px 24px #0000000c;max-width:240px;margin:0 auto}
+.phone img{width:100%;display:block;border-radius:14px;aspect-ratio:9/16;object-fit:cover;object-position:top}
+.desk{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 8px 24px #0000000c}
+.desk img{width:100%;display:block;aspect-ratio:16/10;object-fit:cover;object-position:top}
+.work{display:grid;gap:16px;align-items:center;margin-top:16px}
+@media(min-width:700px){.work{grid-template-columns:160px 1fr}}
+.work .thumb{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;max-width:160px;box-shadow:0 6px 18px #0000000a}
+.work .thumb img{width:100%;display:block;aspect-ratio:9/14;object-fit:cover;object-position:top}
+.work a.link{color:var(--acc-d);font-weight:600;text-decoration:none;word-break:break-all}
+.work a.link:hover{text-decoration:underline}
+.plan{position:relative;background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.plan.hi{border-color:var(--acc);box-shadow:0 10px 28px #14A89A22;background:linear-gradient(180deg,#fff 60%,var(--soft))}
+.badge{align-self:start;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--acc);color:#fff;border-radius:999px;padding:5px 12px}
+.price{font-family:Georgia,"Times New Roman",serif;font-size:clamp(28px,5vw,36px);font-weight:600;letter-spacing:-.02em;line-height:1.1}
+.price small{display:block;font-family:system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--mut);margin-top:6px;letter-spacing:0}
+.plan ul{list-style:none;display:grid;gap:8px;margin:4px 0 8px;color:var(--mut);font-size:14.5px}
+.plan ul li{padding-left:22px;position:relative}
+.plan ul li:before{content:"✓";position:absolute;left:0;color:var(--acc-d);font-weight:700}
+.hint{font-size:13.5px;color:var(--acc-d);font-weight:600;background:var(--soft);border-radius:10px;padding:8px 12px}
+.steps{counter-reset:s;display:grid;gap:12px;margin-top:16px}
+.step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 16px 16px 56px;position:relative}
+.step:before{counter-increment:s;content:counter(s);position:absolute;left:14px;top:16px;width:28px;height:28px;border-radius:50%;background:var(--acc);color:#fff;font-size:13px;font-weight:700;display:grid;place-items:center}
+.step b{display:block;margin-bottom:2px}
+.step p{color:var(--mut);font-size:14.5px;margin:0}
+.trust{margin-top:16px;background:var(--soft);border:1px solid #c8e9e1;border-radius:14px;padding:14px 16px;font-weight:600;color:var(--acc-d);font-size:15px}
+.fab{position:fixed;left:16px;bottom:16px;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 8px 24px #0004;z-index:9;text-decoration:none}
+footer{padding:24px 0 88px;color:var(--mut);font-size:13.5px;text-align:center;border-top:1px solid var(--line)}
+.from{font-size:14px;color:var(--mut);margin-top:10px}
+.from a{color:var(--acc-d);font-weight:600;text-decoration:none}
+.from a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+
+<header class="hero"><div class="c">
+<p class="k">Propuesta privada</p>
+<h1>Propuesta para Alcaraz Odontología Integral</h1>
+<p class="lead" style="margin-top:12px">Les armo la web del consultorio con sus fotos, reseñas y horarios reales. Abajo está la muestra y cómo seguimos.</p>
+<p class="from">De <a href="https://paginadeprueba-collab.github.io/carlos-serrano/" target="_blank" rel="noopener">Carlos Serrano</a> · Flores, CABA</p>
+</div></header>
+
+<section><div class="c">
+<p class="k">Muestra lista</p>
+<h2>Su web ya está armada</h2>
+<p class="lead">La monté con las fotos del consultorio, las reseñas de Google y el horario real. Pueden mirarla ahora, sin compromiso.</p>
+<div class="prev">
+<div class="phone"><img src="img/alcaraz-mobile.webp" alt="Vista celular de la web de Alcaraz" width="323" height="700"></div>
+<div class="desk"><img src="img/alcaraz-desktop.webp" alt="Vista escritorio de la web de Alcaraz" width="800" height="500"></div>
+</div>
+<a class="btn" href="https://paginadeprueba-collab.github.io/alcaraz-odontologia/" target="_blank" rel="noopener">Ver la web completa</a>
+<p class="note">Es una muestra. Cuando elijan un plan, la dejamos a punto y la publicamos con su dominio .com.</p>
+</div></section>
+
+<section><div class="c">
+<p class="k">Referencia reciente</p>
+<h2>Un trabajo real, online</h2>
+<div class="work">
+<a class="thumb" href="https://ortodonciacontreras.com" target="_blank" rel="noopener"><img src="img/jainer-live.webp" alt="Web del Dr. Jainer Contreras" width="323" height="700"></a>
+<div>
+<p class="lead" style="margin:0">Ayer terminé la web del <b>Dr. Jainer Contreras</b>, ortodoncista. Ya está online con dominio propio.</p>
+<p style="margin-top:12px"><a class="link" href="https://ortodonciacontreras.com" target="_blank" rel="noopener">ortodonciacontreras.com</a></p>
+<p class="note">Mismo tipo de trabajo: sitio claro, pensado para el celular, con turnos por WhatsApp.</p>
+</div>
+</div>
+</div></section>
+
+<section><div class="c">
+<p class="k">Planes</p>
+<h2>Elegí el tiempo de acompañamiento</h2>
+<p class="lead">Ambos incluyen el dominio .com propio. El mantenimiento cubre actualizaciones de cada detalle mientras dure el plan.</p>
+<div class="g g2" style="margin-top:18px">
+<article class="plan hi">
+<span class="badge">El más elegido</span>
+<h3 style="font-size:20px;font-weight:600;margin:4px 0 0">Plan 24 meses</h3>
+<p class="price">$450.000<small>Dos pagos de $225.000 · $18.750 por mes</small></p>
+<ul>
+<li>Dominio .com propio</li>
+<li>Mantenimiento y actualizaciones de cada detalle durante 2 años</li>
+</ul>
+<p class="hint">Por solo $50.000 más, el doble de tiempo</p>
+<a class="btn" style="margin-top:4px" href="https://wa.me/5491168713479?text=Hola%20Carlos%2C%20somos%20Alcaraz%20Odontolog%C3%ADa%2C%20elegimos%20el%20plan%20de%2024%20meses" target="_blank" rel="noopener">Elegir plan 24 meses</a>
+</article>
+<article class="plan">
+<h3 style="font-size:20px;font-weight:600;margin:0">Plan 12 meses</h3>
+<p class="price">$400.000<small>Dos pagos de $200.000 · $33.333 por mes</small></p>
+<ul>
+<li>Dominio .com propio</li>
+<li>Mantenimiento y actualizaciones durante 1 año</li>
+</ul>
+<a class="btn btn-ghost" style="margin-top:8px" href="https://wa.me/5491168713479?text=Hola%20Carlos%2C%20somos%20Alcaraz%20Odontolog%C3%ADa%2C%20elegimos%20el%20plan%20de%2012%20meses" target="_blank" rel="noopener">Elegir plan 12 meses</a>
+</article>
+</div>
+</div></section>
+
+<section><div class="c">
+<p class="k">Pasos</p>
+<h2>¿Cómo seguimos?</h2>
+<div class="steps">
+<div class="step"><b>Eligen el plan y pagan la primera mitad</b><p>24 meses ($225.000) o 12 meses ($200.000).</p></div>
+<div class="step"><b>Les envío un formulario</b><p>Para completar datos y cambios: número de matrícula, otros tratamientos, imágenes, horarios, textos y detalles.</p></div>
+<div class="step"><b>Actualizo la web al detalle</b><p>Antes de ponerle su dominio .com, dejamos todo como lo necesitan.</p></div>
+<div class="step"><b>Online con su dominio, pagan la otra mitad</b><p>Cuando la ven publicada con su .com, cierran el segundo pago.</p></div>
+</div>
+<p class="trust">Ven todo antes de pagar el total.</p>
+</div></section>
+
+<section style="border-bottom:0"><div class="c">
+<p class="k">Quién soy</p>
+<h2>Carlos Serrano</h2>
+<p class="lead">Armo webs para consultorios y negocios de barrio desde Flores, CABA. Trato directo por WhatsApp, sin vueltas. Primero ven la muestra; después decidimos.</p>
+<p style="margin-top:14px"><a class="btn btn-ghost" href="https://paginadeprueba-collab.github.io/carlos-serrano/" target="_blank" rel="noopener">Conocer más</a></p>
+</div></section>
+
+<footer><div class="c">Propuesta privada · Carlos Serrano · Flores, CABA</div></footer>
+
+<a class="fab" href="https://wa.me/5491168713479?text=Hola%20Carlos%2C%20somos%20Alcaraz%20Odontolog%C3%ADa%2C%20queremos%20hablar%20de%20la%20propuesta" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg></a>
+</body>
+</html>
