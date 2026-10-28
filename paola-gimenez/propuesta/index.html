@@ -77,20 +77,21 @@ h2{font-size:clamp(20px,4.2vw,26px);margin-bottom:6px}
 .shared li{padding-left:16px;position:relative}
 .shared li:before{content:"✓";position:absolute;left:0;color:var(--acc-d);font-weight:700;font-size:11px}
 
-.plans{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
-.plan{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 10px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px;align-items:stretch}
+.plan{background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 8px 12px;display:flex;flex-direction:column;gap:6px;min-width:0;height:100%}
 .plan.hi{border-color:var(--acc);box-shadow:0 6px 18px #14A89A22;background:linear-gradient(180deg,#fff 40%,var(--soft))}
-.badge{align-self:start;font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:var(--acc);color:#fff;border-radius:999px;padding:3px 8px}
-.plan h3{font-size:14px;font-weight:700;margin:0;font-family:system-ui,sans-serif}
-.plan .blurb{font-size:11.5px;color:var(--mut);line-height:1.3}
-.price{font-family:Georgia,"Times New Roman",serif;font-size:clamp(20px,5.5vw,26px);font-weight:600;letter-spacing:-.02em;line-height:1.1}
-.price small{display:block;font-family:system-ui,sans-serif;font-size:11.5px;font-weight:500;color:var(--mut);margin-top:3px}
-.save{background:#fff;border:1px solid #b9e4db;border-radius:10px;padding:7px 8px;font-size:11px;color:var(--acc-d);font-weight:600;line-height:1.35}
+.badge{align-self:start;font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:var(--acc);color:#fff;border-radius:999px;padding:3px 7px}
+.plan h3{font-size:12.5px;font-weight:700;margin:0;font-family:system-ui,sans-serif;line-height:1.25}
+.price{font-family:Georgia,"Times New Roman",serif;font-size:clamp(18px,5vw,24px);font-weight:600;letter-spacing:-.02em;line-height:1.1}
+.pay{font-size:10.5px;color:var(--mut);line-height:1.35}
+.save{background:#fff;border:1px solid #b9e4db;border-radius:8px;padding:5px 7px;font-size:10.5px;color:var(--acc-d);font-weight:600;line-height:1.3}
 .save em{font-style:normal;font-weight:800;color:var(--ink)}
-.extras{list-style:none;display:grid;gap:4px;font-size:11.5px;color:var(--mut);margin:2px 0}
-.extras li{padding-left:14px;position:relative}
-.extras li:before{content:"✓";position:absolute;left:0;color:var(--acc-d);font-weight:700;font-size:10px}
-.plan .btn{margin-top:auto;padding:11px 8px;font-size:12.5px;width:100%}
+.rows{list-style:none;display:grid;gap:0;margin:2px 0 4px;border-top:1px solid var(--line)}
+.rows li{display:grid;grid-template-columns:14px 1fr;gap:5px;align-items:start;font-size:10.5px;line-height:1.3;color:#3d4441;padding:5px 0;border-bottom:1px solid var(--line)}
+.rows .y,.rows .n{width:14px;height:14px;border-radius:50%;display:grid;place-items:center;font-size:8px;font-weight:800;margin-top:1px}
+.rows .y{background:var(--ok-bg);color:var(--acc-d)}
+.rows .n{background:#FBEDEC;color:var(--bad)}
+.plan .btn{margin-top:auto;padding:10px 6px;font-size:12px;width:100%;position:relative;z-index:1}
 .btn-ghost{background:#fff}
 
 .steps{counter-reset:s;display:grid;gap:7px;margin-top:10px}
@@ -99,8 +100,8 @@ h2{font-size:clamp(20px,4.2vw,26px);margin-bottom:6px}
 .step b{display:block;margin-bottom:1px;font-size:13.5px}
 .step p{color:var(--mut);font-size:12.5px;margin:0}
 .trust{margin-top:10px;background:var(--soft);border:1px solid #c8e9e1;border-radius:10px;padding:10px 12px;font-weight:600;color:var(--acc-d);font-size:13px}
-.fab{position:fixed;left:14px;bottom:14px;width:52px;height:52px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 8px 24px #0004;z-index:9;text-decoration:none}
-footer{padding:18px 0 80px;color:var(--mut);font-size:12px;text-align:center;border-top:1px solid var(--line)}
+.fab{position:fixed;right:14px;bottom:14px;width:52px;height:52px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 8px 24px #0004;z-index:9;text-decoration:none}
+footer{padding:18px 0 90px;color:var(--mut);font-size:12px;text-align:center;border-top:1px solid var(--line)}
 @media(min-width:640px){
   .hero-grid{grid-template-columns:1.1fr .9fr;text-align:left;align-items:center}
   .hero .sub,.from{margin-left:0;text-align:left}
@@ -110,8 +111,11 @@ footer{padding:18px 0 80px;color:var(--mut);font-size:12px;text-align:center;bor
   .side{padding:16px;font-size:13.5px}
   .side h3{font-size:15px}
   .plans{gap:12px}
-  .plan{padding:16px}
-  .price{font-size:28px}
+  .plan{padding:14px 12px}
+  .plan h3{font-size:14px}
+  .price{font-size:26px}
+  .rows li{font-size:12px;padding:6px 0}
+  .pay{font-size:12px}
 }
 </style>
 </head>
@@ -184,42 +188,44 @@ footer{padding:18px 0 80px;color:var(--mut);font-size:12px;text-align:center;bor
 
 <section><div class="c">
 <p class="k">Planes</p>
-<h2>Qué incluye cada plan</h2>
-<p class="lead">Ambos en dos cuotas. Web + dominio .com + mantenimiento.</p>
-<div class="shared">
-<b>Incluido en los dos planes</b>
-<ul>
-<li>Web profesional con fotos, tratamientos, reseñas y mapa</li>
-<li>Agenda digital de turnos (ordena pedidos y facilita la agenda a la secretaria)</li>
-<li>Botón de WhatsApp directo</li>
-<li>Dominio .com propio</li>
-<li>Buena presencia en Google y Google Maps</li>
-<li>Cambios de fotos, textos, horarios y tratamientos</li>
-<li>Mantenimiento y soporte por WhatsApp</li>
-</ul>
-</div>
+<h2>Elegí tu plan</h2>
+<p class="lead">Misma web en los dos. La diferencia es cuánto tiempo queda cubierta.</p>
 <div class="plans">
 <article class="plan hi">
 <span class="badge">Recomendado</span>
-<h3>24 meses</h3>
-<p class="blurb">24 meses de web online con tu dominio .com, mantenimiento y actualizaciones incluidas.</p>
-<p class="blurb" style="margin-top:2px">En ese tiempo: cambios de textos, fotos, tratamientos y horarios; la web online y funcionando; y el dominio .com.</p>
-<p class="price">$450.000<small>Dos pagos de $225.000</small></p>
-<p class="save">Por <em>$50.000 más</em>: 1 año extra de mantenimiento. Sin volver a pagar al cumplir el primero.</p>
-<ul class="extras">
-<li>Prioridad en los cambios</li>
-<li>Respuestas automáticas por WhatsApp</li>
-<li>Soporte 24 meses</li>
+<h3>Plan 24 meses: tu web online 2 años con todo incluido</h3>
+<p class="price">$450.000</p>
+<p class="pay">Pagás en 2 partes: $225.000 al empezar y $225.000 cuando está online</p>
+<p class="save"><em>$50.000 más</em> por 1 año extra</p>
+<ul class="rows">
+<li><span class="y">✓</span><span>Web profesional con fotos, tratamientos y reseñas</span></li>
+<li><span class="y">✓</span><span>Agenda digital de turnos</span></li>
+<li><span class="y">✓</span><span>Botón de WhatsApp</span></li>
+<li><span class="y">✓</span><span>Dominio .com propio</span></li>
+<li><span class="y">✓</span><span>Presencia en Google Maps</span></li>
+<li><span class="y">✓</span><span>Cambios de textos, fotos, horarios y tratamientos</span></li>
+<li><span class="y">✓</span><span>Mantenimiento y soporte</span></li>
+<li><span class="y">✓</span><span>Duración: 24 meses</span></li>
+<li><span class="y">✓</span><span>Prioridad en cambios</span></li>
+<li><span class="y">✓</span><span>Respuestas automáticas WhatsApp</span></li>
 </ul>
 <a class="btn" href="https://wa.me/5491168713479?text=Hola%20Carlos%2C%20soy%20Paola%20Gimenez%2C%20elegimos%20el%20plan%20de%2024%20meses" target="_blank" rel="noopener">Elegir 24 meses</a>
 </article>
 <article class="plan">
-<h3>12 meses</h3>
-<p class="blurb">12 meses de web online con tu dominio .com, mantenimiento y actualizaciones incluidas.</p>
-<p class="blurb" style="margin-top:2px">En ese tiempo: cambios de textos, fotos, tratamientos y horarios; la web online y funcionando; y el dominio .com.</p>
-<p class="price">$400.000<small>Dos pagos de $200.000</small></p>
-<ul class="extras">
-<li>Soporte 12 meses</li>
+<h3>Plan 12 meses: tu web online 1 año con todo incluido</h3>
+<p class="price">$400.000</p>
+<p class="pay">Pagás en 2 partes: $200.000 al empezar y $200.000 cuando está online</p>
+<ul class="rows">
+<li><span class="y">✓</span><span>Web profesional con fotos, tratamientos y reseñas</span></li>
+<li><span class="y">✓</span><span>Agenda digital de turnos</span></li>
+<li><span class="y">✓</span><span>Botón de WhatsApp</span></li>
+<li><span class="y">✓</span><span>Dominio .com propio</span></li>
+<li><span class="y">✓</span><span>Presencia en Google Maps</span></li>
+<li><span class="y">✓</span><span>Cambios de textos, fotos, horarios y tratamientos</span></li>
+<li><span class="y">✓</span><span>Mantenimiento y soporte</span></li>
+<li><span class="y">✓</span><span>Duración: 12 meses</span></li>
+<li><span class="n">✗</span><span>Prioridad en cambios</span></li>
+<li><span class="n">✗</span><span>Respuestas automáticas WhatsApp</span></li>
 </ul>
 <a class="btn btn-ghost" href="https://wa.me/5491168713479?text=Hola%20Carlos%2C%20soy%20Paola%20Gimenez%2C%20elegimos%20el%20plan%20de%2012%20meses" target="_blank" rel="noopener">Elegir 12 meses</a>
 </article>
