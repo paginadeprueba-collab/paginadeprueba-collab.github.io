@@ -2,18 +2,23 @@
 <html lang="es-AR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Carlos Ezequiel Serrano · Webs para negocios</title>
 <meta name="description" content="Tu negocio en una web clara y profesional. La armamos con tus datos y la ves antes de decidir.">
 <link rel="icon" href="favicon.svg">
 <meta name="theme-color" content="#14161a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f7f6f3;--ink:#14161a;--mut:#5d6168;--line:#e4e1da;--acc:#1f7a5a;--gold:#b08d57;--card:#fff;--blue:#2A9FD6}
-*{box-sizing:border-box;margin:0}
-html,body{max-width:100%;overflow-x:hidden}
-body{font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);overflow-wrap:anywhere}
+:root{--bg:#f7f6f3;--ink:#14161a;--mut:#5d6168;--line:#e4e1da;--acc:#1f7a5a;--gold:#b08d57;
+  --j-bg:#EEF0F4;--j-card:#fff;--j-ink:#0E1222;--j-mute:#5E6478;--j-line:#E1E4EB;--j-r:22px;--j-sh:0 10px 30px -12px rgba(20,30,70,.12)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;max-width:100%;overflow-x:hidden}
+body{font:16px/1.55 Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);max-width:100%;overflow-x:hidden;overflow-wrap:anywhere;-webkit-font-smoothing:antialiased}
+img,iframe,svg{max-width:100%;height:auto}
 a{color:inherit}
-.c{max-width:960px;margin:auto;padding:0 16px;width:100%}
+.c{max-width:960px;margin:0 auto;padding:0 20px;width:100%;min-width:0}
 section{padding:48px 0;border-top:1px solid var(--line)}
 h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:600;letter-spacing:-.02em;line-height:1.12}
 h1{font-size:clamp(28px,6.5vw,52px)}
@@ -22,57 +27,53 @@ h2{font-size:clamp(24px,4.5vw,36px);margin-bottom:16px}
 .lead{color:var(--mut);max-width:540px;font-size:17px}
 .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--acc);color:#fff;text-decoration:none;font-weight:600;padding:14px 24px;border-radius:999px;font-size:15px;box-shadow:0 4px 14px #1f7a5a33;border:0;cursor:pointer}
 .hero{padding:36px 0 32px;border:0}
-.hg{display:grid;gap:24px;align-items:center}
-@media(min-width:800px){.hg{grid-template-columns:1.3fr .7fr}}
+.hg{display:grid;gap:24px;align-items:center;min-width:0}
+@media(min-width:800px){.hg{grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr)}}
 .ph{min-width:0}
-.ph img{width:100%;max-width:100%;aspect-ratio:1;object-fit:cover;border-radius:20px;display:block}
+.ph img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:20px;display:block}
 
-/* reviews — estilo Jainer */
-.rwrap{border:0;padding:16px 0 8px}
-.revcard{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:0 10px 30px -12px rgba(20,30,70,.12);padding:22px 14px 16px;display:flex;flex-direction:column;gap:4px;width:100%;max-width:100%;min-width:0}
-.rtop{display:flex;align-items:center;gap:14px;padding:0 6px}
-.rtop b{font-size:48px;font-weight:300;line-height:1}
-.rtop small{display:block;color:var(--mut);font-size:13px;margin-top:2px}
-.stars{color:#F5B301;font-size:20px;letter-spacing:2px;line-height:1;display:inline-flex;align-items:center}
-.stars .h{position:relative;display:inline-block;color:#e2e2e2}
-.stars .h::before{content:"★";position:absolute;left:0;top:0;width:50%;overflow:hidden;color:#F5B301}
-.rcar{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:12px 0 0;padding:4px 2px;overscroll-behavior-x:contain;align-items:flex-start;max-width:100%}
-.rcar::-webkit-scrollbar{display:none}
-.rs{flex:0 0 min(86%,300px);max-width:100%;scroll-snap-align:start;background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px 18px;display:flex;flex-direction:column;gap:8px;box-shadow:0 6px 20px rgba(20,20,60,.05);min-width:0}
-.rs p{font-size:15px;line-height:1.5;margin:0;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
-.rs.open p{-webkit-line-clamp:unset}
-.rs .more{align-self:start;border:0;background:none;color:var(--blue);font-weight:600;padding:0;font-size:14px;cursor:pointer;font-family:inherit}
-.rs b{font-weight:600;font-size:15px}
-.rs small{color:#777;margin-top:-4px;font-size:13px}
-.rs a{color:var(--acc);font-weight:600;text-decoration:none}
-.rdots{display:flex;gap:6px;justify-content:center;margin:12px 0 8px}
-.rdots button{width:8px;height:8px;border-radius:9px;border:0;background:#C9E7F4;padding:0;transition:.25s;cursor:pointer}
-.rdots button.on{width:22px;background:linear-gradient(90deg,#2A9FD6,#4FC3C9)}
-.glink{font-size:14px;font-weight:600;color:var(--blue);text-decoration:none;padding:0 6px;display:inline-block}
-@media(min-width:700px){
-.rwrap{padding:28px 0 12px}
-.revcard{padding:26px 22px 18px}
-.rtop b{font-size:56px}
-.rs{flex:0 0 min(420px,86%)}
-}
+/* ===== Reviews: EXACT Jainer structure/CSS (scoped under #resenas) ===== */
+#resenas.wrap{max-width:1240px;margin:0 auto;padding:16px 20px 8px;border:0;width:100%;min-width:0}
+#resenas .card{background:var(--j-card);border:1px solid var(--j-line);border-radius:var(--j-r);box-shadow:var(--j-sh)}
+#resenas .rev{padding:26px;display:flex;flex-direction:column;gap:14px;margin-top:0}
+#resenas .rtop{display:flex;align-items:center;gap:16px}
+#resenas .rtop b{font-size:56px;font-weight:300;line-height:1;color:var(--j-ink)}
+#resenas .stars{color:#F5B301;font-size:22px;letter-spacing:2px;line-height:1}
+#resenas .rtop .stars{font-size:22px}
+#resenas .rtop small{display:block;color:var(--j-mute);font-size:13px}
+#resenas .stars .half{position:relative;display:inline-block;color:#DEDEDE}
+#resenas .stars .half::before{content:"★";position:absolute;inset:0 auto 0 0;width:50%;overflow:hidden;color:#F5B301}
+#resenas .rcar{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:14px -4px 0;padding:4px;overscroll-behavior-x:contain;align-items:flex-start;max-width:100%}
+#resenas .rcar::-webkit-scrollbar{display:none}
+#resenas .rs{flex:0 0 min(86%,420px);scroll-snap-align:start;background:#fff;border:1px solid var(--j-line);border-radius:18px;padding:18px 20px;display:flex;flex-direction:column;gap:8px;box-shadow:0 6px 20px rgba(20,20,60,.05);min-width:0}
+#resenas .rs p{font-size:15px;line-height:1.5;margin:0;display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical;overflow:hidden;color:var(--j-ink)}
+#resenas .rs.open p{-webkit-line-clamp:unset}
+#resenas .rs .more{align-self:start;border:0;background:none;color:#2A9FD6;font-weight:600;padding:0;font-size:14px;cursor:pointer;font-family:inherit}
+#resenas .rs b{font-weight:600;color:var(--j-ink)}
+#resenas .rs small{color:#777;margin-top:-6px}
+#resenas .rs a{color:var(--acc);font-weight:600;text-decoration:none}
+#resenas .rdots{display:flex;gap:6px;justify-content:center;margin:12px 0 4px}
+#resenas .rdots button{width:8px;height:8px;border-radius:9px;border:0;background:#C9E7F4;padding:0;transition:.25s;cursor:pointer}
+#resenas .rdots button.on{width:22px;background:linear-gradient(90deg,#2A9FD6,#4FC3C9)}
+#resenas .glink{font-size:14px;font-weight:600;color:#2A9FD6;text-decoration:none}
 
-/* comparación — siempre 2 cols */
-.vs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;align-items:stretch}
-.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;min-width:0}
-.card h3{margin:0 0 8px;font-size:14px}
-.card ul{list-style:none;padding:0;margin:0}
-.card li{padding:5px 0;border-bottom:1px solid var(--line);display:flex;gap:5px;font-size:11px;line-height:1.35;align-items:flex-start;min-width:0}
-.card li:last-child{border:0}
-.card.bad{background:#faf6f5;border-color:#e8cfc9}
-.card.bad h3{color:#9b2c2c}
-.card.good{background:#f3faf6;border-color:#b7dcc9}
-.card.good h3{color:var(--acc)}
+/* comparación */
+.vs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;align-items:stretch;width:100%}
+.cmp{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;min-width:0}
+.cmp h3{margin:0 0 8px;font-size:14px}
+.cmp ul{list-style:none}
+.cmp li{padding:5px 0;border-bottom:1px solid var(--line);display:flex;gap:5px;font-size:11px;line-height:1.35;align-items:flex-start}
+.cmp li:last-child{border:0}
+.cmp.bad{background:#faf6f5;border-color:#e8cfc9}
+.cmp.bad h3{color:#9b2c2c}
+.cmp.good{background:#f3faf6;border-color:#b7dcc9}
+.cmp.good h3{color:var(--acc)}
 .x{color:#c0392b;flex:none;font-weight:700}.ok{color:var(--acc);flex:none;font-weight:700}
 @media(min-width:700px){
 .vs{gap:20px}
-.card{padding:24px;border-radius:16px}
-.card h3{font-size:20px;margin-bottom:16px}
-.card li{padding:8px 0;gap:10px;font-size:16px;line-height:1.55}
+.cmp{padding:24px;border-radius:16px}
+.cmp h3{font-size:20px;margin-bottom:16px}
+.cmp li{padding:8px 0;gap:10px;font-size:16px;line-height:1.55}
 }
 
 .car{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:16px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none;max-width:100%}
@@ -81,14 +82,14 @@ h2{font-size:clamp(24px,4.5vw,36px);margin-bottom:16px}
 .w img{width:100%;height:270px;object-fit:cover;object-position:top;display:block;border-bottom:1px solid var(--line)}
 .w span{display:block;padding:12px;font-weight:600;font-size:14px}
 
-.plans{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;align-items:stretch}
+.plans{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;align-items:stretch;width:100%}
 .plan{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 10px;position:relative;display:flex;flex-direction:column;min-width:0}
 .plan.rec{border-color:var(--acc);box-shadow:0 0 0 2px var(--acc);background:#f3faf6}
 .badge{position:absolute;top:-11px;left:8px;background:var(--acc);color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:999px}
 .plan h3{font-size:13px;margin:4px 0 0}
 .price{font-size:15px;font-weight:700;margin:6px 0;line-height:1.2}
 .extra{color:var(--acc);font-weight:600;margin-bottom:6px;font-size:11px;line-height:1.3}
-.plan ul{list-style:none;padding:0;margin:6px 0;flex:1}
+.plan ul{list-style:none;margin:6px 0;flex:1}
 .plan li{padding:4px 0;font-size:11px;line-height:1.3;border-bottom:1px solid var(--line)}
 .plan li:last-child{border:0}
 .pay{color:var(--mut);font-size:11px;margin-top:6px;line-height:1.35}
@@ -105,21 +106,20 @@ h2{font-size:clamp(24px,4.5vw,36px);margin-bottom:16px}
 }
 
 form{display:grid;gap:14px;max-width:100%}
-label{font-size:14px;font-weight:600}
+label{font-size:14px;font-weight:600;display:block}
 input{width:100%;max-width:100%;padding:14px;border:1px solid var(--line);border-radius:10px;font:inherit;margin-top:4px;background:#fff}
-iframe{width:100%;max-width:100%;height:260px;border:0;border-radius:14px;margin-top:16px}
+iframe{width:100%;max-width:100%;height:260px;border:0;border-radius:14px;margin-top:16px;display:block}
 .fab{position:fixed;left:16px;bottom:16px;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 8px 24px #0004;z-index:9}
-footer{padding:32px 0 90px;color:var(--mut);font-size:14px;text-align:center}
+footer{padding:32px 0 90px;color:var(--mut);font-size:14px;text-align:center;border:0}
 </style>
 </head>
 <body>
 
-<section class="rwrap" id="resenas">
-<div class="c">
-<div class="revcard">
-<div class="rtop"><b>4,5</b><div><span class="stars" aria-label="4,5 de 5">★★★★<span class="h">★</span></span><small>6 reseñas de clientes</small></div></div>
+<section class="wrap" id="resenas" style="padding-top:16px">
+<div class="card rev">
+<div class="rtop"><b>4,5</b><div><span class="stars" aria-label="4,5 de 5">★★★★<span class="half">★</span></span><small>6 reseñas de clientes</small></div></div>
 <div class="rcar" id="rcar">
-<article class="rs"><span class="stars">★★★★★</span><p>“10/10, muy buena la página para mi consultorio.”</p><b>Jainer Contreras</b><small>Ortodoncista · <a href="https://ortodonciacontreras.com" target="_blank" rel="noopener">ortodonciacontreras.com</a></small></article>
+<article class="rs"><span class="stars">★★★★★</span><p>“10/10, muy buena la página para mi consultorio.”</p><button class="more" type="button">Leer más</button><b>Jainer Contreras</b><small>Ortodoncista · <a href="https://ortodonciacontreras.com" target="_blank" rel="noopener">ortodonciacontreras.com</a></small></article>
 <article class="rs"><span class="stars">★★★★★</span><p>“Me armó la web rapidito y se ve bien desde el celular. Ahora me escriben por WhatsApp ya con el servicio que quieren.”</p><button class="more" type="button">Leer más</button><b>María G.</b><small>Peluquería en Flores</small></article>
 <article class="rs"><span class="stars">★★★★★</span><p>“Antes solo tenía Maps. Con la web la gente me pide turno con día y horario, mucho más ordenado.”</p><button class="more" type="button">Leer más</button><b>Juan P.</b><small>Taller mecánico</small></article>
 <article class="rs"><span class="stars">★★★★★</span><p>“Vi la muestra antes de pagar y me cerró. Quedó clara y fácil de compartir con pacientes.”</p><button class="more" type="button">Leer más</button><b>Laura S.</b><small>Consultorio dental</small></article>
@@ -128,7 +128,6 @@ footer{padding:32px 0 90px;color:var(--mut);font-size:14px;text-align:center}
 </div>
 <div class="rdots" id="rdots"><button type="button" aria-label="Reseña 1" class="on"></button><button type="button" aria-label="Reseña 2"></button><button type="button" aria-label="Reseña 3"></button><button type="button" aria-label="Reseña 4"></button><button type="button" aria-label="Reseña 5"></button><button type="button" aria-label="Reseña 6"></button></div>
 <a class="glink" href="#trabajos">Ver trabajos reales →</a>
-</div>
 </div>
 </section>
 
@@ -139,7 +138,7 @@ footer{padding:32px 0 90px;color:var(--mut);font-size:14px;text-align:center}
 <h1>Tu negocio en una web clara y profesional</h1>
 <p class="lead" style="margin-top:14px">Tu competencia ya tiene web. La tuya la armamos con tus datos y la ves antes de decidir.</p>
 </div>
-<div class="ph"><img src="img/carlos.jpg" alt="Carlos Ezequiel Serrano"></div>
+<div class="ph"><img src="img/carlos.jpg" alt="Carlos Ezequiel Serrano" width="480" height="480"></div>
 </div>
 </header>
 
@@ -148,7 +147,7 @@ footer{padding:32px 0 90px;color:var(--mut);font-size:14px;text-align:center}
 <p class="k">Antes y después</p>
 <h2>Sin web vs con tu web</h2>
 <div class="vs">
-<div class="card bad">
+<div class="cmp bad">
 <h3>Sin web</h3>
 <ul>
 <li><span class="x">✕</span> Nadie ve las valoraciones reales de tus pacientes</li>
@@ -163,7 +162,7 @@ footer{padding:32px 0 90px;color:var(--mut);font-size:14px;text-align:center}
 <li><span class="x">✕</span> Quedás atrás de los que sí tienen web</li>
 </ul>
 </div>
-<div class="card good">
+<div class="cmp good">
 <h3>Con tu web</h3>
 <ul>
 <li><span class="ok">✓</span> Se ven todos tus tratamientos con claridad</li>
@@ -189,14 +188,14 @@ footer{padding:32px 0 90px;color:var(--mut);font-size:14px;text-align:center}
 <h2>Webs que ya están online</h2>
 <p class="lead">Abrilas y probá.</p>
 <div class="car">
-<a class="w" href="https://paginadeprueba-collab.github.io/jainer-contreras/" target="_blank"><img src="img/jainer-contreras.jpg" alt="Jainer Contreras"><span>Ortodoncia Jainer Contreras</span></a>
-<a class="w" href="https://paginadeprueba-collab.github.io/dra-daniela-acuna/" target="_blank"><img src="img/dra-daniela-acuna.jpg" alt="Dra. Daniela Acuña"><span>Dra. Daniela Acuña</span></a>
-<a class="w" href="https://paginadeprueba-collab.github.io/cubides-ortodoncia/" target="_blank"><img src="img/cubides-ortodoncia.jpg" alt="Cubides"><span>Cubides Ortodoncia</span></a>
-<a class="w" href="https://paginadeprueba-collab.github.io/white-odontologia/" target="_blank"><img src="img/white-odontologia.jpg" alt="White"><span>White Odontología</span></a>
-<a class="w" href="https://paginadeprueba-collab.github.io/palermo-dental/" target="_blank"><img src="img/palermo-dental.jpg" alt="Palermo Dental"><span>Palermo Dental</span></a>
-<a class="w" href="https://paginadeprueba-collab.github.io/dental-abasto/" target="_blank"><img src="img/dental-abasto.jpg" alt="Dental Abasto"><span>Dental Abasto</span></a>
-<a class="w" href="https://paginadeprueba-collab.github.io/coesp/" target="_blank"><img src="img/coesp.jpg" alt="COESP"><span>COESP</span></a>
-<a class="w" href="https://paginadeprueba-collab.github.io/aqua-dental/" target="_blank"><img src="img/aqua-dental.jpg" alt="Aqua Dental"><span>Aqua Dental</span></a>
+<a class="w" href="https://paginadeprueba-collab.github.io/jainer-contreras/" target="_blank" rel="noopener"><img src="img/jainer-contreras.jpg" alt="Jainer Contreras" width="200" height="270"><span>Ortodoncia Jainer Contreras</span></a>
+<a class="w" href="https://paginadeprueba-collab.github.io/dra-daniela-acuna/" target="_blank" rel="noopener"><img src="img/dra-daniela-acuna.jpg" alt="Dra. Daniela Acuña" width="200" height="270"><span>Dra. Daniela Acuña</span></a>
+<a class="w" href="https://paginadeprueba-collab.github.io/cubides-ortodoncia/" target="_blank" rel="noopener"><img src="img/cubides-ortodoncia.jpg" alt="Cubides" width="200" height="270"><span>Cubides Ortodoncia</span></a>
+<a class="w" href="https://paginadeprueba-collab.github.io/white-odontologia/" target="_blank" rel="noopener"><img src="img/white-odontologia.jpg" alt="White" width="200" height="270"><span>White Odontología</span></a>
+<a class="w" href="https://paginadeprueba-collab.github.io/palermo-dental/" target="_blank" rel="noopener"><img src="img/palermo-dental.jpg" alt="Palermo Dental" width="200" height="270"><span>Palermo Dental</span></a>
+<a class="w" href="https://paginadeprueba-collab.github.io/dental-abasto/" target="_blank" rel="noopener"><img src="img/dental-abasto.jpg" alt="Dental Abasto" width="200" height="270"><span>Dental Abasto</span></a>
+<a class="w" href="https://paginadeprueba-collab.github.io/coesp/" target="_blank" rel="noopener"><img src="img/coesp.jpg" alt="COESP" width="200" height="270"><span>COESP</span></a>
+<a class="w" href="https://paginadeprueba-collab.github.io/aqua-dental/" target="_blank" rel="noopener"><img src="img/aqua-dental.jpg" alt="Aqua Dental" width="200" height="270"><span>Aqua Dental</span></a>
 </div>
 <div style="text-align:center;margin-top:24px">
 <a class="btn" href="#contacto">Pedí tu web de muestra gratis</a>
@@ -256,35 +255,35 @@ footer{padding:32px 0 90px;color:var(--mut);font-size:14px;text-align:center}
 <p class="k">Contacto</p>
 <h2>¿Te gustaría ver cómo quedaría tu web gratis?</h2>
 <form id="f">
-<label>Nombre del negocio<input id="neg" required></label>
+<label>Nombre del negocio<input id="neg" required autocomplete="organization"></label>
 <label>Dirección del negocio (Maps)<input id="dir" required placeholder="Pegá el link de Maps o escribí la dirección"></label>
-<label>Nombre<input id="nom" required></label>
+<label>Nombre<input id="nom" required autocomplete="name"></label>
 <button class="btn" type="submit">Enviar por WhatsApp</button>
 </form>
-<iframe loading="lazy" title="Mapa" src="https://www.google.com/maps?q=Av.+Riestra+3203,+Flores,+CABA&output=embed"></iframe>
-<p style="margin-top:12px;text-align:center"><b>Av. Riestra 3203, Flores, CABA</b><br><a href="https://wa.me/5491168713479" target="_blank">WhatsApp 11 6871-3479</a></p>
+<iframe loading="lazy" title="Mapa" src="https://www.google.com/maps?q=Av.+Riestra+3203,+Flores,+CABA&amp;output=embed"></iframe>
+<p style="margin-top:12px;text-align:center"><b>Av. Riestra 3203, Flores, CABA</b><br><a href="https://wa.me/5491168713479" target="_blank" rel="noopener">WhatsApp 11 6871-3479</a></p>
 </div>
 </section>
 
 <footer><div class="c">Carlos Ezequiel Serrano</div></footer>
 
-<a class="fab" href="https://wa.me/5491168713479?text=Hola%20Carlos%2C%20quiero%20ver%20una%20muestra%20de%20web" target="_blank" aria-label="WhatsApp">
-<svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg>
+<a class="fab" href="https://wa.me/5491168713479?text=Hola%20Carlos%2C%20quiero%20ver%20una%20muestra%20de%20web" target="_blank" rel="noopener" aria-label="WhatsApp">
+<svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg>
 </a>
 
 <script>
-document.getElementById('f').onsubmit = e => {
+document.getElementById('f').onsubmit=e=>{
   e.preventDefault();
-  const neg = document.getElementById('neg').value.trim();
-  const dir = document.getElementById('dir').value.trim();
-  const nom = document.getElementById('nom').value.trim();
-  const t = `Hola Carlos, quiero ver cómo quedaría mi web gratis.\nNegocio: ${neg}\nDirección: ${dir}\nNombre: ${nom}`;
-  window.open('https://wa.me/5491168713479?text=' + encodeURIComponent(t), '_blank');
+  const neg=document.getElementById('neg').value.trim();
+  const dir=document.getElementById('dir').value.trim();
+  const nom=document.getElementById('nom').value.trim();
+  const t=`Hola Carlos, quiero ver cómo quedaría mi web gratis.\nNegocio: ${neg}\nDirección: ${dir}\nNombre: ${nom}`;
+  window.open('https://wa.me/5491168713479?text='+encodeURIComponent(t),'_blank');
 };
 const rc=document.getElementById('rcar'),rd=[...document.querySelectorAll('#rdots button')];
 if(rc&&rd.length){
-  rc.addEventListener('scroll',()=>{const w=rc.firstElementChild?rc.firstElementChild.offsetWidth+12:1;const i=Math.round(rc.scrollLeft/w);rd.forEach((d,j)=>d.classList.toggle('on',j===i));},{passive:true});
-  rd.forEach((d,j)=>d.onclick=()=>{const card=rc.children[j];if(card)rc.scrollTo({left:card.offsetLeft-rc.offsetLeft,behavior:'smooth'});});
+  rc.addEventListener('scroll',()=>{const w=(rc.firstElementChild?rc.firstElementChild.offsetWidth:0)+12;const i=Math.round(rc.scrollLeft/Math.max(w,1));rd.forEach((d,j)=>d.classList.toggle('on',j===i));},{passive:true});
+  rd.forEach((d,j)=>d.onclick=()=>{const card=rc.children[j];if(card)rc.scrollTo({left:card.offsetLeft-4,behavior:'smooth'});});
 }
 document.querySelectorAll('.rs .more').forEach(m=>m.onclick=()=>{const r=m.parentElement;r.classList.toggle('open');m.textContent=r.classList.contains('open')?'Leer menos':'Leer más';});
 </script>
