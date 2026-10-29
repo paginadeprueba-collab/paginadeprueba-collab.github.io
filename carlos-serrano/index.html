@@ -4,15 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Carlos Ezequiel Serrano · Webs para negocios</title>
-<meta name="description" content="Tu negocio en una web clara y profesional. La armamos con tus datos y la ves antes de decidir.">
+<meta name="description" content="Hola, soy Carlos. Hago que tu negocio tenga una web clara y profesional. La armamos con tus datos y la ves antes de decidir.">
 <link rel="icon" href="favicon.svg">
-<meta name="theme-color" content="#14161a">
+<meta name="theme-color" content="#122033">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f7f6f3;--ink:#14161a;--mut:#5d6168;--line:#e4e1da;--acc:#1f7a5a;--gold:#b08d57;
-  --j-bg:#EEF0F4;--j-card:#fff;--j-ink:#0E1222;--j-mute:#5E6478;--j-line:#E1E4EB;--j-r:22px;--j-sh:0 10px 30px -12px rgba(20,30,70,.12)}
+:root{
+  --bg:#f3f0ea;--ink:#122033;--mut:#5c6573;--line:#e0dbd2;
+  --acc:#1a3d4d;--acc2:#245a6b;--gold:#a8894e;--cream:#faf8f3;
+  --j-card:#fff;--j-ink:#122033;--j-mute:#5c6573;--j-line:#e0dbd2;--j-r:22px;
+  --j-sh:0 10px 30px -12px rgba(18,32,51,.14)
+}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;max-width:100%;overflow-x:hidden}
 body{font:16px/1.55 Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);max-width:100%;overflow-x:hidden;overflow-wrap:anywhere;-webkit-font-smoothing:antialiased}
@@ -21,20 +25,24 @@ a{color:inherit}
 .c{max-width:960px;margin:0 auto;padding:0 20px;width:100%;min-width:0}
 section{padding:48px 0;border-top:1px solid var(--line)}
 h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:600;letter-spacing:-.02em;line-height:1.12}
-h1{font-size:clamp(28px,6.5vw,52px)}
+h1{font-size:clamp(26px,5.6vw,46px)}
 h2{font-size:clamp(24px,4.5vw,36px);margin-bottom:16px}
 .k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:10px}
-.lead{color:var(--mut);max-width:540px;font-size:17px}
-.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--acc);color:#fff;text-decoration:none;font-weight:600;padding:14px 24px;border-radius:999px;font-size:15px;box-shadow:0 4px 14px #1f7a5a33;border:0;cursor:pointer;font-family:inherit}
+.lead{color:var(--mut);max-width:540px;font-size:16px;line-height:1.55}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--acc);color:#fff;text-decoration:none;font-weight:600;padding:13px 20px;border-radius:999px;font-size:14px;box-shadow:0 4px 14px rgba(26,61,77,.28);border:0;cursor:pointer;font-family:inherit}
+.btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:none}
 .btn:disabled{opacity:.6;cursor:not-allowed}
-.hero{padding:36px 0 32px;border:0}
-.hg{display:grid;gap:24px;align-items:center;min-width:0}
-@media(min-width:800px){.hg{grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr)}}
-.ph{min-width:0}
-.ph img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:20px;display:block}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
 
-/* ===== Reviews: Jainer-style ===== */
-#resenas.wrap{max-width:1240px;margin:0 auto;padding:16px 20px 8px;border:0;width:100%;min-width:0}
+/* top bar */
+.top{padding:14px 0 0;border:0}
+.top .bar{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:8px;font-weight:700;letter-spacing:.02em;text-decoration:none}
+.brand i{width:34px;height:34px;border-radius:50%;background:var(--acc);color:#fff;display:grid;place-items:center;font-style:normal;font-size:12px;font-weight:700}
+.brand span{font-size:15px}.brand b{color:var(--gold)}
+
+/* ===== Reviews ===== */
+#resenas.wrap{max-width:1240px;margin:0 auto;padding:18px 20px 8px;border:0;width:100%;min-width:0}
 #resenas .card{background:var(--j-card);border:1px solid var(--j-line);border-radius:var(--j-r);box-shadow:var(--j-sh)}
 #resenas .rev{padding:22px 18px 18px;display:flex;flex-direction:column;gap:12px;margin-top:0}
 @media(min-width:700px){#resenas .rev{padding:28px}}
@@ -47,17 +55,29 @@ h2{font-size:clamp(24px,4.5vw,36px);margin-bottom:16px}
 #resenas .stars .half::before{content:"★";position:absolute;inset:0 auto 0 0;width:50%;overflow:hidden;color:#F5B301}
 #resenas .rcar{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:10px -4px 0;padding:4px;overscroll-behavior-x:contain;align-items:flex-start;max-width:100%}
 #resenas .rcar::-webkit-scrollbar{display:none}
-#resenas .rs{flex:0 0 min(86%,420px);scroll-snap-align:start;background:#fff;border:1px solid var(--j-line);border-radius:18px;padding:18px 20px;display:flex;flex-direction:column;gap:8px;box-shadow:0 6px 20px rgba(20,20,60,.05);min-width:0}
+#resenas .rs{flex:0 0 min(86%,420px);scroll-snap-align:start;background:#fff;border:1px solid var(--j-line);border-radius:18px;padding:18px 20px;display:flex;flex-direction:column;gap:8px;box-shadow:0 6px 20px rgba(18,32,51,.05);min-width:0}
 #resenas .rs p{font-size:15px;line-height:1.5;margin:0;display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical;overflow:hidden;color:var(--j-ink)}
 #resenas .rs.open p{-webkit-line-clamp:unset}
-#resenas .rs .more{align-self:start;border:0;background:none;color:#2A9FD6;font-weight:600;padding:0;font-size:14px;cursor:pointer;font-family:inherit}
+#resenas .rs .more{align-self:start;border:0;background:none;color:var(--acc2);font-weight:600;padding:0;font-size:14px;cursor:pointer;font-family:inherit}
 #resenas .rs b{font-weight:600;color:var(--j-ink)}
 #resenas .rs small{color:#777;margin-top:-6px}
 #resenas .rs a{color:var(--acc);font-weight:600;text-decoration:none}
 #resenas .rdots{display:flex;gap:6px;justify-content:center;margin:12px 0 4px}
-#resenas .rdots button{width:8px;height:8px;border-radius:9px;border:0;background:#C9E7F4;padding:0;transition:.25s;cursor:pointer}
-#resenas .rdots button.on{width:22px;background:linear-gradient(90deg,#2A9FD6,#4FC3C9)}
-#resenas .glink{font-size:14px;font-weight:600;color:#2A9FD6;text-decoration:none}
+#resenas .rdots button{width:8px;height:8px;border-radius:9px;border:0;background:#cfd8de;padding:0;transition:.25s;cursor:pointer}
+#resenas .rdots button.on{width:22px;background:linear-gradient(90deg,var(--acc),var(--acc2))}
+#resenas .glink{font-size:14px;font-weight:600;color:var(--acc2);text-decoration:none}
+
+/* hero: text + photo side by side even on mobile */
+.hero{padding:20px 0 28px;border:0}
+.hg{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:14px;align-items:center;min-width:0}
+.hero h1 .hl{color:var(--acc)}
+.ph{min-width:0}
+.ph img{width:100%;aspect-ratio:1;object-fit:cover;object-position:center top;border-radius:18px;display:block;background:#dfe5ea;box-shadow:0 12px 28px -16px rgba(18,32,51,.45)}
+@media(min-width:700px){
+  .hg{gap:28px;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr)}
+  .ph img{border-radius:22px}
+  .btn{font-size:15px;padding:14px 22px}
+}
 
 /* comparación */
 .vs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;align-items:stretch;width:100%}
@@ -67,10 +87,10 @@ h2{font-size:clamp(24px,4.5vw,36px);margin-bottom:16px}
 .cmp li{padding:5px 0;border-bottom:1px solid var(--line);display:flex;gap:5px;font-size:11px;line-height:1.35;align-items:flex-start}
 .cmp li:last-child{border:0}
 .cmp.bad{background:#faf6f5;border-color:#e8cfc9}
-.cmp.bad h3{color:#9b2c2c}
-.cmp.good{background:#f3faf6;border-color:#b7dcc9}
+.cmp.bad h3{color:#8a3a3a}
+.cmp.good{background:#f2f6f5;border-color:#c5d6d1}
 .cmp.good h3{color:var(--acc)}
-.x{color:#c0392b;flex:none;font-weight:700}.ok{color:var(--acc);flex:none;font-weight:700}
+.x{color:#a34444;flex:none;font-weight:700}.ok{color:var(--acc);flex:none;font-weight:700}
 @media(min-width:700px){
 .vs{gap:20px}
 .cmp{padding:24px;border-radius:16px}
@@ -78,12 +98,12 @@ h2{font-size:clamp(24px,4.5vw,36px);margin-bottom:16px}
 .cmp li{padding:8px 0;gap:10px;font-size:16px;line-height:1.55}
 }
 
-/* trabajos / muestras */
+/* trabajos */
 .car{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 2px 16px;-webkit-overflow-scrolling:touch;scrollbar-width:none;max-width:100%;overscroll-behavior-x:contain}
 .car::-webkit-scrollbar{display:none}
-.w{flex:0 0 min(78%,260px);scroll-snap-align:start;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;min-width:0;display:flex;flex-direction:column;box-shadow:0 8px 24px -14px rgba(20,30,50,.28);transition:transform .2s,box-shadow .2s}
-.w:hover{transform:translateY(-2px);box-shadow:0 14px 28px -14px rgba(20,30,50,.35)}
-.w .shot{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;display:block;background:#eef0f3;border-bottom:1px solid var(--line)}
+.w{flex:0 0 min(78%,260px);scroll-snap-align:start;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;min-width:0;display:flex;flex-direction:column;box-shadow:0 8px 24px -14px rgba(18,32,51,.28);transition:transform .2s,box-shadow .2s}
+.w:hover{transform:translateY(-2px);box-shadow:0 14px 28px -14px rgba(18,32,51,.35)}
+.w .shot{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;display:block;background:#e8ecef;border-bottom:1px solid var(--line)}
 .w .meta{padding:14px 14px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
 .w .meta strong{font-size:15px;line-height:1.25;font-weight:700}
 .w .meta em{font-style:normal;font-size:12px;color:var(--mut)}
@@ -92,7 +112,7 @@ h2{font-size:clamp(24px,4.5vw,36px);margin-bottom:16px}
 
 .plans{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;align-items:stretch;width:100%}
 .plan{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 10px;position:relative;display:flex;flex-direction:column;min-width:0}
-.plan.rec{border-color:var(--acc);box-shadow:0 0 0 2px var(--acc);background:#f3faf6}
+.plan.rec{border-color:var(--acc);box-shadow:0 0 0 2px var(--acc);background:#f1f5f4}
 .badge{position:absolute;top:-11px;left:8px;background:var(--acc);color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:999px}
 .plan h3{font-size:13px;margin:4px 0 0}
 .price{font-size:15px;font-weight:700;margin:6px 0;line-height:1.2}
@@ -127,7 +147,12 @@ footer{padding:32px 0 90px;color:var(--mut);font-size:14px;text-align:center;bor
 </head>
 <body>
 
-<section class="wrap" id="resenas" style="padding-top:16px">
+<header class="top"><div class="c bar">
+<a class="brand" href="#"><i>CS</i><span>Carlos Serrano <b>·</b> Webs</span></a>
+<a class="btn" href="#contacto" style="padding:10px 16px;font-size:13px">Hablemos ↗</a>
+</div></header>
+
+<section class="wrap" id="resenas">
 <div class="card rev">
 <div class="rtop"><b>4,5</b><div><span class="stars" aria-label="4,5 de 5">★★★★<span class="half">★</span></span><small>6 reseñas de clientes</small></div></div>
 <div class="rcar" id="rcar">
@@ -144,13 +169,19 @@ footer{padding:32px 0 90px;color:var(--mut);font-size:14px;text-align:center;bor
 </section>
 
 <header class="hero">
-<div class="c hg">
+<div class="c">
+<div class="hg">
 <div>
-<p class="k">Carlos Ezequiel Serrano</p>
-<h1>Tu negocio en una web clara y profesional</h1>
-<p class="lead" style="margin-top:14px">Tu competencia ya tiene web. La tuya la armamos con tus datos y la ves antes de decidir.</p>
+<p class="k">Diseño web para negocios</p>
+<h1>Hola, soy Carlos.<br><span class="hl">Hago que tu negocio tenga una web clara y profesional.</span></h1>
+<p class="lead" style="margin-top:12px">Armo tu web con tus datos reales. La ves antes de decidir y te llegan consultas más claras por WhatsApp.</p>
 </div>
-<div class="ph"><img src="img/carlos.jpg" alt="Carlos Ezequiel Serrano" width="480" height="480"></div>
+<div class="ph"><img src="img/carlos.jpg" alt="Carlos Ezequiel Serrano" width="480" height="480" decoding="async" fetchpriority="high"></div>
+</div>
+<div class="btns">
+<a class="btn" href="#contacto">Pedí tu muestra ↗</a>
+<a class="btn ghost" href="#trabajos">Ver trabajos</a>
+</div>
 </div>
 </header>
 
@@ -201,47 +232,47 @@ footer{padding:32px 0 90px;color:var(--mut);font-size:14px;text-align:center;bor
 <p class="lead">Abrí cada una y mirá cómo queda en el celular.</p>
 <div class="car">
 <a class="w" href="https://ortodonciacontreras.com" target="_blank" rel="noopener">
-<img class="shot" src="img/ortodonciacontreras.jpg" alt="Ortodoncia Contreras" width="260" height="347">
+<img class="shot" src="img/ortodonciacontreras.jpg" alt="Ortodoncia Contreras" width="260" height="347" loading="lazy" decoding="async">
 <span class="meta"><strong>Ortodoncia Contreras</strong><em>ortodonciacontreras.com</em><span class="ver">Ver web</span></span>
 </a>
 <a class="w" href="https://paginadeprueba-collab.github.io/gustavo-ghiglione/" target="_blank" rel="noopener">
-<img class="shot" src="img/gustavo-ghiglione.jpg" alt="Dr. Gustavo Ghiglione" width="260" height="347">
+<img class="shot" src="img/gustavo-ghiglione.jpg" alt="Dr. Gustavo Ghiglione" width="260" height="347" loading="lazy" decoding="async">
 <span class="meta"><strong>Dr. Gustavo Ghiglione</strong><em>Cirugía plástica</em><span class="ver">Ver web</span></span>
 </a>
 <a class="w" href="https://paginadeprueba-collab.github.io/celia-propiedades/" target="_blank" rel="noopener">
-<img class="shot" src="img/celia-propiedades.jpg" alt="Celia Propiedades" width="260" height="347">
+<img class="shot" src="img/celia-propiedades.jpg" alt="Celia Propiedades" width="260" height="347" loading="lazy" decoding="async">
 <span class="meta"><strong>Celia Propiedades</strong><em>Inmobiliaria</em><span class="ver">Ver web</span></span>
 </a>
 <a class="w" href="https://paginadeprueba-collab.github.io/electricista-guillen/" target="_blank" rel="noopener">
-<img class="shot" src="img/electricista-guillen.jpg" alt="Electricista Guillen" width="260" height="347">
+<img class="shot" src="img/electricista-guillen.jpg" alt="Electricista Guillen" width="260" height="347" loading="lazy" decoding="async">
 <span class="meta"><strong>Electricista Guillen</strong><em>Instalaciones y reparaciones</em><span class="ver">Ver web</span></span>
 </a>
 <a class="w" href="https://paginadeprueba-collab.github.io/dra-daniela-acuna/" target="_blank" rel="noopener">
-<img class="shot" src="img/dra-daniela-acuna.jpg" alt="Dra. Daniela Acuña" width="260" height="347">
+<img class="shot" src="img/dra-daniela-acuna.jpg" alt="Dra. Daniela Acuña" width="260" height="347" loading="lazy" decoding="async">
 <span class="meta"><strong>Dra. Daniela Acuña</strong><em>Odontología</em><span class="ver">Ver web</span></span>
 </a>
 <a class="w" href="https://paginadeprueba-collab.github.io/cubides-ortodoncia/" target="_blank" rel="noopener">
-<img class="shot" src="img/cubides-ortodoncia.jpg" alt="Cubides Ortodoncia" width="260" height="347">
+<img class="shot" src="img/cubides-ortodoncia.jpg" alt="Cubides Ortodoncia" width="260" height="347" loading="lazy" decoding="async">
 <span class="meta"><strong>Cubides Ortodoncia</strong><em>Ortodoncia</em><span class="ver">Ver web</span></span>
 </a>
 <a class="w" href="https://paginadeprueba-collab.github.io/white-odontologia/" target="_blank" rel="noopener">
-<img class="shot" src="img/white-odontologia.jpg" alt="White Odontología" width="260" height="347">
+<img class="shot" src="img/white-odontologia.jpg" alt="White Odontología" width="260" height="347" loading="lazy" decoding="async">
 <span class="meta"><strong>White Odontología</strong><em>Odontología</em><span class="ver">Ver web</span></span>
 </a>
 <a class="w" href="https://paginadeprueba-collab.github.io/palermo-dental/" target="_blank" rel="noopener">
-<img class="shot" src="img/palermo-dental.jpg" alt="Palermo Dental" width="260" height="347">
+<img class="shot" src="img/palermo-dental.jpg" alt="Palermo Dental" width="260" height="347" loading="lazy" decoding="async">
 <span class="meta"><strong>Palermo Dental</strong><em>Odontología</em><span class="ver">Ver web</span></span>
 </a>
 <a class="w" href="https://paginadeprueba-collab.github.io/dental-abasto/" target="_blank" rel="noopener">
-<img class="shot" src="img/dental-abasto.jpg" alt="Dental Abasto" width="260" height="347">
+<img class="shot" src="img/dental-abasto.jpg" alt="Dental Abasto" width="260" height="347" loading="lazy" decoding="async">
 <span class="meta"><strong>Dental Abasto</strong><em>Odontología</em><span class="ver">Ver web</span></span>
 </a>
 <a class="w" href="https://paginadeprueba-collab.github.io/coesp/" target="_blank" rel="noopener">
-<img class="shot" src="img/coesp.jpg" alt="COESP" width="260" height="347">
+<img class="shot" src="img/coesp.jpg" alt="COESP" width="260" height="347" loading="lazy" decoding="async">
 <span class="meta"><strong>COESP</strong><em>Odontología</em><span class="ver">Ver web</span></span>
 </a>
 <a class="w" href="https://paginadeprueba-collab.github.io/aqua-dental/" target="_blank" rel="noopener">
-<img class="shot" src="img/aqua-dental.jpg" alt="Aqua Dental" width="260" height="347">
+<img class="shot" src="img/aqua-dental.jpg" alt="Aqua Dental" width="260" height="347" loading="lazy" decoding="async">
 <span class="meta"><strong>Aqua Dental</strong><em>Odontología</em><span class="ver">Ver web</span></span>
 </a>
 </div>
