@@ -1,15 +1,6 @@
 Placeholders pendientes SURA (subí con este nombre en img/):
 
 - foto1.jpg  |  Imagen 1 – logo header  |  recomendado 400×400 px
-- foto11.jpg  |  Imagen 11 – video / cómo calza  |  recomendado 1080×1350 px
-- foto17.jpg  |  Imagen 17 – look 1  |  recomendado 1080×1350 px
-- foto18.jpg  |  Imagen 18 – look 2  |  recomendado 1080×1350 px
-- foto19.jpg  |  Imagen 19 – look 3  |  recomendado 1080×1350 px
-- foto20.jpg  |  Imagen 20 – look 4  |  recomendado 1080×1350 px
-- foto21.jpg  |  Imagen 21 – look 5  |  recomendado 1080×1350 px
-- foto22.jpg  |  Imagen 22 – look 6  |  recomendado 1080×1350 px
-- foto23.jpg  |  Imagen 23 – video looks  |  recomendado 1080×1350 px
 - foto24.jpg  |  Imagen 24 – logo footer  |  recomendado 400×400 px
 
 Hero ya cargado: hero1.jpg/.webp … hero5.jpg/.webp
-Reseñas: tarjetas de texto premium (ya no usan foto12–foto16).
