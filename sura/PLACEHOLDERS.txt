@@ -1,6 +1,4 @@
-Placeholders pendientes SURA (subí con este nombre en img/):
+Placeholders pendientes SURA: ninguno.
 
-- foto1.jpg  |  Imagen 1 – logo header  |  recomendado 400×400 px
-- foto24.jpg  |  Imagen 24 – logo footer  |  recomendado 400×400 px
-
-Hero ya cargado: hero1.jpg/.webp … hero5.jpg/.webp
+Logo: img/logo.png y img/logo.webp (extraído de sura-caba.netlify.app).
+Hero: hero1.jpg/.webp … hero5.jpg/.webp
