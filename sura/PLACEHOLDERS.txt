@@ -1,21 +1,7 @@
-Placeholders SURA — subí cada foto con este nombre exacto en la carpeta img/
+Placeholders pendientes SURA (subí con este nombre en img/):
 
 - foto1.jpg  |  Imagen 1 – logo header  |  recomendado 400×400 px
-- foto2.jpg  |  Imagen 2 – hero / carrusel 1  |  recomendado 1080×1350 px
-- foto3.jpg  |  Imagen 3 – info producto  |  recomendado 1080×1350 px
-- foto4.jpg  |  Imagen 4 – info producto  |  recomendado 1080×1350 px
-- foto5.jpg  |  Imagen 5 – info producto  |  recomendado 1080×1350 px
-- foto6.jpg  |  Imagen 6 – carrusel producto  |  recomendado 1080×1350 px
-- foto7.jpg  |  Imagen 7 – carrusel producto  |  recomendado 1080×1350 px
-- foto8.jpg  |  Imagen 8 – carrusel producto  |  recomendado 1080×1350 px
-- foto9.jpg  |  Imagen 9 – carrusel producto  |  recomendado 1080×1350 px
-- foto10.jpg  |  Imagen 10 – carrusel producto  |  recomendado 1080×1350 px
-- foto11.jpg  |  Imagen 11 – video cómo calza  |  recomendado 1080×1350 px
-- foto12.jpg  |  Imagen 12 – reseña Leandro  |  recomendado 900×1400 px
-- foto13.jpg  |  Imagen 13 – reseña Agustín  |  recomendado 900×1400 px
-- foto14.jpg  |  Imagen 14 – reseña Rodrigo  |  recomendado 900×1400 px
-- foto15.jpg  |  Imagen 15 – reseña Matías  |  recomendado 900×1400 px
-- foto16.jpg  |  Imagen 16 – reseña Emiliano  |  recomendado 900×1400 px
+- foto11.jpg  |  Imagen 11 – video / cómo calza  |  recomendado 1080×1350 px
 - foto17.jpg  |  Imagen 17 – look 1  |  recomendado 1080×1350 px
 - foto18.jpg  |  Imagen 18 – look 2  |  recomendado 1080×1350 px
 - foto19.jpg  |  Imagen 19 – look 3  |  recomendado 1080×1350 px
@@ -24,3 +10,6 @@ Placeholders SURA — subí cada foto con este nombre exacto en la carpeta img/
 - foto22.jpg  |  Imagen 22 – look 6  |  recomendado 1080×1350 px
 - foto23.jpg  |  Imagen 23 – video looks  |  recomendado 1080×1350 px
 - foto24.jpg  |  Imagen 24 – logo footer  |  recomendado 400×400 px
+
+Hero ya cargado: hero1.jpg/.webp … hero5.jpg/.webp
+Reseñas: tarjetas de texto premium (ya no usan foto12–foto16).

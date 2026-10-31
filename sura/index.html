@@ -92,14 +92,136 @@ footer .ph-logo{max-width:64px;height:64px;margin:0 auto 10px;aspect-ratio:1/1}
 .pack-proof .stars{font-size:16px}
 .top{font-size:12px;letter-spacing:.04em}
 .rv .stars.big{margin-bottom:4px;font-size:16px}
+
+/* hero real photos */
+.hero-slide{position:relative;border-radius:6px;overflow:hidden;background:#E5D3C0;aspect-ratio:4/5}
+.hero-slide picture,.hero-slide img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.hero-cap{
+  position:absolute;left:12px;bottom:12px;z-index:3;
+  background:rgba(247,242,236,.94);color:#151515;
+  font-size:12px;font-weight:600;letter-spacing:.02em;
+  padding:8px 12px;border-radius:8px;border:1px solid #E5D3C0;
+  box-shadow:0 4px 14px rgba(0,0,0,.08);max-width:80%;
+}
+.hero-cap.premium{background:#151515;color:#F7F2EC;border-color:#151515}
+.ship-bar{
+  background:linear-gradient(90deg,#151515,#2a221c);color:#F7F2EC;
+  text-align:center;font-size:13px;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;padding:10px 12px;
+}
+.ship-bar .hi{color:#E5D3C0}
+.ship-badge-lg{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#151515;color:#F7F2EC;font-weight:700;font-size:14px;
+  letter-spacing:.04em;text-transform:uppercase;
+  padding:10px 14px;border-radius:10px;margin:10px 0 14px;
+  box-shadow:0 6px 16px rgba(21,21,21,.18);
+}
+.ship-badge-lg .dot{width:8px;height:8px;border-radius:50%;background:#00B67A;flex:0 0 auto}
+.cta-ship{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  margin-top:8px;font-size:13px;font-weight:600;color:#151515;
+}
+.cta-ship span{background:#F7F2EC;border:1px solid #E5D3C0;border-radius:999px;padding:6px 10px}
+
+/* reviews premium */
+.rev-wrap{max-width:720px;margin:auto}
+.rev-summary{
+  background:#fff;border:1px solid var(--ln);border-radius:12px;
+  padding:18px 16px;margin-bottom:18px;
+  display:grid;gap:16px;
+}
+@media(min-width:560px){.rev-summary{grid-template-columns:140px 1fr;align-items:center}}
+.rev-score{text-align:center}
+.rev-score .num{font-family:'Playfair Display',Georgia,serif;font-size:48px;line-height:1;font-weight:600}
+.rev-score .stars{font-size:18px;letter-spacing:2px;margin:6px 0}
+.rev-score .n{font-size:13px;color:var(--g)}
+.rev-bars{display:grid;gap:6px}
+.rev-bar{display:grid;grid-template-columns:52px 1fr 28px;gap:8px;align-items:center;font-size:12px;color:var(--g)}
+.rev-bar .track{height:8px;background:#eee;border-radius:99px;overflow:hidden}
+.rev-bar .fill{height:100%;background:#00B67A;border-radius:99px}
+.rev-grid{
+  display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;
+  padding:4px 2px 10px;-webkit-overflow-scrolling:touch;scrollbar-width:none;
+}
+.rev-grid::-webkit-scrollbar{display:none}
+.rev-card{
+  flex:0 0 min(86%,340px);scroll-snap-align:start;
+  background:#fff;border:1px solid var(--ln);border-radius:12px;padding:16px;
+  box-shadow:0 8px 22px rgba(0,0,0,.04);
+}
+.rev-head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.rev-av{
+  width:40px;height:40px;border-radius:50%;background:#E5D3C0;color:#151515;
+  display:grid;place-items:center;font-weight:700;font-size:14px;flex:0 0 auto;
+}
+.rev-meta{min-width:0}
+.rev-meta b{display:block;font-size:14px;line-height:1.2}
+.rev-verified{
+  display:inline-flex;align-items:center;gap:4px;margin-top:3px;
+  font-size:11px;font-weight:600;color:#1B7A4A;background:rgba(0,182,122,.1);
+  padding:2px 8px;border-radius:999px;
+}
+.rev-verified svg{width:12px;height:12px}
+.rev-card .stars{color:#00B67A;font-size:14px;letter-spacing:1px;margin:6px 0 4px}
+.rev-card h3{font-family:Inter,Arial,sans-serif;font-size:15px;font-weight:600;margin:0 0 6px}
+.rev-card p{font-size:14px;color:#333;line-height:1.45;margin:0}
+.rev-tag{display:inline-block;margin-top:10px;font-size:11px;color:var(--g);background:var(--bl);border:1px solid var(--ln);padding:4px 8px;border-radius:999px}
+
+/* payment methods */
+.pay-methods{display:grid;gap:10px;margin-top:12px}
+.pay-item{
+  display:flex;align-items:flex-start;gap:12px;background:#fff;
+  border:1px solid var(--ln);border-radius:8px;padding:12px;
+}
+.pay-item .ico{
+  width:36px;height:36px;border-radius:8px;background:var(--bl);
+  display:grid;place-items:center;flex:0 0 auto;font-size:16px;
+}
+.pay-item b{display:block;font-size:14px;margin-bottom:2px}
+.pay-item span{font-size:12px;color:var(--g)}
+.pay-online{
+  opacity:.55;cursor:not-allowed;position:relative;
+}
+.pay-online .soon{
+  display:inline-block;margin-top:6px;font-size:11px;font-weight:700;
+  letter-spacing:.04em;text-transform:uppercase;color:#8a5a00;
+  background:#fff7e6;border:1px solid #f0d9a8;padding:3px 8px;border-radius:999px;
+}
+.pay-btn-disabled{
+  display:inline-flex;align-items:center;justify-content:center;
+  margin-top:8px;padding:10px 14px;border-radius:8px;border:1px dashed #b89c7e;
+  background:#F7F2EC;color:#6b6b6b;font-size:13px;font-weight:600;
+  pointer-events:none;width:100%;
+}
 </style></head><body>
-<div class="top">★★★★★ · +500 vendidos · Te llega en 24 hs · Envío gratis CABA</div>
+<div class="ship-bar"><span class="hi">Te llega en 24 hs</span> · Envío gratis CABA y alrededores · ★★★★★ +500 vendidos</div>
 <header><a class="br" href="#"><div class="ph ph-logo" data-label="Imagen 1 – logo header" data-size="400×400"><img src="img/foto1.jpg" alt="SURA" loading="lazy" onerror="this.classList.add('miss')"></div><span>SURA</span></a><a class="ig" href="https://instagram.com/sura.caba" target="_blank" aria-label="Instagram @sura.caba"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8"/></svg></a></header>
 <div class="wrap prod">
- <div class="car"><div class="track"><div class="sl"><span class="seal">+500 VENDIDOS</span><div class="ph" data-label="Imagen 2 – hero / carrusel 1" data-size="1080×1350"><img src="img/foto2.jpg" alt="Jean Recto Negro SURA" loading="lazy" onerror="this.classList.add('miss')"></div></div><div class="sl info"><div class="ph" data-label="Imagen 3 – info producto" data-size="1080×1350"><img src="img/foto3.jpg" alt="Jean Recto Negro SURA" loading="lazy" onerror="this.classList.add('miss')"></div></div><div class="sl info"><div class="ph" data-label="Imagen 4 – info producto" data-size="1080×1350"><img src="img/foto4.jpg" alt="Jean Recto Negro SURA" loading="lazy" onerror="this.classList.add('miss')"></div></div><div class="sl info"><div class="ph" data-label="Imagen 5 – info producto" data-size="1080×1350"><img src="img/foto5.jpg" alt="Jean Recto Negro SURA" loading="lazy" onerror="this.classList.add('miss')"></div></div><div class="sl"><span class="seal">+500 VENDIDOS</span><div class="ph" data-label="Imagen 6 – carrusel producto" data-size="1080×1350"><img src="img/foto6.jpg" alt="Jean Recto Negro SURA" loading="lazy" onerror="this.classList.add('miss')"></div></div><div class="sl"><span class="seal">+500 VENDIDOS</span><div class="ph" data-label="Imagen 7 – carrusel producto" data-size="1080×1350"><img src="img/foto7.jpg" alt="Jean Recto Negro SURA" loading="lazy" onerror="this.classList.add('miss')"></div></div><div class="sl"><span class="seal">+500 VENDIDOS</span><div class="ph" data-label="Imagen 8 – carrusel producto" data-size="1080×1350"><img src="img/foto8.jpg" alt="Jean Recto Negro SURA" loading="lazy" onerror="this.classList.add('miss')"></div></div><div class="sl"><span class="seal">+500 VENDIDOS</span><div class="ph" data-label="Imagen 9 – carrusel producto" data-size="1080×1350"><img src="img/foto9.jpg" alt="Jean Recto Negro SURA" loading="lazy" onerror="this.classList.add('miss')"></div></div><div class="sl"><span class="seal">+500 VENDIDOS</span><div class="ph" data-label="Imagen 10 – carrusel producto" data-size="1080×1350"><img src="img/foto10.jpg" alt="Jean Recto Negro SURA" loading="lazy" onerror="this.classList.add('miss')"></div></div></div><div class="dots"></div></div>
+  <div class="car hero-car"><div class="track"><div class="sl"><span class="seal">+500 VENDIDOS</span><div class="hero-slide">
+<picture><source type="image/webp" srcset="img/hero1.webp"><img src="img/hero1.jpg" alt="Jean Recto Negro SURA con remera azul" width="1024" height="1536" fetchpriority="high"></picture>
+<div class="hero-cap">Queda bien en cualquier cuerpo</div>
+</div></div><div class="sl"><div class="hero-slide">
+<picture><source type="image/webp" srcset="img/hero2.webp"><img src="img/hero2.jpg" alt="Jean Recto Negro SURA con remera blanca" width="1024" height="1536" loading="lazy"></picture>
+<div class="hero-cap">Queda bien en cualquier cuerpo</div>
+</div></div><div class="sl"><div class="hero-slide">
+<picture><source type="image/webp" srcset="img/hero3.webp"><img src="img/hero3.jpg" alt="Jean Recto Negro SURA con remera verde" width="1024" height="1536" loading="lazy"></picture>
+<div class="hero-cap">Queda bien en cualquier cuerpo</div>
+</div></div><div class="sl"><div class="hero-slide">
+<picture><source type="image/webp" srcset="img/hero4.webp"><img src="img/hero4.jpg" alt="Jean Recto Negro SURA con remera negra" width="1024" height="1536" loading="lazy"></picture>
+<div class="hero-cap">Queda bien en cualquier cuerpo</div>
+</div></div><div class="sl"><div class="hero-slide">
+<picture><source type="image/webp" srcset="img/hero5.webp"><img src="img/hero5.jpg" alt="Detalle de tela rígida, bolsillo y remache" width="1080" height="1350" loading="lazy"></picture>
+<div class="hero-cap premium">Calidad premium</div>
+</div></div></div><div class="dots"></div></div>
+
  <div id="comprar">
-  <div class="proof"><div class="stars big">★★★★★ ★★★★★</div><div class="proof-line"><span class="rt"><b>+500 vendidos</b></span><span class="ship">Te llega en 24 hs</span></div></div>
-  <h1>Jean Recto Negro SURA</h1>
+  <div class="proof">
+    <div class="stars big">★★★★★ ★★★★★</div>
+    <div class="proof-line"><span class="rt"><b>+500 vendidos</b></span></div>
+    <div class="ship-badge-lg"><span class="dot" aria-hidden="true"></span> Te llega en 24 hs</div>
+    </div>
+    <h1>Jean Recto Negro SURA</h1>
   <div class="price" style="font-size:30px;font-weight:600">$40.000</div>
   <p class="desde">Llevá más y ahorrá hasta $30.000</p>
   <p class="sub">Corte recto, calce suelto y tela rígida. Talles 40 al 50.</p>
@@ -125,8 +247,36 @@ footer .ph-logo{max-width:64px;height:64px;margin:0 auto 10px;aspect-ratio:1/1}
   <div class="help"><a href="#talles">¿Qué talle soy?</a><span>El modelo mide 1,70 y usa talle 44</span></div>
   <div class="sizes"><div class="s1"><label for="t1">Talle unidad 1</label><select id="t1"><option value="">Elegí tu talle</option><option>40</option><option>42</option><option>44</option><option>46</option><option>48</option><option>50</option></select></div><div class="s2"><label for="t2">Talle unidad 2</label><select id="t2"><option value="">Elegí tu talle</option><option>40</option><option>42</option><option>44</option><option>46</option><option>48</option><option>50</option></select></div><div class="s3"><label for="t3">Talle unidad 3</label><select id="t3"><option value="">Elegí tu talle</option><option>40</option><option>42</option><option>44</option><option>46</option><option>48</option><option>50</option></select></div></div>
   <p class="micro" style="text-align:left">Podés elegir talles distintos en cada pack.</p>
-  <div class="pay"><h3>Pagás por transferencia o Mercado Pago</h3><div class="alias"><div><small style="margin:0">Alias</small><code id="al">Suramp</code></div><button type="button" class="cp" onclick="cp(this)">Copiar alias</button></div><small>Titular: Carlos Ezequiel Serrano</small></div>
-  <a class="cta wa js" href="https://wa.me/5491168713479?text=Hola!%20Quiero%20pedir%20el%20Jean%20Recto%20Negro%20SURA" target="_blank" rel="noopener">Pedir por WhatsApp</a><button type="submit" class="cta nojs">Pedir por WhatsApp</button><p class="warn" id="warn">Elegí los talles para que lleguen en tu pedido (si no, van como "a confirmar").</p>
+  <div class="pay">
+  <h3>Medios de pago</h3>
+  <div class="pay-methods">
+    <div class="pay-item">
+      <div class="ico" aria-hidden="true">🏦</div>
+      <div><b>Transferencia bancaria</b><span>Te pasamos los datos por WhatsApp al confirmar el pedido.</span></div>
+    </div>
+    <div class="pay-item">
+      <div class="ico" aria-hidden="true">💙</div>
+      <div>
+        <b>Mercado Pago</b>
+        <span>Alias <code id="al">Suramp</code> · Titular: Carlos Ezequiel Serrano</span>
+        <div class="alias" style="margin-top:8px"><div><small style="margin:0">Alias</small><code>Suramp</code></div><button type="button" class="cp" onclick="cp(this)">Copiar alias</button></div>
+      </div>
+    </div>
+    <!-- Pasarela online: conectar luego (Mercado Pago Checkout / Stripe / etc.).
+         data-gateway="pending" deja el gancho listo sin activar el cobro. -->
+    <div class="pay-item pay-online" data-gateway="pending" data-payment="online" aria-disabled="true">
+      <div class="ico" aria-hidden="true">💳</div>
+      <div>
+        <b>Pagar online</b>
+        <span>Espacio libre para conectar una pasarela de pago más adelante.</span>
+        <button type="button" class="pay-btn-disabled" disabled data-gateway="pending">Pagar online</button>
+        <div class="soon">próximamente</div>
+      </div>
+    </div>
+  </div>
+</div>
+<a class="cta wa js" href="https://wa.me/5491168713479?text=Hola!%20Quiero%20pedir%20el%20Jean%20Recto%20Negro%20SURA" target="_blank" rel="noopener">Pedir por WhatsApp</a><button type="submit" class="cta nojs">Pedir por WhatsApp</button><p class="warn" id="warn">Elegí los talles para que lleguen en tu pedido (si no, van como "a confirmar").</p>
+  <p class="cta-ship"><span>Te llega en 24 hs · Envío gratis CABA</span></p>
   <p class="micro">Te respondemos al instante para coordinar la entrega. Atención 24 hs.</p>
   </form>
  </div>
@@ -138,7 +288,58 @@ footer .ph-logo{max-width:64px;height:64px;margin:0 auto 10px;aspect-ratio:1/1}
 <div class="gi"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>Pago por transferencia o Mercado Pago</div>
 </div></div>
 <section><div class="wrap narrow"><h2>Mirá cómo calza</h2><p class="lead">El corte recto, en movimiento.</p><div class="sl"><div class="ph" data-label="Imagen 11 – video cómo calza" data-size="1080×1350"><img src="img/foto11.jpg" alt="Imagen 11 – video cómo calza" loading="lazy" onerror="this.classList.add('miss')"></div></video></div><p class="model">El modelo mide 1,70 y usa talle 44</p></div></section>
-<section class="beige"><div class="wrap narrow"><h2>Lo que dicen nuestros clientes</h2><p class="lead"><span class="stars big">★★★★★ ★★★★★</span><br>+500 vendidos · Mensajes reales por WhatsApp</p><div class="car"><div class="track"><div class="sl rv rvi"><div class="ph ph-rev" data-label="Imagen 12 – reseña Leandro" data-size="900×1400"><img src="img/foto12.jpg" alt="Chat de WhatsApp de Leandro" loading="lazy" onerror="this.classList.add('miss')"></div><div class="stars big">★★★★★</div><b>Leandro</b><p>“Che, recién lo probé.<br>La tela es otra cosa, se siente rígida y dura, no es como los pantalones finitos.<br>Me gustó mucho el calce, queda recto como quería.”</p></div><div class="sl rv rvi"><div class="ph ph-rev" data-label="Imagen 13 – reseña Agustín" data-size="900×1400"><img src="img/foto13.jpg" alt="Chat de WhatsApp de Agustín" loading="lazy" onerror="this.classList.add('miss')"></div><div class="stars big">★★★★★</div><b>Agustín</b><p>“Llegó hoy, todo bien.<br>El pantalón está muy bueno, se nota que la tela es pesada y de calidad.<br>Me gustó que no se arruga fácil. Voy a pedir otro en negro si queda stock.”</p></div><div class="sl rv rvi"><div class="ph ph-rev" data-label="Imagen 14 – reseña Rodrigo" data-size="900×1400"><img src="img/foto14.jpg" alt="Chat de WhatsApp de Rodrigo" loading="lazy" onerror="this.classList.add('miss')"></div><div class="stars big">★★★★★</div><b>Rodrigo</b><p>“Ahí te mandé un audio porque estaba manejando.<br>Solo para decirte que me encantó, el pantalón es tal cual lo mostrás.<br>La tela es rígida y se siente firme.<br>Gracias por la buena atención! 👏”</p></div><div class="sl rv rvi"><div class="ph ph-rev" data-label="Imagen 15 – reseña Matías" data-size="900×1400"><img src="img/foto15.jpg" alt="Chat de WhatsApp de Matías" loading="lazy" onerror="this.classList.add('miss')"></div><div class="stars big">★★★★★</div><b>Matías</b><p>“Me llegó antes de lo que pensé.<br>La verdad muy buena calidad, se siente resistente y el calce es perfecto.<br>Me gustó mucho, va con todo.<br>Seguro pido otro talle para mi hermano.”</p></div><div class="sl rv rvi"><div class="ph ph-rev" data-label="Imagen 16 – reseña Emiliano" data-size="900×1400"><img src="img/foto16.jpg" alt="Chat de WhatsApp de Emiliano" loading="lazy" onerror="this.classList.add('miss')"></div><div class="stars big">★★★★★</div><b>Emiliano</b><p>“Todo perfecto.<br>El pantalón es pesado, la tela se nota que es buena.<br>Me quedó un poco largo pero nada grave, lo voy a ajustar.<br>Igual estoy muy contento con la compra.”</p></div></div><div class="dots"></div></div></div></section>
+<section class="beige" id="resenas"><div class="wrap rev-wrap">
+<h2>Lo que dicen nuestros clientes</h2>
+<p class="lead">Reseñas reales de compradores por WhatsApp</p>
+<div class="rev-summary">
+  <div class="rev-score">
+    <div class="num">5,0</div>
+    <div class="stars">★★★★★</div>
+    <div class="n">Basado en 5 reseñas</div>
+  </div>
+  <div class="rev-bars" aria-label="Distribución de estrellas">
+    <div class="rev-bar"><span>5 estrellas</span><div class="track"><div class="fill" style="width:100%"></div></div><span>5</span></div>
+    <div class="rev-bar"><span>4 estrellas</span><div class="track"><div class="fill" style="width:0%"></div></div><span>0</span></div>
+    <div class="rev-bar"><span>3 estrellas</span><div class="track"><div class="fill" style="width:0%"></div></div><span>0</span></div>
+    <div class="rev-bar"><span>2 estrellas</span><div class="track"><div class="fill" style="width:0%"></div></div><span>0</span></div>
+    <div class="rev-bar"><span>1 estrella</span><div class="track"><div class="fill" style="width:0%"></div></div><span>0</span></div>
+  </div>
+</div>
+<div class="rev-grid">
+  <article class="rev-card">
+    <div class="rev-head"><div class="rev-av">L</div><div class="rev-meta"><b>Leandro</b><span class="rev-verified"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.2l-3.5-3.5L4 14.2l5 5 12-12-1.5-1.5z"/></svg>Compra verificada</span></div></div>
+    <div class="stars">★★★★★</div>
+    <h3>La tela es otra cosa</h3>
+    <p>“Che, recién lo probé. La tela es otra cosa, se siente rígida y dura, no es como los pantalones finitos. Me gustó mucho el calce, queda recto como quería.”</p>
+    <span class="rev-tag">Calce recto</span>
+  </article>
+  <article class="rev-card">
+    <div class="rev-head"><div class="rev-av">A</div><div class="rev-meta"><b>Agustín</b><span class="rev-verified"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.2l-3.5-3.5L4 14.2l5 5 12-12-1.5-1.5z"/></svg>Compra verificada</span></div></div>
+    <div class="stars">★★★★★</div>
+    <h3>Tela pesada y de calidad</h3>
+    <p>“Llegó hoy, todo bien. El pantalón está muy bueno, se nota que la tela es pesada y de calidad. Me gustó que no se arruga fácil. Voy a pedir otro en negro si queda stock.”</p>
+    <span class="rev-tag">Color: negro</span>
+  </article>
+  <article class="rev-card">
+    <div class="rev-head"><div class="rev-av">R</div><div class="rev-meta"><b>Rodrigo</b><span class="rev-verified"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.2l-3.5-3.5L4 14.2l5 5 12-12-1.5-1.5z"/></svg>Compra verificada</span></div></div>
+    <div class="stars">★★★★★</div>
+    <h3>Tal cual lo mostrás</h3>
+    <p>“Ahí te mandé un audio porque estaba manejando. Solo para decirte que me encantó, el pantalón es tal cual lo mostrás. La tela es rígida y se siente firme. Gracias por la buena atención! 👏”</p>
+  </article>
+  <article class="rev-card">
+    <div class="rev-head"><div class="rev-av">M</div><div class="rev-meta"><b>Matías</b><span class="rev-verified"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.2l-3.5-3.5L4 14.2l5 5 12-12-1.5-1.5z"/></svg>Compra verificada</span></div></div>
+    <div class="stars">★★★★★</div>
+    <h3>Calce perfecto</h3>
+    <p>“Me llegó antes de lo que pensé. La verdad muy buena calidad, se siente resistente y el calce es perfecto. Me gustó mucho, va con todo. Seguro pido otro talle para mi hermano.”</p>
+  </article>
+  <article class="rev-card">
+    <div class="rev-head"><div class="rev-av">E</div><div class="rev-meta"><b>Emiliano</b><span class="rev-verified"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.2l-3.5-3.5L4 14.2l5 5 12-12-1.5-1.5z"/></svg>Compra verificada</span></div></div>
+    <div class="stars">★★★★★</div>
+    <h3>Muy contento con la compra</h3>
+    <p>“Todo perfecto. El pantalón es pesado, la tela se nota que es buena. Me quedó un poco largo pero nada grave, lo voy a ajustar. Igual estoy muy contento con la compra.”</p>
+  </article>
+</div>
+</div></section>
 <section><div class="wrap narrow"><h2>Combinalo como quieras</h2><p class="lead">Un jean, mil looks.</p><div class="car"><div class="track"><div class="sl"><div class="ph" data-label="Imagen 17 – look 1" data-size="1080×1350"><img src="img/foto17.jpg" alt="Look con jean SURA" loading="lazy" onerror="this.classList.add('miss')"></div></div><div class="sl"><div class="ph" data-label="Imagen 18 – look 2" data-size="1080×1350"><img src="img/foto18.jpg" alt="Look con jean SURA" loading="lazy" onerror="this.classList.add('miss')"></div></div><div class="sl"><div class="ph" data-label="Imagen 19 – look 3" data-size="1080×1350"><img src="img/foto19.jpg" alt="Look con jean SURA" loading="lazy" onerror="this.classList.add('miss')"></div></div><div class="sl"><div class="ph" data-label="Imagen 20 – look 4" data-size="1080×1350"><img src="img/foto20.jpg" alt="Look con jean SURA" loading="lazy" onerror="this.classList.add('miss')"></div></div><div class="sl"><div class="ph" data-label="Imagen 21 – look 5" data-size="1080×1350"><img src="img/foto21.jpg" alt="Look con jean SURA" loading="lazy" onerror="this.classList.add('miss')"></div></div><div class="sl"><div class="ph" data-label="Imagen 22 – look 6" data-size="1080×1350"><img src="img/foto22.jpg" alt="Look con jean SURA" loading="lazy" onerror="this.classList.add('miss')"></div></div><div class="sl"><div class="ph" data-label="Imagen 23 – video looks" data-size="1080×1350"><img src="img/foto23.jpg" alt="Imagen 23 – video looks" loading="lazy" onerror="this.classList.add('miss')"></div></video></div></div><div class="dots"></div></div>
 <div class="more"><a class="cta" href="#comprar">Lo quiero</a><a class="ig2" href="https://instagram.com/sura.caba" target="_blank">Más looks en @sura.caba</a></div></div></section>
 <section class="beige" id="talles"><div class="wrap"><h2>Guía de talles</h2><p class="lead">Medidas en centímetros</p>
