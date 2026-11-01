@@ -3,17 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Carlos Ezequiel Serrano · Webs para negocios</title>
-<meta name="description" content="Hola, soy Carlos. Hago que tu negocio tenga una web clara y profesional. La armamos con tus datos y la ves antes de decidir.">
+<title>Carlos Ezequiel Serrano · Diseñador web freelance</title>
+<meta name="description" content="Soy Carlos Serrano, diseñador web freelance. Creo webs claras y profesionales para negocios y profesionales. La ves antes de decidir.">
 <link rel="icon" href="favicon.svg">
-<meta name="theme-color" content="#122033">
+<meta name="theme-color" content="#1a3d4d">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#f3f0ea;--ink:#122033;--mut:#5c6573;--line:#e0dbd2;
   --acc:#1a3d4d;--acc2:#245a6b;--gold:#a8894e;--cream:#faf8f3;
+  --hero:#142f3c;--hero2:#1a3d4d;--hero3:#0f2430;
   --j-card:#fff;--j-ink:#122033;--j-mute:#5c6573;--j-line:#e0dbd2;--j-r:22px;
   --j-sh:0 10px 30px -12px rgba(18,32,51,.14)
 }
@@ -21,28 +22,98 @@
 html{scroll-behavior:smooth;max-width:100%;overflow-x:hidden}
 body{font:16px/1.55 Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);max-width:100%;overflow-x:hidden;overflow-wrap:anywhere;-webkit-font-smoothing:antialiased}
 img,iframe,svg{max-width:100%;height:auto}
-a{color:inherit}
-.c{max-width:960px;margin:0 auto;padding:0 20px;width:100%;min-width:0}
-section{padding:48px 0;border-top:1px solid var(--line)}
-h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:600;letter-spacing:-.02em;line-height:1.12}
-h1{font-size:clamp(26px,5.6vw,46px)}
+a{color:inherit;text-decoration:none}
+.c{max-width:1080px;margin:0 auto;padding:0 20px;width:100%;min-width:0}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h1,h2{font-family:Manrope,system-ui,sans-serif;font-weight:700;letter-spacing:-.03em;line-height:1.12}
+h1{font-size:clamp(28px,6.2vw,52px)}
 h2{font-size:clamp(24px,4.5vw,36px);margin-bottom:16px}
 .k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:10px}
-.lead{color:var(--mut);max-width:540px;font-size:16px;line-height:1.55}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--acc);color:#fff;text-decoration:none;font-weight:600;padding:13px 20px;border-radius:999px;font-size:14px;box-shadow:0 4px 14px rgba(26,61,77,.28);border:0;cursor:pointer;font-family:inherit}
-.btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:none}
+.lead{color:var(--mut);max-width:560px;font-size:16px;line-height:1.55}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--acc);color:#fff;text-decoration:none;font-weight:600;padding:13px 20px;border-radius:999px;font-size:14px;box-shadow:0 4px 14px rgba(26,61,77,.28);border:0;cursor:pointer;font-family:inherit;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.28);box-shadow:none}
+.btn.light{background:#fff;color:var(--acc);box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.btn.wa{background:#25d366;box-shadow:0 6px 18px rgba(37,211,102,.35)}
 .btn:disabled{opacity:.6;cursor:not-allowed}
-.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
 
-/* top bar */
-.top{padding:14px 0 0;border:0}
+/* ===== Header fijo ===== */
+.top{position:fixed;top:0;left:0;right:0;z-index:40;padding:12px 0;background:rgba(15,36,48,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
 .top .bar{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.brand{display:flex;align-items:center;gap:8px;font-weight:700;letter-spacing:.02em;text-decoration:none}
-.brand i{width:34px;height:34px;border-radius:50%;background:var(--acc);color:#fff;display:grid;place-items:center;font-style:normal;font-size:12px;font-weight:700}
-.brand span{font-size:15px}.brand b{color:var(--gold)}
+.brand{display:flex;align-items:center;gap:8px;font-weight:700;letter-spacing:.02em;color:#fff}
+.brand i{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#c4a56a);color:#122033;display:grid;place-items:center;font-style:normal;font-size:12px;font-weight:800}
+.brand span{font-size:14px}.brand b{color:var(--gold);font-weight:500}
+.nav{display:none;align-items:center;gap:18px}
+.nav a{color:rgba(255,255,255,.78);font-size:13px;font-weight:500}
+.nav a:hover{color:#fff}
+.top-actions{display:flex;align-items:center;gap:8px}
+.top .btn{padding:9px 16px;font-size:13px;box-shadow:none}
+.menu-btn{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#fff;display:grid;place-items:center;cursor:pointer}
+.menu-btn svg{width:18px;height:18px}
+.mnav{display:none;position:fixed;inset:64px 12px auto;background:var(--hero2);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:12px;z-index:39;box-shadow:0 20px 40px rgba(0,0,0,.35)}
+.mnav.open{display:grid;gap:4px}
+.mnav a{color:#fff;padding:12px 14px;border-radius:10px;font-weight:500;font-size:15px}
+.mnav a:hover{background:rgba(255,255,255,.06)}
+@media(min-width:860px){
+  .nav{display:flex}
+  .menu-btn{display:none}
+}
+
+/* ===== Hero oscuro ===== */
+.hero{padding:96px 0 48px;border:0;background:linear-gradient(165deg,var(--hero3) 0%,var(--hero) 45%,var(--hero2) 100%);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:-20% -10% auto auto;width:55%;height:70%;background:radial-gradient(circle,rgba(168,137,78,.18),transparent 65%);pointer-events:none}
+.hg{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:28px;align-items:center;min-width:0;position:relative}
+.eyebrow{display:inline-block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:14px}
+.hero h1{color:#fff;max-width:16ch}
+.hero h1 .hl{color:var(--gold)}
+.hero .lead{color:rgba(255,255,255,.72);margin-top:14px;font-size:15px;max-width:42ch}
+.hero .lead strong{color:#fff;font-weight:600}
+.ph{min-width:0;justify-self:end;width:min(100%,320px);position:relative}
+.ph::after{content:"";position:absolute;inset:10% -8% -8% 18%;border-radius:28px;border:1px solid rgba(168,137,78,.35);z-index:0}
+.ph img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;border-radius:24px;display:block;background:#0f2430;box-shadow:0 24px 48px -18px rgba(0,0,0,.55);position:relative;z-index:1;border:1px solid rgba(255,255,255,.08)}
+.proof{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;margin-top:22px;color:rgba(255,255,255,.7);font-size:13px;font-weight:500}
+.proof .stars{color:#F5B301;letter-spacing:1px}
+.proof span{display:inline-flex;align-items:center;gap:6px}
+.proof .dot{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.28)}
+
+/* Browser mockup */
+.mock-wrap{margin-top:40px;position:relative}
+.browser{background:#0b1c26;border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;box-shadow:0 30px 60px -20px rgba(0,0,0,.55)}
+.browser-bar{display:flex;align-items:center;gap:10px;padding:10px 12px;background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.06)}
+.dots{display:flex;gap:6px}
+.dots i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.18);display:block}
+.dots i:nth-child(1){background:#ff5f57}
+.dots i:nth-child(2){background:#febc2e}
+.dots i:nth-child(3){background:#28c840}
+.urlbar{flex:1;max-width:420px;margin:0 auto;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:999px;padding:6px 14px;font-size:12px;color:rgba(255,255,255,.7);text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.browser-body{background:#111;min-height:220px;display:flex;justify-content:center;align-items:flex-start;overflow:hidden}
+.browser-body img{width:100%;max-width:420px;display:block;object-fit:cover;object-position:top;aspect-ratio:3/4;max-height:min(58vh,520px)}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:14px 2px 4px;-webkit-overflow-scrolling:touch;scrollbar-width:none;max-width:100%}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.04);color:rgba(255,255,255,.78);padding:9px 14px;border-radius:999px;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit;white-space:nowrap;transition:.15s}
+.chip.on,.chip:hover{background:rgba(168,137,78,.18);border-color:rgba(168,137,78,.55);color:#fff}
+.mock-cta{text-align:center;margin-top:18px}
+.mock-cta a{color:rgba(255,255,255,.75);font-size:14px;font-weight:600}
+.mock-cta a:hover{color:#fff}
+
+@media(max-width:699px){
+  .hg{grid-template-columns:1fr;gap:22px}
+  .ph{justify-self:center;width:min(72%,260px);order:-1}
+  .hero{padding:88px 0 36px;text-align:center}
+  .hero h1{margin-left:auto;margin-right:auto}
+  .hero .lead{margin-left:auto;margin-right:auto}
+  .btns{justify-content:center}
+  .proof{justify-content:center}
+  .browser-body img{max-height:min(52vh,440px)}
+}
+@media(min-width:700px){
+  .btn{font-size:15px;padding:14px 22px}
+  .hero .lead{font-size:16px}
+}
 
 /* ===== Reviews ===== */
-#resenas.wrap{max-width:1240px;margin:0 auto;padding:18px 20px 8px;border:0;width:100%;min-width:0}
+#resenas.wrap{max-width:1240px;margin:0 auto;padding:28px 20px 8px;border:0;width:100%;min-width:0}
 #resenas .card{background:var(--j-card);border:1px solid var(--j-line);border-radius:var(--j-r);box-shadow:var(--j-sh)}
 #resenas .rev{padding:22px 18px 18px;display:flex;flex-direction:column;gap:12px;margin-top:0}
 @media(min-width:700px){#resenas .rev{padding:28px}}
@@ -67,21 +138,9 @@ h2{font-size:clamp(24px,4.5vw,36px);margin-bottom:16px}
 #resenas .rdots button.on{width:22px;background:linear-gradient(90deg,var(--acc),var(--acc2))}
 #resenas .glink{font-size:14px;font-weight:600;color:var(--acc2);text-decoration:none}
 
-/* hero: text + photo side by side even on mobile */
-.hero{padding:20px 0 28px;border:0}
-.hg{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:14px;align-items:center;min-width:0}
-.hero h1 .hl{color:var(--acc)}
-.ph{min-width:0}
-.ph img{width:100%;aspect-ratio:1;object-fit:cover;object-position:center top;border-radius:18px;display:block;background:#dfe5ea;box-shadow:0 12px 28px -16px rgba(18,32,51,.45)}
-@media(min-width:700px){
-  .hg{gap:28px;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr)}
-  .ph img{border-radius:22px}
-  .btn{font-size:15px;padding:14px 22px}
-}
-
 /* comparación */
 .vs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;align-items:stretch;width:100%}
-.cmp{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;min-width:0}
+.cmp{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;min-width:0;box-shadow:0 8px 24px -16px rgba(18,32,51,.18)}
 .cmp h3{margin:0 0 8px;font-size:14px}
 .cmp ul{list-style:none}
 .cmp li{padding:5px 0;border-bottom:1px solid var(--line);display:flex;gap:5px;font-size:11px;line-height:1.35;align-items:flex-start}
@@ -98,7 +157,7 @@ h2{font-size:clamp(24px,4.5vw,36px);margin-bottom:16px}
 .cmp li{padding:8px 0;gap:10px;font-size:16px;line-height:1.55}
 }
 
-/* trabajos */
+/* trabajos cards */
 .car{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 2px 16px;-webkit-overflow-scrolling:touch;scrollbar-width:none;max-width:100%;overscroll-behavior-x:contain}
 .car::-webkit-scrollbar{display:none}
 .w{flex:0 0 min(78%,260px);scroll-snap-align:start;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;min-width:0;display:flex;flex-direction:column;box-shadow:0 8px 24px -14px rgba(18,32,51,.28);transition:transform .2s,box-shadow .2s}
@@ -111,7 +170,7 @@ h2{font-size:clamp(24px,4.5vw,36px);margin-bottom:16px}
 @media(min-width:700px){.w{flex:0 0 240px}}
 
 .plans{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;align-items:stretch;width:100%}
-.plan{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 10px;position:relative;display:flex;flex-direction:column;min-width:0}
+.plan{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 10px;position:relative;display:flex;flex-direction:column;min-width:0;box-shadow:0 8px 24px -16px rgba(18,32,51,.16)}
 .plan.rec{border-color:var(--acc);box-shadow:0 0 0 2px var(--acc);background:#f1f5f4}
 .badge{position:absolute;top:-11px;left:8px;background:var(--acc);color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:999px}
 .plan h3{font-size:13px;margin:4px 0 0}
@@ -133,6 +192,9 @@ h2{font-size:clamp(24px,4.5vw,36px);margin-bottom:16px}
 .pay{font-size:14px;margin-top:12px}
 }
 
+.note{display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding:10px 14px;background:#fff;border:1px solid var(--line);border-radius:12px;font-size:13px;color:var(--mut);font-weight:500;box-shadow:0 6px 16px -12px rgba(18,32,51,.2)}
+.note b{color:var(--acc)}
+
 form{display:grid;gap:14px;max-width:560px}
 label{font-size:14px;font-weight:600;display:block}
 input,select,textarea{width:100%;max-width:100%;padding:14px;border:1px solid var(--line);border-radius:10px;font:inherit;margin-top:4px;background:#fff}
@@ -143,14 +205,79 @@ textarea{min-height:90px;resize:vertical}
 iframe{width:100%;max-width:100%;height:260px;border:0;border-radius:14px;margin-top:16px;display:block}
 .fab{position:fixed;left:16px;bottom:16px;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 8px 24px #0004;z-index:9}
 footer{padding:32px 0 90px;color:var(--mut);font-size:14px;text-align:center;border:0}
+.contact-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 12px 32px -18px rgba(18,32,51,.2)}
+@media(min-width:700px){.contact-card{padding:28px}}
 </style>
 </head>
 <body>
 
 <header class="top"><div class="c bar">
 <a class="brand" href="#"><i>CS</i><span>Carlos Serrano <b>·</b> Webs</span></a>
-<a class="btn" href="#contacto" style="padding:10px 16px;font-size:13px">Hablemos ↗</a>
+<nav class="nav" aria-label="Principal">
+  <a href="#trabajos">Trabajos</a>
+  <a href="#planes">Planes</a>
+  <a href="#resenas">Reseñas</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+<div class="top-actions">
+  <a class="btn light" href="#contacto">Hablemos</a>
+  <button class="menu-btn" type="button" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 8h16M4 16h16"/></svg>
+  </button>
+</div>
 </div></header>
+<nav class="mnav" id="mnav" aria-label="Menú móvil">
+  <a href="#trabajos">Trabajos</a>
+  <a href="#planes">Planes</a>
+  <a href="#resenas">Reseñas</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<header class="hero">
+<div class="c">
+<div class="hg">
+  <div>
+    <p class="eyebrow">Diseñador web freelance en Argentina</p>
+    <h1>Hola, soy Carlos.<br><span class="hl">Webs que convierten visitas en clientes.</span></h1>
+    <p class="lead">Soy <strong>Carlos Serrano</strong>, diseñador web freelance. Creo webs claras y profesionales para negocios y profesionales. La ves antes de decidir.</p>
+    <div class="btns">
+      <a class="btn wa" href="https://wa.me/5491168713479?text=Hola%20Carlos%2C%20quiero%20ver%20una%20muestra%20de%20web" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg>
+        Escribime
+      </a>
+      <a class="btn ghost" href="#trabajos">Ver trabajos →</a>
+    </div>
+    <div class="proof" aria-label="Prueba social">
+      <span><span class="stars" aria-hidden="true">★★★★★</span> 4,5 en Google</span>
+      <i class="dot" aria-hidden="true"></i>
+      <span>+10 años diseñando</span>
+      <i class="dot" aria-hidden="true"></i>
+      <span>Respuestas al momento</span>
+    </div>
+  </div>
+  <div class="ph"><img src="img/carlos.jpg" alt="Carlos Ezequiel Serrano" width="480" height="600" decoding="async" fetchpriority="high"></div>
+</div>
+
+<div class="mock-wrap" id="trabajos-mock">
+  <div class="browser">
+    <div class="browser-bar">
+      <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="urlbar" id="mockUrl">ortodonciacontreras.com</div>
+    </div>
+    <div class="browser-body">
+      <img id="mockImg" src="img/ortodonciacontreras-v2.jpg?v=20261031" alt="Vista previa Ortodoncia Contreras" width="420" height="560" decoding="async">
+    </div>
+  </div>
+  <div class="chips" id="chips" role="tablist" aria-label="Trabajos">
+    <button type="button" class="chip on" role="tab" aria-selected="true" data-url="ortodonciacontreras.com" data-href="https://ortodonciacontreras.com" data-img="img/ortodonciacontreras-v2.jpg?v=20261031" data-alt="Ortodoncia Contreras">Ortodonciacontreras.com</button>
+    <button type="button" class="chip" role="tab" aria-selected="false" data-url="gustavo-ghiglione" data-href="https://paginadeprueba-collab.github.io/gustavo-ghiglione/" data-img="img/gustavo-ghiglione-v2.jpg?v=20261031" data-alt="Dr. Gustavo Ghiglione">Gustavo Ghiglione</button>
+    <button type="button" class="chip" role="tab" aria-selected="false" data-url="celia-propiedades" data-href="https://paginadeprueba-collab.github.io/celia-propiedades/" data-img="img/celia-propiedades-v2.jpg?v=20261031" data-alt="Celia Propiedades">Celia Propiedades</button>
+    <button type="button" class="chip" role="tab" aria-selected="false" data-url="electricista-guillen" data-href="https://paginadeprueba-collab.github.io/electricista-guillen/" data-img="img/electricista-guillen-v2.jpg?v=20261031" data-alt="Electricista Guillen">Electricista Guillen</button>
+  </div>
+  <p class="mock-cta"><a id="mockOpen" href="https://ortodonciacontreras.com" target="_blank" rel="noopener">Abrir este trabajo →</a></p>
+</div>
+</div>
+</header>
 
 <section class="wrap" id="resenas">
 <div class="card rev">
@@ -167,23 +294,6 @@ footer{padding:32px 0 90px;color:var(--mut);font-size:14px;text-align:center;bor
 <a class="glink" href="#trabajos">Ver trabajos reales →</a>
 </div>
 </section>
-
-<header class="hero">
-<div class="c">
-<div class="hg">
-<div>
-<p class="k">Diseño web para negocios</p>
-<h1>Hola, soy Carlos.<br><span class="hl">Hago que tu negocio tenga una web clara y profesional.</span></h1>
-<p class="lead" style="margin-top:12px">Armo tu web con tus datos reales. La ves antes de decidir y te llegan consultas más claras por WhatsApp.</p>
-</div>
-<div class="ph"><img src="img/carlos.jpg" alt="Carlos Ezequiel Serrano" width="480" height="480" decoding="async" fetchpriority="high"></div>
-</div>
-<div class="btns">
-<a class="btn" href="#contacto">Pedí tu muestra ↗</a>
-<a class="btn ghost" href="#trabajos">Ver trabajos</a>
-</div>
-</div>
-</header>
 
 <section>
 <div class="c">
@@ -254,11 +364,12 @@ footer{padding:32px 0 90px;color:var(--mut);font-size:14px;text-align:center;bor
 </div>
 </section>
 
-<section>
+<section id="planes">
 <div class="c">
 <p class="k">Planes</p>
 <h2>Elegí tu plan</h2>
-<div class="plans">
+<p class="note"><b>Ves la muestra antes de pagar.</b> Sin riesgo: primero mirás cómo queda tu web.</p>
+<div class="plans" style="margin-top:18px">
 <div class="plan rec">
 <div class="badge">Recomendado</div>
 <h3>Plan 24 meses</h3>
@@ -306,6 +417,7 @@ footer{padding:32px 0 90px;color:var(--mut);font-size:14px;text-align:center;bor
 <p class="k">Contacto</p>
 <h2>¿Te interesa? Dejá tus datos</h2>
 <p class="lead" style="margin-bottom:18px">Completá lo más importante y te llega todo por WhatsApp para arrancar.</p>
+<div class="contact-card">
 <form id="f">
 <div class="row2">
 <label>Tu nombre<input id="nom" name="nombre" required autocomplete="name" placeholder="Ej: Juan Pérez"></label>
@@ -329,12 +441,13 @@ footer{padding:32px 0 90px;color:var(--mut);font-size:14px;text-align:center;bor
 </label>
 <button class="btn" type="submit">Enviar por WhatsApp</button>
 </form>
+</div>
 <iframe loading="lazy" title="Mapa" src="https://www.google.com/maps?q=Av.+Riestra+3203,+Flores,+CABA&amp;output=embed"></iframe>
 <p style="margin-top:12px;text-align:center"><b>Av. Riestra 3203, Flores, CABA</b><br><a href="https://wa.me/5491168713479" target="_blank" rel="noopener">WhatsApp 11 6871-3479</a></p>
 </div>
 </section>
 
-<footer><div class="c">Carlos Ezequiel Serrano</div></footer>
+<footer><div class="c">Carlos Ezequiel Serrano · Diseñador web freelance</div></footer>
 
 <a class="fab" href="https://wa.me/5491168713479?text=Hola%20Carlos%2C%20quiero%20ver%20una%20muestra%20de%20web" target="_blank" rel="noopener" aria-label="WhatsApp">
 <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg>
@@ -355,6 +468,24 @@ if(rc&&rd.length){
   rd.forEach((d,j)=>d.onclick=()=>{const card=rc.children[j];if(card)rc.scrollTo({left:card.offsetLeft-4,behavior:'smooth'});});
 }
 document.querySelectorAll('.rs .more').forEach(m=>m.onclick=()=>{const r=m.parentElement;r.classList.toggle('open');m.textContent=r.classList.contains('open')?'Leer menos':'Leer más';});
+
+const menuBtn=document.getElementById('menuBtn'), mnav=document.getElementById('mnav');
+if(menuBtn&&mnav){
+  menuBtn.onclick=()=>{const open=mnav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',open?'true':'false');};
+  mnav.querySelectorAll('a').forEach(a=>a.onclick=()=>{mnav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');});
+}
+
+const chips=[...document.querySelectorAll('#chips .chip')];
+const mockImg=document.getElementById('mockImg');
+const mockUrl=document.getElementById('mockUrl');
+const mockOpen=document.getElementById('mockOpen');
+chips.forEach(ch=>ch.onclick=()=>{
+  chips.forEach(c=>{c.classList.remove('on');c.setAttribute('aria-selected','false');});
+  ch.classList.add('on');ch.setAttribute('aria-selected','true');
+  mockImg.src=ch.dataset.img;mockImg.alt=ch.dataset.alt||'Vista previa';
+  mockUrl.textContent=ch.dataset.url;
+  mockOpen.href=ch.dataset.href;
+});
 </script>
 </body>
 </html>
