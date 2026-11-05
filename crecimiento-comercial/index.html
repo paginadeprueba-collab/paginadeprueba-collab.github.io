@@ -3,665 +3,639 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Crecimiento Comercial | Estrategia, tecnología y desarrollo digital para empresas</title>
-  <meta name="description" content="Socio externo de crecimiento comercial. Diagnóstico, captación, publicidad, desarrollo digital, organización comercial y optimización de resultados para empresas en Argentina." />
-  <meta name="theme-color" content="#0E3A5C" />
-  <meta property="og:title" content="Crecimiento Comercial" />
-  <meta property="og:description" content="Estrategia, tecnología y desarrollo digital para empresas. Diagnóstico comercial e implementación de soluciones orientadas al funcionamiento del negocio." />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="es_AR" />
+  <title>Crecimiento Comercial | Estrategia, tecnología y desarrollo comercial</title>
+  <meta name="description" content="Socio externo de crecimiento comercial. Diagnóstico, estrategia y tecnología para que las empresas capturen demanda, organicen oportunidades y midan resultados." />
+  <meta name="theme-color" content="#0B1220" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
       --bg: #F7F8FA;
-      --bg-soft: #EEF1F5;
-      --surface: #FFFFFF;
       --ink: #0B1220;
-      --ink-2: #1A2332;
-      --muted: #5B6577;
-      --line: #D8DEE8;
-      --petrol: #0E3A5C;
-      --petrol-deep: #0A2A44;
-      --accent: #3D8BFF;
-      --accent-soft: rgba(61, 139, 255, 0.12);
+      --navy: #0E3A5C;
+      --blue: #3D8BFF;
+      --muted: #5A6577;
+      --line: #E3E7EE;
+      --panel: #FFFFFF;
+      --dark: #0B1220;
+      --dark-2: #111A2B;
+      --soft: #EEF3F9;
       --radius: 14px;
-      --radius-sm: 8px;
-      --max: 1040px;
-      --header-h: 60px;
-      --font: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+      --max: 1120px;
+      --header-h: 68px;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: var(--font);
+      font-family: Manrope, system-ui, -apple-system, Segoe UI, sans-serif;
       background: var(--bg);
       color: var(--ink);
-      line-height: 1.6;
+      line-height: 1.55;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
     }
     img, svg { display: block; max-width: 100%; }
     a { color: inherit; text-decoration: none; }
-    button, input, select, textarea { font: inherit; color: inherit; }
-    .container { width: min(100% - 2rem, var(--max)); margin-inline: auto; }
-    .sr-only {
-      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-      overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    button, input, textarea, select { font: inherit; }
+    .wrap { width: min(100% - 2rem, var(--max)); margin-inline: auto; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-size: .78rem; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--navy);
     }
+    .eyebrow::before {
+      content: ""; width: 18px; height: 2px; background: var(--blue); border-radius: 2px;
+    }
+    h1, h2, h3 { line-height: 1.15; letter-spacing: -.02em; font-weight: 800; }
+    h1 { font-size: clamp(1.85rem, 4.4vw, 3.15rem); }
+    h2 { font-size: clamp(1.45rem, 3vw, 2.15rem); }
+    h3 { font-size: 1.15rem; }
+    p { color: var(--muted); font-size: 1.02rem; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+      min-height: 48px; padding: .85rem 1.25rem; border-radius: 999px;
+      font-weight: 700; font-size: .95rem; border: 1px solid transparent;
+      transition: .2s ease; cursor: pointer; white-space: nowrap;
+    }
+    .btn-primary { background: var(--blue); color: #fff; }
+    .btn-primary:hover { filter: brightness(1.05); transform: translateY(-1px); }
+    .btn-ghost {
+      background: transparent; color: var(--ink); border-color: #C9D2E0;
+    }
+    .btn-ghost:hover { border-color: var(--navy); color: var(--navy); }
+    .btn-dark { background: var(--ink); color: #fff; }
+    .btn-dark:hover { background: #18233a; }
 
     /* Header */
     .site-header {
       position: sticky; top: 0; z-index: 50;
       height: var(--header-h);
-      background: rgba(247, 248, 250, 0.92);
+      background: rgba(247,248,250,.92);
       backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid transparent;
-      transition: border-color .2s ease;
+      border-bottom: 1px solid rgba(227,231,238,.9);
     }
-    .site-header.scrolled { border-bottom-color: var(--line); background: rgba(255,255,255,.95); }
-    .header-inner {
-      height: 100%;
-      display: flex; align-items: center; justify-content: space-between; gap: .75rem;
+    .nav {
+      height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 1rem;
     }
-    .brand { display: flex; align-items: center; gap: .6rem; min-width: 0; }
+    .brand {
+      display: flex; align-items: center; gap: .7rem; font-weight: 800; letter-spacing: -.02em;
+    }
     .brand-mark {
-      width: 30px; height: 30px; border-radius: 7px; flex-shrink: 0;
-      background: linear-gradient(145deg, var(--petrol), var(--petrol-deep));
-      display: grid; place-items: center;
+      width: 34px; height: 34px; border-radius: 9px;
+      background: linear-gradient(145deg, var(--navy), var(--blue));
+      display: grid; place-items: center; color: #fff; font-size: .85rem; font-weight: 800;
+      box-shadow: 0 8px 20px rgba(61,139,255,.25);
     }
-    .brand-mark span {
-      width: 10px; height: 10px; border: 2px solid #fff;
-      border-radius: 2px; transform: rotate(45deg);
+    .brand span { font-size: .92rem; }
+    .brand em { font-style: normal; color: var(--navy); display: block; font-size: .68rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; margin-top: 1px; }
+    .nav-links { display: none; gap: 1.4rem; align-items: center; }
+    .nav-links a { font-size: .92rem; font-weight: 600; color: var(--muted); }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-cta { display: none; }
+    .menu-btn {
+      width: 42px; height: 42px; border-radius: 10px; border: 1px solid var(--line);
+      background: #fff; display: grid; place-items: center; cursor: pointer;
     }
-    .brand-text { min-width: 0; }
-    .brand-name {
-      font-size: .82rem; font-weight: 800; letter-spacing: -.01em;
-      line-height: 1.15; color: var(--ink);
+    .menu-btn span, .menu-btn span::before, .menu-btn span::after {
+      content: ""; display: block; width: 16px; height: 2px; background: var(--ink); border-radius: 2px; position: relative;
     }
-    .brand-desc {
-      font-size: .68rem; color: var(--muted); line-height: 1.2;
-      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-      max-width: 42vw;
+    .menu-btn span::before { position: absolute; top: -5px; }
+    .menu-btn span::after { position: absolute; top: 5px; }
+    .mobile-panel {
+      display: none; position: absolute; inset: var(--header-h) 0 auto 0;
+      background: #fff; border-bottom: 1px solid var(--line); padding: 1rem 1rem 1.25rem;
     }
-    .nav-desktop { display: none; gap: 1.25rem; align-items: center; }
-    .nav-desktop a {
-      font-size: .84rem; font-weight: 600; color: var(--muted);
-      transition: color .15s;
+    .mobile-panel.open { display: block; }
+    .mobile-panel a {
+      display: block; padding: .85rem 0; border-bottom: 1px solid var(--line);
+      font-weight: 600; color: var(--ink);
     }
-    .nav-desktop a:hover { color: var(--ink); }
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: .4rem;
-      font-weight: 700; font-size: .88rem; border-radius: 999px;
-      padding: .7rem 1.15rem; border: 1px solid transparent;
-      cursor: pointer; transition: background .15s, color .15s, border-color .15s, transform .15s;
-      white-space: nowrap;
-    }
-    .btn:active { transform: scale(.98); }
-    .btn-primary {
-      background: var(--petrol); color: #fff;
-    }
-    .btn-primary:hover { background: var(--petrol-deep); }
-    .btn-ghost {
-      background: transparent; color: var(--ink); border-color: var(--line);
-    }
-    .btn-ghost:hover { border-color: var(--ink); }
-    .btn-header {
-      padding: .55rem .95rem; font-size: .8rem;
-    }
-    .btn-wa {
-      background: #128C7E; color: #fff;
-    }
-    .btn-wa:hover { background: #0e7368; }
+    .mobile-panel .btn { width: 100%; margin-top: .9rem; }
 
     /* Hero */
     .hero {
-      padding: 2.4rem 0 2.6rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: "";
-      position: absolute; inset: 0;
+      padding: 2.6rem 0 2.2rem;
       background:
-        radial-gradient(ellipse 70% 55% at 100% 0%, rgba(61,139,255,.10), transparent 55%),
-        radial-gradient(ellipse 50% 40% at 0% 100%, rgba(14,58,92,.06), transparent 50%);
-      pointer-events: none;
+        radial-gradient(900px 420px at 90% -10%, rgba(61,139,255,.14), transparent 60%),
+        radial-gradient(700px 360px at 0% 20%, rgba(14,58,92,.08), transparent 55%),
+        var(--bg);
     }
     .hero-grid {
-      position: relative;
-      display: grid; gap: 1.75rem;
+      display: grid; gap: 2rem; align-items: center;
     }
-    .hero-kicker {
-      font-size: .72rem; font-weight: 700; letter-spacing: .12em;
-      text-transform: uppercase; color: var(--petrol);
-      margin-bottom: .85rem;
+    .hero h1 { margin: .85rem 0 1rem; max-width: 15ch; }
+    .hero .lead { max-width: 42ch; margin-bottom: 1.5rem; font-size: 1.05rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+    .hero-panel {
+      background: linear-gradient(160deg, var(--dark) 0%, var(--dark-2) 55%, #13233d 100%);
+      color: #fff; border-radius: 22px; padding: 1.5rem 1.35rem 1.35rem;
+      box-shadow: 0 24px 60px rgba(11,18,32,.28);
+      position: relative; overflow: hidden; min-height: 320px;
     }
-    .hero h1 {
-      font-size: clamp(1.65rem, 5.2vw, 2.55rem);
-      font-weight: 800; letter-spacing: -.035em; line-height: 1.12;
-      color: var(--ink); max-width: 18ch;
-      margin-bottom: 1rem;
+    .hero-panel::before {
+      content: ""; position: absolute; inset: auto -20% -30% 30%;
+      height: 220px; background: radial-gradient(circle, rgba(61,139,255,.35), transparent 70%);
+      pointer-events: none;
     }
-    .hero h1 em {
-      font-style: normal; color: var(--petrol);
+    .hero-panel .label {
+      font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+      color: rgba(255,255,255,.55); margin-bottom: 1.1rem;
     }
-    .hero-lead {
-      font-size: clamp(.95rem, 2.4vw, 1.05rem);
-      color: var(--muted); max-width: 52ch;
-      margin-bottom: 1.4rem;
+    .diagram { display: grid; gap: .7rem; position: relative; z-index: 1; }
+    .d-row {
+      display: grid; grid-template-columns: 28px 1fr auto; gap: .75rem; align-items: center;
+      background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.08);
+      border-radius: 12px; padding: .85rem .95rem;
     }
-    .hero-actions {
-      display: flex; flex-wrap: wrap; gap: .65rem;
+    .d-num {
+      width: 28px; height: 28px; border-radius: 8px; background: rgba(61,139,255,.2);
+      color: #9ec3ff; display: grid; place-items: center; font-size: .75rem; font-weight: 800;
     }
-    .hero-aside {
-      background: var(--ink);
-      color: #fff;
-      border-radius: var(--radius);
-      padding: 1.35rem 1.25rem;
+    .d-row strong { display: block; font-size: .92rem; font-weight: 700; }
+    .d-row span { font-size: .78rem; color: rgba(255,255,255,.55); }
+    .d-tag {
+      font-size: .68rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+      color: #9ec3ff; background: rgba(61,139,255,.15); padding: .3rem .5rem; border-radius: 999px;
+    }
+    .hero-note {
+      margin-top: 1.1rem; font-size: .82rem; color: rgba(255,255,255,.55); position: relative; z-index: 1;
+    }
+
+    /* Sections common */
+    section { padding: 3rem 0; }
+    .sec-head { max-width: 640px; margin-bottom: 1.6rem; }
+    .sec-head h2 { margin: .7rem 0 .85rem; }
+    .sec-head p { max-width: 54ch; }
+
+    /* Friction / routes */
+    .friction { background: #fff; border-block: 1px solid var(--line); }
+    .routes {
       display: grid; gap: 1rem;
+      background: var(--soft); border: 1px solid var(--line); border-radius: 20px; padding: 1rem;
     }
-    .hero-aside p {
-      font-size: .9rem; line-height: 1.55; color: rgba(255,255,255,.78);
+    .route-tabs {
+      display: flex; gap: .5rem; flex-wrap: wrap;
     }
-    .hero-aside strong {
-      display: block; font-size: .78rem; font-weight: 700;
-      letter-spacing: .08em; text-transform: uppercase;
-      color: var(--accent); margin-bottom: .35rem;
+    .route-tab {
+      border: 1px solid var(--line); background: #fff; color: var(--muted);
+      border-radius: 999px; padding: .65rem 1rem; font-weight: 700; font-size: .88rem;
+      cursor: pointer; transition: .2s ease;
     }
+    .route-tab.active, .route-tab:hover {
+      background: var(--ink); color: #fff; border-color: var(--ink);
+    }
+    .route-panel {
+      display: none; background: #fff; border: 1px solid var(--line); border-radius: 16px;
+      padding: 1.25rem 1.2rem 1.35rem;
+    }
+    .route-panel.active { display: block; animation: fade .25s ease; }
+    .route-panel h3 { margin-bottom: .7rem; color: var(--navy); }
+    .route-panel p + p { margin-top: .75rem; }
+    .route-kicker {
+      display: inline-block; margin-top: 1rem; font-size: .85rem; font-weight: 700; color: var(--blue);
+    }
+    @keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
 
-    /* Shared section */
-    section { padding: 2.5rem 0; }
-    .section-label {
-      font-size: .7rem; font-weight: 700; letter-spacing: .14em;
-      text-transform: uppercase; color: var(--accent);
-      margin-bottom: .55rem;
-    }
-    .section-title {
-      font-size: clamp(1.35rem, 3.8vw, 1.85rem);
-      font-weight: 800; letter-spacing: -.03em; line-height: 1.18;
-      color: var(--ink); max-width: 22ch;
-      margin-bottom: .85rem;
-    }
-    .section-prose {
-      font-size: .98rem; color: var(--muted); max-width: 62ch;
-      margin-bottom: 1.5rem;
-    }
-    .section-prose + .section-prose { margin-top: -.75rem; }
+    /* Accordion for mobile - use same panels but stacked when narrow? We use tabs on all, they wrap fine */
 
-    /* Contexto + enfoque — editorial, no cards */
-    .contexto {
-      background: var(--surface);
+    /* Capabilities */
+    .capabilities { background: var(--bg); }
+    .cap-list { display: grid; gap: 0; }
+    .cap {
+      display: grid; gap: 1rem; padding: 1.5rem 0;
       border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
     }
-    .contexto-intro {
-      display: grid; gap: 1rem;
-      margin-bottom: 2rem;
-      padding-bottom: 1.75rem;
-      border-bottom: 1px solid var(--line);
+    .cap:last-child { border-bottom: 1px solid var(--line); }
+    .cap-index {
+      font-size: .78rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--blue);
     }
-    .contexto-intro p {
-      font-size: 1.02rem; color: var(--ink-2); max-width: 58ch;
-    }
-    .contexto-intro .muted { color: var(--muted); font-size: .95rem; }
+    .cap h3 { font-size: clamp(1.2rem, 2.4vw, 1.55rem); margin: .35rem 0 .65rem; }
+    .cap p + p { margin-top: .7rem; }
 
-    .pilar {
-      display: grid; gap: .65rem;
-      padding: 1.35rem 0;
-      border-bottom: 1px solid var(--line);
+    /* Method */
+    .method {
+      background: var(--dark); color: #fff;
     }
-    .pilar:last-child { border-bottom: 0; padding-bottom: 0; }
-    .pilar:first-of-type { padding-top: 0; }
-    .pilar-head {
-      display: flex; align-items: baseline; gap: .75rem; flex-wrap: wrap;
-    }
-    .pilar-num {
-      font-size: .72rem; font-weight: 800; letter-spacing: .08em;
-      color: var(--accent); font-variant-numeric: tabular-nums;
-    }
-    .pilar h3 {
-      font-size: 1.05rem; font-weight: 800; letter-spacing: -.02em;
-      color: var(--ink); line-height: 1.25;
-    }
-    .pilar p {
-      font-size: .94rem; color: var(--muted); max-width: 62ch;
-    }
-
-    /* Cómo trabajamos — narrativa + filas */
-    .proceso {
-      background: var(--bg);
-    }
-    .proceso-lead {
-      font-size: .98rem; color: var(--muted); max-width: 58ch;
-      margin-bottom: 1.75rem;
-    }
-    .etapa {
-      display: grid; gap: .4rem;
-      padding: 1.1rem 0 1.1rem 1rem;
-      border-left: 2px solid var(--line);
-      margin-left: .35rem;
+    .method .eyebrow { color: #9ec3ff; }
+    .method .eyebrow::before { background: var(--blue); }
+    .method h2 { color: #fff; }
+    .method .sec-head p { color: rgba(255,255,255,.62); }
+    .timeline {
+      display: grid; gap: 0; margin-top: .5rem;
       position: relative;
     }
-    .etapa::before {
-      content: "";
-      position: absolute; left: -5px; top: 1.35rem;
-      width: 8px; height: 8px; border-radius: 50%;
-      background: var(--petrol);
-      box-shadow: 0 0 0 3px var(--bg);
+    .timeline::before {
+      content: ""; position: absolute; left: 15px; top: 8px; bottom: 8px; width: 2px;
+      background: rgba(61,139,255,.35);
     }
-    .etapa:first-child { padding-top: .25rem; }
-    .etapa:first-child::before { top: .55rem; }
-    .etapa:last-child { padding-bottom: .25rem; }
-    .etapa-label {
-      font-size: .7rem; font-weight: 700; letter-spacing: .1em;
-      text-transform: uppercase; color: var(--petrol);
+    .step {
+      display: grid; grid-template-columns: 32px 1fr; gap: 1rem;
+      padding: 1rem 0 1.35rem; position: relative;
     }
-    .etapa h3 {
-      font-size: 1rem; font-weight: 800; letter-spacing: -.015em;
-      color: var(--ink);
+    .step-dot {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: #13233d; border: 2px solid var(--blue);
+      display: grid; place-items: center; font-size: .75rem; font-weight: 800; color: #9ec3ff;
+      z-index: 1;
     }
-    .etapa p {
-      font-size: .92rem; color: var(--muted); max-width: 58ch;
-    }
-
-    .necesidades {
-      margin-top: 2.25rem;
-      background: var(--ink);
-      color: #fff;
-      border-radius: var(--radius);
-      padding: 1.5rem 1.25rem;
-    }
-    .necesidades h3 {
-      font-size: 1.1rem; font-weight: 800; letter-spacing: -.02em;
-      margin-bottom: .4rem;
-    }
-    .necesidades > p {
-      font-size: .9rem; color: rgba(255,255,255,.7);
-      margin-bottom: 1.25rem; max-width: 48ch;
-    }
-    .necesidad {
-      display: grid; gap: .35rem;
-      padding: 1rem 0;
-      border-top: 1px solid rgba(255,255,255,.12);
-    }
-    .necesidad:first-of-type { border-top: 0; padding-top: 0; }
-    .necesidad dt {
-      font-size: .95rem; font-weight: 700; color: #fff;
-    }
-    .necesidad dd {
-      font-size: .88rem; color: rgba(255,255,255,.68); line-height: 1.55;
+    .step h3 { color: #fff; margin-bottom: .45rem; font-size: 1.1rem; }
+    .step p { color: rgba(255,255,255,.62); }
+    .method-note {
+      margin-top: .5rem; padding: 1rem 1.1rem; border-radius: 14px;
+      background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
+      color: rgba(255,255,255,.7); font-size: .95rem;
     }
 
-    /* Contacto */
-    .contacto {
-      background: var(--surface);
-      border-top: 1px solid var(--line);
-      padding-bottom: 3rem;
+    /* Approach */
+    .approach { background: #fff; border-block: 1px solid var(--line); }
+    .approach-grid {
+      display: grid; gap: 1.5rem;
     }
-    .contacto-grid {
-      display: grid; gap: 1.75rem;
+    .approach-lead {
+      font-size: 1.08rem; color: var(--ink); max-width: 58ch; font-weight: 500;
     }
-    .contacto-copy p {
-      font-size: .98rem; color: var(--muted); max-width: 42ch;
-      margin-bottom: 1.1rem;
+    .principles { display: grid; gap: 1.1rem; }
+    .principle {
+      padding: 1.15rem 1.2rem; border-left: 3px solid var(--blue);
+      background: var(--soft); border-radius: 0 14px 14px 0;
     }
-    .form-card {
-      background: var(--bg);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 1.25rem;
+    .principle strong {
+      display: block; font-size: 1.02rem; margin-bottom: .35rem; color: var(--ink);
     }
-    .form-card h3 {
-      font-size: 1rem; font-weight: 800; margin-bottom: 1rem;
-      letter-spacing: -.015em;
+    .principle p { font-size: .98rem; }
+
+    /* Contact */
+    .contact { background: var(--bg); }
+    .contact-box {
+      display: grid; gap: 1.5rem;
+      background: #fff; border: 1px solid var(--line); border-radius: 22px;
+      padding: 1.35rem 1.2rem 1.4rem;
+      box-shadow: 0 16px 40px rgba(11,18,32,.05);
     }
-    .field { margin-bottom: .85rem; }
-    .field label {
-      display: block; font-size: .78rem; font-weight: 700;
-      color: var(--ink-2); margin-bottom: .35rem;
-    }
+    .contact-copy h2 { margin: .65rem 0 .8rem; }
+    .contact-copy p { max-width: 48ch; }
+    .form { display: grid; gap: .85rem; }
+    .field { display: grid; gap: .35rem; }
+    .field label { font-size: .82rem; font-weight: 700; color: var(--ink); }
     .field input, .field textarea, .field select {
-      width: 100%; background: var(--surface);
-      border: 1px solid var(--line); border-radius: var(--radius-sm);
-      padding: .7rem .85rem; outline: none;
-      transition: border-color .15s;
+      width: 100%; border: 1px solid var(--line); border-radius: 12px;
+      padding: .85rem .95rem; background: var(--bg); color: var(--ink);
+      outline: none; transition: .15s ease;
     }
     .field input:focus, .field textarea:focus, .field select:focus {
-      border-color: var(--accent);
+      border-color: var(--blue); background: #fff; box-shadow: 0 0 0 3px rgba(61,139,255,.15);
     }
     .field textarea { min-height: 110px; resize: vertical; }
-    .form-actions {
-      display: flex; flex-direction: column; gap: .55rem; margin-top: .35rem;
+    .form-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: .2rem; }
+    .expect {
+      background: var(--dark); color: #fff; border-radius: 16px; padding: 1.2rem 1.15rem;
     }
-    .form-note {
-      font-size: .78rem; color: var(--muted); margin-top: .75rem;
-    }
+    .expect h3 { color: #fff; margin-bottom: .65rem; font-size: 1.05rem; }
+    .expect p { color: rgba(255,255,255,.65); font-size: .95rem; }
+    .expect p + p { margin-top: .7rem; }
 
     /* Footer */
-    .site-footer {
-      background: var(--ink); color: rgba(255,255,255,.55);
-      padding: 1.5rem 0;
-      font-size: .8rem;
+    footer {
+      border-top: 1px solid var(--line); padding: 1.4rem 0 1.8rem; background: #fff;
     }
-    .footer-inner {
-      display: flex; flex-wrap: wrap; gap: .75rem 1.5rem;
-      align-items: center; justify-content: space-between;
+    .foot {
+      display: flex; flex-wrap: wrap; gap: .8rem 1.5rem; justify-content: space-between; align-items: center;
     }
-    .footer-brand { font-weight: 700; color: #fff; }
-    .footer-links { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .footer-links a:hover { color: #fff; }
+    .foot p, .foot a { font-size: .88rem; color: var(--muted); font-weight: 500; }
+    .foot a:hover { color: var(--ink); }
 
-    /* Reveal */
-    .reveal {
-      opacity: 0; transform: translateY(12px);
-      transition: opacity .5s ease, transform .5s ease;
+    @media (min-width: 760px) {
+      .menu-btn, .mobile-panel { display: none !important; }
+      .nav-links, .nav-cta { display: flex; }
+      .hero-grid { grid-template-columns: 1.05fr .95fr; gap: 2.5rem; }
+      .hero { padding: 3.4rem 0 3rem; }
+      section { padding: 3.6rem 0; }
+      .cap {
+        grid-template-columns: 180px 1fr; gap: 2rem; align-items: start;
+        padding: 1.75rem 0;
+      }
+      .timeline { max-width: 760px; }
+      .approach-grid { grid-template-columns: 1.1fr .9fr; gap: 2.5rem; align-items: start; }
+      .contact-box { grid-template-columns: 1fr 1fr; padding: 1.8rem; gap: 2rem; }
+      .form { grid-template-columns: 1fr 1fr; }
+      .form .full { grid-column: 1 / -1; }
+      .form-actions { grid-column: 1 / -1; }
     }
-    .reveal.visible { opacity: 1; transform: none; }
-
-    @media (min-width: 720px) {
-      .brand-desc { max-width: none; }
-      .nav-desktop { display: flex; }
-      .hero { padding: 3.25rem 0 3.5rem; }
-      .hero-grid {
-        grid-template-columns: 1.4fr .85fr;
-        align-items: end; gap: 2.5rem;
-      }
-      section { padding: 3.25rem 0; }
-      .pilar {
-        grid-template-columns: 11rem 1fr;
-        gap: 1.25rem; align-items: start;
-        padding: 1.5rem 0;
-      }
-      .pilar-head { flex-direction: column; gap: .25rem; }
-      .contacto-grid {
-        grid-template-columns: 1fr 1.05fr;
-        gap: 2.5rem; align-items: start;
-      }
-      .form-actions { flex-direction: row; align-items: center; }
-      .necesidades { padding: 1.75rem 1.75rem; }
-    }
-
-    @media (min-width: 960px) {
-      .hero h1 { max-width: 16ch; }
+    @media (min-width: 980px) {
+      .routes { padding: 1.25rem; }
+      .route-panel { padding: 1.5rem 1.5rem 1.6rem; }
     }
   </style>
 </head>
 <body>
-  <header class="site-header" id="header">
-    <div class="container header-inner">
-      <a class="brand" href="#inicio" aria-label="Crecimiento Comercial — inicio">
-        <span class="brand-mark" aria-hidden="true"><span></span></span>
-        <span class="brand-text">
-          <span class="brand-name">Crecimiento Comercial</span>
-          <span class="brand-desc">Estrategia · tecnología · desarrollo digital</span>
-        </span>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#inicio" aria-label="Crecimiento Comercial">
+        <span class="brand-mark" aria-hidden="true">CC</span>
+        <span>Crecimiento Comercial<em>Estrategia · Tecnología</em></span>
       </a>
-      <nav class="nav-desktop" aria-label="Principal">
+      <nav class="nav-links" aria-label="Principal">
         <a href="#enfoque">Enfoque</a>
-        <a href="#proceso">Cómo trabajamos</a>
+        <a href="#como-trabajamos">Cómo trabajamos</a>
         <a href="#contacto">Contacto</a>
       </nav>
-      <a class="btn btn-primary btn-header" href="https://wa.me/5491168713479?text=Hola%2C%20quisiera%20solicitar%20un%20diagn%C3%B3stico%20comercial." target="_blank" rel="noopener">Diagnóstico</a>
+      <a class="btn btn-primary nav-cta" href="#contacto">Solicitar diagnóstico</a>
+      <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" id="menuBtn"><span></span></button>
+    </div>
+    <div class="mobile-panel" id="mobilePanel">
+      <a href="#enfoque">Enfoque</a>
+      <a href="#como-trabajamos">Cómo trabajamos</a>
+      <a href="#contacto">Contacto</a>
+      <a class="btn btn-primary" href="#contacto">Solicitar diagnóstico</a>
     </div>
   </header>
 
   <main id="inicio">
     <!-- 1. HERO -->
     <section class="hero">
-      <div class="container hero-grid">
+      <div class="wrap hero-grid">
         <div>
-          <p class="hero-kicker">Socio externo de crecimiento comercial</p>
-          <h1>Hacemos crecer empresas a través de <em>estrategia, tecnología y desarrollo comercial</em>.</h1>
-          <p class="hero-lead">Identificamos oportunidades, detectamos problemas comerciales e implementamos soluciones para captar clientes, mejorar procesos y fortalecer la capacidad de venta de la empresa.</p>
+          <p class="eyebrow">Crecimiento comercial para empresas</p>
+          <h1>Hacemos crecer empresas a través de estrategia, tecnología y desarrollo comercial.</h1>
+          <p class="lead">Somos un socio externo de crecimiento comercial. Trabajamos con empresas que necesitan captar mejores oportunidades, ordenar su operación comercial y sostener mejoras medibles en el tiempo.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://wa.me/5491168713479?text=Hola%2C%20quisiera%20solicitar%20un%20diagn%C3%B3stico%20comercial." target="_blank" rel="noopener">Solicitar diagnóstico comercial</a>
-            <a class="btn btn-ghost" href="#enfoque">Conocer el enfoque</a>
+            <a class="btn btn-primary" href="#contacto">Solicitar diagnóstico comercial</a>
+            <a class="btn btn-ghost" href="#como-trabajamos">Cómo trabajamos</a>
           </div>
         </div>
-        <aside class="hero-aside" aria-label="Qué somos">
-          <div>
-            <strong>Quiénes somos</strong>
-            <p>No somos una agencia de páginas web ni una agencia de publicidad convencional. Trabajamos como socio externo de crecimiento comercial para empresas que necesitan ordenar, captar y convertir con mayor claridad.</p>
+        <aside class="hero-panel" aria-label="Sistema de trabajo">
+          <p class="label">Sistema de trabajo</p>
+          <div class="diagram">
+            <div class="d-row">
+              <span class="d-num">01</span>
+              <div><strong>Diagnóstico</strong><span>Dónde se frena el crecimiento</span></div>
+              <span class="d-tag">Base</span>
+            </div>
+            <div class="d-row">
+              <span class="d-num">02</span>
+              <div><strong>Diseño del plan</strong><span>Prioridades de mayor impacto</span></div>
+              <span class="d-tag">Plan</span>
+            </div>
+            <div class="d-row">
+              <span class="d-num">03</span>
+              <div><strong>Implementación</strong><span>Ejecución y acompañamiento</span></div>
+              <span class="d-tag">Acción</span>
+            </div>
           </div>
-          <div>
-            <strong>Cómo empezamos</strong>
-            <p>Antes de proponer acciones, analizamos el funcionamiento comercial actual: canales, consultas, seguimiento y resultados. A partir de ese diagnóstico priorizamos lo que tiene mayor impacto.</p>
-          </div>
+          <p class="hero-note">Primero entendemos la operación. Después proponemos el camino.</p>
         </aside>
       </div>
     </section>
 
-    <!-- 2. CONTEXTO + ENFOQUE -->
-    <section class="contexto" id="enfoque">
-      <div class="container">
-        <p class="section-label">Enfoque</p>
-        <h2 class="section-title">Muchas empresas tienen oportunidades de crecimiento que todavía no están aprovechando</h2>
-        <div class="contexto-intro reveal">
-          <p>Es frecuente encontrar negocios con demanda potencial, pero con fricciones que frenan el resultado: pocos clientes nuevos, una presencia digital que no representa bien a la empresa, consultas que se pierden, presupuestos sin seguimiento, o una operación comercial que no permite saber qué está funcionando.</p>
-          <p class="muted">Nuestro trabajo consiste en identificar esas fricciones, ordenar prioridades y construir un sistema comercial más claro: captación, conversión, organización y medición. No ofrecemos servicios de forma indiscriminada; diseñamos intervenciones a partir del diagnóstico de cada empresa.</p>
+    <!-- 2. FRICTION / ROUTES -->
+    <section class="friction" id="enfoque" aria-labelledby="friction-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Situación comercial</p>
+          <h2 id="friction-title">¿Dónde está frenado el crecimiento comercial?</h2>
+          <p>Cuando una empresa no crece al ritmo que podría, el problema suele concentrarse en pocos puntos. Identificarlos con claridad evita invertir en acciones desconectadas y permite intervenir donde el impacto es mayor.</p>
         </div>
+        <div class="routes">
+          <div class="route-tabs" role="tablist" aria-label="Puntos de fricción">
+            <button class="route-tab active" type="button" role="tab" aria-selected="true" data-route="a">Poca demanda calificada</button>
+            <button class="route-tab" type="button" role="tab" aria-selected="false" data-route="b">Consultas sin seguimiento</button>
+            <button class="route-tab" type="button" role="tab" aria-selected="false" data-route="c">Sin claridad de resultados</button>
+          </div>
 
-        <article class="pilar reveal">
-          <div class="pilar-head">
-            <span class="pilar-num">01</span>
-            <h3>Publicidad y captación</h3>
-          </div>
-          <div>
-            <p>Cuando la empresa no genera consultas suficientes, o cuando la inversión publicitaria no se traduce en oportunidades calificadas, revisamos canales, mensajes y audiencias. Diseñamos captación orientada a demanda real, con seguimiento de costo por consulta y calidad de los contactos que llegan.</p>
-          </div>
-        </article>
-
-        <article class="pilar reveal">
-          <div class="pilar-head">
-            <span class="pilar-num">02</span>
-            <h3>Presencia digital y conversión</h3>
-          </div>
-          <div>
-            <p>Una presencia digital débil o desordenada reduce la confianza y hace que se pierdan visitas que podrían convertirse en consultas. Trabajamos sitios, landing pages y recorridos de contacto alineados al discurso comercial de la empresa, para que el visitante entienda la oferta y pueda avanzar con claridad.</p>
-          </div>
-        </article>
-
-        <article class="pilar reveal">
-          <div class="pilar-head">
-            <span class="pilar-num">03</span>
-            <h3>Organización comercial y CRM</h3>
-          </div>
-          <div>
-            <p>Recibir consultas no alcanza si no hay un lugar donde registrarlas, asignarlas y priorizarlas. Implementamos o reordenamos la organización comercial —procesos y herramientas CRM— para que cada oportunidad tenga responsable, estado y próxima acción, sin depender de la memoria del equipo.</p>
-          </div>
-        </article>
-
-        <article class="pilar reveal">
-          <div class="pilar-head">
-            <span class="pilar-num">04</span>
-            <h3>Seguimiento y recuperación de oportunidades</h3>
-          </div>
-          <div>
-            <p>Una parte importante de las ventas se pierde por falta de seguimiento o por demoras en la respuesta. Definimos rutinas de contacto, recuperación de presupuestos pendientes y criterios para reactivar oportunidades que quedaron sin cierre, de modo que el esfuerzo de captación no se desperdicie.</p>
-          </div>
-        </article>
-
-        <article class="pilar reveal">
-          <div class="pilar-head">
-            <span class="pilar-num">05</span>
-            <h3>Control y optimización de resultados</h3>
-          </div>
-          <div>
-            <p>Sin indicadores claros es difícil saber qué canal, mensaje o proceso aporta valor. Armamos un tablero mínimo de métricas comerciales —consultas, tasas de respuesta, conversiones, origen de los contactos— y ajustamos la operación a partir de datos, no de intuición.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- 3. CÓMO TRABAJAMOS -->
-    <section class="proceso" id="proceso">
-      <div class="container">
-        <p class="section-label">Metodología</p>
-        <h2 class="section-title">Primero identificamos el problema. Después diseñamos la solución.</h2>
-        <p class="proceso-lead reveal">Cada empresa tiene una combinación distinta de canales, equipo y madurez comercial. Por eso no partimos de un paquete fijo: investigamos, diagnosticamos y recién entonces proponemos qué implementar. El proceso se organiza en seis etapas.</p>
-
-        <div class="reveal">
-          <article class="etapa">
-            <span class="etapa-label">Etapa 1</span>
-            <h3>Investigación</h3>
-            <p>Relevamos el contexto del negocio: oferta, mercado, canales actuales, herramientas en uso y forma en que hoy entran y se gestionan las consultas. El objetivo es entender el funcionamiento real, no el teórico.</p>
+          <article class="route-panel active" id="route-a" role="tabpanel">
+            <h3>Poca demanda calificada</h3>
+            <p>La empresa necesita más conversaciones con clientes potenciales, pero la captación es irregular, la presencia digital no genera consultas útiles o la publicidad no llega a perfiles que realmente pueden comprar.</p>
+            <p>En ese escenario trabajamos sobre la propuesta comercial, los canales de captación y la conversión de la presencia digital, para que la demanda que entra tenga mejor calidad y un costo más sostenible.</p>
+            <span class="route-kicker">Intervención → captación y presencia digital</span>
           </article>
-          <article class="etapa">
-            <span class="etapa-label">Etapa 2</span>
-            <h3>Diagnóstico comercial</h3>
-            <p>Analizamos dónde se generan fricciones: captación, conversión, organización, seguimiento o medición. El diagnóstico deja por escrito qué está ocurriendo y qué impacto tiene cada problema sobre el resultado comercial.</p>
-          </article>
-          <article class="etapa">
-            <span class="etapa-label">Etapa 3</span>
-            <h3>Identificación de oportunidades</h3>
-            <p>Priorizamos las mejoras con mayor impacto relativo al esfuerzo. No todo se ataca a la vez: se elige un orden lógico para que la empresa avance con foco y sin dispersar recursos.</p>
-          </article>
-          <article class="etapa">
-            <span class="etapa-label">Etapa 4</span>
-            <h3>Propuesta personalizada</h3>
-            <p>Presentamos un plan concreto —alcance, etapas, responsables y criterios de avance— adaptado a la realidad de esa empresa. La propuesta se construye sobre el diagnóstico, no sobre un catálogo genérico de servicios.</p>
-          </article>
-          <article class="etapa">
-            <span class="etapa-label">Etapa 5</span>
-            <h3>Implementación</h3>
-            <p>Ejecutamos lo acordado: campañas, presencia digital, CRM, rutinas de seguimiento o tableros de control, según lo que el diagnóstico haya priorizado. Trabajamos junto al equipo interno para que la solución quede operable.</p>
-          </article>
-          <article class="etapa">
-            <span class="etapa-label">Etapa 6</span>
-            <h3>Seguimiento y optimización</h3>
-            <p>Medimos resultados, revisamos desviaciones y ajustamos. El acompañamiento busca estabilizar lo implementado y mejorar de forma continua lo que ya está en marcha.</p>
-          </article>
-        </div>
 
-        <div class="necesidades reveal">
-          <h3>Cómo se traduce en necesidades habituales</h3>
-          <p>Estas son situaciones frecuentes con las que suelen llegar las empresas. Cada una se aborda desde el diagnóstico, no desde una solución prefabricada.</p>
-          <dl>
-            <div class="necesidad">
-              <dt>Necesitás conseguir más clientes</dt>
-              <dd>Revisamos canales de captación, propuesta de valor y calidad de las consultas. Se diseña publicidad y captación alineada a la demanda real del negocio, con seguimiento de resultados.</dd>
-            </div>
-            <div class="necesidad">
-              <dt>La empresa no tiene una presencia digital profesional</dt>
-              <dd>Ordenamos el discurso, el sitio y los puntos de contacto para que representen bien a la empresa y faciliten la consulta, sin convertir la web en un fin en sí mismo.</dd>
-            </div>
-            <div class="necesidad">
-              <dt>Recibís consultas pero no las organizás</dt>
-              <dd>Implementamos o reordenamos CRM y procesos para registrar, asignar y priorizar cada oportunidad, con estados claros y responsables definidos.</dd>
-            </div>
-            <div class="necesidad">
-              <dt>Perdés ventas por falta de seguimiento</dt>
-              <dd>Definimos rutinas de contacto, recuperación de presupuestos y criterios de reactivación para que las oportunidades no se enfríen por demora o desorden.</dd>
-            </div>
-            <div class="necesidad">
-              <dt>No sabés qué está funcionando comercialmente</dt>
-              <dd>Armamos indicadores mínimos y un ritmo de revisión para entender origen de consultas, conversión y cuellos de botella, y decidir con información.</dd>
-            </div>
-          </dl>
+          <article class="route-panel" id="route-b" role="tabpanel" hidden>
+            <h3>Consultas sin orden ni seguimiento</h3>
+            <p>Llegan consultas, se piden presupuestos y aparecen oportunidades, pero no hay un criterio claro para registrarlas, priorizarlas y darles seguimiento. El equipo responde cuando puede y muchas conversaciones se enfrían sin cierre.</p>
+            <p>Ahí el foco pasa por organizar el flujo comercial, definir responsables, tiempos de respuesta y un sistema simple de seguimiento —con o sin CRM— para que ninguna oportunidad relevante quede sin atención.</p>
+            <span class="route-kicker">Intervención → organización comercial, CRM y seguimiento</span>
+          </article>
+
+          <article class="route-panel" id="route-c" role="tabpanel" hidden>
+            <h3>Sin claridad de qué funciona</h3>
+            <p>Se invierte en acciones comerciales o digitales, pero no hay una lectura confiable de qué está generando resultados. Sin esa información, las decisiones se toman por intuición y cuesta sostener mejoras en el tiempo.</p>
+            <p>En este caso armamos indicadores simples, conectamos las fuentes de datos y dejamos un tablero operable para revisar captación, seguimiento y conversión, y ajustar el plan con evidencia.</p>
+            <span class="route-kicker">Intervención → medición y optimización</span>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- 4. CONTACTO -->
-    <section class="contacto" id="contacto">
-      <div class="container contacto-grid">
-        <div class="contacto-copy reveal">
-          <p class="section-label">Contacto</p>
-          <h2 class="section-title">Empecemos por conocer tu empresa</h2>
-          <p>Contanos sobre tu negocio y analizaremos dónde existen oportunidades para mejorar su crecimiento comercial. El primer paso es un intercambio para entender el contexto; a partir de ahí evaluamos si un diagnóstico tiene sentido.</p>
-          <a class="btn btn-wa" href="https://wa.me/5491168713479?text=Hola%2C%20quisiera%20conversar%20sobre%20el%20crecimiento%20comercial%20de%20mi%20empresa." target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    <!-- 3. WHAT WE DO -->
+    <section class="capabilities" id="que-hacemos" aria-labelledby="cap-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Capacidades</p>
+          <h2 id="cap-title">Un sistema comercial, no acciones sueltas</h2>
+          <p>No ofrecemos piezas aisladas. Integramos captación, operación comercial y medición para que el crecimiento deje de depender de esfuerzos desconectados.</p>
         </div>
-
-        <div class="form-card reveal">
-          <h3>Solicitar diagnóstico comercial</h3>
-          <form id="lead-form" novalidate>
-            <div class="field">
-              <label for="nombre">Nombre</label>
-              <input id="nombre" name="nombre" type="text" autocomplete="name" required />
+        <div class="cap-list">
+          <article class="cap">
+            <div>
+              <p class="cap-index">01 · Captación</p>
+              <h3>Captación y presencia digital</h3>
             </div>
+            <div>
+              <p>Cuando la demanda es insuficiente o de baja calidad, el problema no siempre es “hacer más publicidad”. Suele estar en cómo se presenta la empresa, a quién se le habla y qué pasa cuando alguien llega a consultar.</p>
+              <p>Diseñamos e implementamos la captación y la presencia digital como parte del sistema comercial: mensajes claros, canales alineados al negocio y rutas de conversión pensadas para generar consultas útiles.</p>
+            </div>
+          </article>
+          <article class="cap">
+            <div>
+              <p class="cap-index">02 · Operación</p>
+              <h3>Organización comercial, CRM y seguimiento</h3>
+            </div>
+            <div>
+              <p>Muchas empresas pierden ventas no por falta de interés del mercado, sino porque las oportunidades no se registran, no se priorizan o no reciben seguimiento a tiempo.</p>
+              <p>Ordenamos el flujo comercial, definimos criterios de trabajo y, cuando corresponde, implementamos CRM y automatizaciones simples para recuperar oportunidades y sostener el seguimiento sin depender de la memoria del equipo.</p>
+            </div>
+          </article>
+          <article class="cap">
+            <div>
+              <p class="cap-index">03 · Control</p>
+              <h3>Medición y optimización</h3>
+            </div>
+            <div>
+              <p>Sin una lectura clara de resultados, es difícil saber qué conviene reforzar y qué conviene corregir. El crecimiento se vuelve intermitente.</p>
+              <p>Definimos indicadores relevantes, conectamos la información disponible y acompañamos la revisión periódica para ajustar captación, seguimiento y conversión con datos concretos.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. METHOD -->
+    <section class="method" id="como-trabajamos" aria-labelledby="method-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Proceso</p>
+          <h2 id="method-title">Primero el diagnóstico. Después el plan. Después la implementación.</h2>
+          <p>No ofrecemos servicios a ciegas. Cada empresa llega con una operación distinta, y el orden de intervención se define después de entender dónde está el mayor impacto.</p>
+        </div>
+        <div class="timeline">
+          <article class="step">
+            <div class="step-dot">1</div>
+            <div>
+              <h3>Diagnóstico comercial</h3>
+              <p>Relevamos cómo captan clientes hoy, qué pasa con las consultas, cómo se organizan las oportunidades y qué información usan para decidir. El objetivo es localizar fricciones reales, no armar un catálogo de servicios.</p>
+            </div>
+          </article>
+          <article class="step">
+            <div class="step-dot">2</div>
+            <div>
+              <h3>Diseño del plan</h3>
+              <p>Priorizamos las intervenciones según impacto y capacidad de ejecución. El plan deja claro qué se atiende primero, qué se deja para después y qué resultados se van a observar.</p>
+            </div>
+          </article>
+          <article class="step">
+            <div class="step-dot">3</div>
+            <div>
+              <h3>Implementación y acompañamiento</h3>
+              <p>Ejecutamos lo acordado —captación, presencia digital, organización comercial, seguimiento o medición— y acompañamos la puesta en marcha para que el sistema quede operable por el equipo.</p>
+            </div>
+          </article>
+        </div>
+        <p class="method-note">El diagnóstico no es un trámite comercial. Es la base para decidir dónde conviene intervenir y con qué profundidad.</p>
+      </div>
+    </section>
+
+    <!-- 5. APPROACH -->
+    <section class="approach" aria-labelledby="approach-title">
+      <div class="wrap approach-grid">
+        <div>
+          <p class="eyebrow">Posicionamiento</p>
+          <h2 id="approach-title">Por qué este modo de trabajo</h2>
+          <p class="approach-lead">No somos una agencia de sitios web ni una agencia de publicidad convencional. Somos un socio externo de crecimiento comercial: combinamos estrategia, tecnología y desarrollo comercial para mejorar cómo una empresa consigue, gestiona y convierte oportunidades.</p>
+        </div>
+        <div class="principles">
+          <article class="principle">
+            <strong>Diagnóstico antes de proponer</strong>
+            <p>Primero entendemos el contexto y las restricciones de la empresa. Recién después proponemos el plan. Así evitamos soluciones genéricas que no encajan con la operación real.</p>
+          </article>
+          <article class="principle">
+            <strong>Estrategia y tecnología juntas</strong>
+            <p>La tecnología sirve cuando sostiene un criterio comercial. Por eso integramos procesos, herramientas y mensajes en un mismo sistema, en lugar de sumar piezas aisladas.</p>
+          </article>
+          <article class="principle">
+            <strong>Medición para ajustar</strong>
+            <p>Lo que no se observa no se puede mejorar con consistencia. Dejamos indicadores simples y una forma de revisar resultados para que el plan se corrija con evidencia.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CONTACT -->
+    <section class="contact" id="contacto" aria-labelledby="contact-title">
+      <div class="wrap">
+        <div class="contact-box">
+          <div class="contact-copy">
+            <p class="eyebrow">Primer intercambio</p>
+            <h2 id="contact-title">Empecemos por conocer tu empresa</h2>
+            <p>Contanos sobre tu negocio y la situación comercial actual. Con esa información evaluamos si hay espacio para un diagnóstico y cómo convendría encararlo.</p>
+            <div class="expect" style="margin-top:1.25rem">
+              <h3>Qué esperar del primer intercambio</h3>
+              <p>Vamos a pedir contexto sobre tu empresa, el tipo de clientes que buscás y dónde sentís que hoy se traba el crecimiento comercial.</p>
+              <p>Si hay encaje, coordinamos un diagnóstico. Si no es el momento o el alcance no coincide, te lo decimos con claridad.</p>
+            </div>
+          </div>
+          <form class="form" id="leadForm" novalidate>
             <div class="field">
               <label for="empresa">Empresa</label>
               <input id="empresa" name="empresa" type="text" autocomplete="organization" required />
             </div>
             <div class="field">
-              <label for="rubro">Rubro o actividad</label>
-              <input id="rubro" name="rubro" type="text" />
+              <label for="nombre">Nombre</label>
+              <input id="nombre" name="nombre" type="text" autocomplete="name" required />
             </div>
             <div class="field">
-              <label for="mensaje">¿Qué situación comercial querés revisar?</label>
-              <textarea id="mensaje" name="mensaje" required placeholder="Por ejemplo: pocas consultas, falta de seguimiento, presencia digital, etc."></textarea>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="field">
+              <label for="telefono">Teléfono</label>
+              <input id="telefono" name="telefono" type="tel" autocomplete="tel" required />
+            </div>
+            <div class="field full">
+              <label for="situacion">Situación comercial</label>
+              <textarea id="situacion" name="situacion" placeholder="Breve descripción de dónde está frenado el crecimiento o qué quisieran mejorar." required></textarea>
             </div>
             <div class="form-actions">
               <button class="btn btn-primary" type="submit">Enviar por WhatsApp</button>
+              <a class="btn btn-ghost" href="https://wa.me/5491168713479" target="_blank" rel="noopener">Escribir por WhatsApp</a>
             </div>
-            <p class="form-note">El mensaje se abre en WhatsApp para que lo envíes vos. No almacenamos los datos en un servidor.</p>
           </form>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p><span class="footer-brand">Crecimiento Comercial</span> · Estrategia, tecnología y desarrollo digital para empresas</p>
-      <div class="footer-links">
-        <a href="#enfoque">Enfoque</a>
-        <a href="#proceso">Cómo trabajamos</a>
-        <a href="#contacto">Contacto</a>
-      </div>
+  <footer>
+    <div class="wrap foot">
+      <p>© <span id="y"></span> Crecimiento Comercial</p>
+      <a href="https://wa.me/5491168713479" target="_blank" rel="noopener">WhatsApp</a>
     </div>
   </footer>
 
   <script>
-    (function () {
-      var header = document.getElementById("header");
-      var onScroll = function () {
-        if (window.scrollY > 8) header.classList.add("scrolled");
-        else header.classList.remove("scrolled");
-      };
-      onScroll();
-      window.addEventListener("scroll", onScroll, { passive: true });
+    document.getElementById('y').textContent = new Date().getFullYear();
 
-      if ("IntersectionObserver" in window) {
-        var io = new IntersectionObserver(function (entries) {
-          entries.forEach(function (e) {
-            if (e.isIntersecting) {
-              e.target.classList.add("visible");
-              io.unobserve(e.target);
-            }
-          });
-        }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
-        document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
-      } else {
-        document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("visible"); });
-      }
+    const menuBtn = document.getElementById('menuBtn');
+    const mobilePanel = document.getElementById('mobilePanel');
+    menuBtn.addEventListener('click', () => {
+      const open = mobilePanel.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mobilePanel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      mobilePanel.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }));
 
-      var form = document.getElementById("lead-form");
-      form.addEventListener("submit", function (ev) {
-        ev.preventDefault();
-        var nombre = (form.nombre.value || "").trim();
-        var empresa = (form.empresa.value || "").trim();
-        var rubro = (form.rubro.value || "").trim();
-        var mensaje = (form.mensaje.value || "").trim();
-        if (!nombre || !empresa || !mensaje) {
-          form.reportValidity();
-          return;
-        }
-        var lines = [
-          "Hola, quiero solicitar un diagnóstico comercial.",
-          "",
-          "Nombre: " + nombre,
-          "Empresa: " + empresa
-        ];
-        if (rubro) lines.push("Rubro: " + rubro);
-        lines.push("", "Situación:", mensaje);
-        var url = "https://wa.me/5491168713479?text=" + encodeURIComponent(lines.join("\n"));
-        window.open(url, "_blank", "noopener");
+    const tabs = document.querySelectorAll('.route-tab');
+    const panels = document.querySelectorAll('.route-panel');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const id = tab.dataset.route;
+        tabs.forEach(t => {
+          t.classList.toggle('active', t === tab);
+          t.setAttribute('aria-selected', t === tab ? 'true' : 'false');
+        });
+        panels.forEach(p => {
+          const on = p.id === 'route-' + id;
+          p.classList.toggle('active', on);
+          if (on) p.removeAttribute('hidden');
+          else p.setAttribute('hidden', '');
+        });
       });
-    })();
+    });
+
+    document.getElementById('leadForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const fd = new FormData(e.target);
+      const empresa = (fd.get('empresa') || '').toString().trim();
+      const nombre = (fd.get('nombre') || '').toString().trim();
+      const email = (fd.get('email') || '').toString().trim();
+      const telefono = (fd.get('telefono') || '').toString().trim();
+      const situacion = (fd.get('situacion') || '').toString().trim();
+      if (!empresa || !nombre || !email || !telefono || !situacion) return;
+      const msg = [
+        'Hola, quiero solicitar un diagnóstico comercial.',
+        '',
+        'Empresa: ' + empresa,
+        'Nombre: ' + nombre,
+        'Email: ' + email,
+        'Teléfono: ' + telefono,
+        '',
+        'Situación:',
+        situacion
+      ].join('\n');
+      window.open('https://wa.me/5491168713479?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+    });
   </script>
 </body>
 </html>
