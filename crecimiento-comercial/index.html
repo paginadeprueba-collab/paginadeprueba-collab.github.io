@@ -32,7 +32,7 @@
       --shadow: 0 18px 50px rgba(11, 18, 32, 0.08);
       --shadow-soft: 0 8px 24px rgba(11, 18, 32, 0.06);
       --max: 1120px;
-      --header-h: 72px;
+      --header-h: 64px;
       --font: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
     }
 
@@ -59,50 +59,51 @@
     .site-header {
       position: sticky; top: 0; z-index: 50;
       height: var(--header-h);
-      background: rgba(247, 248, 250, 0.86);
+      background: rgba(247, 248, 250, 0.9);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       border-bottom: 1px solid transparent;
       transition: border-color .25s ease, background .25s ease;
     }
-    .site-header.scrolled { border-bottom-color: var(--line); background: rgba(255,255,255,.92); }
+    .site-header.scrolled { border-bottom-color: var(--line); background: rgba(255,255,255,.94); }
     .header-inner {
       height: 100%;
-      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      display: flex; align-items: center; justify-content: space-between; gap: .75rem;
     }
     .brand {
-      display: flex; align-items: center; gap: .7rem; min-width: 0;
+      display: flex; align-items: center; gap: .65rem; min-width: 0; flex: 1;
     }
     .brand-mark {
-      width: 34px; height: 34px; border-radius: 9px;
+      width: 32px; height: 32px; border-radius: 8px;
       background: linear-gradient(145deg, var(--petrol), var(--petrol-deep));
       display: grid; place-items: center; flex-shrink: 0;
       box-shadow: 0 8px 18px rgba(14, 58, 92, .28);
     }
-    .brand-mark svg { width: 18px; height: 18px; }
+    .brand-mark svg { width: 16px; height: 16px; }
     .brand-text { display: flex; flex-direction: column; min-width: 0; }
     .brand-name {
-      font-size: .82rem; font-weight: 800; letter-spacing: .04em;
+      font-size: .78rem; font-weight: 800; letter-spacing: .04em;
       text-transform: uppercase; color: var(--petrol); line-height: 1.1;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     }
     .brand-desc {
-      font-size: .68rem; color: var(--muted); white-space: nowrap;
-      overflow: hidden; text-overflow: ellipsis; max-width: 42vw;
+      font-size: .64rem; color: var(--muted); white-space: nowrap;
+      overflow: hidden; text-overflow: ellipsis; max-width: min(52vw, 220px);
     }
     .nav-desktop {
-      display: none; align-items: center; gap: 1.35rem;
-      font-size: .9rem; font-weight: 600; color: var(--ink-2);
+      display: none; align-items: center; gap: 1.25rem;
+      font-size: .88rem; font-weight: 600; color: var(--ink-2);
     }
     .nav-desktop a { opacity: .82; transition: opacity .2s; }
     .nav-desktop a:hover { opacity: 1; color: var(--petrol); }
     .header-cta { display: none; }
     .menu-btn {
-      width: 42px; height: 42px; border-radius: 10px;
+      width: 40px; height: 40px; border-radius: 10px; flex-shrink: 0;
       border: 1px solid var(--line); background: var(--surface);
       display: grid; place-items: center; cursor: pointer;
     }
     .menu-btn span, .menu-btn span::before, .menu-btn span::after {
-      display: block; width: 16px; height: 2px; background: var(--ink);
+      display: block; width: 15px; height: 2px; background: var(--ink);
       border-radius: 2px; position: relative; transition: .2s;
     }
     .menu-btn span::before, .menu-btn span::after {
@@ -142,11 +143,6 @@
       border-color: rgba(14, 58, 92, .28);
     }
     .btn-secondary:hover { background: rgba(14, 58, 92, .05); }
-    .btn-accent {
-      background: var(--accent); color: #fff;
-      box-shadow: 0 12px 28px rgba(61, 139, 255, .28);
-    }
-    .btn-accent:hover { filter: brightness(.96); }
     .btn-ghost {
       background: rgba(255,255,255,.08); color: #fff;
       border-color: rgba(255,255,255,.22);
@@ -161,60 +157,59 @@
     /* Hero */
     .hero {
       position: relative; overflow: hidden;
-      padding: 2.5rem 0 3.5rem;
+      padding: 2.25rem 0 3.25rem;
       background:
         radial-gradient(900px 420px at 85% -10%, rgba(61,139,255,.18), transparent 55%),
         radial-gradient(700px 380px at -10% 30%, rgba(14,58,92,.10), transparent 50%),
         linear-gradient(180deg, #F7F8FA 0%, #EEF3F8 100%);
     }
     .hero-grid {
-      display: grid; gap: 2.5rem; align-items: center;
+      display: grid; gap: 2.25rem; align-items: center;
     }
     .eyebrow {
       display: inline-flex; align-items: center; gap: .5rem;
-      font-size: .78rem; font-weight: 700; letter-spacing: .08em;
+      font-size: .76rem; font-weight: 700; letter-spacing: .08em;
       text-transform: uppercase; color: var(--petrol);
       background: rgba(14, 58, 92, .08); border: 1px solid rgba(14, 58, 92, .12);
-      padding: .45rem .8rem; border-radius: 999px; margin-bottom: 1.1rem;
+      padding: .42rem .75rem; border-radius: 999px; margin-bottom: 1rem;
     }
     .eyebrow-dot {
       width: 7px; height: 7px; border-radius: 50%; background: var(--accent);
       box-shadow: 0 0 0 4px var(--accent-soft);
     }
     .hero h1 {
-      font-size: clamp(1.85rem, 5.2vw, 3.15rem);
+      font-size: clamp(1.8rem, 5.1vw, 3.05rem);
       line-height: 1.12; font-weight: 800; letter-spacing: -.03em;
-      color: var(--ink); max-width: 16ch;
+      color: var(--ink); max-width: 17ch;
     }
     .hero h1 .accent {
       background: linear-gradient(105deg, var(--petrol) 20%, var(--accent));
       -webkit-background-clip: text; background-clip: text; color: transparent;
     }
     .hero-lead {
-      margin-top: 1.1rem; font-size: 1.05rem; color: var(--muted);
-      max-width: 42rem; line-height: 1.65;
+      margin-top: 1.05rem; font-size: 1.02rem; color: var(--muted);
+      max-width: 40rem; line-height: 1.65;
     }
     .hero-actions {
-      display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem;
+      display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.6rem;
     }
     .hero-trust {
-      display: flex; flex-wrap: wrap; gap: .75rem 1.25rem;
-      margin-top: 1.75rem; padding-top: 1.35rem;
+      display: flex; flex-wrap: wrap; gap: .65rem 1.15rem;
+      margin-top: 1.5rem; padding-top: 1.2rem;
       border-top: 1px solid rgba(14, 58, 92, .10);
-      color: var(--muted); font-size: .9rem; font-weight: 600;
+      color: var(--muted); font-size: .88rem; font-weight: 600;
     }
     .hero-trust span { display: inline-flex; align-items: center; gap: .4rem; }
     .hero-trust i {
       width: 6px; height: 6px; border-radius: 50%; background: var(--ok);
       display: inline-block;
     }
-
     .hero-visual {
       position: relative;
       border-radius: 22px;
       background: linear-gradient(160deg, var(--petrol-deep), var(--petrol) 55%, #134a72);
-      padding: 1.25rem; box-shadow: var(--shadow);
-      overflow: hidden; min-height: 340px;
+      padding: 1.2rem; box-shadow: var(--shadow);
+      overflow: hidden; min-height: 300px;
     }
     .hero-visual::before {
       content: ""; position: absolute; inset: 0;
@@ -246,26 +241,22 @@
     .viz-pills span:first-child { background: #ff6b6b; }
     .viz-pills span:nth-child(2) { background: #ffd166; }
     .viz-pills span:nth-child(3) { background: #06d6a0; }
-    .viz-kpis {
-      display: grid; grid-template-columns: repeat(2, 1fr); gap: .75rem;
-    }
+    .viz-kpis { display: grid; grid-template-columns: repeat(2, 1fr); gap: .7rem; }
     .kpi {
       background: rgba(255,255,255,.07);
       border: 1px solid rgba(255,255,255,.1);
-      border-radius: 12px; padding: .9rem;
+      border-radius: 12px; padding: .85rem;
     }
     .kpi strong {
-      display: block; color: #fff; font-size: 1.35rem; font-weight: 800;
+      display: block; color: #fff; font-size: 1.25rem; font-weight: 800;
       letter-spacing: -.02em; line-height: 1.1;
     }
-    .kpi span { color: rgba(255,255,255,.62); font-size: .75rem; font-weight: 600; }
-    .viz-flow {
-      margin-top: .9rem; display: grid; gap: .55rem;
-    }
+    .kpi span { color: rgba(255,255,255,.62); font-size: .72rem; font-weight: 600; }
+    .viz-flow { margin-top: .85rem; display: grid; gap: .5rem; }
     .flow-row {
       display: flex; align-items: center; justify-content: space-between; gap: .75rem;
-      background: rgba(255,255,255,.05); border-radius: 10px; padding: .65rem .8rem;
-      color: rgba(255,255,255,.88); font-size: .82rem; font-weight: 600;
+      background: rgba(255,255,255,.05); border-radius: 10px; padding: .6rem .75rem;
+      color: rgba(255,255,255,.88); font-size: .8rem; font-weight: 600;
     }
     .flow-bar {
       height: 6px; border-radius: 999px; background: rgba(255,255,255,.12);
@@ -277,149 +268,203 @@
     }
 
     /* Sections common */
-    section { padding: 4.25rem 0; }
+    section { padding: 4rem 0; }
     .section-label {
-      display: inline-block; font-size: .75rem; font-weight: 800;
+      display: inline-block; font-size: .74rem; font-weight: 800;
       letter-spacing: .1em; text-transform: uppercase; color: var(--accent);
-      margin-bottom: .75rem;
+      margin-bottom: .7rem;
     }
     .section-title {
-      font-size: clamp(1.55rem, 3.6vw, 2.25rem);
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
       line-height: 1.18; font-weight: 800; letter-spacing: -.025em;
       color: var(--ink); max-width: 22ch;
     }
     .section-lead {
-      margin-top: .9rem; color: var(--muted); max-width: 40rem; font-size: 1.02rem;
+      margin-top: .85rem; color: var(--muted); max-width: 40rem; font-size: 1.02rem;
     }
     .section-head { margin-bottom: 2rem; }
 
-    /* Problem */
+    /* PROBLEM — split + dark typographic panel */
     .problem { background: var(--surface); border-block: 1px solid var(--line); }
-    .problem-grid {
-      display: grid; gap: .9rem;
-      grid-template-columns: 1fr;
+    .problem-layout {
+      display: grid; gap: 2rem; align-items: stretch;
     }
-    .problem-card {
-      display: flex; gap: .9rem; align-items: flex-start;
-      background: var(--bg); border: 1px solid var(--line);
-      border-radius: var(--radius); padding: 1.1rem 1.15rem;
-      transition: border-color .2s, transform .2s, box-shadow .2s;
-    }
-    .problem-card:hover {
-      border-color: rgba(61,139,255,.35);
-      box-shadow: var(--shadow-soft);
-      transform: translateY(-2px);
-    }
-    .problem-num {
-      flex-shrink: 0; width: 34px; height: 34px; border-radius: 10px;
-      display: grid; place-items: center;
-      background: var(--accent-soft); color: var(--petrol);
-      font-weight: 800; font-size: .85rem;
-    }
-    .problem-card p { font-weight: 600; color: var(--ink-2); line-height: 1.4; }
-
-    /* Services */
-    .services-grid {
-      display: grid; gap: 1rem; grid-template-columns: 1fr;
-    }
-    .service-card {
-      background: var(--surface); border: 1px solid var(--line);
-      border-radius: var(--radius); padding: 1.35rem 1.3rem;
-      box-shadow: var(--shadow-soft);
+    .problem-copy .section-title { max-width: 16ch; }
+    .problem-copy .section-lead { margin-bottom: 0; }
+    .problem-panel {
+      background: linear-gradient(165deg, var(--petrol-deep), var(--petrol));
+      color: #fff; border-radius: 22px; padding: 1.6rem 1.4rem;
       position: relative; overflow: hidden;
+      box-shadow: var(--shadow);
     }
-    .service-card::before {
-      content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
-      background: linear-gradient(180deg, var(--accent), var(--petrol));
-      opacity: 0; transition: opacity .2s;
+    .problem-panel::before {
+      content: ""; position: absolute; inset: 0;
+      background:
+        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+      background-size: 24px 24px;
+      opacity: .5; pointer-events: none;
     }
-    .service-card:hover::before { opacity: 1; }
-    .service-icon {
-      width: 42px; height: 42px; border-radius: 12px;
-      background: linear-gradient(145deg, rgba(14,58,92,.08), var(--accent-soft));
-      display: grid; place-items: center; margin-bottom: .95rem;
-      color: var(--petrol);
+    .problem-list {
+      position: relative; z-index: 1;
+      list-style: none; display: grid; gap: 0;
     }
-    .service-icon svg { width: 22px; height: 22px; }
-    .service-card h3 {
-      font-size: 1.08rem; font-weight: 800; color: var(--ink);
-      margin-bottom: .55rem; letter-spacing: -.01em;
+    .problem-list li {
+      display: grid; grid-template-columns: 2.2rem 1fr;
+      gap: .85rem; align-items: baseline;
+      padding: .95rem 0;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+      font-size: 1.02rem; font-weight: 700; letter-spacing: -.01em;
+      line-height: 1.35;
     }
-    .service-card p { color: var(--muted); font-size: .95rem; }
+    .problem-list li:last-child { border-bottom: 0; padding-bottom: 0; }
+    .problem-list li:first-child { padding-top: 0; }
+    .problem-list .idx {
+      font-size: .78rem; font-weight: 800; color: #9ec4ff;
+      letter-spacing: .06em;
+    }
 
-    /* Method */
+    /* SERVICES — editorial typographic rows */
+    .services-editorial { display: grid; gap: 0; border-top: 1px solid var(--line); }
+    .svc-row {
+      display: grid; gap: .55rem;
+      padding: 1.35rem 0;
+      border-bottom: 1px solid var(--line);
+      transition: background .2s;
+    }
+    .svc-row:hover { background: rgba(14,58,92,.02); }
+    .svc-top {
+      display: grid; grid-template-columns: 3rem 1fr; gap: .85rem; align-items: baseline;
+    }
+    .svc-num {
+      font-size: .85rem; font-weight: 800; color: var(--accent);
+      letter-spacing: .04em;
+    }
+    .svc-row h3 {
+      font-size: clamp(1.08rem, 2.4vw, 1.35rem);
+      font-weight: 800; letter-spacing: -.02em; color: var(--ink);
+    }
+    .svc-row p {
+      grid-column: 2; color: var(--muted); font-size: .96rem;
+      max-width: 46rem; line-height: 1.6;
+    }
+
+    /* METHOD — vertical connected timeline */
     .method {
       background:
         radial-gradient(700px 280px at 10% 0%, rgba(61,139,255,.08), transparent 60%),
         var(--bg);
     }
     .method-note {
-      margin: 1.25rem 0 2rem; padding: 1rem 1.15rem;
+      margin: 0 0 2rem; padding: 1rem 1.15rem;
       background: var(--surface); border: 1px solid var(--line);
       border-left: 3px solid var(--accent); border-radius: 12px;
       color: var(--ink-2); font-weight: 600; max-width: 46rem;
     }
-    .method-steps {
-      display: grid; gap: .85rem; counter-reset: step;
+    .timeline {
+      position: relative;
+      display: grid; gap: 0;
+      padding-left: 0;
     }
-    .step {
-      counter-increment: step;
-      display: grid; grid-template-columns: auto 1fr; gap: 1rem;
-      align-items: start; background: var(--surface);
-      border: 1px solid var(--line); border-radius: var(--radius);
-      padding: 1.15rem 1.2rem;
+    .timeline::before {
+      content: ""; position: absolute;
+      left: 15px; top: .55rem; bottom: .55rem;
+      width: 2px; background: linear-gradient(180deg, var(--accent), rgba(14,58,92,.25));
     }
-    .step::before {
-      content: counter(step, decimal-leading-zero);
-      font-weight: 800; font-size: .95rem; color: var(--accent);
-      background: var(--accent-soft); width: 44px; height: 44px;
-      border-radius: 12px; display: grid; place-items: center;
+    .tl-item {
+      position: relative;
+      display: grid; grid-template-columns: 32px 1fr;
+      gap: 1rem; padding: 0 0 1.65rem;
     }
-    .step h3 { font-size: 1.02rem; font-weight: 800; margin-bottom: .25rem; }
-    .step p { color: var(--muted); font-size: .92rem; }
+    .tl-item:last-child { padding-bottom: 0; }
+    .tl-dot {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: var(--surface); border: 2px solid var(--accent);
+      box-shadow: 0 0 0 4px var(--accent-soft);
+      display: grid; place-items: center;
+      font-size: .68rem; font-weight: 800; color: var(--petrol);
+      position: relative; z-index: 1;
+    }
+    .tl-body {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 1rem 1.15rem;
+      box-shadow: var(--shadow-soft);
+    }
+    .tl-body h3 {
+      font-size: 1.02rem; font-weight: 800; margin-bottom: .3rem;
+      letter-spacing: -.01em;
+    }
+    .tl-body p { color: var(--muted); font-size: .92rem; }
 
-    /* Needs */
+    /* NEEDS — pills + reveal panel */
     .needs { background: var(--surface); border-block: 1px solid var(--line); }
-    .needs-list { display: grid; gap: .85rem; }
-    .need-item {
-      display: grid; gap: .65rem;
-      background: var(--bg); border: 1px solid var(--line);
-      border-radius: var(--radius); padding: 1.2rem 1.25rem;
+    .needs-pills {
+      display: flex; flex-wrap: wrap; gap: .55rem;
+      margin-bottom: 1.25rem;
     }
-    .need-q {
-      display: flex; gap: .7rem; align-items: flex-start;
-      font-weight: 800; color: var(--ink); font-size: 1.02rem;
+    .need-pill {
+      appearance: none; border: 1px solid var(--line);
+      background: var(--bg); color: var(--ink-2);
+      border-radius: 999px; padding: .65rem 1rem;
+      font-weight: 700; font-size: .88rem; cursor: pointer;
+      transition: background .2s, border-color .2s, color .2s, box-shadow .2s;
     }
-    .need-q svg { flex-shrink: 0; margin-top: .15rem; color: var(--accent); }
-    .need-a {
-      padding-left: 1.7rem; color: var(--muted); font-size: .95rem;
-      border-left: 2px solid rgba(61,139,255,.35); margin-left: .35rem;
+    .need-pill:hover { border-color: rgba(61,139,255,.45); }
+    .need-pill.active {
+      background: var(--petrol); color: #fff; border-color: var(--petrol);
+      box-shadow: 0 10px 22px rgba(14,58,92,.22);
     }
-    .need-a strong { color: var(--petrol); font-weight: 700; }
+    .need-panel {
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 1.4rem 1.3rem;
+      min-height: 9.5rem;
+    }
+    .need-panel .need-q {
+      font-size: 1.12rem; font-weight: 800; color: var(--ink);
+      letter-spacing: -.015em; margin-bottom: .7rem; line-height: 1.3;
+    }
+    .need-panel .need-a {
+      color: var(--muted); font-size: .98rem; line-height: 1.6;
+      border-left: 3px solid var(--accent);
+      padding-left: 1rem;
+    }
+    .need-panel .need-a strong { color: var(--petrol); font-weight: 700; }
+    .need-panel[hidden] { display: none; }
 
-    /* Why */
-    .why-grid {
-      display: grid; gap: .9rem; grid-template-columns: 1fr;
+    /* WHY — dense typographic strip */
+    .why-band {
+      background: linear-gradient(180deg, #F7F8FA, #EEF3F8);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      overflow: hidden;
     }
-    .why-card {
-      background: var(--surface); border: 1px solid var(--line);
-      border-radius: var(--radius); padding: 1.25rem;
+    .why-items {
+      display: grid;
+      grid-template-columns: 1fr;
     }
-    .why-card h3 {
-      display: flex; align-items: center; gap: .6rem;
-      font-size: 1rem; font-weight: 800; margin-bottom: .4rem;
+    .why-item {
+      padding: 1.2rem 1.25rem;
+      border-bottom: 1px solid var(--line);
     }
-    .why-card h3 span {
-      width: 26px; height: 26px; border-radius: 8px;
-      background: var(--petrol); color: #fff;
-      display: grid; place-items: center; font-size: .75rem; flex-shrink: 0;
+    .why-item:last-child { border-bottom: 0; }
+    .why-item h3 {
+      font-size: .98rem; font-weight: 800; letter-spacing: -.01em;
+      color: var(--ink); margin-bottom: .3rem;
     }
-    .why-card p { color: var(--muted); font-size: .92rem; padding-left: 2.1rem; }
+    .why-item h3 em {
+      font-style: normal; color: var(--accent);
+      font-weight: 800; margin-right: .35rem;
+      font-size: .78rem; letter-spacing: .04em;
+    }
+    .why-item p { color: var(--muted); font-size: .9rem; line-height: 1.5; }
 
     /* Contact */
     .contact {
-      background:
-        linear-gradient(180deg, var(--petrol-deep), var(--petrol));
+      background: linear-gradient(180deg, var(--petrol-deep), var(--petrol));
       color: #fff; position: relative; overflow: hidden;
     }
     .contact::before {
@@ -460,9 +505,7 @@
       background: #fff;
     }
     .field textarea { min-height: 110px; resize: vertical; }
-    .form-actions {
-      display: grid; gap: .7rem; margin-top: .35rem;
-    }
+    .form-actions { display: grid; gap: .7rem; margin-top: .35rem; }
     .form-note {
       font-size: .8rem; color: var(--muted); text-align: center; margin-top: .35rem;
     }
@@ -493,32 +536,45 @@
 
     /* Reveal */
     .reveal {
-      opacity: 0; transform: translateY(16px);
+      opacity: 0; transform: translateY(14px);
       transition: opacity .55s ease, transform .55s ease;
     }
     .reveal.in { opacity: 1; transform: none; }
 
     @media (min-width: 720px) {
       .brand-desc { max-width: none; }
-      .problem-grid { grid-template-columns: repeat(2, 1fr); }
-      .services-grid { grid-template-columns: repeat(2, 1fr); }
-      .why-grid { grid-template-columns: repeat(2, 1fr); }
-      .method-steps { grid-template-columns: repeat(2, 1fr); }
+      .problem-layout { grid-template-columns: 1fr 1.05fr; gap: 2.5rem; align-items: center; }
+      .svc-row {
+        grid-template-columns: 3rem 1fr;
+        column-gap: 1rem;
+        align-items: start;
+      }
+      .svc-top { display: contents; }
+      .svc-row h3 { padding-top: .05rem; }
+      .svc-row p { margin-top: .15rem; }
+      .why-items { grid-template-columns: repeat(2, 1fr); }
+      .why-item:nth-child(odd) { border-right: 1px solid var(--line); }
+      .why-item:nth-child(5), .why-item:nth-child(6) { border-bottom: 0; }
       .form-actions { grid-template-columns: 1fr 1fr; }
-      .hero-visual { min-height: 380px; }
+      .hero-visual { min-height: 340px; }
+      .tl-item { grid-template-columns: 36px 1fr; }
+      .timeline::before { left: 17px; }
+      .tl-dot { width: 36px; height: 36px; font-size: .72rem; }
     }
     @media (min-width: 960px) {
       .menu-btn, .nav-mobile { display: none !important; }
       .nav-desktop, .header-cta { display: flex; }
-      .hero { padding: 3.5rem 0 4.5rem; }
+      --header-h: 72px;
+      .hero { padding: 3.25rem 0 4.25rem; }
       .hero-grid { grid-template-columns: 1.15fr .85fr; gap: 3rem; }
-      .services-grid { grid-template-columns: repeat(3, 1fr); }
-      .services-grid .service-card:nth-child(4),
-      .services-grid .service-card:nth-child(5) { grid-column: span 1; }
-      .method-steps { grid-template-columns: repeat(3, 1fr); }
-      .why-grid { grid-template-columns: repeat(3, 1fr); }
       .contact-wrap { grid-template-columns: 1.35fr .85fr; }
-      section { padding: 5rem 0; }
+      section { padding: 4.75rem 0; }
+      .why-items { grid-template-columns: repeat(3, 1fr); }
+      .why-item { border-right: 1px solid var(--line); }
+      .why-item:nth-child(3n) { border-right: 0; }
+      .why-item:nth-child(n+4) { border-bottom: 0; }
+      .why-item:nth-child(odd) { border-right: 1px solid var(--line); }
+      .why-item:nth-child(3) { border-right: 0; }
     }
   </style>
 </head>
@@ -600,19 +656,21 @@
     </section>
 
     <section class="problem" id="problema" aria-labelledby="problema-title">
-      <div class="container">
-        <div class="section-head reveal">
+      <div class="container problem-layout">
+        <div class="problem-copy reveal">
           <span class="section-label">El problema</span>
           <h2 class="section-title" id="problema-title">Muchas empresas tienen oportunidades de crecimiento que todavía no están aprovechando</h2>
-          <p class="section-lead">Antes de vender un servicio, miramos dónde se frena el crecimiento comercial. Estas son situaciones que vemos con frecuencia.</p>
+          <p class="section-lead">Antes de vender un servicio, miramos dónde se frena el crecimiento comercial. Lo que suele fallar no es la voluntad: es la estructura.</p>
         </div>
-        <div class="problem-grid">
-          <article class="problem-card reveal"><span class="problem-num">01</span><p>No consiguen suficientes clientes.</p></article>
-          <article class="problem-card reveal"><span class="problem-num">02</span><p>Tienen presencia digital deficiente.</p></article>
-          <article class="problem-card reveal"><span class="problem-num">03</span><p>Pierden consultas y presupuestos.</p></article>
-          <article class="problem-card reveal"><span class="problem-num">04</span><p>No organizan sus oportunidades comerciales.</p></article>
-          <article class="problem-card reveal"><span class="problem-num">05</span><p>No realizan seguimiento.</p></article>
-          <article class="problem-card reveal"><span class="problem-num">06</span><p>No conocen sus resultados.</p></article>
+        <div class="problem-panel reveal">
+          <ul class="problem-list">
+            <li><span class="idx">01</span><span>No consiguen suficientes clientes</span></li>
+            <li><span class="idx">02</span><span>Presencia digital deficiente</span></li>
+            <li><span class="idx">03</span><span>Pierden consultas y presupuestos</span></li>
+            <li><span class="idx">04</span><span>Oportunidades sin organizar</span></li>
+            <li><span class="idx">05</span><span>Sin seguimiento comercial</span></li>
+            <li><span class="idx">06</span><span>No conocen sus resultados</span></li>
+          </ul>
         </div>
       </div>
     </section>
@@ -624,40 +682,40 @@
           <h2 class="section-title" id="servicios-title">Cinco áreas para mejorar el funcionamiento comercial</h2>
           <p class="section-lead">No somos una agencia de páginas web ni una agencia de publicidad convencional. Integramos estrategia y tecnología para que tu empresa capte, organice y convierta mejor.</p>
         </div>
-        <div class="services-grid">
-          <article class="service-card reveal">
-            <div class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v8M8 12h8"/></svg>
+        <div class="services-editorial">
+          <article class="svc-row reveal">
+            <div class="svc-top">
+              <span class="svc-num">01</span>
+              <h3>Publicidad y captación</h3>
             </div>
-            <h3>Publicidad y captación</h3>
             <p>Cuando faltan consultas, diseñamos campañas orientadas a demanda real y a perfiles de cliente que tu equipo pueda atender.</p>
           </article>
-          <article class="service-card reveal">
-            <div class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 20h8M12 18v2"/></svg>
+          <article class="svc-row reveal">
+            <div class="svc-top">
+              <span class="svc-num">02</span>
+              <h3>Presencia digital y conversión</h3>
             </div>
-            <h3>Presencia digital y conversión</h3>
             <p>Si tu presencia digital no genera confianza ni pedidos, ordenamos el mensaje, la propuesta y los puntos de contacto para convertir visitas en oportunidades.</p>
           </article>
-          <article class="service-card reveal">
-            <div class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/><circle cx="18" cy="17" r="2.5"/></svg>
+          <article class="svc-row reveal">
+            <div class="svc-top">
+              <span class="svc-num">03</span>
+              <h3>Organización comercial y CRM</h3>
             </div>
-            <h3>Organización comercial y CRM</h3>
             <p>Cuando las consultas se pierden entre chats y planillas, implementamos un flujo comercial claro para registrar, priorizar y avanzar cada oportunidad.</p>
           </article>
-          <article class="service-card reveal">
-            <div class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14.5-4.5"/><path d="M20 4v5h-5"/><path d="M20 12a8 8 0 0 1-14.5 4.5"/><path d="M4 20v-5h5"/></svg>
+          <article class="svc-row reveal">
+            <div class="svc-top">
+              <span class="svc-num">04</span>
+              <h3>Seguimiento y recuperación de oportunidades</h3>
             </div>
-            <h3>Seguimiento y recuperación de oportunidades</h3>
             <p>Si se enfrían los presupuestos, armamos seguimiento sistemático para recuperar ventas que hoy quedan sin respuesta.</p>
           </article>
-          <article class="service-card reveal">
-            <div class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 15l3-4 3 2 4-6"/></svg>
+          <article class="svc-row reveal">
+            <div class="svc-top">
+              <span class="svc-num">05</span>
+              <h3>Control y optimización de resultados</h3>
             </div>
-            <h3>Control y optimización de resultados</h3>
             <p>Cuando no se sabe qué funciona, definimos indicadores, medimos el embudo comercial y ajustamos lo que genera más impacto.</p>
           </article>
         </div>
@@ -671,13 +729,31 @@
           <h2 class="section-title" id="metodologia-title">Primero identificamos el problema. Después diseñamos la solución</h2>
         </div>
         <p class="method-note reveal">No ofrecemos servicios de forma indiscriminada. Analizamos cada empresa y priorizamos los problemas de mayor impacto comercial.</p>
-        <div class="method-steps">
-          <article class="step reveal"><div><h3>Investigación</h3><p>Relevamos mercado, canales, competencia y situación actual del negocio.</p></div></article>
-          <article class="step reveal"><div><h3>Diagnóstico comercial</h3><p>Detectamos fricciones en captación, conversión, seguimiento y medición.</p></div></article>
-          <article class="step reveal"><div><h3>Identificación de oportunidades</h3><p>Ordenamos hallazgos por impacto potencial y viabilidad de implementación.</p></div></article>
-          <article class="step reveal"><div><h3>Propuesta personalizada</h3><p>Diseñamos un plan concreto, alineado a la realidad operativa de tu empresa.</p></div></article>
-          <article class="step reveal"><div><h3>Implementación</h3><p>Ejecutamos las acciones priorizadas con foco en resultados medibles.</p></div></article>
-          <article class="step reveal"><div><h3>Seguimiento y optimización</h3><p>Acompañamos, medimos y ajustamos para sostener la mejora en el tiempo.</p></div></article>
+        <div class="timeline">
+          <article class="tl-item reveal">
+            <div class="tl-dot">01</div>
+            <div class="tl-body"><h3>Investigación</h3><p>Relevamos mercado, canales, competencia y situación actual del negocio.</p></div>
+          </article>
+          <article class="tl-item reveal">
+            <div class="tl-dot">02</div>
+            <div class="tl-body"><h3>Diagnóstico comercial</h3><p>Detectamos fricciones en captación, conversión, seguimiento y medición.</p></div>
+          </article>
+          <article class="tl-item reveal">
+            <div class="tl-dot">03</div>
+            <div class="tl-body"><h3>Identificación de oportunidades</h3><p>Ordenamos hallazgos por impacto potencial y viabilidad de implementación.</p></div>
+          </article>
+          <article class="tl-item reveal">
+            <div class="tl-dot">04</div>
+            <div class="tl-body"><h3>Propuesta personalizada</h3><p>Diseñamos un plan concreto, alineado a la realidad operativa de tu empresa.</p></div>
+          </article>
+          <article class="tl-item reveal">
+            <div class="tl-dot">05</div>
+            <div class="tl-body"><h3>Implementación</h3><p>Ejecutamos las acciones priorizadas con foco en resultados medibles.</p></div>
+          </article>
+          <article class="tl-item reveal">
+            <div class="tl-dot">06</div>
+            <div class="tl-body"><h3>Seguimiento y optimización</h3><p>Acompañamos, medimos y ajustamos para sostener la mejora en el tiempo.</p></div>
+          </article>
         </div>
       </div>
     </section>
@@ -687,44 +763,34 @@
         <div class="section-head reveal">
           <span class="section-label">Soluciones por necesidad</span>
           <h2 class="section-title" id="soluciones-title">Partimos de lo que te está pasando hoy</h2>
-          <p class="section-lead">Cada necesidad se conecta con una solución concreta. Sin paquetes genéricos.</p>
+          <p class="section-lead">Elegí tu situación. Cada necesidad se conecta con una solución concreta, sin paquetes genéricos.</p>
         </div>
-        <div class="needs-list">
-          <article class="need-item reveal">
-            <div class="need-q">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
-              <span>Necesitás conseguir más clientes.</span>
-            </div>
-            <p class="need-a"><strong>Solución:</strong> diagnóstico de demanda, canales de captación y campañas orientadas a leads calificados para tu oferta.</p>
-          </article>
-          <article class="need-item reveal">
-            <div class="need-q">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
-              <span>Tu empresa no tiene una presencia digital profesional.</span>
-            </div>
-            <p class="need-a"><strong>Solución:</strong> desarrollo de presencia digital orientada a conversión: mensaje claro, propuesta de valor y puntos de contacto que faciliten la consulta.</p>
-          </article>
-          <article class="need-item reveal">
-            <div class="need-q">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
-              <span>Recibís consultas pero no las organizás.</span>
-            </div>
-            <p class="need-a"><strong>Solución:</strong> implementación de organización comercial y CRM para registrar, clasificar y priorizar cada oportunidad.</p>
-          </article>
-          <article class="need-item reveal">
-            <div class="need-q">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
-              <span>Perdés ventas por falta de seguimiento.</span>
-            </div>
-            <p class="need-a"><strong>Solución:</strong> secuencias de seguimiento y recuperación de oportunidades para retomar presupuestos y cerrar más ventas.</p>
-          </article>
-          <article class="need-item reveal">
-            <div class="need-q">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
-              <span>No sabés qué está funcionando comercialmente.</span>
-            </div>
-            <p class="need-a"><strong>Solución:</strong> tablero de indicadores, lectura del embudo y optimización continua de lo que genera resultados.</p>
-          </article>
+        <div class="needs-pills reveal" role="tablist" aria-label="Necesidades comerciales">
+          <button type="button" class="need-pill active" role="tab" aria-selected="true" data-need="0">Más clientes</button>
+          <button type="button" class="need-pill" role="tab" aria-selected="false" data-need="1">Presencia digital</button>
+          <button type="button" class="need-pill" role="tab" aria-selected="false" data-need="2">Organizar consultas</button>
+          <button type="button" class="need-pill" role="tab" aria-selected="false" data-need="3">Falta de seguimiento</button>
+          <button type="button" class="need-pill" role="tab" aria-selected="false" data-need="4">Medir resultados</button>
+        </div>
+        <div class="need-panel reveal" data-panel="0" role="tabpanel">
+          <p class="need-q">Necesitás conseguir más clientes.</p>
+          <p class="need-a"><strong>Solución:</strong> diagnóstico de demanda, canales de captación y campañas orientadas a leads calificados para tu oferta.</p>
+        </div>
+        <div class="need-panel" data-panel="1" role="tabpanel" hidden>
+          <p class="need-q">Tu empresa no tiene una presencia digital profesional.</p>
+          <p class="need-a"><strong>Solución:</strong> desarrollo de presencia digital orientada a conversión: mensaje claro, propuesta de valor y puntos de contacto que faciliten la consulta.</p>
+        </div>
+        <div class="need-panel" data-panel="2" role="tabpanel" hidden>
+          <p class="need-q">Recibís consultas pero no las organizás.</p>
+          <p class="need-a"><strong>Solución:</strong> implementación de organización comercial y CRM para registrar, clasificar y priorizar cada oportunidad.</p>
+        </div>
+        <div class="need-panel" data-panel="3" role="tabpanel" hidden>
+          <p class="need-q">Perdés ventas por falta de seguimiento.</p>
+          <p class="need-a"><strong>Solución:</strong> secuencias de seguimiento y recuperación de oportunidades para retomar presupuestos y cerrar más ventas.</p>
+        </div>
+        <div class="need-panel" data-panel="4" role="tabpanel" hidden>
+          <p class="need-q">No sabés qué está funcionando comercialmente.</p>
+          <p class="need-a"><strong>Solución:</strong> tablero de indicadores, lectura del embudo y optimización continua de lo que genera resultados.</p>
         </div>
       </div>
     </section>
@@ -736,13 +802,15 @@
           <h2 class="section-title" id="por-que-title">Un socio externo, no un proveedor de paquetes</h2>
           <p class="section-lead">Trabajamos como extensión del área comercial: diagnosticamos, priorizamos e implementamos con criterio.</p>
         </div>
-        <div class="why-grid">
-          <article class="why-card reveal"><h3><span>1</span> Diagnóstico antes que venta</h3><p>Primero entendemos el problema. Después proponemos.</p></article>
-          <article class="why-card reveal"><h3><span>2</span> Soluciones personalizadas</h3><p>Cada plan se arma a partir de la realidad de tu empresa.</p></article>
-          <article class="why-card reveal"><h3><span>3</span> Integración de estrategia y tecnología</h3><p>Combinamos criterio comercial con herramientas digitales útiles.</p></article>
-          <article class="why-card reveal"><h3><span>4</span> Implementaciones adaptadas</h3><p>Ejecutamos según la capacidad operativa de tu equipo.</p></article>
-          <article class="why-card reveal"><h3><span>5</span> Medición de resultados</h3><p>Definimos qué mirar para saber si el sistema comercial mejora.</p></article>
-          <article class="why-card reveal"><h3><span>6</span> Acompañamiento y optimización</h3><p>Seguimos el proceso y ajustamos lo que haga falta.</p></article>
+        <div class="why-band reveal">
+          <div class="why-items">
+            <article class="why-item"><h3><em>01</em> Diagnóstico antes que venta</h3><p>Primero entendemos el problema. Después proponemos.</p></article>
+            <article class="why-item"><h3><em>02</em> Soluciones personalizadas</h3><p>Cada plan se arma a partir de la realidad de tu empresa.</p></article>
+            <article class="why-item"><h3><em>03</em> Estrategia y tecnología</h3><p>Combinamos criterio comercial con herramientas digitales útiles.</p></article>
+            <article class="why-item"><h3><em>04</em> Implementaciones adaptadas</h3><p>Ejecutamos según la capacidad operativa de tu equipo.</p></article>
+            <article class="why-item"><h3><em>05</em> Medición de resultados</h3><p>Definimos qué mirar para saber si el sistema comercial mejora.</p></article>
+            <article class="why-item"><h3><em>06</em> Acompañamiento continuo</h3><p>Seguimos el proceso y ajustamos lo que haga falta.</p></article>
+          </div>
         </div>
       </div>
     </section>
@@ -762,7 +830,7 @@
                 <input id="empresa" name="empresa" type="text" autocomplete="organization" required placeholder="Ej. Acme SA" />
               </div>
               <div class="field">
-                <label for="contacto">Nombre de contacto</label>
+                <label for="contactoNombre">Nombre de contacto</label>
                 <input id="contactoNombre" name="contacto" type="text" autocomplete="name" required placeholder="Tu nombre" />
               </div>
               <div class="field">
@@ -852,6 +920,27 @@
       } else {
         document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); });
       }
+
+      var pills = document.querySelectorAll(".need-pill");
+      var panels = document.querySelectorAll(".need-panel");
+      pills.forEach(function (pill) {
+        pill.addEventListener("click", function () {
+          var idx = pill.getAttribute("data-need");
+          pills.forEach(function (p) {
+            p.classList.toggle("active", p === pill);
+            p.setAttribute("aria-selected", p === pill ? "true" : "false");
+          });
+          panels.forEach(function (panel) {
+            var show = panel.getAttribute("data-panel") === idx;
+            if (show) {
+              panel.hidden = false;
+              panel.classList.add("in");
+            } else {
+              panel.hidden = true;
+            }
+          });
+        });
+      });
 
       form.addEventListener("submit", function (e) {
         e.preventDefault();
