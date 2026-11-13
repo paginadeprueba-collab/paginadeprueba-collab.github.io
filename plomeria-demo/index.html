@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>HidroFix Plomería 24hs · Urgencias y presupuesto claro en CABA y GBA</title>
+  <meta name="description" content="Plomería profesional las 24 hs en CABA y GBA. Urgencias, pérdidas, destapaciones e instalaciones. Calculá tu presupuesto al instante y escribinos por WhatsApp." />
+  <meta name="theme-color" content="#F6FAF7" />
+  <meta property="og:title" content="HidroFix Plomería 24hs" />
+  <meta property="og:description" content="Urgencias resueltas hoy, con un presupuesto claro. CABA y GBA." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #F6FAF7;
+      --bg-2: #F4F9F7;
+      --ink: #0F291E;
+      --ink-soft: #3D564A;
+      --muted: #5E7268;
+      --green: #16A34A;
+      --green-deep: #15803D;
+      --green-bright: #2EA44F;
+      --yellow: #FFE033;
+      --yellow-2: #FFD426;
+      --star: #FACC15;
+      --glass: rgba(255, 255, 255, 0.62);
+      --glass-border: rgba(255, 255, 255, 0.85);
+      --shadow: 0 12px 32px rgba(13, 43, 29, 0.06);
+      --shadow-btn: 0 8px 22px rgba(240, 180, 0, 0.38);
+      --radius: 22px;
+      --radius-sm: 16px;
+      --header: 68px;
+      --wa: #25D366;
+      --max: 1120px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    html, body { overflow-x: hidden; }
+    body {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.5;
+      min-height: 100vh;
+      padding-bottom: 88px;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    button, select, input { font-family: inherit; }
+
+    .bg-blobs { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(64px);
+      opacity: 0.62;
+    }
+    .b1 { width: 520px; height: 520px; background: #9DE8B8; top: -140px; right: -160px; }
+    .b2 { width: 420px; height: 480px; background: #C8F5D8; top: 18%; left: -180px; border-radius: 60% 40% 70% 30%; }
+    .b3 { width: 380px; height: 380px; background: #B8E8F0; bottom: 8%; right: -120px; opacity: 0.45; }
+    .b4 { width: 280px; height: 280px; background: #E8F9C8; top: 58%; left: 30%; opacity: 0.4; }
+    .leaf {
+      position: absolute;
+      width: 220px; height: 280px;
+      background: radial-gradient(circle at 40% 40%, rgba(46, 164, 79, 0.28), transparent 68%);
+      filter: blur(18px);
+      opacity: 0.7;
+    }
+    .leaf-a { top: 0; right: 0; width: 340px; height: 420px; }
+    .leaf-b { bottom: -40px; left: -40px; width: 300px; height: 260px; }
+
+    .wrap { width: min(100% - 32px, var(--max)); margin-inline: auto; position: relative; z-index: 1; }
+    section { scroll-margin-top: calc(var(--header) + 16px); }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 40;
+      height: var(--header);
+      display: flex; align-items: center;
+      background: rgba(246, 250, 247, 0.72);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    }
+    header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .logo {
+      width: 40px; height: 40px; border-radius: 12px;
+      background: linear-gradient(160deg, #22C55E, #15803D);
+      display: grid; place-items: center;
+      box-shadow: 0 8px 16px rgba(22, 163, 74, 0.28);
+      flex-shrink: 0;
+    }
+    .brand strong { display: block; font-size: 16px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; }
+    .brand small { display: block; font-size: 11px; color: var(--muted); font-weight: 600; letter-spacing: 0.02em; }
+    .header-wa {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: #fff; color: var(--ink);
+      border: 1px solid rgba(15, 41, 30, 0.08);
+      padding: 8px 12px; border-radius: 999px;
+      font-size: 13px; font-weight: 700; text-decoration: none;
+      box-shadow: var(--shadow);
+    }
+    .header-wa svg { width: 16px; height: 16px; }
+
+    /* Glass */
+    .glass {
+      background: var(--glass);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+    }
+
+    /* Hero */
+    .hero { padding: 28px 0 20px; }
+    .hero-grid { display: grid; gap: 28px; align-items: center; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 12px 6px 8px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 0 6px 18px rgba(13, 43, 29, 0.05);
+      font-size: 11px; font-weight: 800; letter-spacing: 0.08em;
+      color: var(--green-deep); text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .badge-dot {
+      width: 22px; height: 22px; border-radius: 50%;
+      background: rgba(22, 163, 74, 0.14);
+      display: grid; place-items: center; color: var(--green);
+    }
+    h1 {
+      font-size: clamp(2.05rem, 8vw, 3.6rem);
+      font-weight: 800; letter-spacing: -0.045em; line-height: 1.05;
+      color: var(--ink); margin-bottom: 14px;
+    }
+    h1 .accent { color: var(--green-bright); }
+    .lead { font-size: 1.02rem; color: var(--muted); max-width: 36rem; margin-bottom: 22px; font-weight: 500; }
+
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      border: 0; cursor: pointer; text-decoration: none;
+      font-weight: 800; letter-spacing: -0.02em;
+      border-radius: 999px; padding: 14px 22px;
+      font-size: 15px; line-height: 1; min-height: 52px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary {
+      background: var(--yellow-2); color: var(--ink);
+      box-shadow: var(--shadow-btn);
+    }
+    .btn-primary:hover { background: var(--yellow); }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      color: var(--ink);
+      box-shadow: var(--shadow);
+    }
+    .btn-ghost {
+      background: transparent; color: var(--green-deep);
+      padding: 10px 0; min-height: 0; font-size: 14px;
+    }
+    .btn .arrow { font-weight: 700; }
+
+    .hero-visual { position: relative; display: flex; justify-content: center; }
+    .photo-card {
+      width: min(100%, 420px);
+      border-radius: 28px;
+      overflow: hidden;
+      position: relative;
+      transform: rotate(3deg);
+      background: rgba(255, 255, 255, 0.45);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 0 22px 50px rgba(13, 43, 29, 0.12);
+    }
+    .photo-card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+    .float-pill {
+      position: absolute; left: 14px; bottom: 14px;
+      background: rgba(255, 255, 255, 0.86);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 999px; padding: 8px 12px;
+      font-size: 12px; font-weight: 800; color: var(--ink);
+      display: inline-flex; align-items: center; gap: 6px;
+      box-shadow: 0 8px 20px rgba(13, 43, 29, 0.1);
+    }
+    .float-pill i { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.18); display: block; }
+
+    /* Stats */
+    .section { padding: 28px 0; }
+    .section-kicker {
+      font-size: 12px; font-weight: 800; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--green-deep); margin-bottom: 8px;
+    }
+    h2 {
+      font-size: clamp(1.55rem, 5.4vw, 2.2rem);
+      font-weight: 800; letter-spacing: -0.04em; line-height: 1.15;
+      margin-bottom: 8px;
+    }
+    h2 .accent { color: var(--green-bright); }
+    .section-lead { color: var(--muted); font-weight: 500; margin-bottom: 20px; max-width: 40rem; }
+
+    .stats {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+    }
+    .stat {
+      padding: 18px 16px 16px;
+      display: flex; flex-direction: column; gap: 6px; min-height: 148px;
+    }
+    .icon-circle {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: rgba(22, 163, 74, 0.12);
+      color: var(--green-deep);
+      display: grid; place-items: center;
+      margin-bottom: 8px;
+    }
+    .icon-circle svg { width: 22px; height: 22px; }
+    .stat-num {
+      font-size: clamp(1.85rem, 7vw, 2.4rem);
+      font-weight: 800; letter-spacing: -0.05em; line-height: 1;
+      color: var(--ink);
+    }
+    .stat-num .star { color: var(--star); font-size: 0.8em; }
+    .stat-label { color: var(--muted); font-size: 13px; font-weight: 600; }
+
+    /* Services */
+    .services { display: grid; gap: 16px; }
+    .service {
+      overflow: hidden; display: flex; flex-direction: column; padding: 10px;
+    }
+    .service img {
+      width: 100%; aspect-ratio: 16/10; object-fit: cover;
+      border-radius: 16px;
+    }
+    .service-body { padding: 14px 8px 8px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+    .service h3 { font-size: 1.08rem; font-weight: 800; letter-spacing: -0.03em; }
+    .service p { color: var(--muted); font-size: 0.92rem; font-weight: 500; flex: 1; }
+    .service .btn { align-self: flex-start; margin-top: 8px; min-height: 46px; padding: 12px 18px; font-size: 14px; }
+
+    /* Calculator */
+    #presupuesto { padding-top: 12px; }
+    .calc {
+      padding: 20px 16px 22px;
+    }
+    .calc-grid { display: grid; gap: 16px; }
+    .field { display: grid; gap: 8px; }
+    .field label, .field .lbl {
+      font-size: 13px; font-weight: 800; color: var(--ink); letter-spacing: -0.01em;
+    }
+    .select, select.styled {
+      appearance: none; -webkit-appearance: none;
+      width: 100%; min-height: 52px;
+      border-radius: 16px;
+      border: 1px solid rgba(15, 41, 30, 0.08);
+      background: rgba(255, 255, 255, 0.78) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'><path d='M5 7.5l5 5 5-5' stroke='%230F291E' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/></svg>") no-repeat right 14px center;
+      padding: 12px 42px 12px 14px;
+      font-size: 15px; font-weight: 600; color: var(--ink);
+      outline: none;
+    }
+    select.styled:focus { border-color: rgba(22, 163, 74, 0.45); box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.12); }
+
+    .chips { display: grid; gap: 8px; }
+    .chip {
+      position: relative;
+    }
+    .chip input { position: absolute; opacity: 0; inset: 0; }
+    .chip span {
+      display: flex; align-items: center; justify-content: center; text-align: center;
+      min-height: 50px; padding: 10px 12px; border-radius: 14px;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1.5px solid rgba(15, 41, 30, 0.08);
+      font-size: 13.5px; font-weight: 700; cursor: pointer;
+      transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+    }
+    .chip input:focus-visible + span { box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.16); }
+    .chip input:checked + span {
+      background: rgba(22, 163, 74, 0.12);
+      border-color: var(--green);
+      color: var(--ink);
+      box-shadow: 0 6px 16px rgba(22, 163, 74, 0.12);
+    }
+    .chips.two { grid-template-columns: 1fr 1fr; }
+    .chips.three { grid-template-columns: 1fr; }
+
+    .result {
+      margin-top: 8px;
+      padding: 18px 16px;
+      border-radius: 20px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.82), rgba(232, 250, 236, 0.7));
+      border: 1px solid rgba(255, 255, 255, 0.95);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+    .result-kicker { font-size: 12px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--green-deep); }
+    .price {
+      font-size: clamp(1.7rem, 7vw, 2.15rem);
+      font-weight: 800; letter-spacing: -0.04em; margin: 6px 0 10px;
+    }
+    .meta-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 16px; }
+    .meta {
+      background: rgba(255, 255, 255, 0.65);
+      border-radius: 14px; padding: 10px 8px;
+    }
+    .meta b { display: block; font-size: 14px; font-weight: 800; }
+    .meta span { font-size: 11px; color: var(--muted); font-weight: 600; }
+    .result .btn { width: 100%; }
+
+    /* Reviews */
+    .reviews-head {
+      display: flex; flex-direction: column; gap: 10px; margin-bottom: 18px;
+    }
+    .google-badge {
+      display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+      padding: 14px 16px;
+    }
+    .g-logo { width: 28px; height: 28px; flex-shrink: 0; }
+    .score { font-size: 1.35rem; font-weight: 800; letter-spacing: -0.03em; }
+    .score small { font-size: 0.7em; color: var(--muted); font-weight: 700; }
+    .stars { color: var(--star); letter-spacing: 1px; font-size: 16px; }
+    .rev-count { font-size: 13px; font-weight: 700; color: var(--muted); }
+
+    .reviews { display: grid; gap: 12px; }
+    .review { padding: 18px 16px 16px; position: relative; overflow: hidden; }
+    .review-top { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: #D1FAE5; color: var(--green-deep);
+      display: grid; place-items: center;
+      font-weight: 800; font-size: 14px; flex-shrink: 0;
+    }
+    .quote-mark {
+      position: absolute; top: 8px; right: 16px;
+      font-size: 72px; line-height: 1; font-weight: 700;
+      color: rgba(15, 41, 30, 0.08); pointer-events: none;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+    .review p { color: var(--ink-soft); font-weight: 500; font-size: 0.95rem; margin: 6px 0 12px; }
+    .review footer { font-size: 13px; }
+    .review footer b { font-weight: 800; color: var(--ink); }
+    .review footer span { color: var(--muted); font-weight: 600; }
+
+    /* Footer */
+    footer.site {
+      padding: 28px 0 12px; color: var(--muted);
+    }
+    footer.site .glass { padding: 22px 18px; }
+    footer.site h3 { color: var(--ink); font-size: 1.15rem; letter-spacing: -0.03em; margin-bottom: 6px; }
+    footer.site p { font-size: 0.92rem; font-weight: 500; margin-bottom: 14px; }
+    .foot-links { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+    .foot-meta { font-size: 12px; font-weight: 600; }
+
+    .wa-float {
+      position: fixed; right: 16px; bottom: 16px; z-index: 50;
+      width: 56px; height: 56px; border-radius: 50%;
+      background: var(--wa); color: #fff;
+      display: grid; place-items: center;
+      box-shadow: 0 10px 24px rgba(37, 211, 102, 0.4);
+      text-decoration: none;
+    }
+    .wa-float svg { width: 28px; height: 28px; }
+
+    @media (min-width: 720px) {
+      body { padding-bottom: 32px; }
+      .hero { padding: 48px 0 28px; }
+      .hero-grid { grid-template-columns: 1.1fr 0.9fr; gap: 40px; }
+      .photo-card { transform: rotate(6deg); }
+      .stats { grid-template-columns: repeat(4, 1fr); }
+      .services { grid-template-columns: 1fr 1fr; }
+      .chips.three { grid-template-columns: 1fr 1fr 1fr; }
+      .calc { padding: 28px; }
+      .reviews { grid-template-columns: 1fr 1fr 1fr; }
+      .wa-float { display: none; }
+    }
+    @media (min-width: 980px) {
+      .services { grid-template-columns: 1fr 1fr 1fr; }
+      .calc-grid { grid-template-columns: 1fr 1fr; gap: 18px 24px; }
+      .calc-grid .full { grid-column: 1 / -1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-blobs" aria-hidden="true">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+    <span class="blob b4"></span>
+    <span class="leaf leaf-a"></span>
+    <span class="leaf leaf-b"></span>
+  </div>
+
+  <header>
+    <div class="wrap">
+      <a class="brand" href="#inicio">
+        <span class="logo" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M12 3C8 9 6 12.2 6 15.2a6 6 0 0012 0C18 12.2 16 9 12 3z" fill="#fff"/>
+          </svg>
+        </span>
+        <span>
+          <strong>HidroFix</strong>
+          <small>Plomería 24hs</small>
+        </span>
+      </a>
+      <a class="header-wa" href="https://wa.me/5491100000000?text=Hola%2C%20quiero%20consultar%20por%20un%20trabajo%20de%20plomer%C3%ADa." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M20.5 3.5A11 11 0 006.2 19.3L5 22.9l3.7-1.2A11 11 0 0022.9 12 11 11 0 0020.5 3.5zm-8.5 17a9.1 9.1 0 01-4.6-1.3l-.3-.2-2.2.7.7-2.1-.2-.3A9.1 9.1 0 1112 20.5zm5-6.8c-.3-.1-1.6-.8-1.9-.9s-.4-.1-.6.1-.7.9-.8 1-.3.2-.6.1a7.4 7.4 0 01-2.2-1.3 8 8 0 01-1.5-1.9c-.2-.3 0-.4.1-.6l.3-.4.1-.3a.5.5 0 000-.5c0-.1-.6-1.5-.8-2s-.4-.5-.6-.5h-.5a1 1 0 00-.7.3 2.9 2.9 0 00-.9 2.2 5 5 0 001.1 2.6 11.6 11.6 0 004.4 4 14 14 0 001.4.5 3.3 3.3 0 001.5.1 2.5 2.5 0 001.7-1.1 2 2 0 00.1-1.1c-.1-.1-.3-.2-.6-.3z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="badge">
+            <span class="badge-dot" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 3C8 9 6 12.2 6 15.2a6 6 0 0012 0C18 12.2 16 9 12 3z" fill="currentColor"/></svg>
+            </span>
+            Plomería profesional 24 hs
+          </div>
+          <h1>Arreglá tu pérdida hoy, con un <span class="accent">presupuesto real</span></h1>
+          <p class="lead">Urgencias, destapaciones e instalaciones en CABA y GBA. Te damos un rango de precio al toque, llegamos rápido y dejamos todo prolijo, sin vueltas.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#presupuesto">Calcular presupuesto <span class="arrow">→</span></a>
+            <a class="btn btn-secondary" href="https://wa.me/5491100000000?text=Hola%2C%20quiero%20consultar%20por%20un%20trabajo%20de%20plomer%C3%ADa." target="_blank" rel="noopener">Escribir por WhatsApp</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <figure class="photo-card">
+            <img src="img/urgencias.jpg" alt="Plomero profesional reparando una pérdida de agua en un caño" width="800" height="600" />
+            <figcaption class="float-pill"><i></i> Respuesta en 30 min</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="numeros" aria-label="Números de HidroFix">
+      <div class="wrap">
+        <p class="section-kicker">Resultados que se ven</p>
+        <h2>Números que <span class="accent">hablan solos</span></h2>
+        <p class="section-lead">Más de veinte años resolviendo pérdidas, destapaciones e instalaciones, con clientes que vuelven a llamar.</p>
+        <div class="stats">
+          <article class="glass stat">
+            <div class="icon-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.8-3.8a6 6 0 01-7.9 7.9l-6.9 6.9a2.1 2.1 0 11-3-3l6.9-6.9a6 6 0 017.9-7.9l-3.8 3.8z"/></svg>
+            </div>
+            <div class="stat-num" data-count="540" data-prefix="+" data-suffix="">0</div>
+            <p class="stat-label">Arreglos y soluciones</p>
+          </article>
+          <article class="glass stat">
+            <div class="icon-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>
+            </div>
+            <div class="stat-num" data-count="20" data-prefix="+" data-suffix="">0</div>
+            <p class="stat-label">Años de experiencia</p>
+          </article>
+          <article class="glass stat">
+            <div class="icon-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2"/><circle cx="9.5" cy="7" r="3.5"/><path d="M22 21v-2a3.5 3.5 0 00-2.6-3.4"/><path d="M16.5 3.6a3.5 3.5 0 010 6.8"/></svg>
+            </div>
+            <div class="stat-num" data-count="380" data-prefix="+" data-suffix="">0</div>
+            <p class="stat-label">Clientes satisfechos</p>
+          </article>
+          <article class="glass stat">
+            <div class="icon-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.6l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 16.9 7.2 18.5l.9-5.4L4.2 9.3l5.4-.8L12 3.6z"/></svg>
+            </div>
+            <div class="stat-num" data-count="4.9" data-decimals="1" data-prefix="" data-suffix=" <span class='star'>★</span>">0</div>
+            <p class="stat-label">Reseñas en Google</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="servicios">
+      <div class="wrap">
+        <p class="section-kicker">Lo que resolvemos</p>
+        <h2>Servicios con <span class="accent">trabajo a la vista</span></h2>
+        <p class="section-lead">Elegí el trabajo que necesitás, mirá cómo queda y cotizalo en un minuto.</p>
+        <div class="services">
+          <article class="glass service">
+            <img src="img/urgencias.jpg" alt="Reparación de urgencia en un caño con pérdida de agua" width="800" height="500" />
+            <div class="service-body">
+              <h3>Urgencias y Pérdidas 24 hs</h3>
+              <p>Pérdidas, caños rotos y cortes de agua. Salimos ahora y dejamos todo controlado.</p>
+              <button class="btn btn-primary" type="button" data-service="urgencias">Cotizar este servicio <span class="arrow">→</span></button>
+            </div>
+          </article>
+          <article class="glass service">
+            <img src="img/desagues.jpg" alt="Plomero arreglando un sifón de PVC blanco bajo la mesada" width="800" height="500" />
+            <div class="service-body">
+              <h3>Sifones y Desagües Bajo Mesada</h3>
+              <p>Cambio de sifones, olores y desagües lentos bajo la bacha. Trabajo prolijo y limpio.</p>
+              <button class="btn btn-primary" type="button" data-service="desagues">Cotizar este servicio <span class="arrow">→</span></button>
+            </div>
+          </article>
+          <article class="glass service">
+            <img src="img/canerias.jpg" alt="Cañerías de PVC instaladas de forma prolija sobre una pared" width="800" height="500" />
+            <div class="service-body">
+              <h3>Instalación y Cambio de Cañerías</h3>
+              <p>Cañerías de agua y desagüe nuevas, bien niveladas y listas para durar años.</p>
+              <button class="btn btn-primary" type="button" data-service="canerias">Cotizar este servicio <span class="arrow">→</span></button>
+            </div>
+          </article>
+          <article class="glass service">
+            <img src="img/inspeccion.jpg" alt="Plomero con linterna frontal inspeccionando un caño antiguo" width="800" height="500" />
+            <div class="service-body">
+              <h3>Detección de Filtraciones y Destapaciones</h3>
+              <p>Encontramos la pérdida sin romper de más y destapamos con equipo profesional.</p>
+              <button class="btn btn-primary" type="button" data-service="inspeccion">Cotizar este servicio <span class="arrow">→</span></button>
+            </div>
+          </article>
+          <article class="glass service">
+            <img src="img/sanitarios.jpg" alt="Plomero instalando el sifón cromado de un sanitario bajo la bacha" width="800" height="500" />
+            <div class="service-body">
+              <h3>Instalación de Sanitarios y Baños</h3>
+              <p>Inodoros, bidets, bachas y desagües de baño instalados a nivel, sin goteos.</p>
+              <button class="btn btn-primary" type="button" data-service="sanitarios">Cotizar este servicio <span class="arrow">→</span></button>
+            </div>
+          </article>
+          <article class="glass service">
+            <img src="img/griferia.jpg" alt="Ajuste profesional de un caño cromado con pinza Vise-Grip" width="800" height="500" />
+            <div class="service-body">
+              <h3>Grifería y Llaves de Paso</h3>
+              <p>Cambio de canillas, flexibles y llaves de paso que no cierran o gotean.</p>
+              <button class="btn btn-primary" type="button" data-service="griferia">Cotizar este servicio <span class="arrow">→</span></button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="presupuesto">
+      <div class="wrap">
+        <p class="section-kicker">Sin sorpresas</p>
+        <h2>Calculá tu <span class="accent">presupuesto</span> al instante</h2>
+        <p class="section-lead">Completá cuatro datos y obtené un rango estimado en pesos, el tiempo de trabajo y la garantía. Después lo mandás por WhatsApp en un toque.</p>
+        <form class="glass calc" id="calc-form" novalidate>
+          <div class="calc-grid">
+            <div class="field full">
+              <label for="tipo">Tipo de trabajo</label>
+              <select class="styled" id="tipo" name="tipo">
+                <option value="urgencias">Urgencias y Pérdidas 24 hs</option>
+                <option value="desagues">Sifones y Desagües Bajo Mesada</option>
+                <option value="canerias">Instalación y Cambio de Cañerías</option>
+                <option value="inspeccion">Detección de Filtraciones y Destapaciones</option>
+                <option value="sanitarios">Instalación de Sanitarios y Baños</option>
+                <option value="griferia">Grifería y Llaves de Paso</option>
+                <option value="termotanque">Instalación o cambio de termotanque</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <p class="lbl" id="lbl-urgencia">Urgencia</p>
+              <div class="chips two" role="radiogroup" aria-labelledby="lbl-urgencia">
+                <label class="chip"><input type="radio" name="urgencia" value="programado" checked /><span>Turno programado</span></label>
+                <label class="chip"><input type="radio" name="urgencia" value="inmediata" /><span>Urgencia inmediata 24 hs</span></label>
+              </div>
+            </div>
+
+            <div class="field">
+              <p class="lbl" id="lbl-complejidad">Complejidad</p>
+              <div class="chips three" role="radiogroup" aria-labelledby="lbl-complejidad">
+                <label class="chip"><input type="radio" name="complejidad" value="simple" /><span>Simple · 1 punto</span></label>
+                <label class="chip"><input type="radio" name="complejidad" value="estandar" checked /><span>Estándar · 2–3 puntos</span></label>
+                <label class="chip"><input type="radio" name="complejidad" value="obra" /><span>Obra / varios puntos</span></label>
+              </div>
+            </div>
+
+            <div class="field">
+              <p class="lbl" id="lbl-repuestos">Repuestos</p>
+              <div class="chips two" role="radiogroup" aria-labelledby="lbl-repuestos">
+                <label class="chip"><input type="radio" name="repuestos" value="mano" checked /><span>Solo mano de obra</span></label>
+                <label class="chip"><input type="radio" name="repuestos" value="basicos" /><span>Incluye repuestos básicos</span></label>
+              </div>
+            </div>
+
+            <div class="field">
+              <p class="lbl" id="lbl-zona">Zona</p>
+              <div class="chips three" role="radiogroup" aria-labelledby="lbl-zona">
+                <label class="chip"><input type="radio" name="zona" value="caba" checked /><span>CABA</span></label>
+                <label class="chip"><input type="radio" name="zona" value="norte" /><span>GBA Norte</span></label>
+                <label class="chip"><input type="radio" name="zona" value="oeste-sur" /><span>GBA Oeste / Sur</span></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="result" aria-live="polite">
+            <p class="result-kicker">Rango estimado</p>
+            <p class="price" id="precio">$0 – $0</p>
+            <div class="meta-row">
+              <div class="meta">
+                <span>Duración estimada</span>
+                <b id="duracion">—</b>
+              </div>
+              <div class="meta">
+                <span>Garantía escrita</span>
+                <b>6 meses</b>
+              </div>
+            </div>
+            <a class="btn btn-primary" id="wa-presupuesto" href="#" target="_blank" rel="noopener">Enviar presupuesto por WhatsApp <span class="arrow">→</span></a>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="resenas">
+      <div class="wrap">
+        <p class="section-kicker">La voz de quienes ya llamaron</p>
+        <h2>Reseñas de Google <span class="accent">5 estrellas</span></h2>
+        <div class="glass google-badge" style="margin: 16px 0 18px;">
+          <svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 8 3.1l5.7-5.7C34.2 6.1 29.4 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.9z"/>
+            <path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 16 19 12 24 12c3.1 0 5.8 1.2 8 3.1l5.7-5.7C34.2 6.1 29.4 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/>
+            <path fill="#4CAF50" d="M24 44c5.2 0 10-2 13.6-5.2l-6.3-5.3C29.2 35.1 26.7 36 24 36c-5.3 0-9.7-3.3-11.3-8l-6.5 5C9.6 39.6 16.3 44 24 44z"/>
+            <path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-1.1 3.2-3.5 5.8-6.6 7.5l6.3 5.3C37.1 41.3 44 36 44 24c0-1.3-.1-2.6-.4-3.9z"/>
+          </svg>
+          <div>
+            <div class="score">4.9 <small>/ 5.0</small></div>
+            <div class="stars" aria-label="5 estrellas">★★★★★</div>
+          </div>
+          <p class="rev-count">+120 reseñas verificadas</p>
+        </div>
+        <div class="reviews">
+          <article class="glass review">
+            <span class="quote-mark" aria-hidden="true">”</span>
+            <div class="review-top">
+              <div class="avatar">MS</div>
+              <div class="stars" aria-hidden="true">★★★★★</div>
+            </div>
+            <p>“Llegó enseguida, encontró la pérdida detrás de la pared y lo dejó impecable. Un profesional de verdad.”</p>
+            <footer><b>Mariana S.</b> <span>· Belgrano</span></footer>
+          </article>
+          <article class="glass review">
+            <span class="quote-mark" aria-hidden="true">”</span>
+            <div class="review-top">
+              <div class="avatar">DR</div>
+              <div class="stars" aria-hidden="true">★★★★★</div>
+            </div>
+            <p>“Me destapó el desagüe de la cocina el mismo día. Precio claro, trabajo prolijo y dejó todo limpio.”</p>
+            <footer><b>Diego R.</b> <span>· Caballito</span></footer>
+          </article>
+          <article class="glass review">
+            <span class="quote-mark" aria-hidden="true">”</span>
+            <div class="review-top">
+              <div class="avatar">LM</div>
+              <div class="stars" aria-hidden="true">★★★★★</div>
+            </div>
+            <p>“Cambió la cañería del baño sin romper de más. Se nota la experiencia. Lo voy a llamar de nuevo.”</p>
+            <footer><b>Laura M.</b> <span>· Vicente López</span></footer>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <div class="glass">
+        <h3>HidroFix Plomería 24hs</h3>
+        <p>Cubrimos CABA y GBA. Atención las 24 horas, los 365 días. Presupuesto claro antes de empezar y garantía escrita de 6 meses.</p>
+        <div class="foot-links">
+          <a class="btn btn-primary" href="https://wa.me/5491100000000?text=Hola%2C%20quiero%20consultar%20por%20un%20trabajo%20de%20plomer%C3%ADa." target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-secondary" href="#presupuesto">Calculadora de presupuesto</a>
+        </div>
+        <p class="foot-meta">Horarios: 24 hs · Cobertura: CABA, GBA Norte, GBA Oeste y Sur.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/5491100000000?text=Hola%2C%20quiero%20consultar%20por%20un%20trabajo%20de%20plomer%C3%ADa." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11 11 0 006.2 19.3L5 22.9l3.7-1.2A11 11 0 0022.9 12 11 11 0 0020.5 3.5zm-8.5 17a9.1 9.1 0 01-4.6-1.3l-.3-.2-2.2.7.7-2.1-.2-.3A9.1 9.1 0 1112 20.5zm5-6.8c-.3-.1-1.6-.8-1.9-.9s-.4-.1-.6.1-.7.9-.8 1-.3.2-.6.1a7.4 7.4 0 01-2.2-1.3 8 8 0 01-1.5-1.9c-.2-.3 0-.4.1-.6l.3-.4.1-.3a.5.5 0 000-.5c0-.1-.6-1.5-.8-2s-.4-.5-.6-.5h-.5a1 1 0 00-.7.3 2.9 2.9 0 00-.9 2.2 5 5 0 001.1 2.6 11.6 11.6 0 004.4 4 14 14 0 001.4.5 3.3 3.3 0 001.5.1 2.5 2.5 0 001.7-1.1 2 2 0 00.1-1.1c-.1-.1-.3-.2-.6-.3z"/></svg>
+  </a>
+
+  <script>
+    (function () {
+      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      function easeOutCubic(t) {
+        return 1 - Math.pow(1 - t, 3);
+      }
+
+      function animateCounter(el) {
+        if (el.dataset.done === "1") return;
+        el.dataset.done = "1";
+        const target = parseFloat(el.dataset.count);
+        const decimals = parseInt(el.dataset.decimals || "0", 10);
+        const prefix = el.dataset.prefix || "";
+        const suffix = el.dataset.suffix || "";
+        const duration = prefersReduced ? 0 : 1600;
+
+        if (duration === 0) {
+          el.innerHTML = prefix + target.toFixed(decimals) + suffix;
+          return;
+        }
+
+        const start = performance.now();
+        function frame(now) {
+          const t = Math.min(1, (now - start) / duration);
+          const value = target * easeOutCubic(t);
+          el.innerHTML = prefix + value.toFixed(decimals) + suffix;
+          if (t < 1) requestAnimationFrame(frame);
+        }
+        requestAnimationFrame(frame);
+      }
+
+      function watchCounters() {
+        const nodes = Array.from(document.querySelectorAll(".stat-num[data-count]"));
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) animateCounter(entry.target);
+          });
+        }, { threshold: 0.4 });
+
+        nodes.forEach((node) => {
+          const rect = node.getBoundingClientRect();
+          const visible = rect.top < window.innerHeight && rect.bottom > 0;
+          if (visible) animateCounter(node);
+          else io.observe(node);
+        });
+      }
+
+      const JOBS = {
+        urgencias: { label: "Urgencias y Pérdidas 24 hs", base: 58000, hours: [1, 2], parts: 18000 },
+        desagues: { label: "Sifones y Desagües Bajo Mesada", base: 45000, hours: [1, 2], parts: 16000 },
+        canerias: { label: "Instalación y Cambio de Cañerías", base: 92000, hours: [3, 6], parts: 35000 },
+        inspeccion: { label: "Detección de Filtraciones y Destapaciones", base: 62000, hours: [1.5, 3], parts: 12000 },
+        sanitarios: { label: "Instalación de Sanitarios y Baños", base: 98000, hours: [3, 5], parts: 40000 },
+        griferia: { label: "Grifería y Llaves de Paso", base: 42000, hours: [1, 2], parts: 22000 },
+        termotanque: { label: "Instalación o cambio de termotanque", base: 78000, hours: [2, 4], parts: 28000 }
+      };
+      const URGENCY = {
+        programado: { label: "Turno programado", mult: 1 },
+        inmediata: { label: "Urgencia inmediata 24 hs", mult: 1.4 }
+      };
+      const COMPLEXITY = {
+        simple: { label: "Simple (1 punto)", mult: 0.85, time: 0.85 },
+        estandar: { label: "Estándar (2–3 puntos)", mult: 1, time: 1 },
+        obra: { label: "Obra / varios puntos", mult: 1.6, time: 1.7 }
+      };
+      const PARTS = {
+        mano: { label: "Solo mano de obra" },
+        basicos: { label: "Incluye repuestos básicos" }
+      };
+      const ZONE = {
+        caba: { label: "CABA", mult: 1 },
+        norte: { label: "GBA Norte", mult: 1.1 },
+        "oeste-sur": { label: "GBA Oeste / Sur", mult: 1.15 }
+      };
+
+      function money(n) {
+        const rounded = Math.round(n / 1000) * 1000;
+        return "$" + rounded.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+      }
+
+      function formatHours(n) {
+        if (n < 1) return "45 a 60 min";
+        const min = Math.max(0.75, n);
+        const max = min * (min < 2 ? 1.6 : 1.35);
+        const fmt = (h) => {
+          if (h < 1) return "45 min";
+          const whole = Math.round(h * 2) / 2;
+          if (whole === 1) return "1 hora";
+          if (Number.isInteger(whole)) return whole + " horas";
+          return whole.toString().replace(".", ",") + " horas";
+        };
+        const a = fmt(min);
+        const b = fmt(max);
+        if (a === b) return a;
+        return a.replace(" horas", "").replace(" hora", " h") + " a " + b;
+      }
+
+      function val(name) {
+        const el = document.querySelector('[name="' + name + '"]:checked') || document.getElementById(name);
+        return el ? el.value : "";
+      }
+
+      function calc() {
+        const tipo = val("tipo") || "urgencias";
+        const urgencia = val("urgencia");
+        const complejidad = val("complejidad");
+        const repuestos = val("repuestos");
+        const zona = val("zona");
+        const job = JOBS[tipo];
+        const mid = job.base * URGENCY[urgencia].mult * COMPLEXITY[complejidad].mult * ZONE[zona].mult
+          + (repuestos === "basicos" ? job.parts : 0);
+        const min = mid * 0.88;
+        const max = mid * 1.14;
+        const hours = ((job.hours[0] + job.hours[1]) / 2) * COMPLEXITY[complejidad].time * (urgencia === "inmediata" ? 1 : 1);
+        const priceText = money(min) + " – " + money(max);
+        const durationText = formatHours(hours);
+
+        document.getElementById("precio").textContent = priceText;
+        document.getElementById("duracion").textContent = durationText;
+
+        const msg = [
+          "Hola, quiero pedir un presupuesto:",
+          "",
+          "Servicio: " + job.label,
+          "Urgencia: " + URGENCY[urgencia].label,
+          "Complejidad: " + COMPLEXITY[complejidad].label,
+          "Repuestos: " + PARTS[repuestos].label,
+          "Zona: " + ZONE[zona].label,
+          "",
+          "Rango estimado: " + priceText,
+          "Duración estimada: " + durationText,
+          "Garantía: 6 meses por escrito",
+          "",
+          "Quedo a la espera. Gracias."
+        ].join("\n");
+        document.getElementById("wa-presupuesto").href = "https://wa.me/5491100000000?text=" + encodeURIComponent(msg);
+      }
+
+      function goToCalc(service) {
+        const select = document.getElementById("tipo");
+        if (service && JOBS[service]) select.value = service;
+        calc();
+        document.getElementById("presupuesto").scrollIntoView({ behavior: prefersReduced ? "auto" : "smooth", block: "start" });
+        select.focus({ preventScroll: true });
+      }
+
+      document.getElementById("calc-form").addEventListener("change", calc);
+      document.querySelectorAll("[data-service]").forEach((btn) => {
+        btn.addEventListener("click", () => goToCalc(btn.getAttribute("data-service")));
+      });
+
+      watchCounters();
+      calc();
+    })();
+  </script>
+</body>
+</html>
