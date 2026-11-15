@@ -4,292 +4,261 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Ezequiel · Técnico en Reparación en General · Flores, CABA</title>
-  <meta name="description" content="Técnico en Reparación en General Ezequiel (Nuestro Servicios). Yerbal 2649, Flores, CABA. Mantenimiento, aire acondicionado, electricidad, gas y más. Pedí tu presupuesto por WhatsApp." />
-  <meta name="theme-color" content="#F6FAF7" />
+  <meta name="description" content="Técnico en Reparación en General Ezequiel (Nuestro Servicios). Yerbal 2649, Flores, CABA. 5.0 en Google con 45 opiniones. Pedí tu presupuesto por WhatsApp." />
+  <meta name="theme-color" content="#F3EEE6" />
   <meta property="og:title" content="Ezequiel · Técnico en Reparación en General" />
   <meta property="og:description" content="Reparaciones en Flores, CABA. 5.0 en Google con 45 opiniones. Yerbal 2649." />
   <meta property="og:type" content="website" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #F6FAF7;
-      --ink: #0F291E;
-      --ink-soft: #3D564A;
-      --muted: #5E7268;
-      --green: #16A34A;
-      --green-deep: #15803D;
-      --green-bright: #2EA44F;
-      --yellow: #FFE033;
-      --yellow-2: #FFD426;
-      --star: #FACC15;
-      --glass: rgba(255, 255, 255, 0.62);
-      --glass-border: rgba(255, 255, 255, 0.85);
-      --shadow: 0 12px 32px rgba(13, 43, 29, 0.06);
-      --shadow-btn: 0 8px 22px rgba(240, 180, 0, 0.38);
-      --radius: 22px;
+      --bg: #F3EEE6;
+      --bg-2: #E8E0D4;
+      --paper: #FFFBF5;
+      --ink: #2A241F;
+      --ink-soft: #5A524A;
+      --muted: #7A7268;
+      --copper: #C46A2D;
+      --copper-deep: #8E4A22;
+      --copper-soft: #E8C4A4;
+      --star: #C9A227;
+      --line: rgba(42, 36, 31, 0.12);
+      --shadow: 0 14px 36px rgba(42, 36, 31, 0.08);
       --header: 68px;
       --wa: #25D366;
-      --max: 1120px;
+      --max: 1080px;
+      --serif: "Fraunces", "Times New Roman", serif;
+      --sans: "Source Sans 3", system-ui, sans-serif;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
     html, body { overflow-x: hidden; }
     body {
-      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-family: var(--sans);
       background: var(--bg);
       color: var(--ink);
-      line-height: 1.5;
+      line-height: 1.55;
       min-height: 100vh;
-      padding-bottom: 88px;
+      padding-bottom: 96px;
     }
     img { max-width: 100%; display: block; }
     a { color: inherit; }
     button, select { font-family: inherit; }
 
-    .bg-blobs { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
-    .blob { position: absolute; border-radius: 50%; filter: blur(64px); opacity: 0.62; }
-    .b1 { width: 520px; height: 520px; background: #9DE8B8; top: -140px; right: -160px; }
-    .b2 { width: 420px; height: 480px; background: #C8F5D8; top: 18%; left: -180px; border-radius: 60% 40% 70% 30%; }
-    .b3 { width: 380px; height: 380px; background: #B8E8F0; bottom: 8%; right: -120px; opacity: 0.45; }
-    .leaf { position: absolute; background: radial-gradient(circle at 40% 40%, rgba(46, 164, 79, 0.28), transparent 68%); filter: blur(18px); opacity: 0.7; }
-    .leaf-a { top: 0; right: 0; width: 340px; height: 420px; }
-    .leaf-b { bottom: -40px; left: -40px; width: 300px; height: 260px; }
-
-    .wrap { width: min(100% - 32px, var(--max)); margin-inline: auto; position: relative; z-index: 1; }
-    section { scroll-margin-top: calc(var(--header) + 16px); }
+    .wrap { width: min(100% - 32px, var(--max)); margin-inline: auto; }
+    section { scroll-margin-top: calc(var(--header) + 14px); }
 
     header {
       position: sticky; top: 0; z-index: 40;
       height: var(--header);
       display: flex; align-items: center;
-      background: rgba(246, 250, 247, 0.72);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+      background: rgba(243, 238, 230, 0.9);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
     }
     header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
     .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
     .logo {
-      width: 40px; height: 40px; border-radius: 12px;
-      background: linear-gradient(160deg, #22C55E, #15803D);
+      width: 40px; height: 40px; border-radius: 10px;
+      background: var(--ink); color: var(--copper-soft);
       display: grid; place-items: center;
-      box-shadow: 0 8px 16px rgba(22, 163, 74, 0.28);
+      font-family: var(--serif); font-weight: 600; font-size: 20px;
       flex-shrink: 0;
     }
-    .brand strong { display: block; font-size: 16px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; }
-    .brand small { display: block; font-size: 11px; color: var(--muted); font-weight: 600; }
+    .brand strong { display: block; font-family: var(--serif); font-size: 1.15rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; }
+    .brand small { display: block; font-size: 11px; color: var(--muted); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
     .header-wa {
       display: inline-flex; align-items: center; gap: 6px;
-      background: #fff; color: var(--ink);
-      border: 1px solid rgba(15, 41, 30, 0.08);
-      padding: 8px 12px; border-radius: 999px;
+      background: var(--ink); color: #F3EEE6;
+      padding: 9px 14px; border-radius: 999px;
       font-size: 13px; font-weight: 700; text-decoration: none;
-      box-shadow: var(--shadow);
     }
     .header-wa svg { width: 16px; height: 16px; }
 
-    .glass {
-      background: var(--glass);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid var(--glass-border);
-      box-shadow: var(--shadow);
-      border-radius: var(--radius);
-    }
-
-    .hero { padding: 28px 0 20px; }
-    .hero-grid { display: grid; gap: 28px; align-items: center; }
-    .badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 6px 12px 6px 8px; border-radius: 999px;
-      background: rgba(255, 255, 255, 0.7);
-      border: 1px solid rgba(255, 255, 255, 0.9);
-      box-shadow: 0 6px 18px rgba(13, 43, 29, 0.05);
-      font-size: 11px; font-weight: 800; letter-spacing: 0.08em;
-      color: var(--green-deep); text-transform: uppercase;
-      margin-bottom: 18px;
-    }
-    .badge-dot {
-      width: 22px; height: 22px; border-radius: 50%;
-      background: rgba(22, 163, 74, 0.14);
-      display: grid; place-items: center; color: var(--green);
+    .hero { padding: 36px 0 28px; text-align: left; }
+    .kicker {
+      display: inline-block;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--copper-deep);
+      margin-bottom: 12px;
     }
     h1 {
-      font-size: clamp(2.05rem, 8vw, 3.4rem);
-      font-weight: 800; letter-spacing: -0.045em; line-height: 1.05;
-      color: var(--ink); margin-bottom: 14px;
+      font-family: var(--serif);
+      font-size: clamp(2.15rem, 8.4vw, 3.6rem);
+      font-weight: 600; letter-spacing: -0.03em; line-height: 1.08;
+      margin-bottom: 10px;
     }
-    h1 .accent { color: var(--green-bright); }
-    .lead { font-size: 1.02rem; color: var(--muted); max-width: 36rem; margin-bottom: 22px; font-weight: 500; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    h1 em { font-style: italic; color: var(--copper-deep); font-weight: 500; }
+    .lead { color: var(--ink-soft); font-size: 1.05rem; max-width: 34rem; margin-bottom: 22px; font-weight: 400; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; }
     .btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 8px;
       border: 0; cursor: pointer; text-decoration: none;
-      font-weight: 800; letter-spacing: -0.02em;
-      border-radius: 999px; padding: 14px 22px;
+      font-weight: 700; border-radius: 999px; padding: 14px 22px;
       font-size: 15px; line-height: 1; min-height: 52px;
-      transition: transform 0.15s ease, background 0.15s ease;
     }
     .btn:active { transform: translateY(1px); }
-    .btn-primary { background: var(--yellow-2); color: var(--ink); box-shadow: var(--shadow-btn); }
-    .btn-primary:hover { background: var(--yellow); }
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.7);
-      border: 1px solid rgba(255, 255, 255, 0.9);
-      color: var(--ink); box-shadow: var(--shadow);
-    }
+    .btn-primary { background: var(--copper); color: #FFFBF5; }
+    .btn-primary:hover { background: var(--copper-deep); }
+    .btn-secondary { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
+    .btn-ghost { background: var(--paper); color: var(--ink); border: 1px solid var(--line); }
 
-    .hero-visual { position: relative; display: flex; justify-content: center; }
-    .photo-card {
-      width: min(100%, 420px);
-      border-radius: 28px;
-      overflow: hidden;
-      position: relative;
-      background: rgba(255, 255, 255, 0.45);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.9);
-      box-shadow: 0 22px 50px rgba(13, 43, 29, 0.12);
+    .reviews-block {
+      background: var(--ink);
+      color: #F6F1E8;
+      padding: 40px 0 36px;
     }
-    .photo-card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
-    .float-pill {
-      position: absolute; left: 14px; bottom: 14px;
-      background: rgba(255, 255, 255, 0.86);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-radius: 999px; padding: 8px 12px;
-      font-size: 12px; font-weight: 800; color: var(--ink);
-      display: inline-flex; align-items: center; gap: 6px;
-      box-shadow: 0 8px 20px rgba(13, 43, 29, 0.1);
+    .reviews-block .kicker { color: var(--copper-soft); }
+    .reviews-block h2,
+    .reviews-block .score-num,
+    .map h2, .calc-sec h2, .services-sec h2 {
+      font-family: var(--serif);
+      font-weight: 600; letter-spacing: -0.03em; line-height: 1.15;
     }
-    .float-pill i { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.18); display: block; }
-
-    .section { padding: 28px 0; }
-    .section-kicker {
-      font-size: 12px; font-weight: 800; letter-spacing: 0.08em;
-      text-transform: uppercase; color: var(--green-deep); margin-bottom: 8px;
-    }
-    h2 {
-      font-size: clamp(1.55rem, 5.4vw, 2.2rem);
-      font-weight: 800; letter-spacing: -0.04em; line-height: 1.15;
+    .reviews-block h2 { font-size: clamp(1.7rem, 6vw, 2.4rem); margin-bottom: 22px; }
+    .impact {
+      display: flex; flex-wrap: wrap; align-items: flex-end; gap: 8px 18px;
       margin-bottom: 8px;
     }
-    h2 .accent { color: var(--green-bright); }
-    .section-lead { color: var(--muted); font-weight: 500; margin-bottom: 20px; max-width: 40rem; }
-
-    .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .stat { padding: 18px 16px 16px; min-height: 140px; display: flex; flex-direction: column; gap: 6px; }
-    .icon-circle {
-      width: 44px; height: 44px; border-radius: 50%;
-      background: rgba(22, 163, 74, 0.12); color: var(--green-deep);
-      display: grid; place-items: center; margin-bottom: 8px;
+    .score-num {
+      font-size: clamp(4.2rem, 18vw, 6.5rem);
+      line-height: 0.85; font-weight: 600; letter-spacing: -0.04em;
     }
-    .icon-circle svg { width: 22px; height: 22px; }
-    .stat-num { font-size: clamp(1.85rem, 7vw, 2.4rem); font-weight: 800; letter-spacing: -0.05em; line-height: 1; }
-    .stat-num .star { color: var(--star); font-size: 0.8em; }
-    .stat-label { color: var(--muted); font-size: 13px; font-weight: 600; }
+    .score-meta { padding-bottom: 6px; }
+    .stars { color: var(--star); letter-spacing: 3px; font-size: 1.25rem; }
+    .rev-count { font-size: 1.05rem; font-weight: 600; margin-top: 4px; color: #E8E0D4; }
+    .google-row { display: flex; align-items: center; gap: 8px; margin: 6px 0 24px; color: #C9C2B6; font-size: 13px; font-weight: 600; }
+    .g-logo { width: 18px; height: 18px; }
+    .review-list { display: grid; gap: 12px; }
+    .review {
+      background: rgba(255, 251, 245, 0.06);
+      border: 1px solid rgba(232, 196, 164, 0.18);
+      border-radius: 18px;
+      padding: 20px 18px 16px;
+    }
+    .review .stars { font-size: 14px; letter-spacing: 2px; margin-bottom: 8px; display: block; }
+    .review p {
+      font-family: var(--serif);
+      font-size: 1.15rem; font-weight: 500; line-height: 1.4;
+      margin-bottom: 12px;
+    }
+    .review footer { font-size: 13px; color: #C9C2B6; font-weight: 600; }
+    .review footer b { color: #F6F1E8; font-weight: 700; font-family: var(--sans); }
 
-    .services { display: grid; gap: 16px; }
-    .service { overflow: hidden; display: flex; flex-direction: column; padding: 10px; }
-    .service img { width: 100%; aspect-ratio: 16/10; object-fit: cover; border-radius: 16px; }
-    .service-body { padding: 14px 8px 8px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
-    .service h3 { font-size: 1.08rem; font-weight: 800; letter-spacing: -0.03em; }
-    .service p { color: var(--muted); font-size: 0.92rem; font-weight: 500; flex: 1; }
-    .service .btn { align-self: flex-start; margin-top: 8px; min-height: 46px; padding: 12px 18px; font-size: 14px; }
-    .more-cats { margin-top: 14px; padding: 16px 18px; color: var(--ink-soft); font-size: 0.92rem; font-weight: 500; }
-    .more-cats strong { color: var(--ink); }
+    .services-sec { padding: 36px 0 20px; overflow: hidden; }
+    .services-sec h2, .calc-sec h2, .map h2 {
+      font-size: clamp(1.65rem, 5.8vw, 2.3rem);
+      margin-bottom: 8px;
+    }
+    .sec-lead { color: var(--muted); margin-bottom: 18px; max-width: 36rem; }
+    .carousel-wrap { position: relative; }
+    .carousel {
+      display: flex; gap: 14px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      padding: 4px 16px 18px;
+      margin-inline: -16px;
+      scrollbar-width: none;
+    }
+    .carousel::-webkit-scrollbar { display: none; }
+    .slide {
+      flex: 0 0 min(78%, 340px);
+      scroll-snap-align: start;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: flex; flex-direction: column;
+    }
+    .slide img { width: 100%; aspect-ratio: 16/10; object-fit: cover; }
+    .slide-body { padding: 14px 14px 16px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+    .slide h3 { font-family: var(--serif); font-size: 1.2rem; font-weight: 600; letter-spacing: -0.02em; }
+    .slide p { color: var(--muted); font-size: 0.92rem; flex: 1; }
+    .slide .btn { align-self: flex-start; min-height: 44px; padding: 10px 16px; font-size: 14px; }
+    .dots { display: flex; justify-content: center; gap: 7px; margin-top: 2px; }
+    .dots button {
+      width: 7px; height: 7px; border-radius: 99px; border: 0;
+      background: var(--copper-soft); padding: 0; cursor: pointer;
+    }
+    .dots button[aria-current="true"] { background: var(--copper); width: 18px; }
 
-    .calc { padding: 20px 16px 22px; }
+    .calc-sec { padding: 20px 0 28px; }
+    .calc {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 22px 16px 20px;
+      box-shadow: var(--shadow);
+    }
     .calc-grid { display: grid; gap: 16px; }
     .field { display: grid; gap: 8px; }
-    .field label, .field .lbl { font-size: 13px; font-weight: 800; color: var(--ink); }
+    .field label, .field .lbl { font-size: 13px; font-weight: 700; }
     select.styled {
       appearance: none; -webkit-appearance: none;
       width: 100%; min-height: 52px;
-      border-radius: 16px;
-      border: 1px solid rgba(15, 41, 30, 0.08);
-      background: rgba(255, 255, 255, 0.78) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'><path d='M5 7.5l5 5 5-5' stroke='%230F291E' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/></svg>") no-repeat right 14px center;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: #fff url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'><path d='M5 7.5l5 5 5-5' stroke='%232A241F' stroke-width='1.8' stroke-linecap='round'/></svg>") no-repeat right 14px center;
       padding: 12px 42px 12px 14px;
       font-size: 15px; font-weight: 600; color: var(--ink); outline: none;
     }
-    select.styled:focus { border-color: rgba(22, 163, 74, 0.45); box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.12); }
+    select.styled:focus { border-color: var(--copper); box-shadow: 0 0 0 3px rgba(196, 106, 45, 0.18); }
     .chips { display: grid; gap: 8px; }
     .chip { position: relative; }
     .chip input { position: absolute; opacity: 0; inset: 0; }
     .chip span {
       display: flex; align-items: center; justify-content: center; text-align: center;
       min-height: 50px; padding: 10px 12px; border-radius: 14px;
-      background: rgba(255, 255, 255, 0.7);
-      border: 1.5px solid rgba(15, 41, 30, 0.08);
+      background: #fff; border: 1.5px solid var(--line);
       font-size: 13.5px; font-weight: 700; cursor: pointer;
     }
-    .chip input:focus-visible + span { box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.16); }
-    .chip input:checked + span {
-      background: rgba(22, 163, 74, 0.12);
-      border-color: var(--green);
-      box-shadow: 0 6px 16px rgba(22, 163, 74, 0.12);
-    }
+    .chip input:focus-visible + span { box-shadow: 0 0 0 3px rgba(196, 106, 45, 0.2); }
+    .chip input:checked + span { border-color: var(--copper); background: #F8EDE3; color: var(--copper-deep); }
     .chips.two { grid-template-columns: 1fr 1fr; }
     .chips.three { grid-template-columns: 1fr; }
-    .disclaimer {
-      font-size: 12px; color: var(--muted); font-weight: 600;
-      margin-top: 4px;
-    }
     .result {
-      margin-top: 8px; padding: 18px 16px; border-radius: 20px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.82), rgba(232, 250, 236, 0.7));
-      border: 1px solid rgba(255, 255, 255, 0.95);
-      box-shadow: var(--shadow); text-align: center;
+      margin-top: 6px; text-align: center;
+      padding: 16px 12px 4px;
+      border-top: 1px solid var(--line);
     }
-    .result-kicker { font-size: 12px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--green-deep); }
-    .price { font-size: clamp(1.7rem, 7vw, 2.15rem); font-weight: 800; letter-spacing: -0.04em; margin: 6px 0 6px; }
-    .result .btn { width: 100%; margin-top: 12px; }
+    .result-kicker { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--copper-deep); }
+    .price { font-family: var(--serif); font-size: clamp(1.7rem, 7vw, 2.3rem); font-weight: 600; letter-spacing: -0.03em; margin: 6px 0 6px; }
+    .disclaimer { font-size: 12px; color: var(--muted); font-weight: 600; }
+    .result .btn { width: 100%; margin-top: 14px; }
 
-    .google-badge { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 14px 16px; margin: 16px 0 18px; }
-    .g-logo { width: 28px; height: 28px; flex-shrink: 0; }
-    .score { font-size: 1.35rem; font-weight: 800; letter-spacing: -0.03em; }
-    .score small { font-size: 0.7em; color: var(--muted); font-weight: 700; }
-    .stars { color: var(--star); letter-spacing: 1px; font-size: 16px; }
-    .rev-count { font-size: 13px; font-weight: 700; color: var(--muted); }
-    .reviews { display: grid; gap: 12px; }
-    .review { padding: 18px 16px 16px; position: relative; overflow: hidden; }
-    .review-top { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
-    .avatar {
-      width: 44px; height: 44px; border-radius: 50%;
-      background: #D1FAE5; color: var(--green-deep);
-      display: grid; place-items: center;
-      font-weight: 800; font-size: 13px; flex-shrink: 0;
+    .map { padding: 12px 0 32px; }
+    .map-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
     }
-    .quote-mark {
-      position: absolute; top: 8px; right: 16px;
-      font-size: 72px; line-height: 1; font-weight: 700;
-      color: rgba(15, 41, 30, 0.08); pointer-events: none;
-      font-family: Georgia, "Times New Roman", serif;
+    .map-card iframe { width: 100%; height: 280px; border: 0; display: block; }
+    .map-meta { padding: 18px 16px 20px; }
+    .map-meta p { color: var(--ink-soft); font-weight: 500; margin-bottom: 12px; }
+    .map-meta .actions { margin-top: 4px; }
+
+    footer.site { padding: 8px 0 20px; color: var(--muted); }
+    footer.site .inner {
+      border-top: 1px solid var(--line);
+      padding-top: 22px;
     }
-    .review p { color: var(--ink-soft); font-weight: 500; font-size: 0.95rem; margin: 6px 0 12px; }
-    .review footer { font-size: 13px; }
-    .review footer b { font-weight: 800; color: var(--ink); }
-    .review footer span { color: var(--muted); font-weight: 600; }
-
-    .info-grid { display: grid; gap: 12px; }
-    .info { padding: 18px 16px; }
-    .info h3 { font-size: 1rem; font-weight: 800; margin-bottom: 6px; letter-spacing: -0.02em; }
-    .info p, .info a { color: var(--ink-soft); font-weight: 500; font-size: 0.95rem; }
-    .info a { color: var(--green-deep); font-weight: 700; text-decoration: none; }
-
-    footer.site { padding: 28px 0 12px; color: var(--muted); }
-    footer.site .glass { padding: 22px 18px; }
-    footer.site h3 { color: var(--ink); font-size: 1.15rem; letter-spacing: -0.03em; margin-bottom: 6px; }
-    footer.site p { font-size: 0.92rem; font-weight: 500; margin-bottom: 14px; }
-    .foot-links { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+    footer.site h3 { font-family: var(--serif); color: var(--ink); font-size: 1.2rem; font-weight: 600; margin-bottom: 6px; }
+    footer.site p { font-size: 0.92rem; margin-bottom: 14px; }
+    .foot-links { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
     .foot-meta { font-size: 12px; font-weight: 600; }
 
     .wa-float {
       position: fixed; right: 16px; bottom: 16px; z-index: 50;
-      width: 56px; height: 56px; border-radius: 50%;
+      width: 58px; height: 58px; border-radius: 50%;
       background: var(--wa); color: #fff;
       display: grid; place-items: center;
       box-shadow: 0 10px 24px rgba(37, 211, 102, 0.4);
@@ -298,38 +267,24 @@
     .wa-float svg { width: 28px; height: 28px; }
 
     @media (min-width: 720px) {
-      body { padding-bottom: 32px; }
-      .hero { padding: 48px 0 28px; }
-      .hero-grid { grid-template-columns: 1.1fr 0.9fr; gap: 40px; }
-      .services { grid-template-columns: 1fr 1fr; }
+      .hero { padding: 56px 0 40px; }
+      .review-list { grid-template-columns: 1fr 1fr 1fr; }
+      .slide { flex-basis: min(42%, 380px); }
       .chips.three { grid-template-columns: 1fr 1fr 1fr; }
       .calc { padding: 28px; }
-      .reviews { grid-template-columns: 1fr 1fr 1fr; }
-      .info-grid { grid-template-columns: 1fr 1fr; }
-      .wa-float { display: none; }
+      .map-card iframe { height: 360px; }
     }
     @media (min-width: 980px) {
-      .services { grid-template-columns: 1fr 1fr 1fr; }
       .calc-grid { grid-template-columns: 1fr 1fr; gap: 18px 24px; }
       .calc-grid .full { grid-column: 1 / -1; }
     }
   </style>
 </head>
 <body>
-  <div class="bg-blobs" aria-hidden="true">
-    <span class="blob b1"></span>
-    <span class="blob b2"></span>
-    <span class="blob b3"></span>
-    <span class="leaf leaf-a"></span>
-    <span class="leaf leaf-b"></span>
-  </div>
-
   <header>
     <div class="wrap">
       <a class="brand" href="#inicio">
-        <span class="logo" aria-hidden="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 7l3 3-8 8-4 1 1-4 8-8z"/></svg>
-        </span>
+        <span class="logo" aria-hidden="true">E</span>
         <span>
           <strong>Ezequiel</strong>
           <small>Reparación en general</small>
@@ -344,121 +299,124 @@
 
   <main>
     <section class="hero" id="inicio">
-      <div class="wrap hero-grid">
-        <div>
-          <div class="badge">
-            <span class="badge-dot" aria-hidden="true">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M14 7l3 3-8 8-4 1 1-4 8-8z"/></svg>
-            </span>
-            Técnico en reparación en general
-          </div>
-          <h1>Reparaciones en tu casa, con un técnico de <span class="accent">Flores</span></h1>
-          <p class="lead">Soy Ezequiel, de Técnico en Reparación en General (Nuestro Servicios). Trabajo en mantenimiento, aire acondicionado, electricidad, gas y más, en Flores, CABA. Escribime y coordinamos.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#presupuesto">Calcular presupuesto <span aria-hidden="true">→</span></a>
-            <a class="btn btn-secondary" href="https://wa.me/5491126033651?text=Hola%20Ezequiel%2C%20te%20escribo%20por%20una%20reparaci%C3%B3n." target="_blank" rel="noopener">Escribir por WhatsApp</a>
-          </div>
-        </div>
-        <div class="hero-visual">
-          <figure class="photo-card">
-            <img src="img/hero-taller.jpg" alt="Herramientas de reparación general sobre un banco de trabajo" width="800" height="600" />
-            <figcaption class="float-pill"><i></i> Flores, CABA</figcaption>
-          </figure>
+      <div class="wrap">
+        <p class="kicker">Flores, CABA</p>
+        <h1>Ezequiel, técnico en <em>reparación en general</em></h1>
+        <p class="lead">Mantenimiento, aire acondicionado, electricidad, gas y más. Escribime y coordinamos el trabajo.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://wa.me/5491126033651?text=Hola%20Ezequiel%2C%20te%20escribo%20por%20una%20reparaci%C3%B3n." target="_blank" rel="noopener">Escribir por WhatsApp</a>
+          <a class="btn btn-secondary" href="#presupuesto">Calcular presupuesto</a>
         </div>
       </div>
     </section>
 
-    <section class="section" id="google" aria-label="Valoración en Google">
+    <section class="reviews-block" id="resenas" aria-label="Reseñas de Google">
       <div class="wrap">
-        <p class="section-kicker">Según Google Maps</p>
-        <h2>Lo que dicen en <span class="accent">Google</span></h2>
-        <p class="section-lead">Datos tomados del perfil público de Google. Sin números inventados.</p>
-        <div class="stats">
-          <article class="glass stat">
-            <div class="icon-circle" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.6l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 16.9 7.2 18.5l.9-5.4L4.2 9.3l5.4-.8L12 3.6z"/></svg>
-            </div>
-            <div class="stat-num" data-count="5.0" data-decimals="1" data-suffix=" <span class='star'>★</span>">0</div>
-            <p class="stat-label">Puntaje en Google</p>
+        <p class="kicker">Opiniones reales de Google</p>
+        <h2>La confianza se nota en las reseñas</h2>
+        <div class="impact">
+          <div class="score-num">5.0</div>
+          <div class="score-meta">
+            <div class="stars" aria-label="5 estrellas">★★★★★</div>
+            <p class="rev-count">45 opiniones en Google</p>
+          </div>
+        </div>
+        <p class="google-row">
+          <svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 8 3.1l5.7-5.7C34.2 6.1 29.4 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.9z"/>
+            <path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 16 19 12 24 12c3.1 0 5.8 1.2 8 3.1l5.7-5.7C34.2 6.1 29.4 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/>
+            <path fill="#4CAF50" d="M24 44c5.2 0 10-2 13.6-5.2l-6.3-5.3C29.2 35.1 26.7 36 24 36c-5.3 0-9.7-3.3-11.3-8l-6.5 5C9.6 39.6 16.3 44 24 44z"/>
+            <path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-1.1 3.2-3.5 5.8-6.6 7.5l6.3 5.3C37.1 41.3 44 36 44 24c0-1.3-.1-2.6-.4-3.9z"/>
+          </svg>
+          Perfil de Google Maps
+        </p>
+        <div class="review-list">
+          <article class="review">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <p>“Muy buena atención y muy buen servicio. Lo recomiendo.”</p>
+            <footer><b>Griselda Olmedo</b> · Google</footer>
           </article>
-          <article class="glass stat">
-            <div class="icon-circle" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2"/><circle cx="9.5" cy="7" r="3.5"/><path d="M22 21v-2a3.5 3.5 0 00-2.6-3.4"/><path d="M16.5 3.6a3.5 3.5 0 010 6.8"/></svg>
-            </div>
-            <div class="stat-num" data-count="45" data-prefix="">0</div>
-            <p class="stat-label">Opiniones en Google</p>
+          <article class="review">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <p>“Muy buen servicio! Muy atento y barato. 100% Recomendado”</p>
+            <footer><b>Elizabeth Paz Alvarez Galia</b> · Google</footer>
+          </article>
+          <article class="review">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <p>“Excelente trabajo. Se nota el profesionalismo, la prolijidad y la atención a cada detalle. Totalmente recomendable!”</p>
+            <footer><b>Nancy Contrera</b> · Google</footer>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="servicios">
+    <section class="services-sec" id="servicios">
       <div class="wrap">
-        <p class="section-kicker">Rubros del perfil</p>
-        <h2>Servicios según <span class="accent">Google Maps</span></h2>
-        <p class="section-lead">Estas categorías figuran en el perfil de Google. Las fotos son de ejemplo, para mostrar cómo se ve la web.</p>
-        <div class="services">
-          <article class="glass service">
+        <p class="kicker">Lo que resuelvo</p>
+        <h2>Servicios</h2>
+        <p class="sec-lead">Categorías publicadas en Google Maps. Deslizá o esperá: el carrusel avanza solo.</p>
+      </div>
+      <div class="carousel-wrap">
+        <div class="carousel" id="carousel" tabindex="0" aria-label="Carrusel de servicios" aria-roledescription="carrusel">
+          <article class="slide" data-service="mantenimiento">
             <img src="img/mantenimiento.jpg" alt="Herramientas de mantenimiento general en un hogar" width="800" height="500" />
-            <div class="service-body">
+            <div class="slide-body">
               <h3>Mantenimiento general</h3>
-              <p>Arreglos y mantenimiento en el hogar, según el rubro del perfil: persona de mantenimiento.</p>
-              <button class="btn btn-primary" type="button" data-service="mantenimiento">Cotizar este servicio <span aria-hidden="true">→</span></button>
+              <p>Arreglos y mantenimiento en el hogar.</p>
+              <button class="btn btn-primary" type="button" data-service="mantenimiento">Cotizar este servicio →</button>
             </div>
           </article>
-          <article class="glass service">
+          <article class="slide" data-service="aire">
             <img src="img/aire.jpg" alt="Aire acondicionado split instalado en una pared" width="800" height="500" />
-            <div class="service-body">
+            <div class="slide-body">
               <h3>Aire acondicionado</h3>
-              <p>Servicio de reparación de aire acondicionado, tal como aparece en Google Maps.</p>
-              <button class="btn btn-primary" type="button" data-service="aire">Cotizar este servicio <span aria-hidden="true">→</span></button>
+              <p>Reparación de aire acondicionado.</p>
+              <button class="btn btn-primary" type="button" data-service="aire">Cotizar este servicio →</button>
             </div>
           </article>
-          <article class="glass service">
+          <article class="slide" data-service="electricidad">
             <img src="img/electricidad.jpg" alt="Herramientas y tablero para reparaciones eléctricas" width="800" height="500" />
-            <div class="service-body">
+            <div class="slide-body">
               <h3>Electricidad</h3>
-              <p>Taller de reparaciones eléctricas y electricista, categorías publicadas en el perfil.</p>
-              <button class="btn btn-primary" type="button" data-service="electricidad">Cotizar este servicio <span aria-hidden="true">→</span></button>
+              <p>Reparaciones eléctricas y electricista.</p>
+              <button class="btn btn-primary" type="button" data-service="electricidad">Cotizar este servicio →</button>
             </div>
           </article>
-          <article class="glass service">
+          <article class="slide" data-service="gas">
             <img src="img/gas.jpg" alt="Instalación de calefón a gas en un lavadero" width="800" height="500" />
-            <div class="service-body">
+            <div class="slide-body">
               <h3>Instalación de gas</h3>
-              <p>El perfil de Google incluye la categoría instalador de gas. Consultá el trabajo que necesitás.</p>
-              <button class="btn btn-primary" type="button" data-service="gas">Cotizar este servicio <span aria-hidden="true">→</span></button>
+              <p>Trabajos de instalación de gas.</p>
+              <button class="btn btn-primary" type="button" data-service="gas">Cotizar este servicio →</button>
             </div>
           </article>
-          <article class="glass service">
+          <article class="slide" data-service="celulares">
             <img src="img/celulares.jpg" alt="Mesa de trabajo para reparación de teléfonos móviles" width="800" height="500" />
-            <div class="service-body">
+            <div class="slide-body">
               <h3>Reparación de celulares</h3>
-              <p>Tienda de reparación de teléfonos móviles, según las categorías del perfil de Google.</p>
-              <button class="btn btn-primary" type="button" data-service="celulares">Cotizar este servicio <span aria-hidden="true">→</span></button>
+              <p>Reparación de teléfonos móviles.</p>
+              <button class="btn btn-primary" type="button" data-service="celulares">Cotizar este servicio →</button>
             </div>
           </article>
-          <article class="glass service">
+          <article class="slide" data-service="otros">
             <img src="img/hero-taller.jpg" alt="Banco de trabajo con herramientas de reparación" width="800" height="500" />
-            <div class="service-body">
+            <div class="slide-body">
               <h3>Maquinaria y otros arreglos</h3>
-              <p>También figuran mantenimiento de maquinaria, sistemas de seguridad y equipos de música.</p>
-              <button class="btn btn-primary" type="button" data-service="otros">Cotizar este servicio <span aria-hidden="true">→</span></button>
+              <p>Maquinaria, seguridad y equipos de música.</p>
+              <button class="btn btn-primary" type="button" data-service="otros">Cotizar este servicio →</button>
             </div>
           </article>
         </div>
-        <div class="glass more-cats">
-          <strong>Categorías publicadas en Google Maps:</strong> persona de mantenimiento, servicio de reparación de aire acondicionado, taller de reparaciones eléctricas, electricista, instalador de gas, servicio de mantenimiento de maquinaria, tienda de reparación de teléfonos móviles, instaladores de sistemas de seguridad y servicio de reparación de equipos de música.
-        </div>
+        <div class="dots" id="dots" hidden></div>
       </div>
     </section>
 
-    <section class="section" id="presupuesto">
+    <section class="calc-sec" id="presupuesto">
       <div class="wrap">
-        <p class="section-kicker">Pedí tu estimado</p>
-        <h2>Calculá un <span class="accent">presupuesto</span> de referencia</h2>
-        <p class="section-lead">Completá el tipo de trabajo, la urgencia y el tamaño. El rango es solo una guía para iniciar la consulta por WhatsApp.</p>
-        <form class="glass calc" id="calc-form" novalidate>
+        <p class="kicker">Sin compromiso</p>
+        <h2>Calculá tu presupuesto</h2>
+        <p class="sec-lead">Completá el tipo de trabajo, la urgencia y el tamaño. Después lo mandás por WhatsApp.</p>
+        <form class="calc" id="calc-form" novalidate>
           <div class="calc-grid">
             <div class="field full">
               <label for="tipo">Tipo de trabajo</label>
@@ -491,84 +449,26 @@
             <p class="result-kicker">Rango de referencia</p>
             <p class="price" id="precio">$0 – $0</p>
             <p class="disclaimer">Valores de referencia de ejemplo. El precio final lo confirma Ezequiel según el trabajo.</p>
-            <a class="btn btn-primary" id="wa-presupuesto" href="#" target="_blank" rel="noopener">Enviar consulta por WhatsApp <span aria-hidden="true">→</span></a>
+            <a class="btn btn-primary" id="wa-presupuesto" href="#" target="_blank" rel="noopener">Enviar consulta por WhatsApp →</a>
           </div>
         </form>
       </div>
     </section>
 
-    <section class="section" id="resenas">
+    <section class="map" id="mapa">
       <div class="wrap">
-        <p class="section-kicker">Opiniones reales</p>
-        <h2>Reseñas de <span class="accent">Google</span></h2>
-        <div class="glass google-badge">
-          <svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true">
-            <path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 8 3.1l5.7-5.7C34.2 6.1 29.4 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.9z"/>
-            <path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 16 19 12 24 12c3.1 0 5.8 1.2 8 3.1l5.7-5.7C34.2 6.1 29.4 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/>
-            <path fill="#4CAF50" d="M24 44c5.2 0 10-2 13.6-5.2l-6.3-5.3C29.2 35.1 26.7 36 24 36c-5.3 0-9.7-3.3-11.3-8l-6.5 5C9.6 39.6 16.3 44 24 44z"/>
-            <path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-1.1 3.2-3.5 5.8-6.6 7.5l6.3 5.3C37.1 41.3 44 36 44 24c0-1.3-.1-2.6-.4-3.9z"/>
-          </svg>
-          <div>
-            <div class="score">5.0 <small>/ 5.0</small></div>
-            <div class="stars" aria-label="5 estrellas">★★★★★</div>
+        <p class="kicker">Dónde encontrarme</p>
+        <h2>Mapa y dirección</h2>
+        <div class="map-card">
+          <iframe title="Mapa de Yerbal 2649, Flores, CABA" src="https://www.google.com/maps?q=Yerbal+2649,+Flores,+CABA&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          <div class="map-meta">
+            <p>Yerbal 2649, flores 1604 1b, C1406GKG, Cdad. Autónoma de Buenos Aires<br />Flores, Comuna 7 · Tel. <a href="tel:+5491126033651">011 2603-3651</a></p>
+            <p class="disclaimer" style="margin-bottom:12px;">En Google Maps todavía no figuran horarios. Escribí o llamá para coordinar.</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=Yerbal+2649,+Flores,+CABA" target="_blank" rel="noopener">Cómo llegar</a>
+              <a class="btn btn-ghost" href="https://maps.app.goo.gl/pYe3cmmtyHx7K7FT7" target="_blank" rel="noopener">Ver en Google Maps</a>
+            </div>
           </div>
-          <p class="rev-count">45 opiniones en Google</p>
-        </div>
-        <div class="reviews">
-          <article class="glass review">
-            <span class="quote-mark" aria-hidden="true">”</span>
-            <div class="review-top">
-              <div class="avatar">GO</div>
-              <div class="stars" aria-hidden="true">★★★★★</div>
-            </div>
-            <p>“Muy buena atención y muy buen servicio. Lo recomiendo.”</p>
-            <footer><b>Griselda Olmedo</b> <span>· Google</span></footer>
-          </article>
-          <article class="glass review">
-            <span class="quote-mark" aria-hidden="true">”</span>
-            <div class="review-top">
-              <div class="avatar">EP</div>
-              <div class="stars" aria-hidden="true">★★★★★</div>
-            </div>
-            <p>“Muy buen servicio! Muy atento y barato. 100% Recomendado”</p>
-            <footer><b>Elizabeth Paz Alvarez Galia</b> <span>· Google</span></footer>
-          </article>
-          <article class="glass review">
-            <span class="quote-mark" aria-hidden="true">”</span>
-            <div class="review-top">
-              <div class="avatar">NC</div>
-              <div class="stars" aria-hidden="true">★★★★★</div>
-            </div>
-            <p>“Excelente trabajo. Se nota el profesionalismo, la prolijidad y la atención a cada detalle. Totalmente recomendable!”</p>
-            <footer><b>Nancy Contrera</b> <span>· Google</span></footer>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="contacto">
-      <div class="wrap">
-        <p class="section-kicker">Dónde encontrarme</p>
-        <h2>Zona, dirección y <span class="accent">contacto</span></h2>
-        <div class="info-grid">
-          <article class="glass info">
-            <h3>Dirección</h3>
-            <p>Yerbal 2649, flores 1604 1b, C1406GKG, Cdad. Autónoma de Buenos Aires</p>
-            <p style="margin-top:8px;"><a href="https://maps.app.goo.gl/pYe3cmmtyHx7K7FT7" target="_blank" rel="noopener">Ver en Google Maps →</a></p>
-          </article>
-          <article class="glass info">
-            <h3>Zona</h3>
-            <p>Flores, Comuna 7, CABA</p>
-          </article>
-          <article class="glass info">
-            <h3>Teléfono</h3>
-            <p><a href="tel:+541126033651">011 2603-3651</a></p>
-            <p style="margin-top:8px;"><a href="https://wa.me/5491126033651?text=Hola%20Ezequiel%2C%20te%20escribo%20por%20una%20reparaci%C3%B3n." target="_blank" rel="noopener">Escribir por WhatsApp →</a></p>
-          </article>
-          <article class="glass info">
-            <h3>Horarios</h3>
-            <p>En Google Maps todavía no figuran horarios de atención. Llamá o escribí para coordinar el día y la hora.</p>
-          </article>
         </div>
       </div>
     </section>
@@ -576,7 +476,7 @@
 
   <footer class="site">
     <div class="wrap">
-      <div class="glass">
+      <div class="inner">
         <h3>Técnico en Reparación en General Ezequiel (Nuestro Servicios)</h3>
         <p>Yerbal 2649, Flores, CABA · 011 2603-3651</p>
         <div class="foot-links">
@@ -595,35 +495,7 @@
   <script>
     (function () {
       const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
-      function animateCounter(el) {
-        if (el.dataset.done === "1") return;
-        el.dataset.done = "1";
-        const target = parseFloat(el.dataset.count);
-        const decimals = parseInt(el.dataset.decimals || "0", 10);
-        const prefix = el.dataset.prefix || "";
-        const suffix = el.dataset.suffix || "";
-        const duration = prefersReduced ? 0 : 1400;
-        if (duration === 0) { el.innerHTML = prefix + target.toFixed(decimals) + suffix; return; }
-        const start = performance.now();
-        function frame(now) {
-          const t = Math.min(1, (now - start) / duration);
-          el.innerHTML = prefix + (target * easeOutCubic(t)).toFixed(decimals) + suffix;
-          if (t < 1) requestAnimationFrame(frame);
-        }
-        requestAnimationFrame(frame);
-      }
-      function watchCounters() {
-        const nodes = Array.from(document.querySelectorAll(".stat-num[data-count]"));
-        const io = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => { if (entry.isIntersecting) animateCounter(entry.target); });
-        }, { threshold: 0.4 });
-        nodes.forEach((node) => {
-          const rect = node.getBoundingClientRect();
-          if (rect.top < window.innerHeight && rect.bottom > 0) animateCounter(node);
-          else io.observe(node);
-        });
-      }
+      const WA = "https://wa.me/5491126033651?text=";
 
       const JOBS = {
         mantenimiento: { label: "Mantenimiento general", base: 45000 },
@@ -669,7 +541,7 @@
           "",
           "¿Me confirmás disponibilidad y el valor? Gracias."
         ].join("\n");
-        document.getElementById("wa-presupuesto").href = "https://wa.me/5491126033651?text=" + encodeURIComponent(msg);
+        document.getElementById("wa-presupuesto").href = WA + encodeURIComponent(msg);
       }
       function goToCalc(service) {
         const select = document.getElementById("tipo");
@@ -680,10 +552,121 @@
       }
       document.getElementById("calc-form").addEventListener("change", calc);
       document.querySelectorAll("[data-service]").forEach((btn) => {
-        btn.addEventListener("click", () => goToCalc(btn.getAttribute("data-service")));
+        btn.addEventListener("click", (ev) => {
+          ev.stopPropagation();
+          goToCalc(btn.getAttribute("data-service"));
+        });
       });
-      watchCounters();
       calc();
+
+      const root = document.getElementById("carousel");
+      const originals = Array.from(root.children);
+      const n = originals.length;
+      let index = 0;
+      let timer = null;
+      let paused = false;
+      let looping = false;
+
+      originals.forEach((slide) => {
+        const clone = slide.cloneNode(true);
+        clone.setAttribute("aria-hidden", "true");
+        clone.querySelectorAll("[data-service]").forEach((btn) => {
+          btn.addEventListener("click", (ev) => {
+            ev.stopPropagation();
+            goToCalc(btn.getAttribute("data-service"));
+          });
+        });
+        root.appendChild(clone);
+      });
+
+      const dotsBox = document.getElementById("dots");
+      dotsBox.hidden = false;
+      const dots = originals.map((_, i) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.setAttribute("aria-label", "Ir al servicio " + (i + 1));
+        b.addEventListener("click", () => { go(i, true); pauseTemp(); });
+        dotsBox.appendChild(b);
+        return b;
+      });
+
+      function slideWidth() {
+        const first = root.children[0];
+        if (!first) return root.clientWidth;
+        const gap = parseFloat(getComputedStyle(root).gap) || 0;
+        return first.getBoundingClientRect().width + gap;
+      }
+      function setDot() {
+        dots.forEach((d, i) => d.setAttribute("aria-current", i === ((index % n) + n) % n ? "true" : "false"));
+      }
+      function go(i, smooth) {
+        index = i;
+        looping = true;
+        root.scrollTo({ left: slideWidth() * (index % (n * 2)), behavior: smooth && !prefersReduced ? "smooth" : "auto" });
+        setDot();
+        setTimeout(() => { looping = false; }, 400);
+      }
+      function next() {
+        if (paused) return;
+        index += 1;
+        looping = true;
+        root.scrollTo({ left: slideWidth() * index, behavior: prefersReduced ? "auto" : "smooth" });
+        setDot();
+        if (index >= n) {
+          setTimeout(() => {
+            const prev = root.style.scrollBehavior;
+            root.style.scrollBehavior = "auto";
+            index = index % n;
+            root.scrollLeft = slideWidth() * index;
+            root.style.scrollBehavior = prev || "";
+            setDot();
+            looping = false;
+          }, 480);
+        } else {
+          setTimeout(() => { looping = false; }, 400);
+        }
+      }
+      function start() {
+        stop();
+        if (prefersReduced || paused) return;
+        timer = setInterval(next, 1500);
+      }
+      function stop() {
+        if (timer) { clearInterval(timer); timer = null; }
+      }
+      function pauseTemp() {
+        paused = true;
+        stop();
+        clearTimeout(pauseTemp._t);
+        pauseTemp._t = setTimeout(() => { paused = false; start(); }, 2500);
+      }
+      function onInteract() { pauseTemp(); }
+
+      root.addEventListener("pointerdown", () => { paused = true; stop(); });
+      root.addEventListener("pointerup", pauseTemp);
+      root.addEventListener("pointercancel", pauseTemp);
+      root.addEventListener("touchstart", () => { paused = true; stop(); }, { passive: true });
+      root.addEventListener("touchend", pauseTemp);
+      root.addEventListener("mouseenter", () => { paused = true; stop(); });
+      root.addEventListener("mouseleave", () => { paused = false; start(); });
+      root.addEventListener("scroll", () => {
+        if (looping) return;
+        const w = slideWidth();
+        if (!w) return;
+        let i = Math.round(root.scrollLeft / w);
+        if (i >= n) {
+          root.style.scrollBehavior = "auto";
+          i = i % n;
+          root.scrollLeft = w * i;
+          root.style.scrollBehavior = "";
+        }
+        index = i;
+        setDot();
+      }, { passive: true });
+
+      setDot();
+      start();
+      window.addEventListener("resize", () => { go(((index % n) + n) % n, false); });
     })();
   </script>
 </body>
