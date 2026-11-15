@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Técnico Ezequiel | Aire acondicionado en Flores, CABA</title>
-<meta name="description" content="Instalación, carga de gas, service y reparación de aires acondicionados en Flores, CABA. También electricidad y mantenimiento general. 5,0 ★ en Google con 45 reseñas.">
+<title>Ezequiel · Servicio Técnico | Gas, refrigeración, electricidad y más en Flores, CABA</title>
+<meta name="description" content="Servicio técnico para todo el hogar en Flores, CABA: gasista, refrigeración matriculada y aire acondicionado, electricidad y cámaras, lavarropas, lavavajillas, microondas, celulares, computadoras y Smart TV. 5,0 ★ en Google.">
 <meta name="theme-color" content="#0a1020">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -65,6 +65,15 @@ p.lead{color:var(--muted);font-size:15.5px;max-width:560px}
 .chip-f b{display:block;color:#fff;font-size:18px;font-weight:800;letter-spacing:-.02em}
 .chip-f.a{left:0;bottom:6%}.chip-f.b{right:2%;top:2%}
 
+.trust-p{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.trust-p span{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:#cfd8ec;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:5px 11px}
+.trust-p span::before{content:"";width:6px;height:6px;border-radius:50%;background:#8fb3ff}
+.trade-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:6px}
+.trade{background:rgba(255,255,255,.07);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:18px 12px 14px;text-align:center;color:#dbe3f5;font-size:12px;font-weight:700;letter-spacing:-.01em;animation:float 6s ease-in-out infinite;box-shadow:0 20px 40px -24px rgba(0,0,0,.6)}
+.trade:nth-child(2n){animation-delay:-3s}.trade:nth-child(3n){animation-delay:-1.5s}
+.trade i{width:46px;height:46px;margin:0 auto 10px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(143,179,255,.28),rgba(47,107,255,.12));color:#cfe0ff}
+.trade i svg{width:24px;height:24px}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 /* reviews */
 .rev-wrap{margin-top:40px}
 .rev-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px;flex-wrap:wrap}
@@ -107,6 +116,9 @@ p.lead{color:var(--muted);font-size:15.5px;max-width:560px}
 .svc .tag{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
 .svc h3{font-size:19px;font-weight:800;letter-spacing:-.03em;margin-bottom:8px}
 .svc p{color:var(--muted);font-size:14px;flex:1}
+.svc ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.svc li{font-size:11.5px;font-weight:600;background:#f1f3f7;color:#3a4356;border-radius:999px;padding:4px 10px}
+.svc.dark li{background:rgba(255,255,255,.08);color:#cfd8ec}
 .svc.dark{background:linear-gradient(160deg,#121a33,#0a1020);border-color:#0a1020;color:#fff}
 .svc.dark p,.svc.dark .tag{color:#9eabc6}.svc.dark .ic{background:rgba(255,255,255,.08);color:#9fbcff}
 @media(max-width:900px){.svc{flex-basis:calc((100% - 16px)/2)}}
@@ -170,7 +182,7 @@ footer b{color:var(--ink)}
 /* reveal */
 .js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
 .js .rv.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.flow path{animation:none}}
+@media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.flow path,.trade{animation:none}}
 </style>
 </head>
 <body>
@@ -184,6 +196,10 @@ footer b{color:var(--ink)}
  <symbol id="wrench" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></symbol>
  <symbol id="bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
  <symbol id="home" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></symbol>
+ <symbol id="flame" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 2s5.5 4.8 5.5 10.5a5.5 5.5 0 0 1-11 0c0-2.2 1.1-3.8 2.2-4.9 0 2.2 1.1 3.3 2.2 3.3C10.9 7.6 12 4.2 12 2z"/></symbol>
+ <symbol id="washer" viewBox="0 0 24 24"><rect x="4" y="2.5" width="16" height="19" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="13.5" r="4.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M7.5 6h2M15 6h1.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+ <symbol id="device" viewBox="0 0 24 24"><rect x="2" y="4" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6 18h6M9 14v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><rect x="17" y="8" width="5" height="12" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+ <symbol id="cam" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M3 7l12-4 2.5 6.5-12 4zM7.5 12.5l1.5 4h5M14 16.5V21M10.5 21h7"/></symbol>
  <symbol id="pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
  <symbol id="tel" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
  <symbol id="star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></symbol>
@@ -191,7 +207,7 @@ footer b{color:var(--ink)}
 
 <header class="nav">
  <div class="nav-in">
-  <a href="#inicio" class="logo"><span class="logo-i"><svg><use href="#snow"/></svg></span>Técnico Ezequiel</a>
+  <a href="#inicio" class="logo"><span class="logo-i"><svg><use href="#wrench"/></svg></span>Ezequiel · Servicio Técnico</a>
   <nav class="nav-links"><a href="#resenas">Reseñas</a><a href="#servicios">Servicios</a><a href="#presupuesto">Presupuesto</a><a href="#ubicacion">Ubicación</a></nav>
   <a class="btn btn-dark" href="#presupuesto">Calcular precio</a>
  </div>
@@ -204,34 +220,23 @@ footer b{color:var(--ink)}
    <div class="hero-top">
     <div>
      <span class="badge-g"><b>5,0</b><span class="st">★★★★★</span>45 reseñas en Google</span>
-     <h1>Tu aire acondicionado, <span>funcionando como nuevo.</span></h1>
-     <p class="sub">Instalación, carga de gas, service y reparación de aires en Flores y CABA. También electricidad y mantenimiento de tu casa.</p>
+     <h1>Tu técnico de confianza <span>para todo el hogar.</span></h1>
+     <p class="sub">Gas, refrigeración, electricidad, electrodomésticos y tecnología. Soluciones rápidas y garantizadas en Flores y CABA.</p>
      <div class="hero-ctas">
       <a class="btn btn-light" href="#presupuesto">Calcular mi presupuesto</a>
       <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
      </div>
+     <div class="trust-p"><span>Servicio profesional</span><span>Atención rápida</span><span>Garantía incluida</span><span>Refrigeración matriculada</span></div>
     </div>
     <div class="ac-art" aria-hidden="true">
-     <svg viewBox="0 0 440 300">
-      <defs>
-       <linearGradient id="u" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dfe6f3"/></linearGradient>
-       <linearGradient id="fl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fb3ff" stop-opacity=".9"/><stop offset="1" stop-color="#8fb3ff" stop-opacity="0"/></linearGradient>
-      </defs>
-      <rect x="40" y="40" width="360" height="110" rx="26" fill="url(#u)"/>
-      <rect x="40" y="118" width="360" height="32" rx="14" fill="#cfd8ea"/>
-      <rect x="70" y="128" width="300" height="10" rx="5" fill="#9fb0cf"/>
-      <circle cx="356" cy="72" r="5" fill="#2f6bff"/>
-      <rect x="300" y="66" width="40" height="12" rx="6" fill="#e7ecf6"/>
-      <text x="306" y="76" font-family="Manrope,Arial" font-size="10" font-weight="800" fill="#0a1020">22°C</text>
-      <g class="flow" fill="none" stroke="url(#fl)" stroke-width="3" stroke-linecap="round">
-       <path d="M110 165 C110 200 95 225 80 260"/>
-       <path d="M170 165 C170 205 165 235 160 275"/>
-       <path d="M230 165 C230 205 235 235 240 275"/>
-       <path d="M290 165 C290 200 305 225 320 260"/>
-      </g>
-     </svg>
-     <div class="chip-f b"><b>22°C</b>Ambiente ideal</div>
-     <div class="chip-f a"><b>Flores, CABA</b>Vamos a tu casa</div>
+     <div class="trade-grid">
+      <div class="trade"><i><svg><use href="#wrench"/></svg></i>Servicio técnico</div>
+      <div class="trade"><i><svg><use href="#flame"/></svg></i>Gasista</div>
+      <div class="trade"><i><svg><use href="#snow"/></svg></i>Refrigeración</div>
+      <div class="trade"><i><svg><use href="#bolt"/></svg></i>Electricidad</div>
+      <div class="trade"><i><svg><use href="#washer"/></svg></i>Lavarropas</div>
+      <div class="trade"><i><svg><use href="#device"/></svg></i>Celus y Smart TV</div>
+     </div>
     </div>
    </div>
 
@@ -250,7 +255,7 @@ footer b{color:var(--ink)}
 <section id="servicios">
  <div class="wrap">
   <div class="svc-head rv">
-   <div><span class="eyebrow">Servicios</span><h2 class="title">Especialista en aire acondicionado</h2><p class="lead">Todo lo que tu equipo necesita, más electricidad y arreglos de la casa.</p></div>
+   <div><span class="eyebrow">Servicios</span><h2 class="title">Todo lo que tu casa necesita, en un solo técnico</h2><p class="lead">Seis rubros, un mismo trato: rápido, prolijo y con garantía.</p></div>
    <div class="arrows"><button type="button" id="svcPrev" aria-label="Anterior">←</button><button type="button" id="svcNext" aria-label="Siguiente">→</button></div>
   </div>
   <div class="svc-view rv" id="svcView"><div class="svc-track" id="svcTrack"></div></div>
@@ -266,17 +271,12 @@ footer b{color:var(--ink)}
   <div class="calc">
    <div class="steps rv">
     <div class="step">
-     <div class="step-h"><span class="num">1</span><div><h3>¿Qué necesitás?</h3><small>Elegí el trabajo</small></div></div>
+     <div class="step-h"><span class="num">1</span><div><h3>¿Qué rubro?</h3><small>Elegí el tipo de servicio</small></div></div>
      <div class="opts s5" id="optJob"></div>
     </div>
     <div class="step">
-     <div class="step-h"><span class="num">2</span><div><h3 id="qtyTitle">¿Cuántos equipos?</h3><small id="qtySub">Cantidad de aires</small></div></div>
-     <div class="opts s4">
-      <label class="opt c"><input type="radio" name="qty" value="1" checked><span>1</span></label>
-      <label class="opt c"><input type="radio" name="qty" value="2"><span>2</span></label>
-      <label class="opt c"><input type="radio" name="qty" value="3"><span>3</span></label>
-      <label class="opt c"><input type="radio" name="qty" value="4"><span>4 o más</span></label>
-     </div>
+     <div class="step-h"><span class="num">2</span><div><h3>¿Qué trabajo?</h3><small id="jobSub">Elegí lo que necesitás</small></div></div>
+     <div class="opts s5" id="optJob2"></div>
     </div>
     <div class="step">
      <div class="step-h"><span class="num">3</span><div><h3>¿Para cuándo?</h3><small>Si es urgente, el precio sube un poco</small></div></div>
@@ -292,11 +292,11 @@ footer b{color:var(--ink)}
     <div class="from">Precio estimado desde</div>
     <div class="price" id="price">—</div>
     <ul class="sumlist">
+     <li><span>Rubro</span><b id="sCat">—</b></li>
      <li><span>Trabajo</span><b id="sJob">—</b></li>
-     <li><span>Cantidad</span><b id="sQty">—</b></li>
      <li><span>Cuándo</span><b id="sUrg">—</b></li>
     </ul>
-    <p class="note">Valores de referencia, se confirman con Ezequiel antes de hacer el trabajo.</p>
+    <p class="note">Valores de referencia, se confirman con Ezequiel antes del trabajo.</p>
     <a class="btn btn-wa" id="calcWa" href="#" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Pedir este presupuesto</a>
    </aside>
   </div>
@@ -311,8 +311,8 @@ footer b{color:var(--ink)}
   <div class="map-grid">
    <div class="map-box rv"><iframe src="https://www.google.com/maps?q=Yerbal+2649,+Flores,+CABA&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa Yerbal 2649, Flores"></iframe></div>
    <div class="contact rv">
-    <div class="ci"><span class="ic2"><svg><use href="#pin"/></svg></span><div><small>Dirección</small><b>Yerbal 2649, Flores, CABA</b></div></div>
-    <div class="ci"><span class="ic2"><svg><use href="#tel"/></svg></span><div><small>Teléfono</small><b><a href="tel:+541126033651">011 2603-3651</a></b></div></div>
+    <div class="ci"><span class="ic2"><svg><use href="#pin"/></svg></span><div><small>Dirección</small><b>Yerbal 2649 1B, Flores, CABA</b></div></div>
+    <div class="ci"><span class="ic2"><svg><use href="#tel"/></svg></span><div><small>WhatsApp y teléfono</small><b><a href="tel:+541126033651">11 2603 3651</a></b></div></div>
     <div class="ci"><span class="ic2"><svg><use href="#star"/></svg></span><div><small>Google</small><b>5,0 ★ · 45 reseñas</b></div></div>
     <a class="btn btn-dark" href="https://maps.app.goo.gl/pYe3cmmtyHx7K7FT7" target="_blank" rel="noopener">Cómo llegar</a>
    </div>
@@ -321,7 +321,7 @@ footer b{color:var(--ink)}
 </section>
 </main>
 
-<footer><div class="wrap"><b>Técnico Ezequiel</b> · Aire acondicionado y reparaciones · Yerbal 2649, Flores, CABA · 011 2603-3651<br>© 2026</div></footer>
+<footer><div class="wrap"><b>Ezequiel · Servicio Técnico</b> · Gas, refrigeración, electricidad, electrodomésticos y tecnología · Yerbal 2649 1B, Flores, CABA · WhatsApp 11 2603 3651<br>© 2026</div></footer>
 <a class="fab" id="fab" href="#" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg><use href="#wa"/></svg></a>
 
 <script>
@@ -348,16 +348,16 @@ showRev();setInterval(function(){ri=(ri+1)%revs.length;showRev();},1500);
 
 /* Servicios */
 var svcs=[
- {ic:'ac',t:'Aire acondicionado',h:'Instalación de split',p:'Colocación completa de equipos split: unidad interior, exterior, cañerías y puesta en marcha.'},
- {ic:'gauge',t:'Aire acondicionado',h:'Carga de gas',p:'Control de presión, búsqueda de pérdidas y carga de gas refrigerante para que vuelva a enfriar.',dark:1},
- {ic:'drop',t:'Aire acondicionado',h:'Service y limpieza',p:'Limpieza de filtros, serpentina y desagüe. Menos consumo, mejor aire y sin goteos.'},
- {ic:'wrench',t:'Aire acondicionado',h:'Reparación de aires',p:'Diagnóstico de fallas: no enfría, no prende, hace ruido o gotea. Lo dejamos funcionando.'},
- {ic:'bolt',t:'Electricidad',h:'Arreglos eléctricos',p:'Tomas, llaves, luces, cortes y tableros. Instalación de la línea para tu aire.',dark:1},
- {ic:'home',t:'Hogar',h:'Mantenimiento general',p:'Esos arreglos de la casa que venís postergando, resueltos en una sola visita.'}
+ {ic:'wrench',t:'Hogar',h:'Servicio técnico e instalaciones',p:'Visitas a domicilio, diagnóstico e instalación de artefactos para tu casa o negocio.',l:['Diagnóstico','Instalación de artefactos','Arreglos del hogar']},
+ {ic:'flame',t:'Gas',h:'Gasista',p:'Reparación y mantenimiento de artefactos e instalaciones de gas, con seguridad.',l:['Pérdidas de gas','Calefones y termotanques','Estufas','Cocinas'],dark:1},
+ {ic:'snow',t:'Refrigeración',h:'Refrigeración matriculada y aire acondicionado',p:'Instalación, carga de gas y service de aires, y reparación de heladeras.',l:['Instalación de split','Carga de gas','Service','Heladeras']},
+ {ic:'cam',t:'Electricidad',h:'Electricidad a domicilio y cámaras',p:'Arreglos eléctricos y sistemas de cámaras de seguridad que ves desde el celular.',l:['Tomas y luces','Cortes','Tableros','Cámaras'],dark:1},
+ {ic:'washer',t:'Electrodomésticos',h:'Lavarropas, lavavajillas y microondas',p:'Reparación de electrodomésticos: no centrifuga, no calienta, pierde agua o no prende.',l:['Lavarropas','Lavavajillas','Microondas']},
+ {ic:'device',t:'Tecnología',h:'Celulares, computadoras y Smart TV',p:'Pantallas, baterías, service de PC y reparación de televisores inteligentes.',l:['Pantallas','Baterías','PC y notebooks','Smart TV'],dark:1}
 ];
 var st=document.getElementById('svcTrack'),sd=document.getElementById('svcDots'),sv=document.getElementById('svcView');
 svcs.forEach(function(s){
- st.insertAdjacentHTML('beforeend','<article class="svc'+(s.dark?' dark':'')+'"><div class="ic"><svg><use href="#'+s.ic+'"/></svg></div><div class="tag">'+s.t+'</div><h3>'+s.h+'</h3><p>'+s.p+'</p></article>');
+ st.insertAdjacentHTML('beforeend','<article class="svc'+(s.dark?' dark':'')+'"><div class="ic"><svg><use href="#'+s.ic+'"/></svg></div><div class="tag">'+s.t+'</div><h3>'+s.h+'</h3><p>'+s.p+'</p><ul>'+s.l.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul></article>');
 });
 var si=0,dotsN=0;
 function perView(){var w=window.innerWidth;return w<=600?1:w<=900?2:3;}
@@ -375,34 +375,32 @@ sv.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:
 sv.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40){dx<0?nextSvc():prevSvc();reset();}x0=null;});
 window.addEventListener('resize',showSvc);showSvc();
 
-/* Calculadora (valores de referencia) */
-var jobs=[
- {k:'inst',n:'Instalación de split',d:'Equipo nuevo',p:150000,u:'equipo'},
- {k:'gas',n:'Carga de gas',d:'No enfría bien',p:70000,u:'equipo'},
- {k:'serv',n:'Service y limpieza',d:'Mantenimiento',p:45000,u:'equipo'},
- {k:'rep',n:'Reparación de aire',d:'Falla o gotea',p:50000,u:'equipo'},
- {k:'elec',n:'Arreglo eléctrico',d:'Tomas, luces, cortes',p:30000,u:'punto'}
+/* Calculadora (valores de referencia, en pesos) */
+var cats=[
+ {n:'Servicio técnico e instalaciones',c:'Instalaciones',d:'Visitas e instalaciones',j:[['Visita y diagnóstico',25000],['Instalación de artefacto',35000],['Arreglos generales del hogar',30000]]},
+ {n:'Gasista',c:'Gasista',d:'Reparación y mantenimiento',j:[['Detección de pérdida',45000],['Calefón o termotanque',50000],['Service de estufa o calefactor',40000],['Conexión de cocina o artefacto',55000]]},
+ {n:'Refrigeración y aire acondicionado',c:'Refrigeración y aire',d:'Aires y heladeras',j:[['Instalación de split',150000],['Carga de gas',70000],['Service y limpieza de aire',45000],['Reparación de heladera',60000]]},
+ {n:'Electricidad y cámaras',c:'Electricidad y cámaras',d:'A domicilio',j:[['Arreglo eléctrico (tomas, luces)',30000],['Cambio de tablero',90000],['Instalación de cámara (c/u)',45000],['Kit de cámaras configurado',180000]]},
+ {n:'Lavarropas, lavavajillas y microondas',c:'Electrodomésticos',d:'Lavarropas y más',j:[['Reparación de lavarropas',50000],['Reparación de lavavajillas',55000],['Reparación de microondas',35000]]},
+ {n:'Celulares, computadoras y Smart TV',c:'Tecnología',d:'Celus, PC y TV',j:[['Batería de celular',30000],['Pantalla de celular',60000],['Service de computadora',35000],['Reparación de Smart TV',60000]]}
 ];
 var URG=[[1,'Esta semana'],[1.15,'En 24-48 h'],[1.3,'Hoy mismo']];
-var oj=document.getElementById('optJob');
-jobs.forEach(function(j,i){oj.insertAdjacentHTML('beforeend','<label class="opt"><input type="radio" name="job" value="'+i+'"'+(i===0?' checked':'')+'><span>'+j.n+'<small>'+j.d+'</small></span></label>');});
+var oj=document.getElementById('optJob'),oj2=document.getElementById('optJob2');
+cats.forEach(function(c,i){oj.insertAdjacentHTML('beforeend','<label class="opt"><input type="radio" name="cat" value="'+i+'"'+(i===0?' checked':'')+'><span>'+c.c+'<small>'+c.d+'</small></span></label>');});
 function val(n){return +document.querySelector('input[name="'+n+'"]:checked').value;}
 function fmt(n){return '$'+(Math.round(n/1000)*1000).toLocaleString('es-AR');}
+function fillJobs(){var c=cats[val('cat')];oj2.innerHTML='';c.j.forEach(function(j,i){oj2.insertAdjacentHTML('beforeend','<label class="opt"><input type="radio" name="job" value="'+i+'"'+(i===0?' checked':'')+'><span>'+j[0]+'<small>desde '+fmt(j[1])+'</small></span></label>');});document.getElementById('jobSub').textContent='Trabajos de '+c.c.toLowerCase();}
 function calc(){
- var j=jobs[val('job')],q=val('qty'),u=URG[val('urg')];
- var elec=j.u==='punto';
- document.getElementById('qtyTitle').textContent=elec?'¿Cuántos puntos?':'¿Cuántos equipos?';
- document.getElementById('qtySub').textContent=elec?'Tomas, llaves o luces a arreglar':'Cantidad de aires';
- var price=j.p*(1+(q-1)*0.8)*u[0];
- var qtxt=(q===4?'4 o más':q)+' '+(elec?(q===1?'punto':'puntos'):(q===1?'equipo':'equipos'));
+ var c=cats[val('cat')],j=c.j[val('job')],u=URG[val('urg')];
+ var price=j[1]*u[0];
  document.getElementById('price').textContent=fmt(price);
- document.getElementById('sJob').textContent=j.n;
- document.getElementById('sQty').textContent=qtxt;
+ document.getElementById('sCat').textContent=c.c;
+ document.getElementById('sJob').textContent=j[0];
  document.getElementById('sUrg').textContent=u[1];
- document.getElementById('calcWa').href=wa('Hola Ezequiel, vi tu web y quiero un presupuesto:\n• Trabajo: '+j.n+'\n• Cantidad: '+qtxt+'\n• Para: '+u[1]+'\n• Estimado de la web: desde '+fmt(price));
+ document.getElementById('calcWa').href=wa('Hola Ezequiel, vi tu web y quiero un presupuesto:\n• Rubro: '+c.n+'\n• Trabajo: '+j[0]+'\n• Para: '+u[1]+'\n• Estimado de la web: desde '+fmt(price));
 }
-document.querySelectorAll('.steps input').forEach(function(r){r.addEventListener('change',calc);});
-calc();
+document.querySelector('.steps').addEventListener('change',function(e){if(e.target.name==='cat')fillJobs();calc();});
+fillJobs();calc();
 
 /* Animación al hacer scroll */
 var els=document.querySelectorAll('.rv');
