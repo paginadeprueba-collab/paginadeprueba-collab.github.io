@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Técnico Ezequiel | Reparación de aires y service en general en Flores, CABA</title>
+<meta name="description" content="Técnico en reparación en general en Flores, CABA. Aire acondicionado, electricidad, gas, celulares, cámaras y más. 5,0 estrellas en Google con 45 reseñas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{overflow-x:clip;max-width:100%}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#eef0f4;color:#0f172a;line-height:1.5;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+:root{--accent:#1f4fd8;--accent2:#173eae;--ink:#0f172a;--muted:#5b6475;--card:#fff;--r:24px;--wa:#16a34a}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 16px}
+section{padding:56px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);background:#e3eafc;border-radius:999px;padding:6px 14px}
+h2.title{font-size:clamp(28px,5vw,46px);line-height:1.08;font-weight:800;letter-spacing:-.03em;margin:14px 0 10px}
+p.lead{color:var(--muted);font-size:17px;max-width:640px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:14px 24px;font-weight:700;font-size:16px;border:0;cursor:pointer;transition:transform .15s,background .15s;font-family:inherit}
+.btn:active{transform:scale(.97)}
+.btn-accent{background:var(--accent);color:#fff}.btn-accent:hover{background:var(--accent2)}
+.btn-wa{background:var(--wa);color:#fff}.btn-wa:hover{background:#12813b}
+.btn-white{background:#fff;color:var(--ink)}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* NAV */
+.nav{position:sticky;top:10px;z-index:50;margin:10px auto 0;max-width:1200px;padding:0 16px}
+.nav-in{background:rgba(255,255,255,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:999px;display:flex;align-items:center;justify-content:space-between;padding:8px 8px 8px 18px;box-shadow:0 6px 24px rgba(15,23,42,.08);gap:10px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:16px;letter-spacing:-.02em;min-width:0}
+.logo-i{width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;flex:none}
+.logo-i svg{width:18px;height:18px}
+.logo span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-links{display:flex;gap:4px}
+.nav-links a{padding:8px 14px;border-radius:999px;font-weight:600;font-size:14px;color:var(--muted)}
+.nav-links a:hover{background:#eef0f4;color:var(--ink)}
+.nav .btn{padding:10px 18px;font-size:14px}
+@media(max-width:860px){.nav-links{display:none}}
+
+/* HERO */
+.hero{padding:16px 0 40px}
+.hero-box{position:relative;border-radius:32px;overflow:hidden;background:#0b1630 url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1600&q=70&auto=format&fit=crop') center/cover no-repeat;color:#fff;padding:56px 32px 32px}
+.hero-box::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,15,35,.78) 0%,rgba(8,15,35,.72) 50%,rgba(8,15,35,.9) 100%)}
+.hero-box>*{position:relative}
+.hero-top{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:start}
+.badge-g{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600}
+.badge-g b{color:#fbbf24}
+.hero h1{font-size:clamp(34px,6.2vw,64px);line-height:1.02;font-weight:900;letter-spacing:-.04em;margin:18px 0 14px}
+.hero h1 em{font-style:normal;color:#8fb0ff}
+.hero p.sub{font-size:clamp(16px,2.2vw,19px);color:#d7deeb;max-width:560px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+
+/* stats floating */
+.stats{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.stat{background:#fff;color:var(--ink);border-radius:20px;padding:14px 18px;box-shadow:0 10px 30px rgba(0,0,0,.18);min-width:130px}
+.stat b{display:block;font-size:28px;font-weight:900;letter-spacing:-.03em;line-height:1.1}
+.stat span{font-size:13px;color:var(--muted);font-weight:600}
+
+/* reviews carousel */
+.rev-wrap{margin-top:34px}
+.rev-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+.rev-head h3{font-size:22px;font-weight:800;letter-spacing:-.02em}
+.rev-score{display:flex;align-items:center;gap:10px;background:#fff;color:var(--ink);border-radius:999px;padding:8px 16px;font-weight:800}
+.stars{color:#fbbf24;letter-spacing:2px;font-size:18px}
+.rev-view{overflow:hidden;border-radius:26px}
+.rev-track{display:flex;transition:transform .6s cubic-bezier(.22,.8,.3,1)}
+.rev{flex:0 0 100%;padding:0 2px}
+.rev-card{background:#fff;color:var(--ink);border-radius:26px;padding:28px 28px 24px;min-height:220px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 18px 50px rgba(0,0,0,.25)}
+.rev-card .stars{font-size:26px}
+.rev-card q{display:block;font-size:clamp(20px,3.2vw,30px);font-weight:700;line-height:1.25;letter-spacing:-.02em;margin:12px 0 18px;quotes:"“" "”"}
+.rev-who{display:flex;align-items:center;gap:12px}
+.av{width:44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-weight:800;font-size:18px;flex:none}
+.rev-who b{display:block}.rev-who small{color:var(--muted);font-size:13px}
+.dots{display:flex;gap:6px;justify-content:center;margin-top:14px}
+.dots i{width:8px;height:8px;border-radius:99px;background:rgba(255,255,255,.4);transition:all .3s}
+.dots i.on{width:26px;background:#fff}
+
+/* calc card in hero */
+.calc-card{background:#fff;color:var(--ink);border-radius:26px;padding:22px;box-shadow:0 18px 50px rgba(0,0,0,.3)}
+.calc-card h3{font-size:20px;font-weight:800;letter-spacing:-.02em;display:flex;align-items:center;gap:8px}
+.calc-card .small{font-size:13px;color:var(--muted);margin:4px 0 14px}
+label.fl{display:block;font-size:13px;font-weight:700;margin:12px 0 6px;color:#334155}
+select,.qty input{width:100%;font-family:inherit;font-size:16px;border:1.5px solid #dbe1ea;border-radius:14px;padding:12px 14px;background:#f8fafc;color:var(--ink);appearance:none;-webkit-appearance:none}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235b6475' stroke-width='2' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+.qty{display:flex;align-items:center;gap:8px}
+.qty button{width:46px;height:46px;flex:none;border-radius:50%;border:0;background:#e3eafc;color:var(--accent);font-size:22px;font-weight:800;cursor:pointer;font-family:inherit}
+.qty input{text-align:center;font-weight:800;min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.chip span{display:inline-block;padding:9px 14px;border-radius:999px;border:1.5px solid #dbe1ea;background:#f8fafc;font-size:14px;font-weight:600;cursor:pointer;transition:all .15s}
+.chip input:checked+span{background:var(--accent);border-color:var(--accent);color:#fff}
+.chip input:focus-visible+span{outline:2px solid var(--accent);outline-offset:2px}
+.result{margin-top:16px;background:linear-gradient(135deg,#1f4fd8,#3b6cf0);color:#fff;border-radius:20px;padding:16px 18px}
+.result small{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;opacity:.85}
+.result .price{font-size:clamp(24px,4.5vw,32px);font-weight:900;letter-spacing:-.03em;line-height:1.15;margin:4px 0}
+.result p{font-size:12.5px;opacity:.9}
+.calc-card .btn{width:100%;margin-top:12px}
+
+@media(max-width:960px){.hero-top{grid-template-columns:1fr}}
+@media(max-width:560px){
+ .hero-box{padding:40px 16px 20px;border-radius:26px}
+ .rev-card{padding:22px 20px 20px;min-height:230px}
+ .stat{flex:1 1 calc(50% - 6px);min-width:0;padding:12px 14px}
+ .stat b{font-size:24px}
+ .calc-card{padding:18px}
+ section{padding:44px 0}
+}
+
+/* SERVICES */
+.svc-head{display:flex;align-items:end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:24px}
+.arrows{display:flex;gap:8px}
+.arrows button{width:48px;height:48px;border-radius:50%;border:0;background:#fff;box-shadow:0 4px 14px rgba(15,23,42,.08);font-size:20px;cursor:pointer;color:var(--ink)}
+.svc-view{overflow:hidden;touch-action:pan-y}
+.svc-track{display:flex;gap:16px;transition:transform .6s cubic-bezier(.22,.8,.3,1)}
+.svc{flex:0 0 calc((100% - 32px)/3);background:#fff;border-radius:var(--r);padding:26px;display:flex;flex-direction:column;min-height:300px;box-shadow:0 4px 18px rgba(15,23,42,.05)}
+.svc .ic{width:60px;height:60px;border-radius:18px;display:grid;place-items:center;color:#fff;margin-bottom:18px}
+.svc .ic svg{width:30px;height:30px}
+.svc h3{font-size:22px;font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
+.svc p{color:var(--muted);font-size:15px;flex:1}
+.svc ul{list-style:none;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:6px}
+.svc li{font-size:12.5px;font-weight:600;background:#eef0f4;border-radius:999px;padding:5px 11px}
+.svc.dark{background:#0f172a;color:#fff}.svc.dark p{color:#b8c1d1}.svc.dark li{background:#1e293b}
+@media(max-width:900px){.svc{flex-basis:calc((100% - 16px)/2)}}
+@media(max-width:600px){.svc{flex-basis:86%}}
+.svc-dots{display:flex;gap:6px;justify-content:center;margin-top:18px}
+.svc-dots i{width:8px;height:8px;border-radius:99px;background:#cbd2dd;transition:all .3s}
+.svc-dots i.on{width:26px;background:var(--accent)}
+
+/* FULL CALC */
+.calc-full{display:grid;grid-template-columns:1.2fr .8fr;gap:20px;margin-top:26px}
+.panel{background:#fff;border-radius:var(--r);padding:26px;box-shadow:0 4px 18px rgba(15,23,42,.05)}
+.panel .fl:first-child{margin-top:0}
+.sum{background:#0f172a;color:#fff;border-radius:var(--r);padding:26px;display:flex;flex-direction:column;gap:14px;position:sticky;top:90px;align-self:start}
+.sum h3{font-size:20px;font-weight:800}
+.sum .line{display:flex;justify-content:space-between;gap:10px;font-size:14px;color:#b8c1d1;border-bottom:1px dashed #334155;padding-bottom:8px}
+.sum .line b{color:#fff;text-align:right}
+.sum .big{font-size:clamp(28px,5vw,38px);font-weight:900;letter-spacing:-.03em;line-height:1.1}
+.sum .note{font-size:12.5px;color:#94a3b8}
+@media(max-width:900px){.calc-full{grid-template-columns:1fr}.sum{position:static}}
+
+/* trust strip */
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.trust div{background:#fff;border-radius:20px;padding:18px;font-weight:700;display:flex;gap:12px;align-items:center;font-size:15px}
+.trust svg{width:26px;height:26px;color:var(--accent);flex:none}
+@media(max-width:700px){.trust{grid-template-columns:1fr}}
+
+/* MAP */
+.map-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:20px;margin-top:26px}
+.map-box{border-radius:var(--r);overflow:hidden;min-height:380px;background:#dde3ec}
+.map-box iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
+.contact{background:#fff;border-radius:var(--r);padding:26px;display:flex;flex-direction:column;gap:16px}
+.ci{display:flex;gap:14px;align-items:flex-start}
+.ci .ic2{width:46px;height:46px;border-radius:14px;background:#e3eafc;color:var(--accent);display:grid;place-items:center;flex:none}
+.ci .ic2 svg{width:22px;height:22px}
+.ci small{display:block;color:var(--muted);font-size:13px;font-weight:600}
+.ci b{font-size:16px}
+.contact .btn{width:100%}
+@media(max-width:900px){.map-grid{grid-template-columns:1fr}.map-box,.map-box iframe{min-height:300px}}
+
+footer{padding:30px 0 100px;color:var(--muted);font-size:14px;text-align:center}
+footer b{color:var(--ink)}
+.fab{position:fixed;right:16px;bottom:16px;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 10px 26px rgba(22,163,74,.45)}
+.fab svg{width:30px;height:30px}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></symbol>
+ <symbol id="wrench" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></symbol>
+ <symbol id="snow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 2v20M4.9 4.9l14.2 14.2M2 12h20M4.9 19.1L19.1 4.9M9 3l3 3 3-3M9 21l3-3 3 3M3 9l3 3-3 3M21 9l-3 3 3 3"/></symbol>
+ <symbol id="bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
+ <symbol id="flame" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 2s5 4.5 5 10a5 5 0 0 1-10 0c0-2 1-3.5 2-4.5 0 2 1 3 2 3 0-3 1-6.5 1-8.5z"/></symbol>
+ <symbol id="phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M11 18h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+ <symbol id="cam" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M3 7l13-4 2 6-13 4zM8 12l1 4h5M14 16v4M10 20h8"/></symbol>
+ <symbol id="music" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="16" r="3" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+ <symbol id="gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></symbol>
+ <symbol id="pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+ <symbol id="tel" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+ <symbol id="check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M20 6L9 17l-5-5"/></symbol>
+ <symbol id="star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></symbol>
+</svg>
+
+<header class="nav">
+ <div class="nav-in">
+  <a href="#inicio" class="logo"><span class="logo-i"><svg><use href="#wrench"/></svg></span><span>Técnico Ezequiel</span></a>
+  <nav class="nav-links"><a href="#resenas">Reseñas</a><a href="#servicios">Servicios</a><a href="#presupuesto">Presupuesto</a><a href="#ubicacion">Ubicación</a></nav>
+  <a class="btn btn-wa wa-link" href="#"><svg><use href="#wa"/></svg>WhatsApp</a>
+ </div>
+</header>
+
+<main id="inicio">
+<!-- HERO -->
+<section class="hero">
+ <div class="wrap">
+  <div class="hero-box">
+   <div class="hero-top">
+    <div>
+     <span class="badge-g"><b>★ 5,0</b> en Google · 45 reseñas</span>
+     <h1>Tu técnico de confianza en <em>Flores</em>, para todo lo de tu casa.</h1>
+     <p class="sub">Reparación e instalación de aires acondicionados, electricidad, gas y service en general. Atención prolija, responsable y a buen precio.</p>
+     <div class="hero-ctas">
+      <a class="btn btn-wa wa-link" href="#"><svg><use href="#wa"/></svg>Pedí tu visita por WhatsApp</a>
+      <a class="btn btn-white" href="#servicios">Ver servicios</a>
+     </div>
+     <div class="stats">
+      <div class="stat"><b>5,0 ★</b><span>Calificación en Google</span></div>
+      <div class="stat"><b>45</b><span>Reseñas de clientes</span></div>
+      <div class="stat"><b>100%</b><span>Lo recomiendan</span></div>
+     </div>
+    </div>
+
+    <!-- calculadora rápida -->
+    <div class="calc-card" id="calc-hero">
+     <h3>🧮 Calculá tu presupuesto</h3>
+     <p class="small">Elegí el trabajo y te mostramos un precio estimativo al toque.</p>
+     <label class="fl" for="h-svc">¿Qué necesitás?</label>
+     <select id="h-svc" class="c-svc"></select>
+     <label class="fl" for="h-qty">Cantidad de equipos / puntos</label>
+     <div class="qty"><button type="button" class="c-minus" aria-label="Menos">−</button><input id="h-qty" class="c-qty" type="number" inputmode="numeric" min="1" max="10" value="1"><button type="button" class="c-plus" aria-label="Más">+</button></div>
+     <label class="fl">¿Para cuándo?</label>
+     <div class="chips">
+      <label class="chip"><input type="radio" name="h-urg" value="normal" checked><span>Esta semana</span></label>
+      <label class="chip"><input type="radio" name="h-urg" value="pronto"><span>24-48 h</span></label>
+      <label class="chip"><input type="radio" name="h-urg" value="urgente"><span>Urgente hoy</span></label>
+     </div>
+     <div class="result"><small>Precio estimativo</small><div class="price c-out">—</div><p>Valor orientativo. El precio final se confirma después de ver el equipo.</p></div>
+     <a class="btn btn-wa c-wa" href="#"><svg><use href="#wa"/></svg>Pedir este presupuesto</a>
+    </div>
+   </div>
+
+   <!-- reseñas -->
+   <div class="rev-wrap" id="resenas">
+    <div class="rev-head">
+     <h3>Lo que dicen los clientes</h3>
+     <div class="rev-score"><span class="stars">★★★★★</span>5,0 · 45 reseñas en Google</div>
+    </div>
+    <div class="rev-view"><div class="rev-track" id="revTrack"></div></div>
+    <div class="dots" id="revDots"></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+ <div class="wrap">
+  <div class="svc-head">
+   <div><span class="eyebrow">Servicios</span><h2 class="title">Todo lo que reparamos e instalamos</h2><p class="lead">Un solo técnico para resolver lo que se rompe en tu casa o negocio.</p></div>
+   <div class="arrows"><button type="button" id="svcPrev" aria-label="Anterior">←</button><button type="button" id="svcNext" aria-label="Siguiente">→</button></div>
+  </div>
+  <div class="svc-view" id="svcView"><div class="svc-track" id="svcTrack"></div></div>
+  <div class="svc-dots" id="svcDots"></div>
+ </div>
+</section>
+
+<!-- CALCULADORA COMPLETA -->
+<section id="presupuesto">
+ <div class="wrap">
+  <span class="eyebrow">Calculadora de presupuestos</span>
+  <h2 class="title">Sabé cuánto te sale antes de llamar</h2>
+  <p class="lead">Armá tu pedido en 4 pasos y mandalo por WhatsApp. Te respondemos con el precio final.</p>
+  <div class="calc-full" id="calc-full">
+   <div class="panel">
+    <label class="fl" for="f-svc">1. Tipo de servicio</label>
+    <select id="f-svc" class="c-svc"></select>
+    <label class="fl" for="f-det">2. Trabajo a realizar</label>
+    <select id="f-det" class="c-det"></select>
+    <label class="fl" for="f-qty">3. Cantidad de equipos / puntos</label>
+    <div class="qty"><button type="button" class="c-minus" aria-label="Menos">−</button><input id="f-qty" class="c-qty" type="number" inputmode="numeric" min="1" max="10" value="1"><button type="button" class="c-plus" aria-label="Más">+</button></div>
+    <label class="fl">4. ¿Para cuándo lo necesitás?</label>
+    <div class="chips">
+     <label class="chip"><input type="radio" name="f-urg" value="normal" checked><span>Esta semana</span></label>
+     <label class="chip"><input type="radio" name="f-urg" value="pronto"><span>En 24-48 h</span></label>
+     <label class="chip"><input type="radio" name="f-urg" value="urgente"><span>Urgente hoy</span></label>
+    </div>
+    <label class="fl">¿Dónde es el trabajo?</label>
+    <div class="chips">
+     <label class="chip"><input type="radio" name="f-zona" value="flores" checked><span>Flores y alrededores</span></label>
+     <label class="chip"><input type="radio" name="f-zona" value="caba"><span>Resto de CABA</span></label>
+     <label class="chip"><input type="radio" name="f-zona" value="gba"><span>GBA</span></label>
+    </div>
+   </div>
+   <aside class="sum">
+    <h3>Tu presupuesto</h3>
+    <div class="line"><span>Servicio</span><b class="s-svc">—</b></div>
+    <div class="line"><span>Trabajo</span><b class="s-det">—</b></div>
+    <div class="line"><span>Cantidad</span><b class="s-qty">—</b></div>
+    <div class="line"><span>Plazo</span><b class="s-urg">—</b></div>
+    <div class="line"><span>Zona</span><b class="s-zona">—</b></div>
+    <div><small style="color:#94a3b8;font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase">Precio estimativo</small><div class="big c-out">—</div></div>
+    <p class="note">Valores orientativos en pesos. El precio final se confirma después de revisar el equipo o el lugar. No incluye repuestos especiales.</p>
+    <a class="btn btn-wa c-wa" href="#"><svg><use href="#wa"/></svg>Enviar por WhatsApp</a>
+   </aside>
+  </div>
+  <div class="trust">
+   <div><svg><use href="#check"/></svg>Te decimos el precio antes de arrancar</div>
+   <div><svg><use href="#check"/></svg>Trabajo prolijo y con garantía</div>
+   <div><svg><use href="#check"/></svg>Atención responsable y puntual</div>
+  </div>
+ </div>
+</section>
+
+<!-- MAPA -->
+<section id="ubicacion">
+ <div class="wrap">
+  <span class="eyebrow">Ubicación</span>
+  <h2 class="title">Estamos en Flores, CABA</h2>
+  <p class="lead">Vamos a tu casa o negocio. Escribinos y coordinamos el día.</p>
+  <div class="map-grid">
+   <div class="map-box"><iframe src="https://www.google.com/maps?q=Yerbal+2649,+Flores,+CABA&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa Yerbal 2649, Flores"></iframe></div>
+   <div class="contact">
+    <div class="ci"><span class="ic2"><svg><use href="#pin"/></svg></span><div><small>Dirección</small><b>Yerbal 2649, Flores<br>C1406GKG, CABA</b></div></div>
+    <div class="ci"><span class="ic2"><svg><use href="#tel"/></svg></span><div><small>Teléfono</small><b><a href="tel:+541126033651">011 2603-3651</a></b></div></div>
+    <div class="ci"><span class="ic2"><svg><use href="#star"/></svg></span><div><small>Google</small><b>5,0 ★ · 45 reseñas</b></div></div>
+    <a class="btn btn-wa wa-link" href="#"><svg><use href="#wa"/></svg>Escribinos por WhatsApp</a>
+    <a class="btn btn-accent" href="https://maps.app.goo.gl/pYe3cmmtyHx7K7FT7" target="_blank" rel="noopener">Cómo llegar</a>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer><div class="wrap"><b>Técnico en Reparación en General Ezequiel</b> · Yerbal 2649, Flores, CABA · 011 2603-3651<br>© 2026 · Todos los derechos reservados</div></footer>
+<a class="fab wa-link" href="#" aria-label="WhatsApp"><svg><use href="#wa"/></svg></a>
+
+<script>
+(function(){
+var WA='5491126033651';
+function wa(t){return 'https://wa.me/'+WA+'?text='+encodeURIComponent(t);}
+document.querySelectorAll('.wa-link').forEach(function(a){a.href=wa('Hola Ezequiel, vi tu web y quiero consultar por un servicio.');a.target='_blank';a.rel='noopener';});
+
+/* RESEÑAS (textos reales de Google Maps) */
+var revs=[
+ {n:'Nancy',t:'Excelente trabajo. Se nota el profesionalismo, la prolijidad y la atención a cada detalle. Totalmente recomendable!'},
+ {n:'Lidia',t:'Me solucionó los aires!! Re bien!!! Excelente técnico!! Gracias!!!'},
+ {n:'Elizabeth',t:'Muy buen servicio! Muy atento y barato. 100% recomendado.'},
+ {n:'Griselda',t:'Muy buena atención y muy buen servicio. Lo recomiendo.'},
+ {n:'Martín',t:'Muy buen servicio.. muy responsable!! 100% recomendable!!'}
+];
+var rt=document.getElementById('revTrack'),rd=document.getElementById('revDots');
+revs.forEach(function(r){
+ rt.insertAdjacentHTML('beforeend','<div class="rev"><div class="rev-card"><div><span class="stars">★★★★★</span><q>'+r.t+'</q></div><div class="rev-who"><span class="av">'+r.n[0]+'</span><div><b>'+r.n+'</b><small>Reseña de Google</small></div></div></div></div>');
+ rd.insertAdjacentHTML('beforeend','<i></i>');
+});
+var ri=0;function showRev(){rt.style.transform='translateX(-'+(ri*100)+'%)';[].forEach.call(rd.children,function(d,i){d.className=i===ri?'on':'';});}
+showRev();setInterval(function(){ri=(ri+1)%revs.length;showRev();},1500);
+
+/* SERVICIOS */
+var svcs=[
+ {k:'aire',ic:'snow',c:'#1f4fd8',h:'Aire acondicionado',p:'Instalación, reparación, carga de gas y limpieza de splits y equipos de ventana.',l:['Instalación','Carga de gas','Service','Reparación'],
+  det:[['Limpieza y service',45000,75000],['Carga de gas',70000,120000],['Reparación / diagnóstico',50000,150000],['Instalación split',150000,260000],['Desinstalación',40000,70000]]},
+ {k:'elec',ic:'bolt',c:'#f59e0b',h:'Electricidad',p:'Arreglos eléctricos, tomas, llaves, tableros, cortes y luminarias para casa o local.',l:['Tableros','Tomas y llaves','Cortes','Luminarias'],
+  det:[['Toma o llave nueva',25000,45000],['Arreglo de corte / falla',40000,90000],['Cambio de tablero',90000,200000],['Instalación de luminaria',25000,50000]]},
+ {k:'gas',ic:'flame',c:'#ef4444',h:'Instalaciones de gas',p:'Conexión y revisión de artefactos a gas, pérdidas y mantenimiento.',l:['Pérdidas','Conexiones','Artefactos'],
+  det:[['Revisión de pérdida',45000,90000],['Conexión de artefacto',60000,120000],['Mantenimiento de calefactor',40000,80000]]},
+ {k:'mant',ic:'wrench',c:'#0f172a',h:'Mantenimiento general',p:'Esos arreglos de la casa que venís postergando, resueltos en una sola visita.',l:['Arreglos','Colocaciones','Hogar y locales'],dark:1,
+  det:[['Visita y arreglos varios',35000,80000],['Colocación (estantes, cortinas, etc.)',25000,60000]]},
+ {k:'maq',ic:'gear',c:'#7c3aed',h:'Mantenimiento de maquinaria',p:'Revisión y puesta a punto de equipos y máquinas de comercios y talleres.',l:['Diagnóstico','Puesta a punto'],
+  det:[['Diagnóstico de máquina',45000,90000],['Mantenimiento preventivo',70000,150000]]},
+ {k:'cel',ic:'phone',c:'#0ea5e9',h:'Reparación de celulares',p:'Cambio de pantalla, batería y pin de carga. Diagnóstico sin vueltas.',l:['Pantallas','Baterías','Pin de carga'],
+  det:[['Cambio de batería',30000,60000],['Cambio de pin de carga',25000,50000],['Cambio de pantalla',60000,180000]]},
+ {k:'cam',ic:'cam',c:'#10b981',h:'Cámaras y seguridad',p:'Instalación de cámaras, alarmas y sistemas de seguridad con vista desde el celular.',l:['Cámaras','Alarmas','Ver desde el celu'],
+  det:[['Instalación por cámara',35000,70000],['Configuración en el celular',25000,45000],['Instalación de alarma',90000,180000]]},
+ {k:'audio',ic:'music',c:'#db2777',h:'Equipos de música',p:'Reparación de equipos de audio, parlantes y amplificadores.',l:['Parlantes','Amplificadores','Audio'],
+  det:[['Diagnóstico y reparación',35000,90000]]}
+];
+var st=document.getElementById('svcTrack'),sd=document.getElementById('svcDots'),sv=document.getElementById('svcView');
+svcs.forEach(function(s){
+ st.insertAdjacentHTML('beforeend','<article class="svc'+(s.dark?' dark':'')+'"><div class="ic" style="background:'+s.c+'"><svg><use href="#'+s.ic+'"/></svg></div><h3>'+s.h+'</h3><p>'+s.p+'</p><ul>'+s.l.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul></article>');
+ sd.insertAdjacentHTML('beforeend','<i></i>');
+});
+var si=0;
+function perView(){var w=window.innerWidth;return w<=600?1:w<=900?2:3;}
+function maxI(){return svcs.length-perView();}
+function showSvc(){if(si>maxI())si=0;if(si<0)si=maxI();var card=st.children[0];var step=card.getBoundingClientRect().width+16;st.style.transform='translateX(-'+(si*step)+'px)';[].forEach.call(sd.children,function(d,i){d.className=i===si?'on':'';});}
+function nextSvc(){si=si>=maxI()?0:si+1;showSvc();}
+function prevSvc(){si=si<=0?maxI():si-1;showSvc();}
+var timer=setInterval(nextSvc,2500);
+function reset(){clearInterval(timer);timer=setInterval(nextSvc,2500);}
+document.getElementById('svcNext').onclick=function(){nextSvc();reset();};
+document.getElementById('svcPrev').onclick=function(){prevSvc();reset();};
+var x0=null;
+sv.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+sv.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40){dx<0?nextSvc():prevSvc();reset();}x0=null;});
+window.addEventListener('resize',showSvc);showSvc();
+
+/* CALCULADORAS */
+var URG={normal:[1,'Esta semana'],pronto:[1.15,'En 24-48 h'],urgente:[1.3,'Urgente hoy']};
+var ZONA={flores:[0,'Flores y alrededores'],caba:[8000,'Resto de CABA'],gba:[18000,'GBA']};
+function fmt(n){return '$'+(Math.round(n/1000)*1000).toLocaleString('es-AR');}
+function setup(root,full){
+ var svc=root.querySelector('.c-svc'),det=root.querySelector('.c-det'),qty=root.querySelector('.c-qty');
+ svcs.forEach(function(s){svc.insertAdjacentHTML('beforeend','<option value="'+s.k+'">'+s.h+'</option>');});
+ function cur(){return svcs.filter(function(s){return s.k===svc.value;})[0];}
+ function fillDet(){if(!det)return;det.innerHTML='';cur().det.forEach(function(d,i){det.insertAdjacentHTML('beforeend','<option value="'+i+'">'+d[0]+'</option>');});}
+ function radio(n){var r=root.querySelector('input[name="'+n+'"]:checked');return r?r.value:null;}
+ function calc(){
+  var s=cur(),d=det?s.det[+det.value||0]:s.det[0],q=Math.max(1,Math.min(10,parseInt(qty.value)||1));qty.value=q;
+  var u=URG[radio(full?'f-urg':'h-urg')],z=full?ZONA[radio('f-zona')]:[0,''];
+  var f=1+(q-1)*0.8;
+  var lo=d[1]*f*u[0]+z[0],hi=d[2]*f*u[0]+z[0];
+  var txt=fmt(lo)+' – '+fmt(hi);
+  root.querySelectorAll('.c-out').forEach(function(e){e.textContent=txt;});
+  if(full){root.querySelector('.s-svc').textContent=s.h;root.querySelector('.s-det').textContent=d[0];root.querySelector('.s-qty').textContent=q;root.querySelector('.s-urg').textContent=u[1];root.querySelector('.s-zona').textContent=z[1];}
+  var msg='Hola Ezequiel, vi tu web y quiero un presupuesto:\n• Servicio: '+s.h+(full?'\n• Trabajo: '+d[0]:'')+'\n• Cantidad: '+q+'\n• Para: '+u[1]+(full?'\n• Zona: '+z[1]:'')+'\n• Estimado de la web: '+txt;
+  root.querySelectorAll('.c-wa').forEach(function(a){a.href=wa(msg);a.target='_blank';a.rel='noopener';});
+ }
+ svc.addEventListener('change',function(){fillDet();calc();});
+ if(det)det.addEventListener('change',calc);
+ qty.addEventListener('input',calc);
+ root.querySelector('.c-minus').onclick=function(){qty.value=Math.max(1,(parseInt(qty.value)||1)-1);calc();};
+ root.querySelector('.c-plus').onclick=function(){qty.value=Math.min(10,(parseInt(qty.value)||1)+1);calc();};
+ root.querySelectorAll('input[type=radio]').forEach(function(r){r.addEventListener('change',calc);});
+ fillDet();calc();
+}
+setup(document.getElementById('calc-hero'),false);
+setup(document.getElementById('calc-full'),true);
+})();
+</script>
+</body>
+</html>
