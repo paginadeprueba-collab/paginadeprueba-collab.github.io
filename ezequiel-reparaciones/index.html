@@ -1,673 +1,680 @@
 <!DOCTYPE html>
 <html lang="es-AR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Ezequiel · Técnico en Reparación en General · Flores, CABA</title>
-  <meta name="description" content="Técnico en Reparación en General Ezequiel (Nuestro Servicios). Yerbal 2649, Flores, CABA. 5.0 en Google con 45 opiniones. Pedí tu presupuesto por WhatsApp." />
-  <meta name="theme-color" content="#F3EEE6" />
-  <meta property="og:title" content="Ezequiel · Técnico en Reparación en General" />
-  <meta property="og:description" content="Reparaciones en Flores, CABA. 5.0 en Google con 45 opiniones. Yerbal 2649." />
-  <meta property="og:type" content="website" />
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <meta name="description" content="Técnico en Reparación en General Ezequiel (Nuestro Servicios). Yerbal 2649, Flores, CABA. 5,0 en Google con 45 opiniones. Pedí tu presupuesto por WhatsApp.">
+  <meta name="theme-color" content="#EEF0F4">
+  <meta property="og:title" content="Ezequiel · Técnico en Reparación en General">
+  <meta property="og:description" content="Reparaciones en Flores, CABA. 5,0 en Google con 45 opiniones. Yerbal 2649.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg: #F3EEE6;
-      --bg-2: #E8E0D4;
-      --paper: #FFFBF5;
-      --ink: #2A241F;
-      --ink-soft: #5A524A;
-      --muted: #7A7268;
-      --copper: #C46A2D;
-      --copper-deep: #8E4A22;
-      --copper-soft: #E8C4A4;
-      --star: #C9A227;
-      --line: rgba(42, 36, 31, 0.12);
-      --shadow: 0 14px 36px rgba(42, 36, 31, 0.08);
-      --header: 68px;
-      --wa: #25D366;
-      --max: 1080px;
-      --serif: "Fraunces", "Times New Roman", serif;
-      --sans: "Source Sans 3", system-ui, sans-serif;
+    :root{
+      --bg:#EEF0F4;--card:#fff;--ink:#16181D;--mute:#5E6478;--line:#E1E4EB;
+      --acc:#1A9B8A;--acc2:#4EC9B0;--tagbg:#E7F6F3;
+      --g:linear-gradient(100deg,#1A9B8A,#4EC9B0);
+      --r:22px;--sh:0 10px 30px -12px rgba(20,30,40,.12)
     }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-    html, body { overflow-x: hidden; }
-    body {
-      font-family: var(--sans);
-      background: var(--bg);
-      color: var(--ink);
-      line-height: 1.55;
-      min-height: 100vh;
-      padding-bottom: 96px;
-    }
-    img { max-width: 100%; display: block; }
-    a { color: inherit; }
-    button, select { font-family: inherit; }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    html,body{overflow-x:hidden}
+    body{font-family:Manrope,Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    button,select,input{font-family:inherit}
+    .wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+    header.hdr{position:sticky;top:0;z-index:50;padding:10px 0}
+    .nav{display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:999px;padding:6px 6px 6px 14px;box-shadow:var(--sh)}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;line-height:1.1}
+    .logo small{display:block;font-weight:500;color:var(--mute);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+    .mono{width:34px;height:34px;border-radius:12px;background:var(--g);display:grid;place-items:center;color:#fff;font-weight:700;font-size:15px;letter-spacing:.02em;flex-shrink:0}
+    .links{display:flex;gap:26px;font-size:14.5px;color:var(--mute);font-weight:500}
+    .links a:hover{color:var(--ink)}
+    .btn{display:inline-flex;align-items:center;gap:12px;border-radius:999px;padding:7px 7px 7px 22px;font-weight:600;font-size:15px;border:0;cursor:pointer;font-family:inherit;transition:transform .2s,box-shadow .2s}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-p{background:var(--g);color:#fff;box-shadow:0 10px 24px -10px var(--acc)}
+    .btn-p .ar{width:36px;height:36px;border-radius:50%;background:#fff;color:var(--acc);display:grid;place-items:center}
+    .btn-s{background:#fff;border:1px solid var(--line);color:var(--ink);padding:13px 22px}
+    .btn-wa{background:#fff;border:1px solid var(--line);color:var(--ink);padding:13px 20px;gap:10px}
+    .btn-wa svg{flex:none}
+    .btn-g{background:#25D366;color:#fff;padding:13px 22px;justify-content:center}
+    .burger{display:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;place-items:center}
+    .mmenu{display:none}
+    section{padding:56px 0}
+    section.wrap{padding-top:64px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh)}
+    .tag{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;color:var(--acc);background:var(--tagbg);border-radius:999px;padding:5px 12px;letter-spacing:.03em}
+    h1,h2,h3{font-weight:400;letter-spacing:-.02em;line-height:1.08}
+    h1{font-size:clamp(40px,5.4vw,68px)}
+    h2{font-size:clamp(32px,4vw,50px)}
+    h3{font-size:21px;font-weight:600;letter-spacing:-.01em}
+    .lead{color:var(--mute);font-size:17px}
+    .media{position:relative;overflow:hidden;border-radius:var(--r)}
+    .media img{width:100%;height:100%;object-fit:cover}
+    .cta{display:flex;gap:10px;flex-wrap:wrap}
+    .disc{font-size:12.5px;color:var(--mute)}
+    .shead{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:26px;flex-wrap:wrap}
+    .shead p{max-width:440px}
 
-    .wrap { width: min(100% - 32px, var(--max)); margin-inline: auto; }
-    section { scroll-margin-top: calc(var(--header) + 14px); }
+    .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+    .rv.in{opacity:1;transform:none}
 
-    header {
-      position: sticky; top: 0; z-index: 40;
-      height: var(--header);
-      display: flex; align-items: center;
-      background: rgba(243, 238, 230, 0.9);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--line);
-    }
-    header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-    .logo {
-      width: 40px; height: 40px; border-radius: 10px;
-      background: var(--ink); color: var(--copper-soft);
-      display: grid; place-items: center;
-      font-family: var(--serif); font-weight: 600; font-size: 20px;
-      flex-shrink: 0;
-    }
-    .brand strong { display: block; font-family: var(--serif); font-size: 1.15rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; }
-    .brand small { display: block; font-size: 11px; color: var(--muted); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
-    .header-wa {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: var(--ink); color: #F3EEE6;
-      padding: 9px 14px; border-radius: 999px;
-      font-size: 13px; font-weight: 700; text-decoration: none;
-    }
-    .header-wa svg { width: 16px; height: 16px; }
+    .rev{padding:26px;display:flex;flex-direction:column;gap:14px;margin-top:6px}
+    .rtop{display:flex;align-items:center;gap:16px}
+    .rtop b{font-size:56px;font-weight:300;line-height:1}
+    .stars{color:#F5B301;font-size:22px;letter-spacing:2px}
+    .rtop small{display:block;color:var(--mute);font-size:13px}
+    .rcar{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:14px -4px 0;padding:4px;overscroll-behavior-x:contain;align-items:flex-start}
+    .rcar::-webkit-scrollbar{display:none}
+    .rs{flex:0 0 min(86%,420px);scroll-snap-align:start;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 20px;display:flex;flex-direction:column;gap:8px;box-shadow:0 6px 20px rgba(20,20,40,.05)}
+    .rs p{font-size:15px;line-height:1.5;margin:0}
+    .rs b{font-weight:600}
+    .rs small{color:#777;margin-top:-6px}
+    .rdots{display:flex;gap:6px;justify-content:center;margin:12px 0 4px}
+    .rdots button{width:8px;height:8px;border-radius:9px;border:0;background:#C9EDE6;padding:0;transition:.25s}
+    .rdots button.on{width:22px;background:linear-gradient(90deg,#1A9B8A,#4EC9B0)}
+    .glink{font-size:14px;font-weight:600;color:var(--acc)}
 
-    .hero { padding: 36px 0 28px; text-align: left; }
-    .kicker {
-      display: inline-block;
-      font-size: 12px; font-weight: 700; letter-spacing: 0.14em;
-      text-transform: uppercase; color: var(--copper-deep);
-      margin-bottom: 12px;
-    }
-    h1 {
-      font-family: var(--serif);
-      font-size: clamp(2.15rem, 8.4vw, 3.6rem);
-      font-weight: 600; letter-spacing: -0.03em; line-height: 1.08;
-      margin-bottom: 10px;
-    }
-    h1 em { font-style: italic; color: var(--copper-deep); font-weight: 500; }
-    .lead { color: var(--ink-soft); font-size: 1.05rem; max-width: 34rem; margin-bottom: 22px; font-weight: 400; }
-    .actions { display: flex; flex-wrap: wrap; gap: 10px; }
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      border: 0; cursor: pointer; text-decoration: none;
-      font-weight: 700; border-radius: 999px; padding: 14px 22px;
-      font-size: 15px; line-height: 1; min-height: 52px;
-    }
-    .btn:active { transform: translateY(1px); }
-    .btn-primary { background: var(--copper); color: #FFFBF5; }
-    .btn-primary:hover { background: var(--copper-deep); }
-    .btn-secondary { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
-    .btn-ghost { background: var(--paper); color: var(--ink); border: 1px solid var(--line); }
+    .intro{padding-top:40px}
+    .intro h1{font-size:clamp(40px,9vw,72px)}
+    .intro p{margin-top:12px}
+    .top2{display:grid;grid-template-columns:1fr;gap:18px;align-items:start}
+    .stats{display:flex;gap:10px;flex-wrap:wrap}
+    .stats span{font-size:13px;background:var(--bg);border-radius:999px;padding:6px 12px;color:var(--mute)}
+    .hcred{margin-top:14px}
+    .hcred span{background:#fff;border:1px solid var(--line);color:var(--ink);font-weight:500}
+    .dipl{margin-top:20px;height:min(70vh,560px)}
+    .hcar{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;overscroll-behavior-x:contain}
+    .hcar::-webkit-scrollbar{display:none}
+    .hcar img{flex:0 0 100%;width:100%;height:100%;object-fit:cover;scroll-snap-align:start;scroll-snap-stop:always;display:block}
+    .hdots{position:absolute;top:14px;left:50%;transform:translateX(-50%);margin:0!important;padding:6px 10px;background:rgba(255,255,255,.85);border-radius:99px;backdrop-filter:blur(8px)}
+    .cap{position:absolute;left:14px;right:14px;bottom:14px;background:rgba(255,255,255,.92);border-radius:14px;padding:12px 16px;font-size:14px;font-weight:600;backdrop-filter:blur(8px)}
+    .cap small{display:block;font-weight:400;color:var(--mute);font-size:12.5px}
 
-    .reviews-block {
-      background: var(--ink);
-      color: #F6F1E8;
-      padding: 40px 0 36px;
-    }
-    .reviews-block .kicker { color: var(--copper-soft); }
-    .reviews-block h2,
-    .reviews-block .score-num,
-    .map h2, .calc-sec h2, .services-sec h2 {
-      font-family: var(--serif);
-      font-weight: 600; letter-spacing: -0.03em; line-height: 1.15;
-    }
-    .reviews-block h2 { font-size: clamp(1.7rem, 6vw, 2.4rem); margin-bottom: 22px; }
-    .impact {
-      display: flex; flex-wrap: wrap; align-items: flex-end; gap: 8px 18px;
-      margin-bottom: 8px;
-    }
-    .score-num {
-      font-size: clamp(4.2rem, 18vw, 6.5rem);
-      line-height: 0.85; font-weight: 600; letter-spacing: -0.04em;
-    }
-    .score-meta { padding-bottom: 6px; }
-    .stars { color: var(--star); letter-spacing: 3px; font-size: 1.25rem; }
-    .rev-count { font-size: 1.05rem; font-weight: 600; margin-top: 4px; color: #E8E0D4; }
-    .google-row { display: flex; align-items: center; gap: 8px; margin: 6px 0 24px; color: #C9C2B6; font-size: 13px; font-weight: 600; }
-    .g-logo { width: 18px; height: 18px; }
-    .review-list { display: grid; gap: 12px; }
-    .review {
-      background: rgba(255, 251, 245, 0.06);
-      border: 1px solid rgba(232, 196, 164, 0.18);
-      border-radius: 18px;
-      padding: 20px 18px 16px;
-    }
-    .review .stars { font-size: 14px; letter-spacing: 2px; margin-bottom: 8px; display: block; }
-    .review p {
-      font-family: var(--serif);
-      font-size: 1.15rem; font-weight: 500; line-height: 1.4;
-      margin-bottom: 12px;
-    }
-    .review footer { font-size: 13px; color: #C9C2B6; font-weight: 600; }
-    .review footer b { color: #F6F1E8; font-weight: 700; font-family: var(--sans); }
+    .ctraj{display:grid;grid-template-columns:1fr;gap:16px}
+    .ctraj .card{padding:22px;display:flex;flex-direction:column;gap:10px}
+    .ctraj .ic{width:44px;height:44px;border-radius:14px;background:var(--tagbg);color:var(--acc);display:grid;place-items:center;font-size:22px;flex-shrink:0}
+    .ctraj h3{font-size:17px;font-weight:600;letter-spacing:-.01em;line-height:1.25;margin:0}
+    .ctraj p{color:var(--mute);font-size:14.5px;line-height:1.55;margin:0;flex:1}
+    .ctraj-cta{display:flex;justify-content:center;margin-top:26px}
 
-    .services-sec { padding: 36px 0 20px; overflow: hidden; }
-    .services-sec h2, .calc-sec h2, .map h2 {
-      font-size: clamp(1.65rem, 5.8vw, 2.3rem);
-      margin-bottom: 8px;
-    }
-    .sec-lead { color: var(--muted); margin-bottom: 18px; max-width: 36rem; }
-    .carousel-wrap { position: relative; }
-    .carousel {
-      display: flex; gap: 14px;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
-      padding: 4px 16px 18px;
-      margin-inline: -16px;
-      scrollbar-width: none;
-    }
-    .carousel::-webkit-scrollbar { display: none; }
-    .slide {
-      flex: 0 0 min(78%, 340px);
-      scroll-snap-align: start;
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      display: flex; flex-direction: column;
-    }
-    .slide img { width: 100%; aspect-ratio: 16/10; object-fit: cover; }
-    .slide-body { padding: 14px 14px 16px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
-    .slide h3 { font-family: var(--serif); font-size: 1.2rem; font-weight: 600; letter-spacing: -0.02em; }
-    .slide p { color: var(--muted); font-size: 0.92rem; flex: 1; }
-    .slide .btn { align-self: flex-start; min-height: 44px; padding: 10px 16px; font-size: 14px; }
-    .dots { display: flex; justify-content: center; gap: 7px; margin-top: 2px; }
-    .dots button {
-      width: 7px; height: 7px; border-radius: 99px; border: 0;
-      background: var(--copper-soft); padding: 0; cursor: pointer;
-    }
-    .dots button[aria-current="true"] { background: var(--copper); width: 18px; }
+    .gcar{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;overscroll-behavior-x:contain;scroll-padding:0 6%;padding:0 6% 8px;margin:0 -6%}
+    .gcar::-webkit-scrollbar{display:none}
+    .gs{flex:0 0 88%;max-width:560px;scroll-snap-align:center;margin:0;position:relative;border-radius:22px;overflow:hidden;height:420px;box-shadow:0 10px 30px rgba(20,20,40,.08);background:var(--card);border:0}
+    .gs img{width:100%;height:100%;object-fit:cover;display:block}
+    .gs figcaption{position:absolute;left:12px;right:12px;bottom:12px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-radius:14px;padding:10px 14px;font-size:14px;font-weight:600;display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .gs figcaption span{display:block}
+    .gs figcaption small{display:block;font-weight:400;color:var(--mute);font-size:12.5px;margin-top:2px}
+    .gs .cot{flex:none;border:0;background:var(--g);color:#fff;border-radius:999px;padding:8px 12px;font:inherit;font-size:13px;font-weight:600;cursor:pointer}
+    .gdots{display:flex;gap:6px;justify-content:center;margin:14px 0 0}
+    .gdots button{width:8px;height:8px;border-radius:9px;border:0;background:#C9EDE6;padding:0;transition:.25s}
+    .gdots button.on{width:22px;background:linear-gradient(90deg,#1A9B8A,#4EC9B0)}
 
-    .calc-sec { padding: 20px 0 28px; }
-    .calc {
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      padding: 22px 16px 20px;
-      box-shadow: var(--shadow);
-    }
-    .calc-grid { display: grid; gap: 16px; }
-    .field { display: grid; gap: 8px; }
-    .field label, .field .lbl { font-size: 13px; font-weight: 700; }
-    select.styled {
-      appearance: none; -webkit-appearance: none;
-      width: 100%; min-height: 52px;
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      background: #fff url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'><path d='M5 7.5l5 5 5-5' stroke='%232A241F' stroke-width='1.8' stroke-linecap='round'/></svg>") no-repeat right 14px center;
-      padding: 12px 42px 12px 14px;
-      font-size: 15px; font-weight: 600; color: var(--ink); outline: none;
-    }
-    select.styled:focus { border-color: var(--copper); box-shadow: 0 0 0 3px rgba(196, 106, 45, 0.18); }
-    .chips { display: grid; gap: 8px; }
-    .chip { position: relative; }
-    .chip input { position: absolute; opacity: 0; inset: 0; }
-    .chip span {
-      display: flex; align-items: center; justify-content: center; text-align: center;
-      min-height: 50px; padding: 10px 12px; border-radius: 14px;
-      background: #fff; border: 1.5px solid var(--line);
-      font-size: 13.5px; font-weight: 700; cursor: pointer;
-    }
-    .chip input:focus-visible + span { box-shadow: 0 0 0 3px rgba(196, 106, 45, 0.2); }
-    .chip input:checked + span { border-color: var(--copper); background: #F8EDE3; color: var(--copper-deep); }
-    .chips.two { grid-template-columns: 1fr 1fr; }
-    .chips.three { grid-template-columns: 1fr; }
-    .result {
-      margin-top: 6px; text-align: center;
-      padding: 16px 12px 4px;
-      border-top: 1px solid var(--line);
-    }
-    .result-kicker { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--copper-deep); }
-    .price { font-family: var(--serif); font-size: clamp(1.7rem, 7vw, 2.3rem); font-weight: 600; letter-spacing: -0.03em; margin: 6px 0 6px; }
-    .disclaimer { font-size: 12px; color: var(--muted); font-weight: 600; }
-    .result .btn { width: 100%; margin-top: 14px; }
+    .trat{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px;margin-top:22px;list-style:none}
+    .trat li{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-weight:500;display:flex;gap:10px;align-items:center}
+    .trat li:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--g);flex:none}
 
-    .map { padding: 12px 0 32px; }
-    .map-card {
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-    .map-card iframe { width: 100%; height: 280px; border: 0; display: block; }
-    .map-meta { padding: 18px 16px 20px; }
-    .map-meta p { color: var(--ink-soft); font-weight: 500; margin-bottom: 12px; }
-    .map-meta .actions { margin-top: 4px; }
+    .ag-wrap{display:grid;gap:18px}
+    .ag{padding:24px;display:flex;flex-direction:column;gap:22px}
+    .ag h3{font-size:15px;font-weight:600;margin-bottom:10px;display:flex;gap:10px;align-items:center}
+    .ag h3 span{width:24px;height:24px;border-radius:50%;background:var(--g);color:#fff;font-size:12px;display:grid;place-items:center;flex:none}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{border:1px solid var(--line);background:#F7F8FB;border-radius:999px;padding:10px 16px;font:inherit;font-size:14.5px;cursor:pointer;color:var(--ink)}
+    .chip.on{background:var(--g);color:#fff;border-color:transparent}
+    .pick{display:flex;flex-direction:column;gap:6px}
+    .pick select{width:100%}
+    select,input{font:inherit;font-size:15px;border:1px solid var(--line);background:#F7F8FB;border-radius:14px;padding:13px 14px;color:var(--ink);outline:none;font-weight:400}
+    select:focus,input:focus{border-color:var(--acc);background:#fff}
+    .sum{background:var(--bg);border-radius:14px;padding:12px 16px;font-size:14px;color:var(--mute)}
+    .sum b{color:var(--ink);display:block;font-size:22px;font-weight:600;margin-top:4px}
+    .avisos{display:grid;gap:8px;margin-top:18px}
+    .avisos div{background:var(--tagbg);border-radius:12px;padding:10px 14px;font-size:14px}
 
-    footer.site { padding: 8px 0 20px; color: var(--muted); }
-    footer.site .inner {
-      border-top: 1px solid var(--line);
-      padding-top: 22px;
-    }
-    footer.site h3 { font-family: var(--serif); color: var(--ink); font-size: 1.2rem; font-weight: 600; margin-bottom: 6px; }
-    footer.site p { font-size: 0.92rem; margin-bottom: 14px; }
-    .foot-links { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
-    .foot-meta { font-size: 12px; font-weight: 600; }
+    .contact{display:grid;grid-template-columns:1fr;gap:18px}
+    .cinfo{padding:24px;display:flex;flex-direction:column;gap:6px}
+    .crow{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line);align-items:center}
+    .crow:last-of-type{border:0}
+    .crow small{display:block;color:var(--mute);font-size:12.5px}
+    .ic{width:42px;height:42px;border-radius:12px;background:var(--bg);display:grid;place-items:center;flex:none;color:var(--acc);font-size:18px}
+    .map{overflow:hidden;min-height:420px}
+    .map iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
 
-    .wa-float {
-      position: fixed; right: 16px; bottom: 16px; z-index: 50;
-      width: 58px; height: 58px; border-radius: 50%;
-      background: var(--wa); color: #fff;
-      display: grid; place-items: center;
-      box-shadow: 0 10px 24px rgba(37, 211, 102, 0.4);
-      text-decoration: none;
-    }
-    .wa-float svg { width: 28px; height: 28px; }
+    footer{padding:20px 0 30px}
+    .foot{padding:24px;display:grid;grid-template-columns:1fr;gap:30px;font-size:14.5px}
+    .foot h4{font-size:13px;color:var(--mute);font-weight:600;margin-bottom:12px;text-transform:uppercase;letter-spacing:.06em}
+    .foot ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+    .legal{display:flex;justify-content:space-between;padding:18px 6px 0;font-size:13px;color:var(--mute);flex-wrap:wrap;gap:10px}
 
-    @media (min-width: 720px) {
-      .hero { padding: 56px 0 40px; }
-      .review-list { grid-template-columns: 1fr 1fr 1fr; }
-      .slide { flex-basis: min(42%, 380px); }
-      .chips.three { grid-template-columns: 1fr 1fr 1fr; }
-      .calc { padding: 28px; }
-      .map-card iframe { height: 360px; }
+    .wa-float{position:fixed;left:18px;bottom:18px;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 24px -8px rgba(0,0,0,.35);z-index:40}
+
+    @media(max-width:1020px){
+      .links,.nav>.btn{display:none}
+      .burger{display:grid}
+      .mmenu.on{display:flex;flex-direction:column;gap:4px;margin-top:8px;padding:14px}
+      .mmenu a{padding:12px 14px;border-radius:12px;font-weight:500}
+      .mmenu a:hover{background:var(--bg)}
+      section{padding:30px 0}
+      section.wrap{padding-top:44px}
     }
-    @media (min-width: 980px) {
-      .calc-grid { grid-template-columns: 1fr 1fr; gap: 18px 24px; }
-      .calc-grid .full { grid-column: 1 / -1; }
+    @media(max-width:780px){
+      .cta .btn{width:100%;justify-content:space-between}
+      .cta .btn-wa,.cta .btn-s{justify-content:center}
+      .gs{height:360px}
+    }
+    @media(min-width:781px){
+      .cta .btn-wa{justify-content:center}
+      .foot{grid-template-columns:1.4fr 1fr 1fr}
+      .foot{padding:40px}
+      .cinfo{padding:34px}
+    }
+    @media(min-width:900px){
+      .top2{grid-template-columns:1fr 1fr}
+      .dipl{margin-top:0;height:640px}
+      .ag-wrap{grid-template-columns:1fr 1.2fr}
+      .ag{padding:34px}
+      .ctraj{grid-template-columns:1fr 1fr}
+      .contact{grid-template-columns:1fr 1.3fr}
+      .gcar{justify-content:flex-start}
+    }
+    @media(min-width:1021px){
+      .ctraj{grid-template-columns:repeat(4,1fr)}
+      .mono{width:38px;height:38px}
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="wrap">
-      <a class="brand" href="#inicio">
-        <span class="logo" aria-hidden="true">E</span>
-        <span>
-          <strong>Ezequiel</strong>
-          <small>Reparación en general</small>
-        </span>
+<header class="hdr">
+  <div class="wrap">
+    <nav class="nav">
+      <a href="#top" class="logo">
+        <span class="mono">E</span>
+        <span>Ezequiel<small>Reparación en general</small></span>
       </a>
-      <a class="header-wa" href="https://wa.me/5491126033651?text=Hola%20Ezequiel%2C%20te%20escribo%20por%20una%20reparaci%C3%B3n." target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M20.5 3.5A11 11 0 006.2 19.3L5 22.9l3.7-1.2A11 11 0 0022.9 12 11 11 0 0020.5 3.5zm-8.5 17a9.1 9.1 0 01-4.6-1.3l-.3-.2-2.2.7.7-2.1-.2-.3A9.1 9.1 0 1112 20.5zm5-6.8c-.3-.1-1.6-.8-1.9-.9s-.4-.1-.6.1-.7.9-.8 1-.3.2-.6.1a7.4 7.4 0 01-2.2-1.3 8 8 0 01-1.5-1.9c-.2-.3 0-.4.1-.6l.3-.4.1-.3a.5.5 0 000-.5c0-.1-.6-1.5-.8-2s-.4-.5-.6-.5h-.5a1 1 0 00-.7.3 2.9 2.9 0 00-.9 2.2 5 5 0 001.1 2.6 11.6 11.6 0 004.4 4 14 14 0 001.4.5 3.3 3.3 0 001.5.1 2.5 2.5 0 001.7-1.1 2 2 0 00.1-1.1c-.1-.1-.3-.2-.6-.3z"/></svg>
-        WhatsApp
-      </a>
+      <div class="links">
+        <a href="#resenas">Reseñas</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#presupuesto">Presupuesto</a>
+        <a href="#contacto">Cómo llegar</a>
+      </div>
+      <a href="#presupuesto" class="btn btn-p">Calcular presupuesto<span class="ar">→</span></a>
+      <button class="burger" aria-label="Abrir menú" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16181D" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </nav>
+    <div class="mmenu card">
+      <a href="#resenas">Reseñas</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#presupuesto">Presupuesto</a>
+      <a href="#contacto">Cómo llegar</a>
+      <a href="https://wa.me/5491126033651?text=Hola%20Ezequiel%2C%20te%20escribo%20por%20una%20reparaci%C3%B3n." data-wa>WhatsApp</a>
     </div>
-  </header>
+  </div>
+</header>
 
-  <main>
-    <section class="hero" id="inicio">
-      <div class="wrap">
-        <p class="kicker">Flores, CABA</p>
-        <h1>Ezequiel, técnico en <em>reparación en general</em></h1>
-        <p class="lead">Mantenimiento, aire acondicionado, electricidad, gas y más. Escribime y coordinamos el trabajo.</p>
-        <div class="actions">
-          <a class="btn btn-primary" href="https://wa.me/5491126033651?text=Hola%20Ezequiel%2C%20te%20escribo%20por%20una%20reparaci%C3%B3n." target="_blank" rel="noopener">Escribir por WhatsApp</a>
-          <a class="btn btn-secondary" href="#presupuesto">Calcular presupuesto</a>
+<main id="top">
+  <section class="wrap" id="resenas" style="padding-top:4px">
+    <div class="card rev rv in">
+      <div class="rtop">
+        <b>5,0</b>
+        <div>
+          <span class="stars">★★★★★</span>
+          <small>45 reseñas en Google</small>
         </div>
       </div>
-    </section>
+      <div class="rcar" id="rcar">
+        <article class="rs">
+          <span class="stars">★★★★★</span>
+          <p>“Muy buena atención y muy buen servicio. Lo recomiendo.”</p>
+          <b>Griselda Olmedo</b>
+          <small>Reseña en Google</small>
+        </article>
+        <article class="rs">
+          <span class="stars">★★★★★</span>
+          <p>“Muy buen servicio! Muy atento y barato. 100% Recomendado”</p>
+          <b>Elizabeth Paz Alvarez Galia</b>
+          <small>Reseña en Google</small>
+        </article>
+        <article class="rs">
+          <span class="stars">★★★★★</span>
+          <p>“Excelente trabajo. Se nota el profesionalismo, la prolijidad y la atención a cada detalle. Totalmente recomendable!”</p>
+          <b>Nancy Contrera</b>
+          <small>Reseña en Google</small>
+        </article>
+      </div>
+      <div class="rdots" id="rdots">
+        <button type="button" aria-label="Reseña 1" class="on"></button>
+        <button type="button" aria-label="Reseña 2"></button>
+        <button type="button" aria-label="Reseña 3"></button>
+      </div>
+      <a class="glink" href="https://maps.app.goo.gl/pYe3cmmtyHx7K7FT7" target="_blank" rel="noopener">Ver todas en Google →</a>
+    </div>
+  </section>
 
-    <section class="reviews-block" id="resenas" aria-label="Reseñas de Google">
-      <div class="wrap">
-        <p class="kicker">Opiniones reales de Google</p>
-        <h2>La confianza se nota en las reseñas</h2>
-        <div class="impact">
-          <div class="score-num">5.0</div>
-          <div class="score-meta">
-            <div class="stars" aria-label="5 estrellas">★★★★★</div>
-            <p class="rev-count">45 opiniones en Google</p>
-          </div>
+  <section class="wrap intro">
+    <div class="top2">
+      <div class="rv">
+        <span class="tag">Yerbal 2649 · Flores, CABA</span>
+        <h1 style="margin-top:14px">Técnico en reparación en general, en Flores</h1>
+        <p class="lead">Ezequiel, de Técnico en Reparación en General (Nuestro Servicios). Mantenimiento, aire acondicionado, electricidad, gas, celulares y más. Escribime y coordinamos el trabajo.</p>
+        <div class="stats hcred">
+          <span>5,0 en Google</span>
+          <span>45 opiniones</span>
+          <span>7 servicios</span>
         </div>
-        <p class="google-row">
-          <svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true">
-            <path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 8 3.1l5.7-5.7C34.2 6.1 29.4 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.9z"/>
-            <path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 16 19 12 24 12c3.1 0 5.8 1.2 8 3.1l5.7-5.7C34.2 6.1 29.4 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/>
-            <path fill="#4CAF50" d="M24 44c5.2 0 10-2 13.6-5.2l-6.3-5.3C29.2 35.1 26.7 36 24 36c-5.3 0-9.7-3.3-11.3-8l-6.5 5C9.6 39.6 16.3 44 24 44z"/>
-            <path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-1.1 3.2-3.5 5.8-6.6 7.5l6.3 5.3C37.1 41.3 44 36 44 24c0-1.3-.1-2.6-.4-3.9z"/>
-          </svg>
-          Perfil de Google Maps
-        </p>
-        <div class="review-list">
-          <article class="review">
-            <span class="stars" aria-hidden="true">★★★★★</span>
-            <p>“Muy buena atención y muy buen servicio. Lo recomiendo.”</p>
-            <footer><b>Griselda Olmedo</b> · Google</footer>
-          </article>
-          <article class="review">
-            <span class="stars" aria-hidden="true">★★★★★</span>
-            <p>“Muy buen servicio! Muy atento y barato. 100% Recomendado”</p>
-            <footer><b>Elizabeth Paz Alvarez Galia</b> · Google</footer>
-          </article>
-          <article class="review">
-            <span class="stars" aria-hidden="true">★★★★★</span>
-            <p>“Excelente trabajo. Se nota el profesionalismo, la prolijidad y la atención a cada detalle. Totalmente recomendable!”</p>
-            <footer><b>Nancy Contrera</b> · Google</footer>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="services-sec" id="servicios">
-      <div class="wrap">
-        <p class="kicker">Lo que resuelvo</p>
-        <h2>Servicios</h2>
-        <p class="sec-lead">Categorías publicadas en Google Maps. Deslizá o esperá: el carrusel avanza solo.</p>
-      </div>
-      <div class="carousel-wrap">
-        <div class="carousel" id="carousel" tabindex="0" aria-label="Carrusel de servicios" aria-roledescription="carrusel">
-          <article class="slide" data-service="mantenimiento">
-            <img src="img/mantenimiento.jpg" alt="Herramientas de mantenimiento general en un hogar" width="800" height="500" />
-            <div class="slide-body">
-              <h3>Mantenimiento general</h3>
-              <p>Arreglos y mantenimiento en el hogar.</p>
-              <button class="btn btn-primary" type="button" data-service="mantenimiento">Cotizar este servicio →</button>
-            </div>
-          </article>
-          <article class="slide" data-service="aire">
-            <img src="img/aire.jpg" alt="Aire acondicionado split instalado en una pared" width="800" height="500" />
-            <div class="slide-body">
-              <h3>Aire acondicionado</h3>
-              <p>Reparación de aire acondicionado.</p>
-              <button class="btn btn-primary" type="button" data-service="aire">Cotizar este servicio →</button>
-            </div>
-          </article>
-          <article class="slide" data-service="electricidad">
-            <img src="img/electricidad.jpg" alt="Herramientas y tablero para reparaciones eléctricas" width="800" height="500" />
-            <div class="slide-body">
-              <h3>Electricidad</h3>
-              <p>Reparaciones eléctricas y electricista.</p>
-              <button class="btn btn-primary" type="button" data-service="electricidad">Cotizar este servicio →</button>
-            </div>
-          </article>
-          <article class="slide" data-service="gas">
-            <img src="img/gas.jpg" alt="Instalación de calefón a gas en un lavadero" width="800" height="500" />
-            <div class="slide-body">
-              <h3>Instalación de gas</h3>
-              <p>Trabajos de instalación de gas.</p>
-              <button class="btn btn-primary" type="button" data-service="gas">Cotizar este servicio →</button>
-            </div>
-          </article>
-          <article class="slide" data-service="celulares">
-            <img src="img/celulares.jpg" alt="Mesa de trabajo para reparación de teléfonos móviles" width="800" height="500" />
-            <div class="slide-body">
-              <h3>Reparación de celulares</h3>
-              <p>Reparación de teléfonos móviles.</p>
-              <button class="btn btn-primary" type="button" data-service="celulares">Cotizar este servicio →</button>
-            </div>
-          </article>
-          <article class="slide" data-service="otros">
-            <img src="img/hero-taller.jpg" alt="Banco de trabajo con herramientas de reparación" width="800" height="500" />
-            <div class="slide-body">
-              <h3>Maquinaria y otros arreglos</h3>
-              <p>Maquinaria, seguridad y equipos de música.</p>
-              <button class="btn btn-primary" type="button" data-service="otros">Cotizar este servicio →</button>
-            </div>
-          </article>
-        </div>
-        <div class="dots" id="dots" hidden></div>
-      </div>
-    </section>
-
-    <section class="calc-sec" id="presupuesto">
-      <div class="wrap">
-        <p class="kicker">Sin compromiso</p>
-        <h2>Calculá tu presupuesto</h2>
-        <p class="sec-lead">Completá el tipo de trabajo, la urgencia y el tamaño. Después lo mandás por WhatsApp.</p>
-        <form class="calc" id="calc-form" novalidate>
-          <div class="calc-grid">
-            <div class="field full">
-              <label for="tipo">Tipo de trabajo</label>
-              <select class="styled" id="tipo" name="tipo">
-                <option value="mantenimiento">Mantenimiento general</option>
-                <option value="aire">Aire acondicionado</option>
-                <option value="electricidad">Electricidad</option>
-                <option value="gas">Instalación de gas</option>
-                <option value="celulares">Reparación de celulares</option>
-                <option value="otros">Maquinaria, seguridad u otro arreglo</option>
-              </select>
-            </div>
-            <div class="field">
-              <p class="lbl" id="lbl-urgencia">Urgencia</p>
-              <div class="chips two" role="radiogroup" aria-labelledby="lbl-urgencia">
-                <label class="chip"><input type="radio" name="urgencia" value="programado" checked /><span>Turno programado</span></label>
-                <label class="chip"><input type="radio" name="urgencia" value="inmediata" /><span>Lo antes posible</span></label>
-              </div>
-            </div>
-            <div class="field">
-              <p class="lbl" id="lbl-tamano">Tamaño del trabajo</p>
-              <div class="chips three" role="radiogroup" aria-labelledby="lbl-tamano">
-                <label class="chip"><input type="radio" name="tamano" value="chico" /><span>Trabajo chico</span></label>
-                <label class="chip"><input type="radio" name="tamano" value="medio" checked /><span>Trabajo mediano</span></label>
-                <label class="chip"><input type="radio" name="tamano" value="grande" /><span>Trabajo grande / varios puntos</span></label>
-              </div>
-            </div>
-          </div>
-          <div class="result" aria-live="polite">
-            <p class="result-kicker">Rango de referencia</p>
-            <p class="price" id="precio">$0 – $0</p>
-            <p class="disclaimer">Valores de referencia de ejemplo. El precio final lo confirma Ezequiel según el trabajo.</p>
-            <a class="btn btn-primary" id="wa-presupuesto" href="#" target="_blank" rel="noopener">Enviar consulta por WhatsApp →</a>
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <section class="map" id="mapa">
-      <div class="wrap">
-        <p class="kicker">Dónde encontrarme</p>
-        <h2>Mapa y dirección</h2>
-        <div class="map-card">
-          <iframe title="Mapa de Yerbal 2649, Flores, CABA" src="https://www.google.com/maps?q=Yerbal+2649,+Flores,+CABA&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-          <div class="map-meta">
-            <p>Yerbal 2649, flores 1604 1b, C1406GKG, Cdad. Autónoma de Buenos Aires<br />Flores, Comuna 7 · Tel. <a href="tel:+5491126033651">011 2603-3651</a></p>
-            <p class="disclaimer" style="margin-bottom:12px;">En Google Maps todavía no figuran horarios. Escribí o llamá para coordinar.</p>
-            <div class="actions">
-              <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=Yerbal+2649,+Flores,+CABA" target="_blank" rel="noopener">Cómo llegar</a>
-              <a class="btn btn-ghost" href="https://maps.app.goo.gl/pYe3cmmtyHx7K7FT7" target="_blank" rel="noopener">Ver en Google Maps</a>
-            </div>
-          </div>
+        <div class="cta" style="margin-top:20px">
+          <a href="#presupuesto" class="btn btn-p">Calcular presupuesto<span class="ar">→</span></a>
+          <a href="#" class="btn btn-wa" data-wa>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
+            WhatsApp
+          </a>
         </div>
       </div>
-    </section>
-  </main>
-
-  <footer class="site">
-    <div class="wrap">
-      <div class="inner">
-        <h3>Técnico en Reparación en General Ezequiel (Nuestro Servicios)</h3>
-        <p>Yerbal 2649, Flores, CABA · 011 2603-3651</p>
-        <div class="foot-links">
-          <a class="btn btn-primary" href="https://wa.me/5491126033651?text=Hola%20Ezequiel%2C%20te%20escribo%20por%20una%20reparaci%C3%B3n." target="_blank" rel="noopener">WhatsApp</a>
-          <a class="btn btn-secondary" href="#presupuesto">Calculadora de presupuesto</a>
+      <div class="media dipl rv">
+        <div class="hcar" id="hcar">
+          <img src="img/hero-taller.jpg" alt="Herramientas de reparación general sobre un banco de trabajo" fetchpriority="high">
+          <img src="img/aire.jpg" alt="Aire acondicionado split instalado en una pared" loading="lazy">
+          <img src="img/mantenimiento.jpg" alt="Herramientas de mantenimiento general en un hogar" loading="lazy">
         </div>
-        <p class="foot-meta">Muestra web armada a partir del perfil público de Google Maps.</p>
+        <div class="hdots rdots" id="hdots">
+          <button type="button" aria-label="Foto 1" class="on"></button>
+          <button type="button" aria-label="Foto 2"></button>
+          <button type="button" aria-label="Foto 3"></button>
+        </div>
+        <div class="cap">Ezequiel<small>Técnico en Reparación en General · Flores, CABA</small></div>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <a class="wa-float" href="https://wa.me/5491126033651?text=Hola%20Ezequiel%2C%20te%20escribo%20por%20una%20reparaci%C3%B3n." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11 11 0 006.2 19.3L5 22.9l3.7-1.2A11 11 0 0022.9 12 11 11 0 0020.5 3.5zm-8.5 17a9.1 9.1 0 01-4.6-1.3l-.3-.2-2.2.7.7-2.1-.2-.3A9.1 9.1 0 1112 20.5zm5-6.8c-.3-.1-1.6-.8-1.9-.9s-.4-.1-.6.1-.7.9-.8 1-.3.2-.6.1a7.4 7.4 0 01-2.2-1.3 8 8 0 01-1.5-1.9c-.2-.3 0-.4.1-.6l.3-.4.1-.3a.5.5 0 000-.5c0-.1-.6-1.5-.8-2s-.4-.5-.6-.5h-.5a1 1 0 00-.7.3 2.9 2.9 0 00-.9 2.2 5 5 0 001.1 2.6 11.6 11.6 0 004.4 4 14 14 0 001.4.5 3.3 3.3 0 001.5.1 2.5 2.5 0 001.7-1.1 2 2 0 00.1-1.1c-.1-.1-.3-.2-.6-.3z"/></svg>
-  </a>
+  <section class="wrap" id="como-trabajamos">
+    <div class="shead rv">
+      <div>
+        <span class="tag">Cómo trabajamos</span>
+        <h2 style="margin-top:14px">Cómo trabajamos</h2>
+        <p class="lead" style="margin-top:10px">Lo que priorizamos en cada visita, de forma clara y sin vueltas.</p>
+      </div>
+    </div>
+    <div class="ctraj">
+      <div class="card rv">
+        <div class="ic" aria-hidden="true">💬</div>
+        <h3>Te explicamos el trabajo</h3>
+        <p>Antes de empezar te contamos qué hay que hacer y te damos un estimado de referencia para que decidas con tranquilidad.</p>
+      </div>
+      <div class="card rv">
+        <div class="ic" aria-hidden="true">🔧</div>
+        <h3>Varios rubros, un técnico</h3>
+        <p>Según el perfil de Google: mantenimiento, aire acondicionado, electricidad, gas, celulares, seguridad y equipos de música.</p>
+      </div>
+      <div class="card rv">
+        <div class="ic" aria-hidden="true">📍</div>
+        <h3>En Flores, CABA</h3>
+        <p>El consultorio de atención está en Yerbal 2649, Flores, Comuna 7. Coordinamos día y horario por WhatsApp.</p>
+      </div>
+      <div class="card rv">
+        <div class="ic" aria-hidden="true">⭐</div>
+        <h3>Reseñas reales en Google</h3>
+        <p>5,0 sobre 5 con 45 opiniones en el perfil público. Las que ves arriba están copiadas tal cual, con el nombre de quien las escribió.</p>
+      </div>
+    </div>
+  </section>
 
-  <script>
-    (function () {
-      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      const WA = "https://wa.me/5491126033651?text=";
+  <section class="wrap" id="servicios">
+    <div class="shead rv">
+      <div>
+        <span class="tag">Servicios</span>
+        <h2 style="margin-top:14px">Qué trabajos se publican en Google</h2>
+        <p class="lead" style="margin-top:10px">Carrusel con las categorías del perfil. Podés deslizar o esperar: avanza solo.</p>
+      </div>
+    </div>
+    <div class="gcar rv" id="gcar" tabindex="0" aria-label="Carrusel de servicios">
+      <figure class="gs">
+        <img src="img/mantenimiento.jpg" alt="Herramientas de mantenimiento general en un hogar">
+        <figcaption>
+          <span>Mantenimiento general<small>Persona de mantenimiento</small></span>
+          <button class="cot" type="button" data-service="mantenimiento">Cotizar →</button>
+        </figcaption>
+      </figure>
+      <figure class="gs">
+        <img src="img/aire.jpg" alt="Aire acondicionado split instalado en una pared">
+        <figcaption>
+          <span>Aire acondicionado<small>Reparación de aire acondicionado</small></span>
+          <button class="cot" type="button" data-service="aire">Cotizar →</button>
+        </figcaption>
+      </figure>
+      <figure class="gs">
+        <img src="img/electricidad.jpg" alt="Herramientas y tablero para reparaciones eléctricas">
+        <figcaption>
+          <span>Electricidad<small>Taller de reparaciones eléctricas</small></span>
+          <button class="cot" type="button" data-service="electricidad">Cotizar →</button>
+        </figcaption>
+      </figure>
+      <figure class="gs">
+        <img src="img/gas.jpg" alt="Instalación de calefón a gas en un lavadero">
+        <figcaption>
+          <span>Instalación de gas<small>Instalador de gas</small></span>
+          <button class="cot" type="button" data-service="gas">Cotizar →</button>
+        </figcaption>
+      </figure>
+      <figure class="gs">
+        <img src="img/celulares.jpg" alt="Mesa de trabajo para reparación de teléfonos móviles">
+        <figcaption>
+          <span>Reparación de celulares<small>Teléfonos móviles</small></span>
+          <button class="cot" type="button" data-service="celulares">Cotizar →</button>
+        </figcaption>
+      </figure>
+      <figure class="gs">
+        <img src="img/hero-taller.jpg" alt="Banco de trabajo con herramientas de reparación">
+        <figcaption>
+          <span>Maquinaria y seguridad<small>También equipos de música</small></span>
+          <button class="cot" type="button" data-service="otros">Cotizar →</button>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="gdots" id="gdots">
+      <button type="button" class="on" aria-label="Servicio 1"></button>
+      <button type="button" aria-label="Servicio 2"></button>
+      <button type="button" aria-label="Servicio 3"></button>
+      <button type="button" aria-label="Servicio 4"></button>
+      <button type="button" aria-label="Servicio 5"></button>
+      <button type="button" aria-label="Servicio 6"></button>
+    </div>
+    <ul class="trat rv">
+      <li>Mantenimiento general</li>
+      <li>Aire acondicionado</li>
+      <li>Electricidad</li>
+      <li>Instalación de gas</li>
+      <li>Reparación de celulares</li>
+      <li>Sistemas de seguridad</li>
+      <li>Equipos de música</li>
+    </ul>
+  </section>
 
-      const JOBS = {
-        mantenimiento: { label: "Mantenimiento general", base: 45000 },
-        aire: { label: "Aire acondicionado", base: 70000 },
-        electricidad: { label: "Electricidad", base: 55000 },
-        gas: { label: "Instalación de gas", base: 80000 },
-        celulares: { label: "Reparación de celulares", base: 40000 },
-        otros: { label: "Maquinaria, seguridad u otro arreglo", base: 60000 }
-      };
-      const URGENCY = {
-        programado: { label: "Turno programado", mult: 1 },
-        inmediata: { label: "Lo antes posible", mult: 1.25 }
-      };
-      const SIZE = {
-        chico: { label: "Trabajo chico", mult: 0.8 },
-        medio: { label: "Trabajo mediano", mult: 1 },
-        grande: { label: "Trabajo grande / varios puntos", mult: 1.55 }
-      };
+  <section class="wrap" id="presupuesto">
+    <div class="ag-wrap">
+      <div class="rv">
+        <span class="tag">Presupuesto</span>
+        <h2 style="margin-top:14px">Calculá tu presupuesto por WhatsApp</h2>
+        <p class="lead" style="margin-top:10px">Elegí el tipo de trabajo, la urgencia y el tamaño. Se abre WhatsApp con el mensaje armado y Ezequiel te confirma el valor.</p>
+        <div class="avisos">
+          <div>Valores de referencia de ejemplo. El precio final lo confirma Ezequiel según el trabajo.</div>
+          <div>En Google Maps todavía no figuran horarios: la disponibilidad se coordina por WhatsApp.</div>
+        </div>
+      </div>
+      <form class="card ag rv" id="calc-form" novalidate>
+        <div>
+          <h3><span>1</span>Tipo de trabajo</h3>
+          <label class="pick">
+            <select id="tipo" name="tipo">
+              <option value="mantenimiento">Mantenimiento general</option>
+              <option value="aire">Aire acondicionado</option>
+              <option value="electricidad">Electricidad</option>
+              <option value="gas">Instalación de gas</option>
+              <option value="celulares">Reparación de celulares</option>
+              <option value="otros">Maquinaria, seguridad u otro arreglo</option>
+            </select>
+          </label>
+        </div>
+        <div>
+          <h3><span>2</span>Urgencia</h3>
+          <div class="chips" id="urg">
+            <button type="button" class="chip on" data-val="programado">Turno programado</button>
+            <button type="button" class="chip" data-val="inmediata">Lo antes posible</button>
+          </div>
+        </div>
+        <div>
+          <h3><span>3</span>Tamaño del trabajo</h3>
+          <div class="chips" id="tam">
+            <button type="button" class="chip" data-val="chico">Trabajo chico</button>
+            <button type="button" class="chip on" data-val="medio">Trabajo mediano</button>
+            <button type="button" class="chip" data-val="grande">Trabajo grande / varios puntos</button>
+          </div>
+        </div>
+        <div class="sum" id="sum"></div>
+        <button type="button" class="btn btn-p" id="go" style="justify-content:space-between">Enviar consulta por WhatsApp<span class="ar">→</span></button>
+        <p class="disc" style="text-align:center">Valores de referencia de ejemplo. El precio final lo confirma Ezequiel según el trabajo.</p>
+      </form>
+    </div>
+  </section>
 
-      function money(n) {
-        const rounded = Math.round(n / 1000) * 1000;
-        return "$" + rounded.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-      }
-      function val(name) {
-        const el = document.querySelector('[name="' + name + '"]:checked') || document.getElementById(name);
-        return el ? el.value : "";
-      }
-      function calc() {
-        const tipo = val("tipo") || "mantenimiento";
-        const urgencia = val("urgencia");
-        const tamano = val("tamano");
-        const mid = JOBS[tipo].base * URGENCY[urgencia].mult * SIZE[tamano].mult;
-        const priceText = money(mid * 0.88) + " – " + money(mid * 1.14);
-        document.getElementById("precio").textContent = priceText;
-        const msg = [
-          "Hola Ezequiel, te escribo para consultar un trabajo:",
-          "",
-          "Servicio: " + JOBS[tipo].label,
-          "Urgencia: " + URGENCY[urgencia].label,
-          "Tamaño: " + SIZE[tamano].label,
-          "",
-          "Rango de referencia de ejemplo: " + priceText,
-          "",
-          "¿Me confirmás disponibilidad y el valor? Gracias."
-        ].join("\n");
-        document.getElementById("wa-presupuesto").href = WA + encodeURIComponent(msg);
-      }
-      function goToCalc(service) {
-        const select = document.getElementById("tipo");
-        if (service && JOBS[service]) select.value = service;
-        calc();
-        document.getElementById("presupuesto").scrollIntoView({ behavior: prefersReduced ? "auto" : "smooth", block: "start" });
-        select.focus({ preventScroll: true });
-      }
-      document.getElementById("calc-form").addEventListener("change", calc);
-      document.querySelectorAll("[data-service]").forEach((btn) => {
-        btn.addEventListener("click", (ev) => {
-          ev.stopPropagation();
-          goToCalc(btn.getAttribute("data-service"));
-        });
+  <section class="wrap" id="contacto">
+    <div class="contact">
+      <div class="card cinfo rv">
+        <span class="tag" style="align-self:start">Contacto</span>
+        <h2 style="margin:12px 0 8px;font-size:clamp(28px,3.4vw,42px)">Cómo llegar</h2>
+        <a class="crow" href="https://wa.me/5491126033651?text=Hola%20Ezequiel%2C%20te%20escribo%20por%20una%20reparaci%C3%B3n." data-wa>
+          <span class="ic">💬</span>
+          <span><small>WhatsApp</small>+54 9 11 2603-3651</span>
+        </a>
+        <a class="crow" href="tel:+5491126033651">
+          <span class="ic">☎</span>
+          <span><small>Teléfono</small>011 2603-3651</span>
+        </a>
+        <div class="crow">
+          <span class="ic">⌖</span>
+          <span><small>Dirección</small>Yerbal 2649, flores 1604 1b, C1406GKG, CABA</span>
+        </div>
+        <div class="crow">
+          <span class="ic">📍</span>
+          <span><small>Zona</small>Flores, Comuna 7</span>
+        </div>
+        <div class="crow">
+          <span class="ic">◷</span>
+          <span><small>Horarios</small>No figuran en Google Maps. Coordiná por WhatsApp.</span>
+        </div>
+        <div class="cta" style="margin-top:16px">
+          <a class="btn btn-p" href="https://www.google.com/maps/dir/?api=1&amp;destination=Yerbal+2649,+Flores,+CABA" target="_blank" rel="noopener">Cómo llegar<span class="ar">→</span></a>
+          <a class="btn btn-s" href="https://maps.app.goo.gl/pYe3cmmtyHx7K7FT7" target="_blank" rel="noopener">Ver en Google Maps</a>
+        </div>
+      </div>
+      <div class="card map rv">
+        <iframe title="Mapa de Yerbal 2649, Flores, CABA" referrerpolicy="no-referrer-when-downgrade" loading="lazy" src="https://www.google.com/maps?q=Yerbal+2649,+Flores,+CABA&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="card foot">
+      <div>
+        <a href="#top" class="logo">
+          <span class="mono">E</span>
+          <span>Ezequiel<small>Reparación en general</small></span>
+        </a>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li>Yerbal 2649, Flores, CABA</li>
+          <li><a href="tel:+5491126033651">011 2603-3651</a></li>
+          <li><a href="https://wa.me/5491126033651?text=Hola%20Ezequiel%2C%20te%20escribo%20por%20una%20reparaci%C3%B3n." data-wa>+54 9 11 2603-3651</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Atajos</h4>
+        <ul>
+          <li><a href="#presupuesto">Calcular presupuesto</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="https://wa.me/5491126033651?text=Hola%20Ezequiel%2C%20te%20escribo%20por%20una%20reparaci%C3%B3n." data-wa>WhatsApp</a></li>
+          <li><a href="https://maps.app.goo.gl/pYe3cmmtyHx7K7FT7" target="_blank" rel="noopener">Google Maps</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>Técnico en Reparación en General Ezequiel (Nuestro Servicios)</span>
+      <span>Muestra web a partir del perfil público de Google Maps</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5491126033651?text=Hola%20Ezequiel%2C%20te%20escribo%20por%20una%20reparaci%C3%B3n." data-wa aria-label="WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg>
+</a>
+
+<script>
+  (function(){
+    const WHATSAPP = '5491126033651';
+    const waUrl = t => 'https://wa.me/5491126033651?text=' + encodeURIComponent(t);
+    const DEF = 'Hola Ezequiel, te escribo por una reparación.';
+    document.querySelectorAll('[data-wa]').forEach(a=>{a.href=waUrl(DEF);a.target='_blank';a.rel='noopener'});
+
+    const b=document.querySelector('.burger'), m=document.querySelector('.mmenu');
+    b.onclick=()=>{m.classList.toggle('on');b.setAttribute('aria-expanded',m.classList.contains('on'))};
+    m.querySelectorAll('a').forEach(a=>a.onclick=()=>m.classList.remove('on'));
+
+    const rv=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rv.unobserve(e.target)}}),{threshold:.08});
+    document.querySelectorAll('.rv').forEach(el=>rv.observe(el));
+
+    const hc=document.getElementById('hcar'), hd=[...document.querySelectorAll('#hdots button')];
+    hc.addEventListener('scroll',()=>{const i=Math.round(hc.scrollLeft/hc.clientWidth);hd.forEach((d,j)=>d.classList.toggle('on',i===j))},{passive:true});
+    hd.forEach((d,i)=>d.onclick=()=>hc.scrollTo({left:i*hc.clientWidth,behavior:'smooth'}));
+
+    const rc=document.getElementById('rcar'), rd=[...document.querySelectorAll('#rdots button')];
+    rc.addEventListener('scroll',()=>{const i=Math.round(rc.scrollLeft/Math.max(rc.firstElementChild.offsetWidth,1));rd.forEach((d,j)=>d.classList.toggle('on',i===j))},{passive:true});
+    rd.forEach((d,i)=>d.onclick=()=>rc.scrollTo({left:rc.children[i].offsetLeft-rc.offsetLeft,behavior:'smooth'}));
+
+    const JOBS = {
+      mantenimiento:{label:'Mantenimiento general',base:45000},
+      aire:{label:'Aire acondicionado',base:70000},
+      electricidad:{label:'Electricidad',base:55000},
+      gas:{label:'Instalación de gas',base:80000},
+      celulares:{label:'Reparación de celulares',base:40000},
+      otros:{label:'Maquinaria, seguridad u otro arreglo',base:60000}
+    };
+    const URGENCY={programado:{label:'Turno programado',mult:1},inmediata:{label:'Lo antes posible',mult:1.25}};
+    const SIZE={chico:{label:'Trabajo chico',mult:.8},medio:{label:'Trabajo mediano',mult:1},grande:{label:'Trabajo grande / varios puntos',mult:1.55}};
+    let urg='programado', tam='medio';
+
+    function money(n){
+      const rounded=Math.round(n/1000)*1000;
+      return '$'+rounded.toString().replace(/\B(?=(\d{3})+(?!\d))/g,'.');
+    }
+    function calc(){
+      const tipo=document.getElementById('tipo').value;
+      const mid=JOBS[tipo].base*URGENCY[urg].mult*SIZE[tam].mult;
+      const price=money(mid*.88)+' – '+money(mid*1.14);
+      document.getElementById('sum').innerHTML=JOBS[tipo].label+' · '+URGENCY[urg].label+' · '+SIZE[tam].label+'<b>'+price+'</b>';
+      return {tipo,price};
+    }
+    function chips(id,set){
+      document.querySelectorAll('#'+id+' .chip').forEach(c=>c.onclick=()=>{
+        document.querySelectorAll('#'+id+' .chip').forEach(x=>x.classList.remove('on'));
+        c.classList.add('on'); set(c.getAttribute('data-val')); calc();
       });
+    }
+    chips('urg',v=>urg=v);
+    chips('tam',v=>tam=v);
+    document.getElementById('tipo').onchange=calc;
+    document.getElementById('go').onclick=()=>{
+      const {tipo,price}=calc();
+      const msg=['Hola Ezequiel, te escribo para consultar un trabajo:','','Servicio: '+JOBS[tipo].label,'Urgencia: '+URGENCY[urg].label,'Tamaño: '+SIZE[tam].label,'','Rango de referencia de ejemplo: '+price,'','¿Me confirmás disponibilidad y el valor? Gracias.'].join('\n');
+      window.open(waUrl(msg),'_blank');
+    };
+    calc();
+
+    function goToCalc(service){
+      const sel=document.getElementById('tipo');
+      if(service && JOBS[service]) sel.value=service;
       calc();
+      document.getElementById('presupuesto').scrollIntoView({behavior:'smooth',block:'start'});
+    }
+    document.querySelectorAll('[data-service]').forEach(btn=>{
+      btn.addEventListener('click',ev=>{ev.stopPropagation();goToCalc(btn.getAttribute('data-service'));});
+    });
 
-      const root = document.getElementById("carousel");
-      const originals = Array.from(root.children);
-      const n = originals.length;
-      let index = 0;
-      let timer = null;
-      let paused = false;
-      let looping = false;
-
-      originals.forEach((slide) => {
-        const clone = slide.cloneNode(true);
-        clone.setAttribute("aria-hidden", "true");
-        clone.querySelectorAll("[data-service]").forEach((btn) => {
-          btn.addEventListener("click", (ev) => {
-            ev.stopPropagation();
-            goToCalc(btn.getAttribute("data-service"));
-          });
-        });
-        root.appendChild(clone);
+    const gc=document.getElementById('gcar');
+    const originals=[...gc.querySelectorAll('.gs')];
+    const n=originals.length;
+    const gdd=[...document.querySelectorAll('#gdots button')];
+    const prefersReduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    originals.forEach(slide=>{
+      const clone=slide.cloneNode(true);
+      clone.setAttribute('aria-hidden','true');
+      clone.querySelectorAll('[data-service]').forEach(btn=>{
+        btn.addEventListener('click',ev=>{ev.stopPropagation();goToCalc(btn.getAttribute('data-service'));});
       });
-
-      const dotsBox = document.getElementById("dots");
-      dotsBox.hidden = false;
-      const dots = originals.map((_, i) => {
-        const b = document.createElement("button");
-        b.type = "button";
-        b.setAttribute("aria-label", "Ir al servicio " + (i + 1));
-        b.addEventListener("click", () => { go(i, true); pauseTemp(); });
-        dotsBox.appendChild(b);
-        return b;
-      });
-
-      function slideWidth() {
-        const first = root.children[0];
-        if (!first) return root.clientWidth;
-        const gap = parseFloat(getComputedStyle(root).gap) || 0;
-        return first.getBoundingClientRect().width + gap;
-      }
-      function setDot() {
-        dots.forEach((d, i) => d.setAttribute("aria-current", i === ((index % n) + n) % n ? "true" : "false"));
-      }
-      function go(i, smooth) {
-        index = i;
-        looping = true;
-        root.scrollTo({ left: slideWidth() * (index % (n * 2)), behavior: smooth && !prefersReduced ? "smooth" : "auto" });
-        setDot();
-        setTimeout(() => { looping = false; }, 400);
-      }
-      function next() {
-        if (paused) return;
-        index += 1;
-        looping = true;
-        root.scrollTo({ left: slideWidth() * index, behavior: prefersReduced ? "auto" : "smooth" });
-        setDot();
-        if (index >= n) {
-          setTimeout(() => {
-            const prev = root.style.scrollBehavior;
-            root.style.scrollBehavior = "auto";
-            index = index % n;
-            root.scrollLeft = slideWidth() * index;
-            root.style.scrollBehavior = prev || "";
-            setDot();
-            looping = false;
-          }, 480);
-        } else {
-          setTimeout(() => { looping = false; }, 400);
-        }
-      }
-      function start() {
-        stop();
-        if (prefersReduced || paused) return;
-        timer = setInterval(next, 1500);
-      }
-      function stop() {
-        if (timer) { clearInterval(timer); timer = null; }
-      }
-      function pauseTemp() {
-        paused = true;
-        stop();
-        clearTimeout(pauseTemp._t);
-        pauseTemp._t = setTimeout(() => { paused = false; start(); }, 2500);
-      }
-      function onInteract() { pauseTemp(); }
-
-      root.addEventListener("pointerdown", () => { paused = true; stop(); });
-      root.addEventListener("pointerup", pauseTemp);
-      root.addEventListener("pointercancel", pauseTemp);
-      root.addEventListener("touchstart", () => { paused = true; stop(); }, { passive: true });
-      root.addEventListener("touchend", pauseTemp);
-      root.addEventListener("mouseenter", () => { paused = true; stop(); });
-      root.addEventListener("mouseleave", () => { paused = false; start(); });
-      root.addEventListener("scroll", () => {
-        if (looping) return;
-        const w = slideWidth();
-        if (!w) return;
-        let i = Math.round(root.scrollLeft / w);
-        if (i >= n) {
-          root.style.scrollBehavior = "auto";
-          i = i % n;
-          root.scrollLeft = w * i;
-          root.style.scrollBehavior = "";
-        }
-        index = i;
-        setDot();
-      }, { passive: true });
-
+      gc.appendChild(clone);
+    });
+    function centerLeft(el){
+      return el.offsetLeft-gc.offsetLeft-(gc.clientWidth-el.offsetWidth)/2;
+    }
+    let index=0, timer=null, paused=false, looping=false;
+    function setDot(){gdd.forEach((d,j)=>d.classList.toggle('on',j===((index%n)+n)%n));}
+    function go(i,smooth){
+      index=i;
+      const el=gc.children[index];
+      if(!el) return;
+      looping=true;
+      gc.scrollTo({left:centerLeft(el),behavior:smooth&&!prefersReduced?'smooth':'auto'});
       setDot();
-      start();
-      window.addEventListener("resize", () => { go(((index % n) + n) % n, false); });
-    })();
-  </script>
+      setTimeout(()=>{looping=false;},450);
+    }
+    function next(){
+      if(paused) return;
+      index+=1;
+      const el=gc.children[index];
+      if(!el) return;
+      looping=true;
+      gc.scrollTo({left:centerLeft(el),behavior:prefersReduced?'auto':'smooth'});
+      setDot();
+      if(index>=n){
+        setTimeout(()=>{
+          index=index%n;
+          gc.style.scrollBehavior='auto';
+          gc.scrollLeft=centerLeft(gc.children[index]);
+          gc.style.scrollBehavior='';
+          setDot();
+          looping=false;
+        },480);
+      }else{
+        setTimeout(()=>{looping=false;},400);
+      }
+    }
+    function start(){
+      stop();
+      if(prefersReduced||paused) return;
+      timer=setInterval(next,1500);
+    }
+    function stop(){if(timer){clearInterval(timer);timer=null;}}
+    function pauseTemp(){
+      paused=true; stop();
+      clearTimeout(pauseTemp._t);
+      pauseTemp._t=setTimeout(()=>{paused=false;start();},2500);
+    }
+    gc.addEventListener('pointerdown',()=>{paused=true;stop();});
+    gc.addEventListener('pointerup',pauseTemp);
+    gc.addEventListener('pointercancel',pauseTemp);
+    gc.addEventListener('touchstart',()=>{paused=true;stop();},{passive:true});
+    gc.addEventListener('touchend',pauseTemp);
+    gc.addEventListener('mouseenter',()=>{paused=true;stop();});
+    gc.addEventListener('mouseleave',()=>{paused=false;start();});
+    gc.addEventListener('scroll',()=>{
+      if(looping) return;
+      const kids=[...gc.children];
+      let best=0,bestD=Infinity;
+      kids.forEach((el,i)=>{
+        const mid=el.offsetLeft+el.offsetWidth/2;
+        const d=Math.abs(mid-(gc.scrollLeft+gc.clientWidth/2+gc.offsetLeft));
+        if(d<bestD){bestD=d;best=i;}
+      });
+      if(best>=n){
+        index=best%n;
+        gc.style.scrollBehavior='auto';
+        gc.scrollLeft=centerLeft(gc.children[index]);
+        gc.style.scrollBehavior='';
+      }else{
+        index=best;
+      }
+      setDot();
+    },{passive:true});
+    gdd.forEach((d,i)=>d.onclick=()=>{go(i,true);pauseTemp();});
+    go(0,false);
+    start();
+  })();
+</script>
 </body>
 </html>
