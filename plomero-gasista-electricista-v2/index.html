@@ -48,7 +48,8 @@ p.lead{color:var(--muted);font-size:15.5px;max-width:560px}
 @media(max-width:420px){.logo{font-size:12.5px;gap:8px}.logo-m{width:30px;height:30px}.nav .btn{padding:8px 12px;font-size:12px}}
 
 /* HERO */
-.hero{padding:56px 0 40px}
+.hero{padding:56px 0 40px;position:relative;isolation:isolate;background:linear-gradient(90deg,rgba(245,241,234,.95) 0%,rgba(245,241,234,.88) 42%,rgba(245,241,234,.5) 72%,rgba(234,215,217,.35) 100%),url(img-hero.jpg) center/cover no-repeat}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:60px;background:linear-gradient(rgba(245,241,234,0),var(--bg));z-index:-1}
 .hero-g{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
 .kicker{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;color:var(--acc);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 12px 6px 8px}
 .kicker b{background:var(--acc);color:#fff;border-radius:999px;padding:2px 8px;font-size:11.5px}
@@ -89,6 +90,7 @@ p.lead{color:var(--muted);font-size:15.5px;max-width:560px}
 .rdots i.on{width:22px;background:var(--acc)}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
 @media(max-width:900px){.hero-g{grid-template-columns:1fr;gap:30px}.stage{min-height:360px}}
+@media(max-width:900px){.hero{background:linear-gradient(180deg,rgba(245,241,234,.94) 0%,rgba(245,241,234,.86) 48%,rgba(245,241,234,.5) 75%,rgba(245,241,234,.75) 100%),url(img-hero.jpg) center/cover no-repeat}}
 @media(max-width:560px){.hero{padding:34px 0 26px}.stage{min-height:330px}.rev-stack{height:262px}.fc.s1{left:0;bottom:-2%}.fc.s2{right:0;top:-4%}section{padding:58px 0}}
 
 /* TRUST */
@@ -99,11 +101,15 @@ p.lead{color:var(--muted);font-size:15.5px;max-width:560px}
 
 /* SERVICES */
 .svc-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px}
-.svc{position:relative;overflow:hidden;border-radius:26px;padding:24px 22px 22px;min-height:380px;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
+.svc{position:relative;overflow:hidden;border-radius:26px;padding:0 22px 22px;min-height:520px;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
 .svc:hover{transform:translateY(-4px);box-shadow:0 28px 50px -26px rgba(43,37,34,.45)}
 .svc .bg{position:absolute;right:-28px;bottom:-28px;width:170px;height:170px;opacity:.12;pointer-events:none}
 .svc .bg svg{width:100%;height:100%}
-.svc .ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;margin-bottom:18px}
+.svc .ph{position:relative;margin:0 -22px 0;height:170px;overflow:hidden}
+.svc .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
+.svc:hover .ph img{transform:scale(1.05)}
+.svc .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(122,31,43,.08) 40%,var(--cbg) 100%)}
+.svc .ic{position:relative;z-index:1;width:46px;height:46px;border-radius:14px;display:grid;place-items:center;margin:-23px 0 14px;box-shadow:0 10px 20px -10px rgba(43,37,34,.5)}
 .svc .ic svg{width:22px;height:22px}
 .svc .n{font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.75}
 .svc h3{font-size:22px;font-weight:800;letter-spacing:-.03em;margin:4px 0 8px}
@@ -111,15 +117,16 @@ p.lead{color:var(--muted);font-size:15.5px;max-width:560px}
 .svc ul{list-style:none;display:grid;gap:7px;margin-top:auto;position:relative}
 .svc li{display:flex;gap:8px;align-items:flex-start;font-size:13.5px;font-weight:600;line-height:1.35}
 .svc li::before{content:"";width:6px;height:6px;border-radius:50%;margin-top:6px;flex:none;background:currentColor;opacity:.6}
-.svc.c1{background:var(--acc);color:#fff}.svc.c1 .ic{background:rgba(255,255,255,.14);color:#fff}
+.svc.c1{--cbg:var(--acc)}.svc.c2{--cbg:var(--rose)}.svc.c3{--cbg:var(--acc2)}.svc.c4{--cbg:var(--sand)}
+.svc.c1{background:var(--acc);color:#fff}.svc.c1 .ic{background:var(--acc3);color:#fff}
 .svc.c2{background:var(--rose);color:var(--ink)}.svc.c2 .ic{background:var(--card);color:var(--acc)}
-.svc.c3{background:var(--acc2);color:#fff}.svc.c3 .ic{background:rgba(255,255,255,.16);color:#fff}
+.svc.c3{background:var(--acc2);color:#fff}.svc.c3 .ic{background:var(--acc);color:#fff}
 .svc.c4{background:var(--sand);color:var(--ink)}.svc.c4 .ic{background:var(--card);color:var(--acc)}
 .svc-dots{display:none}
 @media(max-width:1000px){
  .svc-row{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding:4px 18px 8px;margin-left:-18px;margin-right:-18px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
  .svc-row::-webkit-scrollbar{display:none}
- .svc{flex:0 0 46%;scroll-snap-align:start;scroll-margin-left:18px;min-height:360px}
+ .svc{flex:0 0 46%;scroll-snap-align:start;scroll-margin-left:18px;min-height:500px}
  .svc-dots{display:flex;gap:6px;justify-content:center;margin-top:16px}
  .svc-dots i{width:6px;height:6px;border-radius:99px;background:#d6c9bd;transition:all .3s}
  .svc-dots i.on{width:22px;background:var(--acc)}
@@ -318,7 +325,7 @@ footer b{color:var(--ink)}
 </section>
 </main>
 
-<footer><div class="wrap ft"><div><b id="brandF"></b> · Plomería, gas, electricidad y albañilería</div><div>Santander 500, Parque Chacabuco, CABA · WhatsApp 11 5834 6553 · © 2026</div></div></footer>
+<footer><div class="wrap ft"><div><b id="brandF"></b> · Plomería, gas, electricidad y albañilería</div><div>Santander 500, Parque Chacabuco, CABA · WhatsApp 11 5834 6553 · © 2026</div><div style="flex-basis:100%;font-size:11px;opacity:.75">Fotos: Unsplash y Wikimedia Commons (CC0; ladrillos: Dmitry Makeev, CC BY-SA 4.0).</div></div></footer>
 <a class="fab wa-link" href="#" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg><use href="#wa"/></svg></a>
 
 <script>
@@ -337,10 +344,10 @@ var revs=[
 ];
 /* Servicios (listas del folleto) */
 var svcs=[
- {ic:'pipe',h:'Plomería',p:'Agua, cañerías y sanitarios.',l:['Arreglos de fugas','Cambio de cañerías','Instalación de sanitarios','Destape de desagües','Instalación de llaves y griferías']},
- {ic:'flame',h:'Gas',p:'Instalaciones y artefactos a gas.',l:['Reparación de fugas','Instalación de cocinas y calefones','Cambio de reguladores','Revisión de instalaciones','Habilitaciones']},
- {ic:'bolt',h:'Electricidad',p:'Domiciliaria y comercial.',l:['Instalación de tableros','Cambio de llaves y tomas','Reparación de cortocircuitos','Iluminación','Instalaciones domiciliarias y comerciales']},
- {ic:'brick',h:'Albañilería',p:'Arreglos y reformas.',l:['Revoques','Humedad','Cerámicos','Arreglos']}
+ {ic:'pipe',img:'img-plomeria.jpg',h:'Plomería',p:'Agua, cañerías y sanitarios.',l:['Arreglos de fugas','Cambio de cañerías','Instalación de sanitarios','Destape de desagües','Instalación de llaves y griferías']},
+ {ic:'flame',img:'img-gas.jpg',h:'Gas',p:'Instalaciones y artefactos a gas.',l:['Reparación de fugas','Instalación de cocinas y calefones','Cambio de reguladores','Revisión de instalaciones','Habilitaciones']},
+ {ic:'bolt',img:'img-electricidad.jpg',h:'Electricidad',p:'Domiciliaria y comercial.',l:['Instalación de tableros','Cambio de llaves y tomas','Reparación de cortocircuitos','Iluminación','Instalaciones domiciliarias y comerciales']},
+ {ic:'brick',img:'img-albanileria.jpg',h:'Albañilería',p:'Arreglos y reformas.',l:['Revoques','Humedad','Cerámicos','Arreglos']}
 ];
 /* Calculadora (valores de referencia, en pesos) */
 var cats=[
@@ -372,7 +379,7 @@ revs.forEach(function(r){g.insertAdjacentHTML('beforeend','<article class="rg rv
 /* Servicios */
 var row=document.getElementById('svcRow'),sd=document.getElementById('svcDots');
 svcs.forEach(function(s,i){
- row.insertAdjacentHTML('beforeend','<article class="svc c'+(i%4+1)+'"><div class="bg"><svg><use href="#'+s.ic+'"/></svg></div><div class="ic"><svg><use href="#'+s.ic+'"/></svg></div><div class="n">0'+(i+1)+'</div><h3>'+s.h+'</h3><p>'+s.p+'</p><ul>'+s.l.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul></article>');
+ row.insertAdjacentHTML('beforeend','<article class="svc c'+(i%4+1)+'"><div class="bg"><svg><use href="#'+s.ic+'"/></svg></div>'+(s.img?'<div class="ph"><img src="'+s.img+'" alt="'+s.h+'" loading="lazy" width="1000" height="560"></div>':'')+'<div class="ic"><svg><use href="#'+s.ic+'"/></svg></div><div class="n">0'+(i+1)+'</div><h3>'+s.h+'</h3><p>'+s.p+'</p><ul>'+s.l.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul></article>');
  sd.insertAdjacentHTML('beforeend','<i></i>');
 });
 var si=0,paused=false;
