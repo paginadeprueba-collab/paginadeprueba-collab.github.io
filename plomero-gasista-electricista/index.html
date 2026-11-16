@@ -353,9 +353,9 @@ showRev();setInterval(function(){ri=(ri+1)%revs.length;showRev();},1500);
 /* Servicios */
 var svcs=[
  /* Para agregar una foto: completar img con la ruta, por ejemplo img:'plomeria.jpg' */
- {ic:'pipe',t:'Agua',h:'Plomería',img:'',p:'Pérdidas, destapaciones y cambio de cañerías, griferías y sanitarios.',l:['Pérdidas de agua','Destapaciones','Griferías','Cañerías']},
- {ic:'flame',t:'Instalaciones',h:'Gas',img:'',p:'Reparación y mantenimiento de instalaciones y artefactos a gas.',l:['Pérdidas de gas','Calefones y termotanques','Estufas','Cocinas'],dark:1},
- {ic:'bolt',t:'Instalaciones',h:'Electricidad',img:'',p:'Arreglos eléctricos a domicilio: cortes, tomas, luces y tableros.',l:['Cortes y fallas','Tomas y llaves','Luminarias','Tableros']},
+ {ic:'pipe',t:'Agua',h:'Plomería',img:'',p:'Pérdidas, destapaciones y cambio de cañerías, griferías y sanitarios.',l:['Arreglos de fugas','Cambio de cañerías','Instalación de sanitarios','Destape de desagües','Instalación de llaves y griferías']},
+ {ic:'flame',t:'Instalaciones',h:'Gas',img:'',p:'Reparación y mantenimiento de instalaciones y artefactos a gas.',l:['Reparación de fugas','Instalación de cocinas y calefones','Cambio de reguladores','Revisión de instalaciones','Habilitaciones'],dark:1},
+ {ic:'bolt',t:'Instalaciones',h:'Electricidad',img:'',p:'Arreglos eléctricos a domicilio: cortes, tomas, luces y tableros.',l:['Instalación de tableros','Cambio de llaves y tomas','Reparación de cortocircuitos','Iluminación','Instalaciones domiciliarias y comerciales']},
  {ic:'brick',t:'Obra',h:'Albañilería',img:'',p:'Arreglos y reformas: paredes, revoques, humedad y cerámicos.',l:['Revoques','Humedad','Cerámicos','Arreglos'],dark:1}
 ];
 var st=document.getElementById('svcTrack'),sd=document.getElementById('svcDots'),sv=document.getElementById('svcView');
@@ -380,9 +380,9 @@ window.addEventListener('resize',showSvc);showSvc();
 
 /* Calculadora (valores de referencia, en pesos) */
 var cats=[
- {n:'Plomería',c:'Plomería',d:'Agua y cañerías',j:[['Reparación de pérdida',30000],['Destapación',35000],['Cambio de grifería',30000],['Reparación de cañería',80000]]},
- {n:'Gas',c:'Gas',d:'Instalación y artefactos',j:[['Detección de pérdida',45000],['Calefón o termotanque',50000],['Service de estufa',40000],['Conexión de cocina',55000]]},
- {n:'Electricidad',c:'Electricidad',d:'A domicilio',j:[['Arreglo eléctrico (tomas, luces)',30000],['Corte o falla eléctrica',40000],['Instalación de luminaria',25000],['Cambio de tablero',90000]]},
+ {n:'Plomería',c:'Plomería',d:'Agua y cañerías',j:[['Arreglo de fuga',30000],['Destape de desagüe',35000],['Instalación de llaves y griferías',30000],['Cambio de cañería',80000]]},
+ {n:'Gas',c:'Gas',d:'Instalación y artefactos',j:[['Reparación de fuga',45000],['Instalación de calefón',50000],['Revisión de instalación',40000],['Instalación de cocina',55000]]},
+ {n:'Electricidad',c:'Electricidad',d:'A domicilio',j:[['Cambio de llaves y tomas',30000],['Reparación de cortocircuito',40000],['Iluminación',25000],['Instalación de tablero',90000]]},
  {n:'Albañilería',c:'Albañilería',d:'Arreglos y reformas',j:[['Arreglo de humedad (por m²)',25000],['Revoque (por m²)',20000],['Colocación de cerámicos (por m²)',22000],['Arreglos menores',40000]]}
 ];
 var URG=[[1,'Esta semana'],[1.15,'En 24-48 h'],[1.3,'Hoy mismo']];
