@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plomero, Electricista y Gasista en CABA | Tu hogar en buenas manos</title>
+<meta name="description" content="Plomería, gas, electricidad y albañilería en toda CABA. Base en Parque Chacabuco. Trabajo garantizado, responsabilidad y puntualidad. 5,0 ★ en Google.">
+<meta name="theme-color" content="#7A1F2B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{overflow-x:clip;max-width:100%}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+:root{--bg:#F5F1EA;--card:#FBF8F3;--ink:#2B2522;--muted:#6F6560;--line:#E6DED3;--acc:#7A1F2B;--acc2:#A23B47;--acc3:#5E1720;--rose:#EAD7D9;--sand:#EDE3D6;--r:22px;--sh:0 1px 2px rgba(43,37,34,.04),0 14px 34px -16px rgba(43,37,34,.18)}
+body{font-family:'Plus Jakarta Sans',Manrope,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+svg{display:block}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 18px}
+section{padding:76px 0}
+.pill-l{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:var(--acc);background:var(--rose);border-radius:999px;padding:6px 14px;letter-spacing:.02em}
+h2.title{font-size:clamp(25px,4vw,38px);line-height:1.14;font-weight:800;letter-spacing:-.035em;margin:14px 0 10px;max-width:760px}
+.hl{color:var(--acc)}
+p.lead{color:var(--muted);font-size:15.5px;max-width:560px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:13px 22px;font-weight:700;font-size:14.5px;border:1.5px solid transparent;cursor:pointer;transition:transform .2s,background .2s,color .2s,box-shadow .2s}
+.btn:active{transform:scale(.97)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-acc{background:var(--acc);color:#fff;box-shadow:0 12px 26px -12px rgba(122,31,43,.65)}
+.btn-acc:hover{background:var(--acc3)}
+.btn-out{border-color:var(--acc);color:var(--acc);background:transparent}
+.btn-out:hover{background:var(--acc);color:#fff}
+.lnk{font-weight:700;font-size:14.5px;color:var(--ink);display:inline-flex;align-items:center;gap:6px;border-bottom:1.5px solid var(--line);padding:4px 0}
+.lnk:hover{border-color:var(--acc);color:var(--acc)}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:50;background:rgba(245,241,234,.86);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid rgba(230,222,211,.7)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:12px;height:66px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:15px;letter-spacing:-.02em;white-space:nowrap;min-width:0}
+.logo-m{width:34px;height:34px;border-radius:10px;background:var(--acc);color:#fff;display:grid;place-items:center;flex:none}
+.logo-m svg{width:18px;height:18px}
+.nav-links{display:flex;gap:4px}
+.nav-links a{padding:8px 12px;border-radius:999px;font-weight:600;font-size:13.5px;color:var(--muted);transition:.2s}
+.nav-links a:hover{color:var(--acc);background:var(--rose)}
+.nav .btn{padding:9px 16px;font-size:13px}
+@media(max-width:940px){.nav-links{display:none}}
+@media(max-width:420px){.logo{font-size:12.5px;gap:8px}.logo-m{width:30px;height:30px}.nav .btn{padding:8px 12px;font-size:12px}}
+
+/* HERO */
+.hero{padding:56px 0 40px}
+.hero-g{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;color:var(--acc);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 12px 6px 8px}
+.kicker b{background:var(--acc);color:#fff;border-radius:999px;padding:2px 8px;font-size:11.5px}
+.hero h1{font-size:clamp(32px,5.4vw,56px);line-height:1.04;font-weight:800;letter-spacing:-.045em;margin:18px 0 16px}
+.hero h1 em{font-style:normal;color:var(--acc);position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.18em;background:var(--rose);z-index:-1;border-radius:4px}
+.hero p.sub{font-size:clamp(15px,1.8vw,17px);color:var(--muted);max-width:480px}
+.hero-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-top:26px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.tags span{font-size:12.5px;font-weight:600;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 12px;color:var(--ink)}
+.tags span.a{background:var(--rose);border-color:var(--rose);color:var(--acc)}
+
+.stage{position:relative;min-height:440px;display:grid;place-items:center}
+.rings{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none}
+.rings i{position:absolute;border-radius:50%;border:1px solid rgba(122,31,43,.14)}
+.rings i:nth-child(1){width:min(440px,96%);aspect-ratio:1}
+.rings i:nth-child(2){width:min(330px,74%);aspect-ratio:1;border-color:rgba(122,31,43,.2)}
+.rings i:nth-child(3){width:min(220px,50%);aspect-ratio:1;background:radial-gradient(circle,rgba(234,215,217,.9),rgba(234,215,217,0) 70%);border:0}
+.rev-stack{position:relative;width:min(380px,100%);height:250px;z-index:2}
+.rcard{position:absolute;inset:0;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:22px 22px 18px;box-shadow:0 30px 60px -28px rgba(43,37,34,.45);display:flex;flex-direction:column;justify-content:space-between;opacity:0;transform:translateY(14px) scale(.97);transition:opacity .35s ease,transform .35s ease}
+.rcard.on{opacity:1;transform:none}
+.rc-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.rc-score{display:flex;align-items:baseline;gap:6px}
+.rc-score b{font-size:30px;font-weight:800;letter-spacing:-.04em;color:var(--acc);line-height:1}
+.rc-score span{font-size:12px;color:var(--muted);font-weight:600}
+.st{color:var(--acc2);letter-spacing:2px;font-size:15px}
+.rcard q{display:block;font-size:clamp(16px,2.1vw,19px);font-weight:700;line-height:1.35;letter-spacing:-.02em;quotes:"“" "”";margin:10px 0}
+.who{display:flex;align-items:center;gap:10px}
+.av{width:36px;height:36px;border-radius:50%;background:var(--acc);color:#fff;display:grid;place-items:center;font-weight:800;font-size:14px;flex:none}
+.who b{display:block;font-size:13.5px}.who small{font-size:11.5px;color:var(--muted)}
+.fc{position:absolute;z-index:3;background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--sh);padding:12px 14px;font-size:12px;color:var(--muted);font-weight:600;animation:bob 6s ease-in-out infinite}
+.fc b{display:block;color:var(--ink);font-size:17px;font-weight:800;letter-spacing:-.02em}
+.fc.s1{left:-2%;bottom:6%}
+.fc.s2{right:-2%;top:4%;display:flex;align-items:center;gap:8px;border-radius:999px;padding:9px 14px;color:var(--acc);font-weight:700;animation-delay:-3s}
+.fc.s2 i{width:8px;height:8px;border-radius:50%;background:var(--acc2);box-shadow:0 0 0 4px var(--rose)}
+.rdots{position:absolute;bottom:-26px;left:0;right:0;display:flex;gap:6px;justify-content:center;z-index:3}
+.rdots i{width:6px;height:6px;border-radius:99px;background:#d6c9bd;transition:all .3s}
+.rdots i.on{width:22px;background:var(--acc)}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@media(max-width:900px){.hero-g{grid-template-columns:1fr;gap:30px}.stage{min-height:360px}}
+@media(max-width:560px){.hero{padding:34px 0 26px}.stage{min-height:330px}.rev-stack{height:262px}.fc.s1{left:0;bottom:-2%}.fc.s2{right:0;top:-4%}section{padding:58px 0}}
+
+/* TRUST */
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0}
+.trust-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px 22px}
+.trust-row div{display:flex;align-items:center;gap:9px;font-weight:700;font-size:14px;color:var(--muted)}
+.trust-row svg{width:20px;height:20px;color:var(--acc)}
+
+/* SERVICES */
+.svc-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px}
+.svc{position:relative;overflow:hidden;border-radius:26px;padding:24px 22px 22px;min-height:380px;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
+.svc:hover{transform:translateY(-4px);box-shadow:0 28px 50px -26px rgba(43,37,34,.45)}
+.svc .bg{position:absolute;right:-28px;bottom:-28px;width:170px;height:170px;opacity:.12;pointer-events:none}
+.svc .bg svg{width:100%;height:100%}
+.svc .ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;margin-bottom:18px}
+.svc .ic svg{width:22px;height:22px}
+.svc .n{font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.75}
+.svc h3{font-size:22px;font-weight:800;letter-spacing:-.03em;margin:4px 0 8px}
+.svc p{font-size:13.5px;opacity:.85;margin-bottom:14px}
+.svc ul{list-style:none;display:grid;gap:7px;margin-top:auto;position:relative}
+.svc li{display:flex;gap:8px;align-items:flex-start;font-size:13.5px;font-weight:600;line-height:1.35}
+.svc li::before{content:"";width:6px;height:6px;border-radius:50%;margin-top:6px;flex:none;background:currentColor;opacity:.6}
+.svc.c1{background:var(--acc);color:#fff}.svc.c1 .ic{background:rgba(255,255,255,.14);color:#fff}
+.svc.c2{background:var(--rose);color:var(--ink)}.svc.c2 .ic{background:var(--card);color:var(--acc)}
+.svc.c3{background:var(--acc2);color:#fff}.svc.c3 .ic{background:rgba(255,255,255,.16);color:#fff}
+.svc.c4{background:var(--sand);color:var(--ink)}.svc.c4 .ic{background:var(--card);color:var(--acc)}
+.svc-dots{display:none}
+@media(max-width:1000px){
+ .svc-row{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding:4px 18px 8px;margin-left:-18px;margin-right:-18px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+ .svc-row::-webkit-scrollbar{display:none}
+ .svc{flex:0 0 46%;scroll-snap-align:start;scroll-margin-left:18px;min-height:360px}
+ .svc-dots{display:flex;gap:6px;justify-content:center;margin-top:16px}
+ .svc-dots i{width:6px;height:6px;border-radius:99px;background:#d6c9bd;transition:all .3s}
+ .svc-dots i.on{width:22px;background:var(--acc)}
+}
+@media(max-width:620px){.svc{flex-basis:82%}}
+
+/* BAND / CALC */
+.band{position:relative;overflow:hidden;background:var(--acc);color:#fff;padding:80px 0}
+.band .wm{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:clamp(70px,16vw,200px);font-weight:800;letter-spacing:-.05em;color:rgba(255,255,255,.06);white-space:nowrap;pointer-events:none;line-height:1}
+.band-g{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.calc{background:var(--acc3);border:1px solid rgba(255,255,255,.1);border-radius:28px;padding:24px;box-shadow:0 40px 70px -30px rgba(40,8,14,.7)}
+.calc-h{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.calc-h b{font-size:16px;font-weight:800;letter-spacing:-.02em}
+.calc-h span{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#e9c9cd;background:rgba(255,255,255,.08);border-radius:999px;padding:4px 10px}
+.stp{margin-bottom:16px}
+.stp-l{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;color:#e9c9cd;margin-bottom:8px}
+.stp-l i{font-style:normal;width:20px;height:20px;border-radius:50%;background:#fff;color:var(--acc);display:grid;place-items:center;font-size:11px;font-weight:800}
+.opts{display:flex;flex-wrap:wrap;gap:7px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.opt span{display:inline-block;padding:9px 13px;border-radius:12px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);font-size:13px;font-weight:600;cursor:pointer;transition:all .18s;color:#f6e9ea}
+.opt input:checked+span{background:#fff;color:var(--acc);border-color:#fff}
+.opt input:focus-visible+span{outline:2px solid #fff;outline-offset:2px}
+.res{margin-top:18px;background:var(--card);color:var(--ink);border-radius:20px;padding:16px 18px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
+.res small{display:block;font-size:12px;color:var(--muted);font-weight:600}
+.res .price{font-size:clamp(26px,4vw,32px);font-weight:800;letter-spacing:-.04em;color:var(--acc);line-height:1.1}
+.res .btn{padding:11px 18px;font-size:13.5px}
+.note{font-size:12px;color:#e9c9cd;margin-top:12px}
+.band h2{font-size:clamp(26px,4vw,40px);line-height:1.1;font-weight:800;letter-spacing:-.035em;margin:14px 0 12px}
+.band .pill-l{background:rgba(255,255,255,.12);color:#fff}
+.band p.lead{color:#ecd3d6}
+.steps3{display:grid;gap:14px;margin-top:26px}
+.s3{display:flex;gap:14px;align-items:flex-start}
+.s3 .si{width:44px;height:44px;border-radius:14px;background:rgba(255,255,255,.12);display:grid;place-items:center;flex:none}
+.s3 .si svg{width:21px;height:21px}
+.s3 b{display:block;font-size:15.5px}
+.s3 p{font-size:13.5px;color:#ecd3d6}
+@media(max-width:900px){.band-g{grid-template-columns:1fr;gap:34px}.band-g .txt{order:-1}}
+@media(max-width:560px){.band{padding:58px 0}.calc{padding:18px}}
+
+/* REVIEWS GRID */
+.rv-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.score-big{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:14px 18px;box-shadow:var(--sh)}
+.score-big b{font-size:34px;font-weight:800;letter-spacing:-.04em;color:var(--acc);line-height:1}
+.score-big small{display:block;font-size:12px;color:var(--muted);font-weight:600}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.rg{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:14px;box-shadow:var(--sh)}
+.rg q{font-size:15px;font-weight:600;line-height:1.5;quotes:"“" "”";flex:1}
+.rg:nth-child(2){background:var(--rose);border-color:var(--rose)}
+@media(max-width:900px){.rgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.rgrid{grid-template-columns:1fr}}
+
+/* MAP / CONTACT */
+.map-g{display:grid;grid-template-columns:1.3fr .7fr;gap:16px;margin-top:30px}
+.map-box{border-radius:26px;overflow:hidden;min-height:360px;background:var(--sand);border:1px solid var(--line)}
+.map-box iframe{width:100%;height:100%;min-height:360px;border:0;display:block;filter:sepia(.15) saturate(.85)}
+.contact{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:24px;display:flex;flex-direction:column;gap:18px;box-shadow:var(--sh)}
+.ci{display:flex;gap:12px;align-items:flex-start}
+.ci .i2{width:42px;height:42px;border-radius:13px;background:var(--rose);color:var(--acc);display:grid;place-items:center;flex:none}
+.ci .i2 svg{width:20px;height:20px}
+.ci small{display:block;color:var(--muted);font-size:12px;font-weight:600}
+.ci b{font-size:15px}
+.contact .btn{width:100%;margin-top:auto}
+@media(max-width:900px){.map-g{grid-template-columns:1fr}.map-box,.map-box iframe{min-height:280px}}
+
+footer{border-top:1px solid var(--line);padding:26px 0 96px;color:var(--muted);font-size:13px}
+.ft{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+footer b{color:var(--ink)}
+.fab{position:fixed;right:16px;bottom:16px;z-index:60;width:56px;height:56px;border-radius:50%;background:var(--acc);color:#fff;display:grid;place-items:center;box-shadow:0 14px 30px -8px rgba(122,31,43,.6)}
+.fab svg{width:27px;height:27px}
+
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.fc{animation:none}}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></symbol>
+ <symbol id="wrench" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></symbol>
+ <symbol id="pipe" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M3 8h9a4 4 0 0 1 4 4v9M3 13h7a1 1 0 0 1 1 1v7M3 6v9M14 21h8"/></symbol>
+ <symbol id="flame" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 2s5.5 4.8 5.5 10.5a5.5 5.5 0 0 1-11 0c0-2.2 1.1-3.8 2.2-4.9 0 2.2 1.1 3.3 2.2 3.3C10.9 7.6 12 4.2 12 2z"/></symbol>
+ <symbol id="bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
+ <symbol id="brick" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M3 5h18v14H3zM3 9.7h18M3 14.3h18M9 5v4.7M15 5v4.7M6 9.7v4.6M12 9.7v4.6M18 9.7v4.6M9 14.3V19M15 14.3V19"/></symbol>
+ <symbol id="shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+ <symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+ <symbol id="pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+ <symbol id="star" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3-4.6-4.4 6.3-.9z"/></symbol>
+ <symbol id="list" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></symbol>
+ <symbol id="calc" viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 7h8M8.5 12h.01M12 12h.01M15.5 12h.01M8.5 16h.01M12 16h.01M15.5 16h.01" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+</svg>
+
+<header class="nav">
+ <div class="wrap nav-in">
+  <a href="#inicio" class="logo"><span class="logo-m"><svg><use href="#wrench"/></svg></span><span id="brand"></span></a>
+  <nav class="nav-links"><a href="#servicios">Servicios</a><a href="#como">Cómo trabajamos</a><a href="#resenas">Reseñas</a><a href="#presupuesto">Presupuesto</a><a href="#contacto">Contacto</a></nav>
+  <a class="btn btn-out wa-link" href="#" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>WhatsApp</a>
+ </div>
+</header>
+
+<main id="inicio">
+<section class="hero">
+ <div class="wrap hero-g">
+  <div>
+   <span class="kicker"><b>5,0 ★</b>8 reseñas en Google</span>
+   <h1>Tu hogar en <em>buenas manos</em>, con trabajo <em>garantizado</em>.</h1>
+   <p class="sub">Plomería, gas, electricidad y albañilería en toda CABA. Respuesta rápida, responsabilidad y puntualidad, desde Parque Chacabuco.</p>
+   <div class="hero-ctas">
+    <a class="btn btn-acc" href="#presupuesto">Calcular mi presupuesto</a>
+    <a class="lnk" href="#servicios">Ver servicios →</a>
+   </div>
+   <div class="tags"><span>Plomería</span><span>Gas</span><span>Electricidad</span><span>Albañilería</span><span class="a">Garantía</span><span class="a">Toda CABA</span></div>
+  </div>
+  <div class="stage" aria-label="Reseñas de clientes">
+   <div class="rings"><i></i><i></i><i></i></div>
+   <div class="rev-stack" id="revStack"><div class="rdots" id="revDots"></div></div>
+   <div class="fc s1"><b>4 rubros</b>en una sola visita</div>
+   <div class="fc s2"><i></i>Respuesta rápida</div>
+  </div>
+ </div>
+</section>
+
+<div class="trust">
+ <div class="wrap trust-row">
+  <div><svg><use href="#shield"/></svg>Trabajo garantizado</div>
+  <div><svg><use href="#clock"/></svg>Responsabilidad y puntualidad</div>
+  <div><svg><use href="#pin"/></svg>Atención en toda CABA</div>
+  <div><svg><use href="#star"/></svg>5,0 en Google</div>
+ </div>
+</div>
+
+<section id="servicios">
+ <div class="wrap">
+  <div class="rv"><span class="pill-l">Servicios</span>
+  <h2 class="title">Un solo técnico para <span class="hl">plomería, gas, electricidad</span> y <span class="hl">albañilería</span>.</h2>
+  <p class="lead">Resolvemos lo que tu casa necesita, con trabajos prolijos y en tiempo y forma.</p></div>
+  <div class="svc-row rv" id="svcRow"></div>
+  <div class="svc-dots" id="svcDots"></div>
+ </div>
+</section>
+
+<section class="band" id="presupuesto">
+ <div class="wm" aria-hidden="true">PRESUPUESTO</div>
+ <div class="wrap band-g">
+  <div class="calc rv" id="calc">
+   <div class="calc-h"><b>Calculadora de presupuesto</b><span>3 pasos</span></div>
+   <div class="stp"><div class="stp-l"><i>1</i>¿Qué rubro?</div><div class="opts" id="optCat"></div></div>
+   <div class="stp"><div class="stp-l"><i>2</i>¿Qué trabajo?</div><div class="opts" id="optJob"></div></div>
+   <div class="stp"><div class="stp-l"><i>3</i>¿Para cuándo?</div><div class="opts">
+    <label class="opt"><input type="radio" name="urg" value="0" checked><span>Esta semana</span></label>
+    <label class="opt"><input type="radio" name="urg" value="1"><span>En 24-48 h</span></label>
+    <label class="opt"><input type="radio" name="urg" value="2"><span>Hoy mismo</span></label>
+   </div></div>
+   <div class="res"><div><small>Precio estimado desde</small><div class="price" id="price">—</div></div><a class="btn btn-acc" id="calcWa" href="#" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Pedir por WhatsApp</a></div>
+   <p class="note">Valores de referencia, se confirman antes del trabajo.</p>
+  </div>
+  <div class="txt rv" id="como">
+   <span class="pill-l">Cómo trabajamos</span>
+   <h2>Pedí tu presupuesto en 3 pasos</h2>
+   <p class="lead">Sin vueltas: elegís, te pasamos el precio y coordinamos el día.</p>
+   <div class="steps3">
+    <div class="s3"><span class="si"><svg><use href="#list"/></svg></span><div><b>1. Elegí el servicio</b><p>Rubro y trabajo que necesitás.</p></div></div>
+    <div class="s3"><span class="si"><svg><use href="#calc"/></svg></span><div><b>2. Mirá el precio de referencia</b><p>Al instante, según el trabajo y la urgencia.</p></div></div>
+    <div class="s3"><span class="si"><svg><use href="#wa"/></svg></span><div><b>3. Mandalo por WhatsApp</b><p>Confirmamos el precio y vamos a tu casa.</p></div></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="resenas">
+ <div class="wrap">
+  <div class="rv-head rv">
+   <div><span class="pill-l">Reseñas</span><h2 class="title">Lo que dicen <span class="hl">nuestros clientes</span></h2><p class="lead">Opiniones reales de Google.</p></div>
+   <div class="score-big"><b>5,0</b><div><span class="st">★★★★★</span><small>8 reseñas en Google</small></div></div>
+  </div>
+  <div class="rgrid" id="revGrid"></div>
+ </div>
+</section>
+
+<section id="contacto" style="padding-top:0">
+ <div class="wrap">
+  <div class="rv"><span class="pill-l">Contacto</span>
+  <h2 class="title">Atención en <span class="hl">toda CABA</span></h2>
+  <p class="lead">Base en Parque Chacabuco · Vamos a tu casa en cualquier barrio de la Ciudad.</p></div>
+  <div class="map-g">
+   <div class="map-box rv"><iframe src="https://www.google.com/maps?q=Santander+500,+Parque+Chacabuco,+CABA&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa Santander 500, Parque Chacabuco"></iframe></div>
+   <div class="contact rv">
+    <div class="ci"><span class="i2"><svg><use href="#pin"/></svg></span><div><small>Base</small><b>Santander 500, Parque Chacabuco, CABA</b></div></div>
+    <div class="ci"><span class="i2"><svg><use href="#wa"/></svg></span><div><small>WhatsApp</small><b><a class="wa-link" href="#" target="_blank" rel="noopener">11 5834 6553</a></b></div></div>
+    <div class="ci"><span class="i2"><svg><use href="#shield"/></svg></span><div><small>Zona de trabajo</small><b>Toda CABA</b></div></div>
+    <a class="btn btn-acc wa-link" href="#" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Escribinos por WhatsApp</a>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer><div class="wrap ft"><div><b id="brandF"></b> · Plomería, gas, electricidad y albañilería</div><div>Santander 500, Parque Chacabuco, CABA · WhatsApp 11 5834 6553 · © 2026</div></div></footer>
+<a class="fab wa-link" href="#" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg><use href="#wa"/></svg></a>
+
+<script>
+(function(){
+/* ===== DATOS DEL CLIENTE (plantilla) ===== */
+var BRAND='Plomero · Electricista · Gasista';
+var WA='5491158346553';
+/* Reseñas reales de Google Maps */
+var revs=[
+ {n:'Julio',t:'Muy profesional. Solucionó mi problema en tiempo y forma! Altamente recomendable.'},
+ {n:'Alejandro',t:'Fue rápido en responder y venir a solucionar algo que todos me daban muchas vueltas. Ahora lo llamo para todo.'},
+ {n:'Georgi',t:'Excelente servicio y atención! Matías es súper amable y responsable!'},
+ {n:'Paula',t:'Excelente servicio, confiable y prolijo, muy recomendable.'},
+ {n:'Mónica',t:'Excelente servicio. 10/10. Súper recomendable.'},
+ {n:'Damaris',t:'Totalmente recomendable 👌 Y muy buena onda. Fue muy efectivo a la hora de trabajar, quedé muy conforme con el trabajo.'}
+];
+/* Servicios (listas del folleto) */
+var svcs=[
+ {ic:'pipe',h:'Plomería',p:'Agua, cañerías y sanitarios.',l:['Arreglos de fugas','Cambio de cañerías','Instalación de sanitarios','Destape de desagües','Instalación de llaves y griferías']},
+ {ic:'flame',h:'Gas',p:'Instalaciones y artefactos a gas.',l:['Reparación de fugas','Instalación de cocinas y calefones','Cambio de reguladores','Revisión de instalaciones','Habilitaciones']},
+ {ic:'bolt',h:'Electricidad',p:'Domiciliaria y comercial.',l:['Instalación de tableros','Cambio de llaves y tomas','Reparación de cortocircuitos','Iluminación','Instalaciones domiciliarias y comerciales']},
+ {ic:'brick',h:'Albañilería',p:'Arreglos y reformas.',l:['Revoques','Humedad','Cerámicos','Arreglos']}
+];
+/* Calculadora (valores de referencia, en pesos) */
+var cats=[
+ {n:'Plomería',j:[['Arreglo de fuga',30000],['Destape de desagüe',35000],['Instalación de llaves y griferías',30000],['Cambio de cañería',80000]]},
+ {n:'Gas',j:[['Reparación de fuga',45000],['Instalación de calefón',50000],['Revisión de instalación',40000],['Instalación de cocina',55000]]},
+ {n:'Electricidad',j:[['Cambio de llaves y tomas',30000],['Reparación de cortocircuito',40000],['Iluminación',25000],['Instalación de tablero',90000]]},
+ {n:'Albañilería',j:[['Arreglo de humedad (por m²)',25000],['Revoque (por m²)',20000],['Colocación de cerámicos (por m²)',22000],['Arreglos menores',40000]]}
+];
+var URG=[[1,'Esta semana'],[1.15,'En 24-48 h'],[1.3,'Hoy mismo']];
+
+/* ===== LÓGICA ===== */
+function wa(t){return 'https://wa.me/'+WA+'?text='+encodeURIComponent(t);}
+document.getElementById('brand').textContent=BRAND;document.getElementById('brandF').textContent=BRAND;
+document.querySelectorAll('.wa-link').forEach(function(a){a.href=wa('Hola, vi tu web y quiero consultar por un servicio.');});
+
+/* Carrusel de reseñas del hero (1,5 s) */
+var stack=document.getElementById('revStack'),rdots=document.getElementById('revDots');
+revs.forEach(function(r,i){
+ stack.insertAdjacentHTML('beforeend','<article class="rcard'+(i===0?' on':'')+'"><div><div class="rc-top"><div class="rc-score"><b>5,0</b><span>en Google · 8 reseñas</span></div><span class="st">★★★★★</span></div><q>'+r.t+'</q></div><div class="who"><span class="av">'+r.n[0]+'</span><div><b>'+r.n+'</b><small>Reseña de Google</small></div></div></article>');
+ rdots.insertAdjacentHTML('beforeend','<i'+(i===0?' class="on"':'')+'></i>');
+});
+var cards=stack.querySelectorAll('.rcard'),ri=0;
+setInterval(function(){cards[ri].classList.remove('on');rdots.children[ri].className='';ri=(ri+1)%cards.length;cards[ri].classList.add('on');rdots.children[ri].className='on';},1500);
+
+/* Grilla de reseñas */
+var g=document.getElementById('revGrid');
+revs.forEach(function(r){g.insertAdjacentHTML('beforeend','<article class="rg rv"><span class="st">★★★★★</span><q>'+r.t+'</q><div class="who"><span class="av">'+r.n[0]+'</span><div><b>'+r.n+'</b><small>Reseña de Google</small></div></div></article>');});
+
+/* Servicios */
+var row=document.getElementById('svcRow'),sd=document.getElementById('svcDots');
+svcs.forEach(function(s,i){
+ row.insertAdjacentHTML('beforeend','<article class="svc c'+(i%4+1)+'"><div class="bg"><svg><use href="#'+s.ic+'"/></svg></div><div class="ic"><svg><use href="#'+s.ic+'"/></svg></div><div class="n">0'+(i+1)+'</div><h3>'+s.h+'</h3><p>'+s.p+'</p><ul>'+s.l.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul></article>');
+ sd.insertAdjacentHTML('beforeend','<i></i>');
+});
+var si=0,paused=false;
+function mobile(){return window.innerWidth<=1000;}
+function dotsUpd(){var c=row.children[0];if(!c)return;var step=c.getBoundingClientRect().width+14;var max=Math.max(0,row.scrollWidth-row.clientWidth);var n=max<=2?1:Math.round(max/step)+1;[].forEach.call(sd.children,function(d,i){d.style.display=i<n?'':'none';});si=Math.min(n-1,Math.round(row.scrollLeft/step));[].forEach.call(sd.children,function(d,i){d.className=i===si?'on':'';});return n;}
+row.addEventListener('scroll',function(){dotsUpd();},{passive:true});
+row.addEventListener('touchstart',function(){paused=true;},{passive:true});
+row.addEventListener('touchend',function(){setTimeout(function(){paused=false;},4000);},{passive:true});
+setInterval(function(){if(!mobile()||paused)return;var n=dotsUpd();var c=row.children[0];var step=c.getBoundingClientRect().width+14;var nx=si+1>=n?0:si+1;row.scrollTo({left:nx*step,behavior:'smooth'});},2500);
+window.addEventListener('resize',dotsUpd);dotsUpd();
+
+/* Calculadora */
+var oc=document.getElementById('optCat'),oj=document.getElementById('optJob');
+cats.forEach(function(c,i){oc.insertAdjacentHTML('beforeend','<label class="opt"><input type="radio" name="cat" value="'+i+'"'+(i===0?' checked':'')+'><span>'+c.n+'</span></label>');});
+function val(n){return +document.querySelector('input[name="'+n+'"]:checked').value;}
+function fmt(n){return '$'+(Math.round(n/1000)*1000).toLocaleString('es-AR');}
+function fillJobs(){var c=cats[val('cat')];oj.innerHTML='';c.j.forEach(function(j,i){oj.insertAdjacentHTML('beforeend','<label class="opt"><input type="radio" name="job" value="'+i+'"'+(i===0?' checked':'')+'><span>'+j[0]+'</span></label>');});}
+function calc(){var c=cats[val('cat')],j=c.j[val('job')],u=URG[val('urg')];var p=j[1]*u[0];
+ document.getElementById('price').textContent=fmt(p);
+ document.getElementById('calcWa').href=wa('Hola, vi tu web y quiero un presupuesto:\n• Rubro: '+c.n+'\n• Trabajo: '+j[0]+'\n• Para: '+u[1]+'\n• Estimado de la web: desde '+fmt(p));}
+document.getElementById('calc').addEventListener('change',function(e){if(e.target.name==='cat')fillJobs();calc();});
+fillJobs();calc();
+
+/* Animación al hacer scroll */
+var els=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1});els.forEach(function(e){io.observe(e);});}
+else els.forEach(function(e){e.classList.add('in');});
+})();
+</script>
+</body>
+</html>
