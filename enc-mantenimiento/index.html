@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ENC Mantenimiento | Plomería, gas, albañilería y pintura en Capital y Provincia</title>
+<meta name="description" content="ENC Mantenimiento: plomería, gas, albañilería y pintura para tu casa. Base en Lomas del Mirador, trabajamos en Capital Federal y Provincia de Buenos Aires.">
+<meta name="theme-color" content="#0a1020">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{overflow-x:clip;max-width:100%}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+:root{--navy:#0a1020;--navy2:#121a33;--ink:#0d1324;--muted:#5d6678;--line:#e6e8ee;--bg:#f5f6f9;--accent:#2f6bff;--accent2:#1f55e0;--wa:#1faa59;--r:24px;--sh:0 1px 2px rgba(13,19,36,.04),0 12px 32px -12px rgba(13,19,36,.14)}
+body{font-family:Manrope,Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 18px}
+section{padding:72px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.eyebrow::before{content:"";width:18px;height:1.5px;background:currentColor;border-radius:2px}
+h2.title{font-size:clamp(25px,4.2vw,38px);line-height:1.12;font-weight:800;letter-spacing:-.035em;margin:12px 0 10px}
+p.lead{color:var(--muted);font-size:15.5px;max-width:560px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:13px 22px;font-weight:700;font-size:14.5px;border:0;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:active{transform:scale(.97)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-light{background:#fff;color:var(--ink);box-shadow:0 8px 24px -8px rgba(0,0,0,.35)}
+.btn-ghost{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.18)}
+.btn-ghost:hover{background:rgba(255,255,255,.14)}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 10px 26px -10px rgba(31,170,89,.7)}
+.btn-wa:hover{transform:translateY(-1px)}
+.btn-dark{background:var(--ink);color:#fff}
+
+/* NAV */
+.nav{position:sticky;top:10px;z-index:50;padding:0 18px;margin-top:10px}
+.nav-in{max-width:1124px;margin:0 auto;background:rgba(255,255,255,.78);backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border:1px solid rgba(255,255,255,.7);border-radius:999px;display:flex;align-items:center;justify-content:space-between;padding:6px 6px 6px 16px;box-shadow:var(--sh);gap:10px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:15px;letter-spacing:-.02em;white-space:nowrap}
+.logo-i{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#2f6bff,#0a1020);color:#fff;display:grid;place-items:center;flex:none}
+.logo-i svg{width:16px;height:16px}
+.nav-links{display:flex;gap:2px}
+.nav-links a{padding:8px 14px;border-radius:999px;font-weight:600;font-size:13.5px;color:var(--muted);transition:.2s}
+.nav-links a:hover{background:#eef0f5;color:var(--ink)}
+.nav .btn{padding:9px 16px;font-size:13px}
+@media(max-width:860px){.nav-links{display:none}}
+
+/* HERO */
+.hero{padding:14px 0 24px}
+.hero-box{position:relative;overflow:hidden;border-radius:32px;background:radial-gradient(120% 90% at 85% 0%,#1d3a8a 0%,rgba(29,58,138,0) 55%),radial-gradient(80% 70% at 0% 100%,#18254d 0%,rgba(24,37,77,0) 60%),linear-gradient(160deg,#0d1530 0%,#0a1020 70%);color:#fff;padding:56px 44px 40px;isolation:isolate}
+.hero-box::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(70% 60% at 70% 20%,#000,transparent);-webkit-mask-image:radial-gradient(70% 60% at 70% 20%,#000,transparent);z-index:-1}
+.hero-top{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
+.badge-g{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:6px 13px 6px 8px;font-size:12.5px;font-weight:600;color:#dbe3f5}
+.badge-g b{background:#fff;color:var(--ink);border-radius:999px;padding:2px 8px;font-size:12px}
+.badge-g .st{color:#f5c451;letter-spacing:1px}
+.hero h1{font-size:clamp(30px,5.3vw,54px);line-height:1.04;font-weight:800;letter-spacing:-.045em;margin:18px 0 14px}
+.hero h1 span{background:linear-gradient(90deg,#8fb3ff,#cfe0ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.sub{font-size:clamp(15px,1.9vw,17px);color:#aeb9d0;max-width:500px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.ac-art{position:relative;justify-self:end;width:100%;max-width:440px}
+.ac-art svg{width:100%;height:auto;display:block;filter:drop-shadow(0 30px 40px rgba(0,0,0,.45))}
+.flow path{stroke-dasharray:6 10;animation:flow 1.6s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-32}}
+.chip-f{position:absolute;background:rgba(255,255,255,.1);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:10px 14px;font-size:12px;color:#dbe3f5;font-weight:600}
+.chip-f b{display:block;color:#fff;font-size:18px;font-weight:800;letter-spacing:-.02em}
+.chip-f.a{left:0;bottom:6%}.chip-f.b{right:2%;top:2%}
+
+.trust-p{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.trust-p span{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:#cfd8ec;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:5px 11px}
+.trust-p span::before{content:"";width:6px;height:6px;border-radius:50%;background:#8fb3ff}
+.trade-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:6px}
+.trade{background:rgba(255,255,255,.07);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:18px 12px 14px;text-align:center;color:#dbe3f5;font-size:12px;font-weight:700;letter-spacing:-.01em;animation:float 6s ease-in-out infinite;box-shadow:0 20px 40px -24px rgba(0,0,0,.6)}
+.trade:nth-child(2n){animation-delay:-3s}.trade:nth-child(3n){animation-delay:-1.5s}
+.trade i{width:46px;height:46px;margin:0 auto 10px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(143,179,255,.28),rgba(47,107,255,.12));color:#cfe0ff}
+.trade i svg{width:24px;height:24px}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+/* reviews */
+.rev-wrap{margin-top:40px}
+.rev-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+.rev-head h3{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8ea0c4}
+.rev-score{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#fff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:6px 14px}
+.rev-score .st{color:#f5c451;letter-spacing:1px}
+.rev-view{overflow:hidden;border-radius:24px}
+.rev-track{display:flex;align-items:stretch;transition:transform .3s cubic-bezier(.3,.7,.3,1)}
+.rev{flex:0 0 100%;display:flex}
+.rev-card{flex:1;background:rgba(255,255,255,.96);color:var(--ink);border-radius:24px;padding:26px 28px 22px;height:224px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 24px 60px -24px rgba(0,0,0,.6)}
+.rev-card .st{color:#f5b301;font-size:17px;letter-spacing:2px}
+.rev-card q{display:block;font-size:clamp(17px,2.6vw,24px);font-weight:700;line-height:1.3;letter-spacing:-.025em;margin:8px 0 12px;quotes:"“" "”"}
+.rev-who{display:flex;align-items:center;gap:11px}
+.av{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#2f6bff,#0a1020);color:#fff;display:grid;place-items:center;font-weight:800;font-size:15px;flex:none}
+.rev-who b{display:block;font-size:14px}.rev-who small{color:var(--muted);font-size:12px}
+.g{display:inline-flex;align-items:center;gap:4px}
+.dots{display:flex;gap:6px;justify-content:center;margin-top:14px}
+.dots i{width:6px;height:6px;border-radius:99px;background:rgba(255,255,255,.3);transition:all .3s}
+.dots i.on{width:22px;background:#fff}
+
+@media(max-width:900px){.hero-top{grid-template-columns:1fr}.ac-art{display:none}.rev-wrap{margin-top:30px}}
+@media(max-width:560px){
+ .hero-box{padding:36px 18px 22px;border-radius:26px}
+ .rev-card{padding:20px 20px 18px;height:236px}
+ .hero-ctas .btn{flex:1 1 auto}
+ section{padding:56px 0}
+}
+
+/* SERVICES */
+.svc-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:26px}
+.arrows{display:flex;gap:8px}
+.arrows button{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:17px;cursor:pointer;color:var(--ink);transition:.2s}
+.arrows button:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.svc-view{overflow:hidden;touch-action:pan-y;padding:4px;margin:-4px}
+.svc-track{display:flex;gap:16px;transition:transform .55s cubic-bezier(.25,.8,.25,1)}
+.svc{flex:0 0 calc((100% - 32px)/3);background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;min-height:280px;box-shadow:var(--sh);transition:transform .3s,box-shadow .3s}
+.svc:hover{transform:translateY(-3px);box-shadow:0 24px 48px -20px rgba(13,19,36,.25)}
+.svc .ic{width:50px;height:50px;border-radius:15px;display:grid;place-items:center;color:var(--accent);background:linear-gradient(135deg,#eef3ff,#dfe8ff);margin-bottom:20px}
+.svc .ic svg{width:24px;height:24px}
+.svc .tag{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.svc h3{font-size:19px;font-weight:800;letter-spacing:-.03em;margin-bottom:8px}
+.svc p{color:var(--muted);font-size:14px;flex:1}
+.svc ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.svc li{font-size:11.5px;font-weight:600;background:#f1f3f7;color:#3a4356;border-radius:999px;padding:4px 10px}
+.svc.dark li{background:rgba(255,255,255,.08);color:#cfd8ec}
+.svc.dark{background:linear-gradient(160deg,#121a33,#0a1020);border-color:#0a1020;color:#fff}
+.svc.dark p,.svc.dark .tag{color:#9eabc6}.svc.dark .ic{background:rgba(255,255,255,.08);color:#9fbcff}
+@media(max-width:900px){.svc{flex-basis:calc((100% - 16px)/2)}}
+@media(max-width:600px){.svc{flex-basis:84%;min-height:250px}}
+.svc-dots{display:flex;gap:6px;justify-content:center;margin-top:22px}
+.svc-dots i{width:6px;height:6px;border-radius:99px;background:#cdd3de;transition:all .3s}
+.svc-dots i.on{width:22px;background:var(--ink)}
+
+/* CALCULATOR */
+.calc{display:grid;grid-template-columns:1.25fr .75fr;gap:18px;margin-top:30px;align-items:start}
+.steps{background:#fff;border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:var(--sh)}
+.step+.step{margin-top:26px;padding-top:24px;border-top:1px solid var(--line)}
+.step-h{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.num{width:30px;height:30px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:800;font-size:13px;flex:none}
+.step-h h3{font-size:17px;font-weight:800;letter-spacing:-.025em}
+.step-h small{display:block;font-size:12.5px;color:var(--muted);font-weight:500}
+.opts{display:grid;gap:10px}
+.opts.s5{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.opts.s4{grid-template-columns:repeat(4,1fr)}
+.opts.s3{grid-template-columns:repeat(3,1fr)}
+.opt{position:relative;display:block}
+.opt input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.opt span{display:flex;flex-direction:column;justify-content:center;gap:2px;min-height:62px;padding:12px 14px;border-radius:16px;border:1.5px solid var(--line);background:#fafbfc;font-weight:700;font-size:14px;line-height:1.25;cursor:pointer;transition:all .18s}
+.opt span small{font-weight:500;font-size:12px;color:var(--muted)}
+.opt.c span{align-items:center;text-align:center}
+.opt span:hover{border-color:#b9c7e8}
+.opt input:checked+span{border-color:var(--accent);background:#f1f5ff;box-shadow:0 0 0 3px rgba(47,107,255,.14)}
+.opt input:checked+span small{color:#3d5fb8}
+.opt input:focus-visible+span{outline:2px solid var(--accent);outline-offset:2px}
+@media(max-width:560px){.steps{padding:20px}.opts.s5{grid-template-columns:1fr 1fr}.opts.s3 .opt span{font-size:13px;padding:10px 8px}}
+
+.result{position:sticky;top:84px;border-radius:28px;padding:26px;color:#fff;background:radial-gradient(100% 80% at 100% 0%,#1d3a8a 0%,rgba(29,58,138,0) 60%),linear-gradient(160deg,#121a33,#0a1020);box-shadow:0 30px 60px -28px rgba(10,16,32,.7)}
+.result .lbl{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8ea0c4}
+.result .from{margin-top:10px;font-size:14px;color:#c7d2ea;font-weight:600}
+.result .price{font-size:clamp(32px,5vw,42px);font-weight:800;letter-spacing:-.04em;line-height:1.05}
+.sumlist{list-style:none;margin:18px 0;display:grid;gap:8px}
+.sumlist li{display:flex;justify-content:space-between;gap:12px;font-size:13.5px;color:#9eabc6;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:8px}
+.sumlist b{color:#fff;font-weight:700;text-align:right}
+.note{font-size:12.5px;color:#9eabc6;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:10px 12px;margin-bottom:16px}
+.result .btn{width:100%}
+@media(max-width:900px){.calc{grid-template-columns:1fr}.result{position:static}}
+
+/* MAP */
+.map-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:18px;margin-top:30px}
+.map-box{border-radius:28px;overflow:hidden;min-height:360px;background:#dde3ec;box-shadow:var(--sh)}
+.map-box iframe{width:100%;height:100%;min-height:360px;border:0;display:block;filter:saturate(.85)}
+.contact{background:#fff;border:1px solid var(--line);border-radius:28px;padding:24px;display:flex;flex-direction:column;gap:18px;box-shadow:var(--sh)}
+.ci{display:flex;gap:13px;align-items:flex-start}
+.ci .ic2{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,#eef3ff,#dfe8ff);color:var(--accent);display:grid;place-items:center;flex:none}
+.ci .ic2 svg{width:20px;height:20px}
+.ci small{display:block;color:var(--muted);font-size:12px;font-weight:600}
+.ci b{font-size:15px}
+.contact .btn{width:100%;margin-top:auto}
+@media(max-width:900px){.map-grid{grid-template-columns:1fr}.map-box,.map-box iframe{min-height:280px}}
+
+footer{padding:28px 0 96px;color:var(--muted);font-size:13px;text-align:center}
+footer b{color:var(--ink)}
+.fab{position:fixed;right:16px;bottom:16px;z-index:60;width:56px;height:56px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 14px 30px -8px rgba(31,170,89,.6)}
+.fab svg{width:28px;height:28px}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.flow path,.trade{animation:none}}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></symbol>
+ <symbol id="snow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 2v20M4.9 4.9l14.2 14.2M2 12h20M4.9 19.1L19.1 4.9M9 3l3 3 3-3M9 21l3-3 3 3M3 9l3 3-3 3M21 9l-3 3 3 3"/></symbol>
+ <symbol id="ac" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="9" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M5 11h14M7 17.5c0 1 1 1 1 2M12 17.5c0 1 1 1 1 2M17 17.5c0 1 1 1 1 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+ <symbol id="gauge" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 13l4-4M12 3v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+ <symbol id="drop" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 3s6 6.2 6 10.5a6 6 0 0 1-12 0C6 9.2 12 3 12 3z"/><path d="M9.5 14a2.5 2.5 0 0 0 2.5 2.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+ <symbol id="wrench" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></symbol>
+ <symbol id="bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
+ <symbol id="home" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></symbol>
+ <symbol id="flame" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 2s5.5 4.8 5.5 10.5a5.5 5.5 0 0 1-11 0c0-2.2 1.1-3.8 2.2-4.9 0 2.2 1.1 3.3 2.2 3.3C10.9 7.6 12 4.2 12 2z"/></symbol>
+ <symbol id="washer" viewBox="0 0 24 24"><rect x="4" y="2.5" width="16" height="19" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="13.5" r="4.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M7.5 6h2M15 6h1.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+ <symbol id="device" viewBox="0 0 24 24"><rect x="2" y="4" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6 18h6M9 14v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><rect x="17" y="8" width="5" height="12" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+ <symbol id="cam" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M3 7l12-4 2.5 6.5-12 4zM7.5 12.5l1.5 4h5M14 16.5V21M10.5 21h7"/></symbol>
+ <symbol id="brick" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M3 5h18v14H3zM3 9.7h18M3 14.3h18M9 5v4.7M15 5v4.7M6 9.7v4.6M12 9.7v4.6M18 9.7v4.6M9 14.3V19M15 14.3V19"/></symbol>
+ <symbol id="roller" viewBox="0 0 24 24"><rect x="3" y="3" width="15" height="6" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M18 6h2.5v5.5H11V15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><rect x="9" y="15" width="4" height="6.5" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+ <symbol id="pipe" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M3 8h9a4 4 0 0 1 4 4v9M3 13h7a1 1 0 0 1 1 1v7M3 6v9M14 21h8"/></symbol>
+ <symbol id="pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+ <symbol id="tel" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+ <symbol id="star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></symbol>
+</svg>
+
+<header class="nav">
+ <div class="nav-in">
+  <a href="#inicio" class="logo"><span class="logo-i"><svg><use href="#wrench"/></svg></span>ENC Mantenimiento</a>
+  <nav class="nav-links"><a href="#resenas">Reseñas</a><a href="#servicios">Servicios</a><a href="#presupuesto">Presupuesto</a><a href="#ubicacion">Ubicación</a></nav>
+  <a class="btn btn-dark" href="#presupuesto">Calcular precio</a>
+ </div>
+</header>
+
+<main id="inicio">
+<section class="hero">
+ <div class="wrap">
+  <div class="hero-box">
+   <div class="hero-top">
+    <div>
+     <span class="badge-g"><b>5,0</b><span class="st">★★★★★</span>45 reseñas en Google</span>
+     <h1>Mantenimiento integral <span>para tu casa.</span></h1>
+     <p class="sub">Plomería, gas, albañilería y pintura en Capital Federal y Provincia de Buenos Aires. Base en Lomas del Mirador.</p>
+     <div class="hero-ctas">
+      <a class="btn btn-light" href="#presupuesto">Calcular mi presupuesto</a>
+      <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
+     </div>
+     <div class="trust-p"><span>Atención rápida</span><span>Presupuesto por WhatsApp</span><span>Capital y Provincia</span></div>
+    </div>
+    <div class="ac-art" aria-hidden="true">
+     <div class="trade-grid" style="grid-template-columns:repeat(2,1fr)">
+      <div class="trade"><i><svg><use href="#pipe"/></svg></i>Plomería</div>
+      <div class="trade"><i><svg><use href="#flame"/></svg></i>Gas</div>
+      <div class="trade"><i><svg><use href="#brick"/></svg></i>Albañilería</div>
+      <div class="trade"><i><svg><use href="#roller"/></svg></i>Pintura</div>
+     </div>
+    </div>
+   </div>
+
+   <div class="rev-wrap" id="resenas">
+    <div class="rev-head">
+     <h3>Lo que dicen los clientes <small style="text-transform:none;letter-spacing:0;font-weight:600;color:#cfd8ec;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:3px 10px;margin-left:6px;font-size:11.5px">Reseñas de muestra</small></h3>
+     <span class="rev-score"><span class="st">★</span>5,0 en Google · 45 reseñas</span>
+    </div>
+    <div class="rev-view"><div class="rev-track" id="revTrack"></div></div>
+    <div class="dots" id="revDots"></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="servicios">
+ <div class="wrap">
+  <div class="svc-head rv">
+   <div><span class="eyebrow">Servicios</span><h2 class="title">Plomería, gas, albañilería y pintura</h2><p class="lead">Todo el mantenimiento de tu casa con un solo equipo, en Capital y Provincia.</p></div>
+   <div class="arrows"><button type="button" id="svcPrev" aria-label="Anterior">←</button><button type="button" id="svcNext" aria-label="Siguiente">→</button></div>
+  </div>
+  <div class="svc-view rv" id="svcView"><div class="svc-track" id="svcTrack"></div></div>
+  <div class="svc-dots" id="svcDots"></div>
+ </div>
+</section>
+
+<section id="presupuesto">
+ <div class="wrap">
+  <div class="rv"><span class="eyebrow">Calculadora de presupuesto</span>
+  <h2 class="title">¿Cuánto me sale? Calculalo en 3 pasos</h2>
+  <p class="lead">Tocá una opción en cada paso y mirá el precio estimado al instante.</p></div>
+  <div class="calc">
+   <div class="steps rv">
+    <div class="step">
+     <div class="step-h"><span class="num">1</span><div><h3>¿Qué rubro?</h3><small>Elegí el tipo de servicio</small></div></div>
+     <div class="opts s5" id="optJob"></div>
+    </div>
+    <div class="step">
+     <div class="step-h"><span class="num">2</span><div><h3>¿Qué trabajo?</h3><small id="jobSub">Elegí lo que necesitás</small></div></div>
+     <div class="opts s5" id="optJob2"></div>
+    </div>
+    <div class="step">
+     <div class="step-h"><span class="num">3</span><div><h3>¿Para cuándo?</h3><small>Si es urgente, el precio sube un poco</small></div></div>
+     <div class="opts s3">
+      <label class="opt c"><input type="radio" name="urg" value="0" checked><span>Esta semana</span></label>
+      <label class="opt c"><input type="radio" name="urg" value="1"><span>En 24-48 h</span></label>
+      <label class="opt c"><input type="radio" name="urg" value="2"><span>Hoy mismo</span></label>
+     </div>
+    </div>
+   </div>
+   <aside class="result rv">
+    <div class="lbl">Tu presupuesto</div>
+    <div class="from">Precio estimado desde</div>
+    <div class="price" id="price">—</div>
+    <ul class="sumlist">
+     <li><span>Rubro</span><b id="sCat">—</b></li>
+     <li><span>Trabajo</span><b id="sJob">—</b></li>
+     <li><span>Cuándo</span><b id="sUrg">—</b></li>
+    </ul>
+    <p class="note">Valores de referencia, se confirman antes del trabajo.</p>
+    <a class="btn btn-wa" id="calcWa" href="#" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Pedir este presupuesto</a>
+   </aside>
+  </div>
+ </div>
+</section>
+
+<section id="ubicacion">
+ <div class="wrap">
+  <div class="rv"><span class="eyebrow">Ubicación</span>
+  <h2 class="title">Base en Lomas del Mirador</h2>
+  <p class="lead">Base en Lomas del Mirador · Trabajamos en Capital y Provincia de Buenos Aires.</p></div>
+  <div class="map-grid">
+   <div class="map-box rv"><iframe src="https://www.google.com/maps?q=Lomas+del+Mirador,+Buenos+Aires&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa Lomas del Mirador"></iframe></div>
+   <div class="contact rv">
+    <div class="ci"><span class="ic2"><svg><use href="#pin"/></svg></span><div><small>Base</small><b>Lomas del Mirador, La Matanza</b></div></div>
+    <div class="ci"><span class="ic2"><svg><use href="#tel"/></svg></span><div><small>WhatsApp</small><b><a class="wa-txt" href="#" target="_blank" rel="noopener">Escribinos por WhatsApp</a></b></div></div>
+    <div class="ci"><span class="ic2"><svg><use href="#home"/></svg></span><div><small>Zona de trabajo</small><b>Capital Federal y Provincia de Buenos Aires</b></div></div>
+    <a class="btn btn-dark" href="#presupuesto">Calcular presupuesto</a>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer><div class="wrap"><b>ENC Mantenimiento</b> · Plomería, gas, albañilería y pintura · Base en Lomas del Mirador · Capital y Provincia de Buenos Aires<br>© 2026</footer>
+<a class="fab" id="fab" href="#" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg><use href="#wa"/></svg></a>
+
+<script>
+(function(){
+/* NÚMERO A CONFIRMAR: reemplazar 549XXXXXXXXXX por el WhatsApp del cliente */
+var WA='549XXXXXXXXXX';
+function wa(t){return (WA.indexOf('X')>-1?'https://wa.me/':'https://wa.me/'+WA)+'?text='+encodeURIComponent(t);}
+document.getElementById('fab').href=wa('Hola ENC Mantenimiento, vi su web y quiero consultar por un servicio.');document.querySelectorAll('.wa-txt').forEach(function(a){a.href=wa('Hola ENC Mantenimiento, vi su web y quiero consultar por un servicio.');});
+
+/* Reseñas de muestra */
+var revs=[
+ {n:'Lidia',t:'Me solucionó los aires!! Re bien!!! Excelente técnico!! Gracias!!!'},
+ {n:'Nancy',t:'Excelente trabajo. Se nota el profesionalismo, la prolijidad y la atención a cada detalle. Totalmente recomendable!'},
+ {n:'Elizabeth',t:'Muy buen servicio! Muy atento y barato. 100% recomendado.'},
+ {n:'Griselda',t:'Muy buena atención y muy buen servicio. Lo recomiendo.'},
+ {n:'Martín',t:'Muy buen servicio.. muy responsable!! 100% recomendable!!'}
+];
+var rt=document.getElementById('revTrack'),rd=document.getElementById('revDots');
+revs.forEach(function(r){
+ rt.insertAdjacentHTML('beforeend','<div class="rev"><div class="rev-card"><div><span class="st">★★★★★</span><q>'+r.t+'</q></div><div class="rev-who"><span class="av">'+r.n[0]+'</span><div><b>'+r.n+'</b><small>Reseña de muestra</small></div></div></div></div>');
+ rd.insertAdjacentHTML('beforeend','<i></i>');
+});
+var ri=0;function showRev(){rt.style.transform='translateX(-'+(ri*100)+'%)';[].forEach.call(rd.children,function(d,i){d.className=i===ri?'on':'';});}
+showRev();setInterval(function(){ri=(ri+1)%revs.length;showRev();},1500);
+
+/* Servicios */
+var svcs=[
+ {ic:'pipe',t:'Agua',h:'Plomería',p:'Pérdidas, destapaciones y cambio de cañerías, griferías y sanitarios.',l:['Pérdidas de agua','Destapaciones','Griferías','Cañerías']},
+ {ic:'flame',t:'Instalaciones',h:'Gas',p:'Reparación y mantenimiento de instalaciones y artefactos a gas.',l:['Pérdidas de gas','Calefones y termotanques','Estufas','Cocinas'],dark:1},
+ {ic:'brick',t:'Obra',h:'Albañilería',p:'Arreglos y reformas: paredes, revoques, humedad, cerámicos y contrapisos.',l:['Revoques','Humedad','Cerámicos','Reformas']},
+ {ic:'roller',t:'Terminaciones',h:'Pintura',p:'Pintura interior y exterior con terminaciones prolijas, de un ambiente a la casa entera.',l:['Interiores','Exteriores','Rejas y aberturas','Impermeabilización'],dark:1},
+ {ic:'home',t:'Hogar',h:'Mantenimiento general',p:'Esos arreglos de la casa que venís postergando, resueltos en una sola visita.',l:['Arreglos varios','Colocaciones','Puesta a punto']}
+];
+var st=document.getElementById('svcTrack'),sd=document.getElementById('svcDots'),sv=document.getElementById('svcView');
+svcs.forEach(function(s){
+ st.insertAdjacentHTML('beforeend','<article class="svc'+(s.dark?' dark':'')+'"><div class="ic"><svg><use href="#'+s.ic+'"/></svg></div><div class="tag">'+s.t+'</div><h3>'+s.h+'</h3><p>'+s.p+'</p><ul>'+s.l.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul></article>');
+});
+var si=0,dotsN=0;
+function perView(){var w=window.innerWidth;return w<=600?1:w<=900?2:3;}
+function positions(){return svcs.length-perView()+1;}
+function buildDots(){var n=positions();if(n===dotsN)return;dotsN=n;sd.innerHTML='';for(var i=0;i<n;i++)sd.insertAdjacentHTML('beforeend','<i></i>');}
+function showSvc(){buildDots();var n=positions();if(si>=n)si=0;if(si<0)si=n-1;var step=st.children[0].getBoundingClientRect().width+16;st.style.transform='translateX(-'+(si*step)+'px)';[].forEach.call(sd.children,function(d,i){d.className=i===si?'on':'';});}
+function nextSvc(){si=(si+1)%positions();showSvc();}
+function prevSvc(){si=(si-1+positions())%positions();showSvc();}
+var timer=setInterval(nextSvc,2500);
+function reset(){clearInterval(timer);timer=setInterval(nextSvc,2500);}
+document.getElementById('svcNext').onclick=function(){nextSvc();reset();};
+document.getElementById('svcPrev').onclick=function(){prevSvc();reset();};
+var x0=null;
+sv.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+sv.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40){dx<0?nextSvc():prevSvc();reset();}x0=null;});
+window.addEventListener('resize',showSvc);showSvc();
+
+/* Calculadora (valores de referencia, en pesos) */
+var cats=[
+ {n:'Plomería',c:'Plomería',d:'Agua y cañerías',j:[['Reparación de pérdida',30000],['Destapación',35000],['Cambio de grifería',30000],['Cambio de cañería (por tramo)',60000]]},
+ {n:'Gas',c:'Gas',d:'Instalación y artefactos',j:[['Detección de pérdida',45000],['Calefón o termotanque',50000],['Service de estufa',40000],['Conexión de cocina',55000]]},
+ {n:'Albañilería',c:'Albañilería',d:'Arreglos y reformas',j:[['Arreglo de humedad (por m²)',25000],['Revoque (por m²)',20000],['Colocación de cerámicos (por m²)',22000],['Contrapiso (por m²)',18000]]},
+ {n:'Pintura',c:'Pintura',d:'Interior y exterior',j:[['Ambiente chico',120000],['Ambiente grande',180000],['Frente o exterior (por m²)',9000],['Rejas y aberturas',60000]]},
+ {n:'Mantenimiento general',c:'Mantenimiento',d:'Arreglos varios',j:[['Visita y arreglos varios',30000],['Colocaciones (estantes, cortinas)',25000]]}
+];
+var URG=[[1,'Esta semana'],[1.15,'En 24-48 h'],[1.3,'Hoy mismo']];
+var oj=document.getElementById('optJob'),oj2=document.getElementById('optJob2');
+cats.forEach(function(c,i){oj.insertAdjacentHTML('beforeend','<label class="opt"><input type="radio" name="cat" value="'+i+'"'+(i===0?' checked':'')+'><span>'+c.c+'<small>'+c.d+'</small></span></label>');});
+function val(n){return +document.querySelector('input[name="'+n+'"]:checked').value;}
+function fmt(n){return '$'+(Math.round(n/1000)*1000).toLocaleString('es-AR');}
+function fillJobs(){var c=cats[val('cat')];oj2.innerHTML='';c.j.forEach(function(j,i){oj2.insertAdjacentHTML('beforeend','<label class="opt"><input type="radio" name="job" value="'+i+'"'+(i===0?' checked':'')+'><span>'+j[0]+'<small>desde '+fmt(j[1])+'</small></span></label>');});document.getElementById('jobSub').textContent='Trabajos de '+c.c.toLowerCase();}
+function calc(){
+ var c=cats[val('cat')],j=c.j[val('job')],u=URG[val('urg')];
+ var price=j[1]*u[0];
+ document.getElementById('price').textContent=fmt(price);
+ document.getElementById('sCat').textContent=c.c;
+ document.getElementById('sJob').textContent=j[0];
+ document.getElementById('sUrg').textContent=u[1];
+ document.getElementById('calcWa').href=wa('Hola ENC Mantenimiento, vi su web y quiero un presupuesto:\n• Rubro: '+c.n+'\n• Trabajo: '+j[0]+'\n• Para: '+u[1]+'\n• Estimado de la web: desde '+fmt(price));
+}
+document.querySelector('.steps').addEventListener('change',function(e){if(e.target.name==='cat')fillJobs();calc();});
+fillJobs();calc();
+
+/* Animación al hacer scroll */
+var els=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});els.forEach(function(e){io.observe(e);});}
+else els.forEach(function(e){e.classList.add('in');});
+})();
+</script>
+</body>
+</html>
