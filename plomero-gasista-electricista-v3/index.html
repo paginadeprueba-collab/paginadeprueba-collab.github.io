@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Plomero · Electricista · Gasista | Parque Chacabuco, CABA</title>
+<meta name="description" content="Plomería, gas, electricidad y albañilería en toda CABA. 5,0 ★ en Google. Reservá tu visita por WhatsApp.">
+<meta name="theme-color" content="#EEEAFD">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{overflow-x:clip;max-width:100%}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+:root{--acc:#6C5CE7;--acc2:#5847D6;--tint:#EEEAFD;--tint2:#F6F4FE;--bg:#F7F7FA;--card:#fff;--tile:#F3F3F6;--ink:#16161D;--muted:#7A7A88;--line:#ECECF2;--sh:0 10px 30px -14px rgba(40,30,90,.18)}
+body{font-family:'Plus Jakarta Sans',Manrope,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink);font-size:14.5px;line-height:1.5;-webkit-font-smoothing:antialiased;padding-bottom:96px}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer}
+svg{display:block}
+.app{display:grid;grid-template-columns:minmax(0,1fr);justify-content:center}
+.screen,.cards>*,.phead>*{min-width:0}
+.screen{width:100%;max-width:480px;margin:0 auto;background:linear-gradient(180deg,#E6E0FC 0%,#F1EEFD 140px,#fff 330px);padding:18px 18px 28px;position:relative}
+.screen+.screen{background:linear-gradient(180deg,#F1EEFD 0%,#fff 260px)}
+@media(min-width:960px){
+ body{background:radial-gradient(60% 50% at 20% 0%,#EAE5FD,transparent 70%),radial-gradient(50% 40% at 90% 10%,#F1EEFD,transparent 70%),var(--bg)}
+ .app{grid-template-columns:440px 440px;gap:36px;padding:36px 20px 10px}
+ .screen{border-radius:40px;box-shadow:0 40px 80px -40px rgba(40,30,90,.35),0 0 0 8px #fff;margin:0;min-height:860px}
+}
+/* header */
+.top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.me{display:flex;align-items:center;gap:10px;min-width:0}
+.avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--acc),#A99CF5);color:#fff;display:grid;place-items:center;font-weight:800;font-size:16px;flex:none;box-shadow:0 0 0 3px #fff}
+.me small{display:block;color:var(--muted);font-size:11.5px;font-weight:500}
+.me b{display:block;font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rbtns{display:flex;gap:8px;flex:none}
+.rb{width:44px;height:44px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:var(--sh);color:var(--ink)}
+.rb svg{width:20px;height:20px}
+.greet{margin:24px 0 18px}
+.greet .l1{font-size:clamp(24px,7vw,30px);font-weight:300;letter-spacing:-.03em;line-height:1.15}
+.greet .l2{font-size:clamp(24px,7vw,30px);font-weight:800;letter-spacing:-.035em;line-height:1.15}
+.greet p{color:var(--muted);font-size:13.5px;margin-top:8px}
+/* tabs */
+.tabs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 -18px;padding:2px 18px 4px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;padding:10px 18px;border-radius:999px;background:#fff;font-weight:600;font-size:13px;box-shadow:0 4px 14px -8px rgba(40,30,90,.25);transition:.2s}
+.tab.on{background:var(--acc);color:#fff;box-shadow:0 10px 20px -10px rgba(108,92,231,.8)}
+/* cards */
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+.pcard{background:#fff;border-radius:24px;padding:14px 12px 14px;box-shadow:var(--sh);position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;animation:pop .35s ease}
+@keyframes pop{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.badge{position:absolute;top:12px;left:12px;font-size:10px;font-weight:700;color:#3d8b5a;background:#E8F5EC;border-radius:999px;padding:3px 8px}
+.badge.u{color:#b0413e;background:#FBEAEA}
+.cimg{width:74px;height:74px;border-radius:50%;background:var(--tint);color:var(--acc);display:grid;place-items:center;margin:22px 0 10px;box-shadow:inset 0 0 0 6px #F7F5FE}
+.cimg svg{width:32px;height:32px}
+.pcard h4{font-size:13.5px;font-weight:700;line-height:1.25}
+.pcard .s{font-size:11.5px;color:var(--muted);margin-top:2px}
+.pcard .rt{font-size:11.5px;font-weight:600;margin-top:6px;color:var(--ink)}
+.pcard .rt i{font-style:normal;color:#F5A623}
+.pcard .pr{font-size:17px;font-weight:800;color:var(--acc);margin-top:6px;letter-spacing:-.02em}
+.pcard .pr small{display:block;font-size:10px;color:var(--muted);font-weight:600;letter-spacing:0}
+/* section heads */
+.sh{display:flex;align-items:center;justify-content:space-between;margin:26px 0 12px}
+.sh h3{font-size:16px;font-weight:800;letter-spacing:-.02em}
+.sh a,.sh button{font-size:12.5px;font-weight:600;color:var(--acc)}
+.sh .lbl{font-size:11px;font-weight:600;color:var(--muted)}
+/* reviews */
+.revs{position:relative;height:172px}
+.rv{position:absolute;inset:0;background:#fff;border-radius:24px;padding:16px 18px;box-shadow:var(--sh);display:flex;flex-direction:column;justify-content:space-between;opacity:0;transform:translateX(18px);transition:opacity .35s,transform .35s}
+.rv.on{opacity:1;transform:none}
+.rv .hd{display:flex;align-items:center;justify-content:space-between}
+.rv .sc{display:flex;align-items:center;gap:6px;font-weight:800;font-size:13px;color:var(--acc);background:var(--tint);border-radius:999px;padding:4px 10px}
+.stars{color:#F5A623;letter-spacing:1.5px;font-size:13px}
+.rv q{font-size:14.5px;font-weight:600;line-height:1.4;quotes:"“" "”";margin:8px 0}
+.who{display:flex;align-items:center;gap:9px}
+.who .av{width:30px;height:30px;border-radius:50%;background:var(--tint);color:var(--acc);display:grid;place-items:center;font-weight:800;font-size:12px}
+.who b{font-size:12.5px}.who small{display:block;font-size:10.5px;color:var(--muted)}
+.rdots{display:flex;gap:5px;justify-content:center;margin-top:10px}
+.rdots i{width:5px;height:5px;border-radius:9px;background:#D9D5F3;transition:.3s}
+.rdots i.on{width:18px;background:var(--acc)}
+/* list */
+.list{display:grid;gap:10px}
+.row{display:flex;align-items:center;gap:12px;background:#fff;border-radius:20px;padding:10px 12px;box-shadow:0 6px 18px -12px rgba(40,30,90,.3)}
+.row .th{width:46px;height:46px;border-radius:50%;background:var(--tint);color:var(--acc);display:grid;place-items:center;flex:none}
+.row .th svg{width:21px;height:21px}
+.row .tx{flex:1;min-width:0}
+.row .tx b{display:block;font-size:13.5px;font-weight:700;line-height:1.25}
+.row .tx small{display:block;font-size:11.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.row .tg{font-size:10.5px;font-weight:700;color:var(--acc);background:var(--tint2);border-radius:999px;padding:4px 8px;flex:none;display:flex;align-items:center;gap:4px}
+.row .tg svg{width:11px;height:11px}
+.row .ch{width:16px;height:16px;color:#B5B5C3;flex:none}
+/* profile */
+.ptop{display:flex;justify-content:space-between;align-items:center}
+.phead{display:grid;grid-template-columns:1fr 130px;gap:12px;align-items:end;margin-top:16px}
+.pill{display:inline-block;font-size:11px;font-weight:700;color:var(--acc);background:var(--tint);border-radius:999px;padding:5px 11px}
+.phead h2{font-size:clamp(22px,6.4vw,27px);font-weight:800;letter-spacing:-.035em;line-height:1.1;margin:10px 0 8px}
+.addr{display:flex;gap:6px;align-items:flex-start;font-size:12.5px;color:var(--muted)}
+.addr svg{width:15px;height:15px;flex:none;margin-top:2px;color:var(--acc)}
+.pphoto{height:160px;border-radius:26px 26px 26px 60px;overflow:hidden;background:var(--tint)}
+.pphoto img{width:100%;height:100%;object-fit:cover;display:block}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.tile{background:var(--tile);border-radius:18px;padding:12px 10px}
+.tile .ti{width:30px;height:30px;border-radius:50%;background:#fff;color:var(--acc);display:grid;place-items:center;margin-bottom:8px}
+.tile .ti svg{width:15px;height:15px}
+.tile b{display:block;font-size:13px;font-weight:800;letter-spacing:-.01em;line-height:1.2}
+.tile small{font-size:11px;color:var(--muted)}
+.drow{display:flex;align-items:center;gap:8px;font-weight:700;font-size:13px;margin-bottom:10px}
+.drow svg{width:17px;height:17px;color:var(--acc)}
+.days{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 -18px 12px;padding:2px 18px 6px}
+.days::-webkit-scrollbar{display:none}
+.day{flex:none;width:54px;padding:9px 0;border-radius:18px;background:#fff;text-align:center;box-shadow:0 4px 14px -8px rgba(40,30,90,.25);font-size:11px;color:var(--muted);font-weight:600}
+.day b{display:block;font-size:16px;color:var(--ink);font-weight:800}
+.day.on{background:var(--acc);color:#E4DFFC}.day.on b{color:#fff}
+.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.slot{padding:10px 0;border-radius:999px;border:1.5px solid var(--line);font-weight:700;font-size:12.5px;background:#fff;transition:.2s}
+.slot.on{background:var(--acc);border-color:var(--acc);color:#fff}
+.slot:disabled{color:#C7C7D2;background:var(--tile);border-color:var(--tile);cursor:not-allowed;text-decoration:line-through}
+.hint{font-size:11px;color:var(--muted);margin-top:8px}
+/* calc */
+.calc{background:#fff;border-radius:24px;padding:16px;box-shadow:var(--sh)}
+.cl{font-size:11.5px;font-weight:700;color:var(--muted);margin:2px 0 8px;display:flex;align-items:center;gap:6px}
+.cl i{font-style:normal;width:18px;height:18px;border-radius:50%;background:var(--acc);color:#fff;display:grid;place-items:center;font-size:10px}
+.opts{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.opt span{display:inline-block;padding:8px 13px;border-radius:999px;background:var(--tile);font-size:12.5px;font-weight:600;cursor:pointer;transition:.2s}
+.opt input:checked+span{background:var(--acc);color:#fff}
+.opt input:focus-visible+span{outline:2px solid var(--acc);outline-offset:2px}
+.res{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--tint);border-radius:18px;padding:12px 14px;flex-wrap:wrap}
+.res small{display:block;font-size:11px;color:var(--muted);font-weight:600}
+.res .pv{font-size:22px;font-weight:800;color:var(--acc);letter-spacing:-.03em;line-height:1.1}
+.res a{background:var(--acc);color:#fff;border-radius:999px;padding:10px 14px;font-weight:700;font-size:12.5px;display:flex;align-items:center;gap:6px}
+.res a svg{width:15px;height:15px}
+.note{font-size:11px;color:var(--muted);margin-top:8px}
+/* map */
+.mapw{max-width:480px;margin:0 auto;padding:10px 18px 0}
+@media(min-width:960px){.mapw{max-width:916px;padding-top:40px}}
+.mapc{background:#fff;border-radius:28px;overflow:hidden;box-shadow:var(--sh)}
+.mapc iframe{width:100%;height:260px;border:0;display:block}
+@media(min-width:960px){.mapc iframe{height:320px}}
+.mapc .mi{padding:14px 16px;display:flex;gap:10px;align-items:center}
+.mapc .mi .th{width:40px;height:40px;border-radius:50%;background:var(--tint);color:var(--acc);display:grid;place-items:center;flex:none}
+.mapc .mi svg{width:18px;height:18px}
+.mapc .mi b{display:block;font-size:13.5px}.mapc .mi small{font-size:12px;color:var(--muted)}
+footer{max-width:916px;margin:0 auto;padding:22px 18px 10px;text-align:center;font-size:11.5px;color:var(--muted)}
+footer b{color:var(--ink)}
+/* bottom bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(247,247,250,0),rgba(247,247,250,.96) 35%)}
+.bar-in{max-width:480px;margin:0 auto;display:flex;gap:10px;align-items:center}
+.chat{width:54px;height:54px;border-radius:50%;background:#fff;box-shadow:var(--sh);display:grid;place-items:center;color:var(--acc);flex:none}
+.chat svg{width:22px;height:22px}
+.book{flex:1;height:54px;border-radius:999px;background:var(--acc);color:#fff;font-weight:700;font-size:14.5px;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 14px 28px -12px rgba(108,92,231,.9);min-width:0;padding:0 14px;text-align:center}
+.book svg{width:19px;height:19px;flex:none}
+.book span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:350px){.tiles{grid-template-columns:1fr 1fr}.phead{grid-template-columns:1fr 110px}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></symbol>
+ <symbol id="tel" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+ <symbol id="pipe" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M3 8h9a4 4 0 0 1 4 4v9M3 13h7a1 1 0 0 1 1 1v7M3 6v9M14 21h8"/></symbol>
+ <symbol id="flame" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 2s5.5 4.8 5.5 10.5a5.5 5.5 0 0 1-11 0c0-2.2 1.1-3.8 2.2-4.9 0 2.2 1.1 3.3 2.2 3.3C10.9 7.6 12 4.2 12 2z"/></symbol>
+ <symbol id="bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
+ <symbol id="brick" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M3 5h18v14H3zM3 9.7h18M3 14.3h18M9 5v4.7M15 5v4.7M6 9.7v4.6M12 9.7v4.6M18 9.7v4.6M9 14.3V19M15 14.3V19"/></symbol>
+ <symbol id="alert" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 3l10 18H2z"/><path d="M12 10v4M12 17.5h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+ <symbol id="tooth" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M7.5 3C5 3 3.5 5 3.5 7.5c0 2 .8 3.4 1.4 5 .7 2 .9 4.2 1.4 6.2.3 1.4.9 2.3 1.7 2.3 1.4 0 1.5-2.6 2-4.4.3-1 .9-1.6 2-1.6s1.7.6 2 1.6c.5 1.8.6 4.4 2 4.4.8 0 1.4-.9 1.7-2.3.5-2 .7-4.2 1.4-6.2.6-1.6 1.4-3 1.4-5C20.5 5 19 3 16.5 3c-1.8 0-2.6 1-4.5 1S9.3 3 7.5 3z"/></symbol>
+ <symbol id="spark" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></symbol>
+ <symbol id="brace" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M3 12h18"/><rect x="5" y="9" width="4" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="15" y="9" width="4" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 9v6" stroke="currentColor" stroke-width="1.8"/></symbol>
+ <symbol id="implant" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M7 3h10l-1 6H8zM9 9l1 12h4l1-12M9.5 13h5M9.8 16.5h4.4"/></symbol>
+ <symbol id="shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+ <symbol id="pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+ <symbol id="star" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3-4.6-4.4 6.3-.9z"/></symbol>
+ <symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+ <symbol id="award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8.5 14l-1.5 7 5-3 5 3-1.5-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+ <symbol id="cal" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="16.5" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+ <symbol id="chev" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></symbol>
+ <symbol id="back" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M15 6l-6 6 6 6"/></symbol>
+ <symbol id="chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+</svg>
+
+<div class="app">
+ <!-- PANTALLA 1 -->
+ <main class="screen" id="inicio">
+  <div class="top">
+   <div class="me"><span class="avatar" id="avatar"></span><div><small id="hello"></small><b id="brand"></b></div></div>
+   <div class="rbtns"><a class="rb wa-link" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#wa"/></svg></a><a class="rb" id="telBtn" href="#contacto" aria-label="Llamar"><svg><use href="#tel"/></svg></a></div>
+  </div>
+  <div class="greet"><div class="l1" id="g1"></div><div class="l2" id="g2"></div><p id="gsub"></p></div>
+  <div class="tabs" id="tabs" role="tablist"></div>
+  <div class="cards" id="cards"></div>
+  <div class="sh" id="resenas"><h3>Reseñas</h3><span class="lbl" id="revLbl"></span></div>
+  <div class="revs" id="revs"></div>
+  <div class="rdots" id="rdots"></div>
+  <div class="sh"><h3>Servicios más pedidos</h3><button type="button" id="seeAll">Ver todos</button></div>
+  <div class="list" id="list"></div>
+ </main>
+
+ <!-- PANTALLA 2 -->
+ <section class="screen" id="perfil">
+  <div class="ptop"><a class="rb" href="#inicio" aria-label="Volver arriba"><svg><use href="#back"/></svg></a><a class="rb wa-link" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#wa"/></svg></a></div>
+  <div class="phead">
+   <div><span class="pill" id="ptag"></span><h2 id="pname"></h2><div class="addr"><svg><use href="#pin"/></svg><span id="paddr"></span></div></div>
+   <div class="pphoto"><img id="pphoto" src="" alt="" width="260" height="320"></div>
+  </div>
+  <div class="sh"><h3>Información</h3></div>
+  <div class="tiles" id="tiles"></div>
+  <div class="sh" id="turno"><h3 id="turnoTitle">Turno / Visita</h3></div>
+  <div class="drow"><svg><use href="#cal"/></svg><span id="month"></span></div>
+  <div class="days" id="days"></div>
+  <div class="slots" id="slots"></div>
+  <p class="hint">Elegí día y horario y reservalo por WhatsApp. Se confirma por mensaje.</p>
+  <div class="sh" id="presupuesto"><h3>Calculá tu presupuesto</h3><span class="lbl">3 pasos</span></div>
+  <div class="calc" id="calc">
+   <div class="cl"><i>1</i><span id="c1l">¿Qué servicio?</span></div><div class="opts" id="oCat"></div>
+   <div class="cl"><i>2</i>¿Qué trabajo?</div><div class="opts" id="oJob"></div>
+   <div class="cl"><i>3</i>¿Para cuándo?</div><div class="opts" id="oUrg"></div>
+   <div class="res"><div><small>Precio estimado desde</small><div class="pv" id="pv">—</div></div><a id="calcWa" href="#" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Pedir</a></div>
+   <p class="note" id="pnote"></p>
+  </div>
+ </section>
+</div>
+
+<div class="mapw" id="contacto">
+ <div class="sh"><h3>Ubicación</h3><span class="lbl" id="zoneLbl"></span></div>
+ <div class="mapc"><iframe id="map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa"></iframe>
+  <div class="mi"><span class="th"><svg><use href="#pin"/></svg></span><div><b id="mapT"></b><small id="mapS"></small></div></div>
+ </div>
+</div>
+<footer><b id="brandF"></b><span id="footS"></span><br><span id="credits"></span></footer>
+
+<div class="bar"><div class="bar-in"><a class="chat wa-link" href="#" target="_blank" rel="noopener" aria-label="Chatear por WhatsApp"><svg><use href="#chat"/></svg></a><a class="book" id="book" href="#" target="_blank" rel="noopener"><svg><use href="#wa"/></svg><span id="bookTxt">Reservar por WhatsApp</span></a></div></div>
+
+<script>
+/* ===== DATOS (plantilla 3) ===== */
+var D={"brand": "Plomero · Electricista · Gasista", "initial": "M", "greet2": "Tu plomero de confianza", "sub": "Plomería, gas, electricidad y albañilería en toda CABA. Tu hogar en buenas manos.", "wa": "5491158346553", "tel": "+541158346553", "msg": "Hola, vi tu web y quiero hacer una consulta.", "rating": "5,0", "ratingSrc": "Google", "ratingCount": "8 reseñas", "revLabel": "Reseñas reales de Google", "revSmall": "Reseña de Google", "tag": "24 h", "reviews": [{"n": "Julio", "t": "Muy profesional. Solucionó mi problema en tiempo y forma! Altamente recomendable."}, {"n": "Alejandro", "t": "Fue rápido en responder y venir a solucionar algo que todos me daban muchas vueltas. Ahora lo llamo para todo."}, {"n": "Georgi", "t": "Excelente servicio y atención! Matías es súper amable y responsable!"}, {"n": "Paula", "t": "Excelente servicio, confiable y prolijo, muy recomendable."}, {"n": "Mónica", "t": "Excelente servicio. 10/10. Súper recomendable."}, {"n": "Damaris", "t": "Totalmente recomendable 👌 Y muy buena onda. Fue muy efectivo a la hora de trabajar, quedé muy conforme con el trabajo."}], "tabs": [{"name": "Plomería", "icon": "pipe", "cards": [{"name": "Arreglo de fugas", "sub": "Caños y canillas", "price": 30000}, {"name": "Destape", "sub": "Desagües y cloacas", "price": 35000}], "list": [{"t": "Arreglos de fugas", "tag": "24 h"}, {"t": "Cambio de cañerías", "tag": "24 h"}, {"t": "Instalación de sanitarios", "tag": "24 h"}, {"t": "Destape de desagües", "tag": "24 h"}, {"t": "Instalación de llaves y griferías", "tag": "24 h"}]}, {"name": "Gas", "icon": "flame", "cards": [{"name": "Fugas de gas", "sub": "Detección y reparación", "price": 45000}, {"name": "Calefones", "sub": "Cocinas y calefones", "price": 50000}], "list": [{"t": "Reparación de fugas", "tag": "CABA"}, {"t": "Instalación de cocinas y calefones", "tag": "CABA"}, {"t": "Cambio de reguladores", "tag": "CABA"}, {"t": "Revisión de instalaciones", "tag": "CABA"}, {"t": "Habilitaciones", "tag": "CABA"}]}, {"name": "Electricidad", "icon": "bolt", "cards": [{"name": "Llaves y tomas", "sub": "Cambio e instalación", "price": 30000}, {"name": "Cortocircuitos", "sub": "Diagnóstico y arreglo", "price": 40000}], "list": [{"t": "Instalación de tableros", "tag": "CABA"}, {"t": "Cambio de llaves y tomas", "tag": "CABA"}, {"t": "Reparación de cortocircuitos", "tag": "CABA"}, {"t": "Iluminación", "tag": "CABA"}, {"t": "Instalaciones domiciliarias y comerciales", "tag": "CABA"}]}, {"name": "Albañilería", "icon": "brick", "cards": [{"name": "Humedad", "sub": "Por m²", "price": 25000}, {"name": "Revoques", "sub": "Por m²", "price": 20000}], "list": [{"t": "Revoques", "tag": "CABA"}, {"t": "Humedad", "tag": "CABA"}, {"t": "Cerámicos", "tag": "CABA"}, {"t": "Arreglos", "tag": "CABA"}]}, {"name": "Urgencias", "icon": "alert", "urgent": true, "cards": [{"name": "Pérdida de agua", "sub": "Atención hoy", "price": 39000, "icon": "pipe"}, {"name": "Olor a gas", "sub": "Atención hoy", "price": 58500, "icon": "flame"}], "list": [{"t": "Pérdidas de agua urgentes", "tag": "24 h"}, {"t": "Fugas de gas", "tag": "24 h"}, {"t": "Cortes de luz y cortocircuitos", "tag": "24 h"}, {"t": "Desagües tapados", "tag": "24 h"}]}], "profile": {"tag": "Plomero · Gasista · Electricista", "name": "Matías", "addr": "Santander 500, Parque Chacabuco, CABA", "photo": "img-perfil.jpg", "alt": "Cañerías de agua sobre pared de ladrillo", "tiles": [{"icon": "star", "v": "5,0 ★", "l": "Google"}, {"icon": "pin", "v": "Toda CABA", "l": "Zona"}, {"icon": "shield", "v": "Garantía", "l": "Trabajo"}]}, "turnoTitle": "Turno / Visita", "closedDays": [0], "slots": ["09:00", "10:00", "11:00", "12:00", "14:00", "15:00", "16:00", "17:00", "19:00"], "bookTxt": "Reservar", "bookMsg": "Hola, vi tu web y quiero reservar una visita:", "calcQ1": "¿Qué servicio?", "calc": [{"n": "Plomería", "j": [["Arreglo de fuga", 30000], ["Destape de desagüe", 35000], ["Instalación de llaves y griferías", 30000], ["Cambio de cañería", 80000]]}, {"n": "Gas", "j": [["Reparación de fuga", 45000], ["Instalación de calefón", 50000], ["Revisión de instalación", 40000], ["Instalación de cocina", 55000]]}, {"n": "Electricidad", "j": [["Cambio de llaves y tomas", 30000], ["Reparación de cortocircuito", 40000], ["Iluminación", 25000], ["Instalación de tablero", 90000]]}, {"n": "Albañilería", "j": [["Arreglo de humedad (por m²)", 25000], ["Revoque (por m²)", 20000], ["Colocación de cerámicos (por m²)", 22000], ["Arreglos menores", 40000]]}], "priceNote": "Valores de referencia, se confirman antes del trabajo.", "map": {"q": "Santander 500, Parque Chacabuco, CABA", "t": "Santander 500, Parque Chacabuco", "s": "Atención en toda CABA · 011 5834-6553", "zone": "Toda CABA"}, "foot": "Trabajo garantizado · Responsabilidad y puntualidad · 011 5834-6553", "credits": "Foto: Unsplash."};
+</script>
+<script>
+(function(){
+function $(i){return document.getElementById(i);}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function wa(t){return (D.wa?'https://wa.me/'+D.wa:'https://wa.me/')+'?text='+encodeURIComponent(t);}
+function ic(n){return '<svg><use href="#'+n+'"/></svg>';}
+function fmt(n){return '$'+(Math.round(n/1000)*1000).toLocaleString('es-AR');}
+var h=new Date().getHours();
+$('hello').textContent=h<12?'¡Buen día!':h<20?'¡Buenas tardes!':'¡Buenas noches!';
+$('g1').textContent=h<12?'Buen día,':h<20?'Buenas tardes,':'Buenas noches,';
+$('g2').textContent=D.greet2;$('gsub').textContent=D.sub;
+$('avatar').textContent=D.initial;$('brand').textContent=D.brand;$('brandF').textContent=D.brand;
+document.querySelectorAll('.wa-link').forEach(function(a){a.href=wa(D.msg);});
+if(D.tel){$('telBtn').href='tel:'+D.tel;}
+/* tabs + cards + list */
+var cur=0,all=false;
+D.tabs.forEach(function(t,i){$('tabs').insertAdjacentHTML('beforeend','<button type="button" class="tab'+(i===0?' on':'')+'" role="tab" data-i="'+i+'">'+esc(t.name)+'</button>');});
+function render(){
+ [].forEach.call($('tabs').children,function(b,i){b.classList.toggle('on',i===cur);});
+ var t=D.tabs[cur];
+ $('cards').innerHTML=t.cards.map(function(c){return '<article class="pcard"><span class="badge'+(t.urgent?' u':'')+'">'+(t.urgent?'Hoy':'Disponible')+'</span><div class="cimg">'+ic(c.icon||t.icon)+'</div><h4>'+esc(c.name)+'</h4><div class="s">'+esc(c.sub)+'</div><div class="rt"><i>★</i> '+D.rating+' · '+esc(D.ratingSrc)+'</div><div class="pr"><small>desde</small>'+fmt(c.price)+'</div></article>';}).join('');
+ var items=all?[].concat.apply([],D.tabs.map(function(x){return x.list.map(function(l){return {l:l,t:x};});})):t.list.map(function(l){return {l:l,t:t};});
+ $('list').innerHTML=items.map(function(o){return '<a class="row wa-row" href="'+wa('Hola, vi tu web y quiero consultar por: '+o.l.t)+'" target="_blank" rel="noopener"><span class="th">'+ic(o.t.icon)+'</span><span class="tx"><b>'+esc(o.l.t)+'</b><small>'+esc(o.l.s||o.t.name)+'</small></span><span class="tg">'+ic(o.l.tag==='CABA'?'pin':'clock')+esc(o.l.tag||D.tag)+'</span><svg class="ch"><use href="#chev"/></svg></a>';}).join('');
+ $('seeAll').textContent=all?'Ver menos':'Ver todos';
+}
+$('tabs').addEventListener('click',function(e){var b=e.target.closest('.tab');if(!b)return;cur=+b.dataset.i;all=false;render();});
+$('seeAll').addEventListener('click',function(){all=!all;render();});
+render();
+/* reviews */
+$('revLbl').textContent=D.revLabel;
+D.reviews.forEach(function(r,i){$('revs').insertAdjacentHTML('beforeend','<article class="rv'+(i===0?' on':'')+'"><div class="hd"><span class="sc">★ '+D.rating+'<span style="font-weight:600;color:var(--muted)"> · '+esc(D.ratingCount)+'</span></span><span class="stars">★★★★★</span></div><q>'+esc(r.t)+'</q><div class="who"><span class="av">'+esc(r.n[0])+'</span><div><b>'+esc(r.n)+'</b><small>'+esc(D.revSmall)+'</small></div></div></article>');$('rdots').insertAdjacentHTML('beforeend','<i'+(i===0?' class="on"':'')+'></i>');});
+var rv=$('revs').children,ri=0;
+setInterval(function(){rv[ri].classList.remove('on');$('rdots').children[ri].className='';ri=(ri+1)%rv.length;rv[ri].classList.add('on');$('rdots').children[ri].className='on';},1500);
+/* profile */
+var P=D.profile;$('ptag').textContent=P.tag;$('pname').textContent=P.name;$('paddr').textContent=P.addr;$('pphoto').src=P.photo;$('pphoto').alt=P.alt;
+$('tiles').innerHTML=P.tiles.map(function(t){return '<div class="tile"><span class="ti">'+ic(t.icon)+'</span><b>'+esc(t.v)+'</b><small>'+esc(t.l)+'</small></div>';}).join('');
+$('turnoTitle').textContent=D.turnoTitle;
+/* turnos */
+var dn=['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'],mn=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+var days=[],d0=new Date();d0.setHours(0,0,0,0);
+for(var k=1;days.length<7;k++){var d=new Date(d0);d.setDate(d0.getDate()+k);if(D.closedDays.indexOf(d.getDay())>-1)continue;days.push(d);}
+var sd=0,ss=-1;
+function slotsR(){
+ $('month').textContent=mn[days[sd].getMonth()].replace(/^./,function(c){return c.toUpperCase();})+' '+days[sd].getFullYear();
+ [].forEach.call($('days').children,function(b,i){b.classList.toggle('on',i===sd);});
+ var seed=days[sd].getDate();
+ $('slots').innerHTML=D.slots.map(function(s,i){var dis=((seed+i)%4===3);return '<button type="button" class="slot" data-i="'+i+'"'+(dis?' disabled':'')+'>'+s+'</button>';}).join('');
+ var first=[].filter.call($('slots').children,function(b){return !b.disabled;})[0];ss=first?+first.dataset.i:-1;mark();
+}
+function mark(){[].forEach.call($('slots').children,function(b){b.classList.toggle('on',+b.dataset.i===ss);});
+ var dd=days[sd],lbl=dn[dd.getDay()]+' '+dd.getDate()+'/'+(dd.getMonth()+1)+(ss>-1?' · '+D.slots[ss]:'');
+ $('bookTxt').textContent=D.bookTxt+' · '+lbl;
+ $('book').href=wa(D.bookMsg+'\n• Día: '+dn[dd.getDay()]+' '+dd.getDate()+'/'+(dd.getMonth()+1)+(ss>-1?'\n• Horario: '+D.slots[ss]:'')+'\n¿Tenés disponibilidad?');}
+$('days').innerHTML=days.map(function(d,i){return '<button type="button" class="day" data-i="'+i+'">'+dn[d.getDay()]+'<b>'+d.getDate()+'</b></button>';}).join('');
+$('days').addEventListener('click',function(e){var b=e.target.closest('.day');if(!b)return;sd=+b.dataset.i;slotsR();});
+$('slots').addEventListener('click',function(e){var b=e.target.closest('.slot');if(!b||b.disabled)return;ss=+b.dataset.i;mark();});
+slotsR();
+/* calculadora */
+var URG=[[1,'Esta semana'],[1.15,'En 24-48 h'],[1.3,'Hoy mismo']];
+$('c1l').textContent=D.calcQ1;
+D.calc.forEach(function(c,i){$('oCat').insertAdjacentHTML('beforeend','<label class="opt"><input type="radio" name="cat" value="'+i+'"'+(i===0?' checked':'')+'><span>'+esc(c.n)+'</span></label>');});
+URG.forEach(function(u,i){$('oUrg').insertAdjacentHTML('beforeend','<label class="opt"><input type="radio" name="urg" value="'+i+'"'+(i===0?' checked':'')+'><span>'+u[1]+'</span></label>');});
+function v(n){return +document.querySelector('input[name="'+n+'"]:checked').value;}
+function jobs(){$('oJob').innerHTML=D.calc[v('cat')].j.map(function(j,i){return '<label class="opt"><input type="radio" name="job" value="'+i+'"'+(i===0?' checked':'')+'><span>'+esc(j[0])+'</span></label>';}).join('');}
+function calc(){var c=D.calc[v('cat')],j=c.j[v('job')],u=URG[v('urg')],p=j[1]*u[0];$('pv').textContent=fmt(p);
+ $('calcWa').href=wa('Hola, vi tu web y quiero un presupuesto:\n• Servicio: '+c.n+'\n• Trabajo: '+j[0]+'\n• Para: '+u[1]+'\n• Estimado de la web: desde '+fmt(p));}
+$('calc').addEventListener('change',function(e){if(e.target.name==='cat')jobs();calc();});
+jobs();calc();$('pnote').textContent=D.priceNote;
+/* mapa y pie */
+$('map').src='https://www.google.com/maps?q='+encodeURIComponent(D.map.q)+'&output=embed';$('map').title='Mapa '+D.map.t;
+$('mapT').textContent=D.map.t;$('mapS').textContent=D.map.s;$('zoneLbl').textContent=D.map.zone;
+$('footS').textContent=' · '+D.foot;$('credits').textContent=D.credits;
+})();
+</script>
+</body>
+</html>
