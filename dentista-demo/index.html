@@ -118,6 +118,7 @@ svg{display:block}
 .hint{font-size:11px;color:var(--muted);margin-top:8px}
 /* calc */
 .calc{background:#fff;border-radius:24px;padding:16px;box-shadow:var(--sh)}
+.calc .days{margin:0 -16px 14px;padding:2px 16px 6px}
 .cl{font-size:11.5px;font-weight:700;color:var(--muted);margin:2px 0 8px;display:flex;align-items:center;gap:6px}
 .cl i{font-style:normal;width:18px;height:18px;border-radius:50%;background:var(--acc);color:#fff;display:grid;place-items:center;font-size:10px}
 .opts{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px}
@@ -151,7 +152,7 @@ footer b{color:var(--ink)}
 .chat svg{width:22px;height:22px}
 .book{flex:1;height:54px;border-radius:999px;background:var(--acc);color:#fff;font-weight:700;font-size:14.5px;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 14px 28px -12px rgba(108,92,231,.9);min-width:0;padding:0 14px;text-align:center}
 .book svg{width:19px;height:19px;flex:none}
-.book span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.book span{white-space:normal;overflow:hidden;line-height:1.2;font-size:13px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 @media(max-width:350px){.tiles{grid-template-columns:1fr 1fr}.phead{grid-template-columns:1fr 110px}}
 </style>
 </head>
@@ -205,18 +206,15 @@ footer b{color:var(--ink)}
   </div>
   <div class="sh"><h3>Información</h3></div>
   <div class="tiles" id="tiles"></div>
-  <div class="sh" id="turno"><h3 id="turnoTitle">Turno / Visita</h3></div>
-  <div class="drow"><svg><use href="#cal"/></svg><span id="month"></span></div>
-  <div class="days" id="days"></div>
-  <div class="slots" id="slots"></div>
-  <p class="hint">Elegí día y horario y reservalo por WhatsApp. Se confirma por mensaje.</p>
-  <div class="sh" id="presupuesto"><h3>Calculá tu presupuesto</h3><span class="lbl">3 pasos</span></div>
-  <div class="calc" id="calc">
-   <div class="cl"><i>1</i><span id="c1l">¿Qué servicio?</span></div><div class="opts" id="oCat"></div>
-   <div class="cl"><i>2</i>¿Qué trabajo?</div><div class="opts" id="oJob"></div>
-   <div class="cl"><i>3</i>¿Para cuándo?</div><div class="opts" id="oUrg"></div>
-   <div class="res"><div><small>Precio estimado desde</small><div class="pv" id="pv">—</div></div><a id="calcWa" href="#" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Pedir</a></div>
-   <p class="note" id="pnote"></p>
+  <div class="sh" id="turno"><h3>Reservá tu turno</h3><span class="lbl">3 pasos</span></div>
+  <div class="calc">
+   <div class="cl"><i>1</i>¿Qué tratamiento?</div><div class="opts" id="oTrt"></div>
+   <div class="cl"><i>2</i>Elegí el día</div>
+   <div class="drow"><svg><use href="#cal"/></svg><span id="month"></span></div>
+   <div class="days" id="days"></div>
+   <div class="cl"><i>3</i>Elegí el horario</div>
+   <div class="slots" id="slots"></div>
+   <p class="hint">Tocá "Reservar" abajo y te confirmamos el turno por WhatsApp.</p>
   </div>
  </section>
 </div>
@@ -271,8 +269,10 @@ setInterval(function(){rv[ri].classList.remove('on');$('rdots').children[ri].cla
 /* profile */
 var P=D.profile;$('ptag').textContent=P.tag;$('pname').textContent=P.name;$('paddr').textContent=P.addr;$('pphoto').src=P.photo;$('pphoto').alt=P.alt;
 $('tiles').innerHTML=P.tiles.map(function(t){return '<div class="tile"><span class="ti">'+ic(t.icon)+'</span><b>'+esc(t.v)+'</b><small>'+esc(t.l)+'</small></div>';}).join('');
-$('turnoTitle').textContent=D.turnoTitle;
 /* turnos */
+var tr=0;
+$('oTrt').innerHTML=D.tabs.map(function(t,i){return '<label class="opt"><input type="radio" name="trt" value="'+i+'"'+(i===0?' checked':'')+'><span>'+esc(t.name)+'</span></label>';}).join('');
+$('oTrt').addEventListener('change',function(e){tr=+e.target.value;mark();});
 var dn=['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'],mn=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
 var days=[],d0=new Date();d0.setHours(0,0,0,0);
 for(var k=1;days.length<7;k++){var d=new Date(d0);d.setDate(d0.getDate()+k);if(D.closedDays.indexOf(d.getDay())>-1)continue;days.push(d);}
@@ -286,23 +286,12 @@ function slotsR(){
 }
 function mark(){[].forEach.call($('slots').children,function(b){b.classList.toggle('on',+b.dataset.i===ss);});
  var dd=days[sd],lbl=dn[dd.getDay()]+' '+dd.getDate()+'/'+(dd.getMonth()+1)+(ss>-1?' · '+D.slots[ss]:'');
- $('bookTxt').textContent=D.bookTxt+' · '+lbl;
- $('book').href=wa(D.bookMsg+'\n• Día: '+dn[dd.getDay()]+' '+dd.getDate()+'/'+(dd.getMonth()+1)+(ss>-1?'\n• Horario: '+D.slots[ss]:'')+'\n¿Tenés disponibilidad?');}
+ $('bookTxt').textContent='Reservar · '+D.tabs[tr].name+' · '+lbl;
+ $('book').href=wa(D.bookMsg+'\n• Tratamiento: '+D.tabs[tr].name+'\n• Día: '+dn[dd.getDay()]+' '+dd.getDate()+'/'+(dd.getMonth()+1)+(ss>-1?'\n• Horario: '+D.slots[ss]:'')+'\n¿Tenés disponibilidad?');}
 $('days').innerHTML=days.map(function(d,i){return '<button type="button" class="day" data-i="'+i+'">'+dn[d.getDay()]+'<b>'+d.getDate()+'</b></button>';}).join('');
 $('days').addEventListener('click',function(e){var b=e.target.closest('.day');if(!b)return;sd=+b.dataset.i;slotsR();});
 $('slots').addEventListener('click',function(e){var b=e.target.closest('.slot');if(!b||b.disabled)return;ss=+b.dataset.i;mark();});
 slotsR();
-/* calculadora */
-var URG=D.urg||[[1,'Esta semana'],[1.15,'En 24-48 h'],[1.3,'Hoy mismo']];
-$('c1l').textContent=D.calcQ1;
-D.calc.forEach(function(c,i){$('oCat').insertAdjacentHTML('beforeend','<label class="opt"><input type="radio" name="cat" value="'+i+'"'+(i===0?' checked':'')+'><span>'+esc(c.n)+'</span></label>');});
-URG.forEach(function(u,i){$('oUrg').insertAdjacentHTML('beforeend','<label class="opt"><input type="radio" name="urg" value="'+i+'"'+(i===0?' checked':'')+'><span>'+u[1]+'</span></label>');});
-function v(n){return +document.querySelector('input[name="'+n+'"]:checked').value;}
-function jobs(){$('oJob').innerHTML=D.calc[v('cat')].j.map(function(j,i){return '<label class="opt"><input type="radio" name="job" value="'+i+'"'+(i===0?' checked':'')+'><span>'+esc(j[0])+'</span></label>';}).join('');}
-function calc(){var c=D.calc[v('cat')],j=c.j[v('job')],u=URG[v('urg')],p=j[1]*u[0];$('pv').textContent=fmt(p);
- $('calcWa').href=wa('Hola, vi tu web y quiero un presupuesto:\n• Servicio: '+c.n+'\n• Trabajo: '+j[0]+'\n• Para: '+u[1]+'\n• Estimado de la web: desde '+fmt(p));}
-$('calc').addEventListener('change',function(e){if(e.target.name==='cat')jobs();calc();});
-jobs();calc();$('pnote').textContent=D.priceNote;
 /* mapa y pie */
 $('map').src='https://www.google.com/maps?q='+encodeURIComponent(D.map.q)+'&output=embed';$('map').title='Mapa '+D.map.t;
 $('mapT').textContent=D.map.t;$('mapS').textContent=D.map.s;$('zoneLbl').textContent=D.map.zone;
